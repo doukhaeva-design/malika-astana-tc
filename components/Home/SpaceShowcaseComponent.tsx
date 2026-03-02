@@ -19,7 +19,7 @@ export default function SpaceShowcaseComponent() {
             </div>
 
             <div className={styles.container}>
-                <div className={styles.content}>
+                <div className={`${styles.content} animate-fade`}>
                     <span className={styles.badge}>Экономия времени</span>
                     <h2 className={styles.title}>Все нужные сервисы <br /> в одном центре</h2>
                     <p className={styles.text}>
