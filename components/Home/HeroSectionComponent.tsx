@@ -8,6 +8,7 @@
 */
 
 import React from 'react';
+import Link from 'next/link';
 import styles from './HeroSectionComponent.module.css';
 
 export default function HeroSectionComponent() {
@@ -37,8 +38,12 @@ export default function HeroSectionComponent() {
                         Удобное расположение и понятная структура делают визит быстрым и комфортным.
                     </p>
                     <div className={`${styles.actions} animate-fade stagger-3`}>
-                        <button className={styles.btnPrimary}>Смотреть направления</button>
-                        <button className={styles.btnSecondary}>Как добраться</button>
+                        <Link href="/directions" className={styles.btnPrimary}>
+                            Смотреть направления
+                        </Link>
+                        <Link href="/contacts" className={styles.btnSecondary}>
+                            Как добраться
+                        </Link>
                     </div>
                 </div>
             </div>

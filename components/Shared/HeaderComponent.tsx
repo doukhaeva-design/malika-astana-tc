@@ -25,7 +25,9 @@ export default function HeaderComponent() {
                 </nav>
 
                 <div className={styles.actions}>
-                    <button className={styles.btnRoute}>Проложить маршрут</button>
+                    <Link href="/contacts" className={styles.btnRoute}>
+                        Проложить маршрут
+                    </Link>
                     <div className={styles.langSwitch}>
                         <span className={styles.activeLang}>RU</span> | <span>EN</span>
                     </div>

@@ -5,6 +5,7 @@
 */
 
 import React from 'react';
+import Link from 'next/link';
 import styles from './ForEverydayNeedsSectionComponent.module.css';
 
 export default function ForEverydayNeedsSectionComponent() {
@@ -74,7 +75,9 @@ export default function ForEverydayNeedsSectionComponent() {
                                     </div>
                                 )}
                                 {dir.hasAction && (
-                                    <button className={styles.cardBtn}>Подробнее о центре</button>
+                                    <Link href="/rehab" className={styles.cardBtn}>
+                                        Подробнее о центре
+                                    </Link>
                                 )}
                             </div>
                         </div>

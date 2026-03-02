@@ -7,6 +7,7 @@
 */
 
 import React from 'react';
+import Link from 'next/link';
 import styles from './RehabHighlightSectionComponent.module.css';
 
 export default function RehabHighlightSectionComponent() {
@@ -29,7 +30,9 @@ export default function RehabHighlightSectionComponent() {
                             На территории комплекса работает центр реабилитации, предлагающий профессиональные услуги по восстановлению и поддержанию здоровья.
                             Это удобное решение для тех, кто ценит возможность совмещать повседневные дела и заботу о здоровье.
                         </p>
-                        <button className={styles.btn}>Узнать подробнее</button>
+                        <Link href="/rehab" className={styles.btn}>
+                            Узнать подробнее
+                        </Link>
                     </div>
                 </div>
             </div>

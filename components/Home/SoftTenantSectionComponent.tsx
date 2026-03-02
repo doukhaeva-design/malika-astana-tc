@@ -7,6 +7,7 @@
 */
 
 import React from 'react';
+import Link from 'next/link';
 import styles from './SoftTenantSectionComponent.module.css';
 
 export default function SoftTenantSectionComponent() {
@@ -21,7 +22,9 @@ export default function SoftTenantSectionComponent() {
                             Компактная структура и стабильный поток посетителей создают условия для устойчивой работы.
                             Мы открыты к сотрудничеству с предпринимателями, заинтересованными в долгосрочном развитии.
                         </p>
-                        <button className={styles.btn}>Узнать условия аренды</button>
+                        <Link href="/rent" className={styles.btn}>
+                            Узнать условия аренды
+                        </Link>
                     </div>
                 </div>
             </div>

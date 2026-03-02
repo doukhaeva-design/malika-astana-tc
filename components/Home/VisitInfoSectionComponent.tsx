@@ -6,6 +6,7 @@
 */
 
 import React from 'react';
+import Link from 'next/link';
 import styles from './VisitInfoSectionComponent.module.css';
 
 export default function VisitInfoSectionComponent() {
@@ -38,8 +39,12 @@ export default function VisitInfoSectionComponent() {
                 </div>
 
                 <div className={`${styles.actions} animate-fade stagger-4`}>
-                    <button className={styles.btnPrimary}>Позвонить</button>
-                    <button className={styles.btnSecondary}>Проложить маршрут</button>
+                    <a href="tel:+70000000000" className={styles.btnPrimary}>
+                        Позвонить
+                    </a>
+                    <Link href="/contacts" className={styles.btnSecondary}>
+                        Проложить маршрут
+                    </Link>
                 </div>
             </div>
         </section>

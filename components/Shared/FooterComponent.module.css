@@ -1,36 +1,85 @@
 .footer {
     border-top: 1px solid #eee;
-    padding: 2rem 0;
-    background-color: #f9f9f9;
+    padding: 4rem 0 2rem;
+    background-color: #fff;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 2rem;
     display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-    text-align: center;
-}
-
-.logo {
-    font-weight: bold;
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 3rem;
 }
 
 .info {
-    margin-bottom: 1rem;
+    flex: 1;
+    min-width: 250px;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.contacts {
+    flex: 1;
+    min-width: 300px;
 }
 
 .contacts p {
-    margin: 0.2rem 0;
-    color: #333;
+    margin: 0.5rem 0;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.links {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.footerLabel {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+}
+
+.footerLink {
+    color: #666;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+    color: #000;
 }
 
 .copyright {
+    width: 100%;
+    border-top: 1px solid #efefef;
+    margin-top: 3rem;
+    padding-top: 2rem;
     font-size: 0.85rem;
-    color: #666;
+    color: #aaa;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
 }
