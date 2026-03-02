@@ -10,20 +10,20 @@ import styles from './HeroSectionComponent.module.css';
 export default function HeroSectionComponent() {
     return (
         <section className={styles.hero}>
+            <div className={styles.bgText}>MALIKA</div>
             <div className={styles.container}>
                 <div className={styles.layout}>
                     <div className={`${styles.content} animate-fade`}>
                         <span className={styles.tagline}>Практичный торговый комплекс</span>
                         <h1 className={styles.title}>
-                            MALIKA — <span className={styles.accent}>эффективное</span> место для ваших покупок
+                            Эффективное <br /> место для <br /><span className={styles.accent}>ваших покупок</span>
                         </h1>
                         <p className={styles.description}>
                             Компактная структура, понятная навигация и широкий выбор товаров для дома, бизнеса и авто.
-                            Всё для тех, кто ценит своё время.
                         </p>
                         <div className={styles.actions}>
                             <Link href="/directions" className={styles.btnPrimary}>
-                                Направления торговли
+                                Направления
                             </Link>
                             <Link href="/contacts" className={styles.btnSecondary}>
                                 Как добраться
@@ -38,9 +38,12 @@ export default function HeroSectionComponent() {
                         <div className={`${styles.imageOffset} animate-fade stagger-2`}>
                             <img src="/pinterest_hero_2_1772463249311.png" alt="Customer lifestyle" />
                         </div>
-                        <div className={styles.blob}></div>
                     </div>
                 </div>
+            </div>
+            <div className={styles.scrollDown}>
+                <div className={styles.mouse}></div>
+                <span>Листайте ниже</span>
             </div>
         </section>
     );
