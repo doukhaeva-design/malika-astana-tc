@@ -107,8 +107,8 @@
 .imageMain {
     width: 420px;
     height: 580px;
-    border-radius: 12px;
-    /* Less rounded for more commercial feel */
+    border-radius: 8px;
+    /* Reduced from 12px */
     overflow: hidden;
     position: relative;
     z-index: 2;
@@ -124,7 +124,8 @@
 .imageOffset {
     width: 320px;
     height: 420px;
-    border-radius: 12px;
+    border-radius: 8px;
+    /* Reduced from 12px */
     overflow: hidden;
     position: absolute;
     bottom: -40px;

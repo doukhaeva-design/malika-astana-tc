@@ -36,7 +36,8 @@
 
 .card {
     padding: 40px;
-    border-radius: 12px;
+    border-radius: 6px;
+    /* Reduced from 12px */
     display: flex;
     align-items: center;
     gap: 25px;
@@ -57,7 +58,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
+    border-radius: 6px;
+    /* Reduced from 8px */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     border: 1px solid #f1f1f1;
 }

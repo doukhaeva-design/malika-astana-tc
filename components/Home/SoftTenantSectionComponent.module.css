@@ -13,7 +13,8 @@
     background-color: #0c0a09;
     /* Deep charcoal almost black */
     color: #fff;
-    border-radius: 60px;
+    border-radius: 12px;
+    /* Reduced from 60px */
     padding: 100px;
     display: flex;
     justify-content: space-between;
