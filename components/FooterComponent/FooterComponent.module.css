@@ -1,0 +1,36 @@
+.footer {
+    border-top: 1px solid #eee;
+    padding: 2rem 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    text-align: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.info {
+    margin-bottom: 1rem;
+}
+
+.contacts p {
+    margin: 0.2rem 0;
+    color: #333;
+}
+
+.copyright {
+    font-size: 0.85rem;
+    color: #666;
+}

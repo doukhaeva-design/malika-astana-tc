@@ -1,0 +1,36 @@
+.section {
+    padding: 4rem 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.mapPlaceholder {
+    height: 400px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    border-radius: 8px;
+    border: 1px dashed #ccc;
+    text-align: center;
+}
+
+.mapPlaceholder p {
+    font-size: 1.25rem;
+    color: #666;
+}
+
+.btn {
+    padding: 0.75rem 2rem;
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

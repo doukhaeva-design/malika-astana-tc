@@ -1,0 +1,33 @@
+.section {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    padding: 2rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: bold;
+}
+
+.cardText {
+    color: #555;
+    line-height: 1.5;
+}

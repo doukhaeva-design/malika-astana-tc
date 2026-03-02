@@ -1,0 +1,23 @@
+.section {
+    padding: 4rem 0;
+    background-color: #fcfcfc;
+    border-bottom: 2px solid #000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.title {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    font-size: 1.25rem;
+    color: #555;
+    max-width: 700px;
+    line-height: 1.6;
+}

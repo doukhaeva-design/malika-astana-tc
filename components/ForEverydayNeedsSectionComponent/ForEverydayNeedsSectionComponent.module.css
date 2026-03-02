@@ -1,0 +1,48 @@
+.section {
+    padding: 4rem 0;
+    background-color: #fff;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.intro {
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: #555;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    background: #fdfdfd;
+}
+
+.cardTitle {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+}
+
+.cardText {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.4;
+}
