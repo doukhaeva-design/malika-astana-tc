@@ -1,0 +1,24 @@
+.hero {
+    padding: 5rem 0;
+    background-color: #f1f8fc;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #0b4a7a;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #333;
+}

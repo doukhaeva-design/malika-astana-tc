@@ -1,0 +1,40 @@
+.section {
+    padding: 4rem 0;
+    background-color: #f7f7f7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.intro {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    font-weight: bold;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.spaceItem {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.title {
+    margin-bottom: 0.5rem;
+}
+
+.text {
+    color: #666;
+}
