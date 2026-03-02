@@ -56,8 +56,8 @@ export default function ForEverydayNeedsSectionComponent() {
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h2 className={styles.title}>Что найти <br /> в <span className={styles.accent}>MALIKA</span></h2>
-                    <p className={styles.subtitle}>Эффективные решения ваших повседневных задач в одном месте.</p>
+                    <h2 className={styles.title}>Направления <br /> для <span className={styles.accent}>важных задач</span></h2>
+                    <p className={styles.subtitle}>Всё для дома, авто и бизнеса. Находите нужное без лишнего поиска.</p>
                 </div>
 
                 <div className={styles.grid}>

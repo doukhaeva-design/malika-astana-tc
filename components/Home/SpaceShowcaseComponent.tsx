@@ -20,11 +20,11 @@ export default function SpaceShowcaseComponent() {
 
             <div className={styles.container}>
                 <div className={styles.content}>
-                    <span className={styles.badge}>Галерея пространства</span>
-                    <h2 className={styles.title}>Больше, чем <br /> просто шопинг</h2>
+                    <span className={styles.badge}>Пространство и свет</span>
+                    <h2 className={styles.title}>Архитектура <br /> вашего ритма</h2>
                     <p className={styles.text}>
-                        Широкие галереи, наполненные светом. Мы создали атмосферу,
-                        в которой комфортно не только покупать, но и находиться.
+                        Широкие галереи и естественный свет создают пространство,
+                        в котором комфортно решать дела любой сложности.
                     </p>
                     <div className={styles.stats}>
                         <div className={styles.statItem}>

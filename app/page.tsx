@@ -29,21 +29,11 @@ export default function Home() {
       <HeaderComponent />
 
       <HeroSectionComponent />
-
       <ForEverydayNeedsSectionComponent />
-
       <SpaceShowcaseComponent />
-
-      <div className="section-divider"></div>
-
       <CompactAdvantageSectionComponent />
-
       <RehabHighlightSectionComponent />
-
-      <div className="section-spacer"></div>
-
       <SoftTenantSectionComponent />
-
       <VisitInfoSectionComponent />
 
       <MapSectionComponent />

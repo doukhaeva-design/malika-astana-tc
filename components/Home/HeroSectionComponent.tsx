@@ -14,9 +14,9 @@ export default function HeroSectionComponent() {
             <div className={styles.container}>
                 <div className={styles.layout}>
                     <div className={`${styles.content} animate-fade`}>
-                        <span className={styles.tagline}>Практичный торговый комплекс</span>
+                        <span className={styles.tagline}>Пространство в ритме Астаны</span>
                         <h1 className={styles.title}>
-                            Эффективное <br /> место для <br /><span className={styles.accent}>ваших покупок</span>
+                            MALIKA — <br /> время в <br /><span className={styles.accent}>вашем ритме</span>
                         </h1>
                         <p className={styles.description}>
                             Компактная структура, понятная навигация и широкий выбор товаров для дома, бизнеса и авто.
