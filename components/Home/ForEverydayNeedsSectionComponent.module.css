@@ -79,13 +79,12 @@
 .grid {
     display: flex;
     gap: 40px;
-    /* from 30px */
     overflow-x: auto;
-    padding: 30px 0 60px;
-    /* added more air */
+    padding: 30px max(40px, calc((100vw - var(--max-width)) / 2 + 40px)) 60px;
     scrollbar-width: none;
     -ms-overflow-style: none;
     scroll-snap-type: x mandatory;
+    scroll-padding-left: max(40px, calc((100vw - var(--max-width)) / 2 + 40px));
 }
 
 .grid::-webkit-scrollbar {
@@ -102,7 +101,6 @@
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     border: 1px solid var(--gray-medium);
     flex: 0 0 400px;
-    /* Fixed width for cards in slider */
     scroll-snap-align: start;
 }
 

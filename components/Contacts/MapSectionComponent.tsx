@@ -10,10 +10,17 @@ import styles from './MapSectionComponent.module.css';
 export default function MapSectionComponent() {
     return (
         <section className={styles.section}>
-            <div className={styles.container}>
-                <div className={styles.mapPlaceholder}>
-                    <p>Интерактивная карта (Yandex / Google Maps)</p>
-                    <button className={styles.btn}>Проложить маршрут</button>
+            <div className={styles.mapWrapper}>
+                <div className={styles.mapVisual}>
+                    <div className={styles.mapOverlay}></div>
+                    <div className={styles.mapContent}>
+                        <div className={styles.marker}>
+                            <div className={styles.markerDot}></div>
+                        </div>
+                        <h3 className={styles.mapTitle}>MALIKA</h3>
+                        <p className={styles.mapAddress}>г. Астана, район Орда Базар</p>
+                        <button className={styles.btn}>ОТКРЫТЬ КАРТУ</button>
+                    </div>
                 </div>
             </div>
         </section>

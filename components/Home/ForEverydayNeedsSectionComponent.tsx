@@ -68,39 +68,39 @@ export default function ForEverydayNeedsSectionComponent() {
                         <Link href="/directions" className={styles.viewAll}>ВСЕ НАПРАВЛЕНИЯ</Link>
                     </div>
                 </div>
+            </div>
 
-                <div className={styles.grid}>
-                    {directions.map((dir, index) => (
-                        <div
-                            key={index}
-                            className={`${styles.card} animate-fade stagger-${index + 1}`}
-                        >
-                            <div className={styles.imageWrapper}>
-                                <img src={dir.img} alt={dir.title} className={styles.cardImage} />
-                                <div className={styles.badge}>
-                                    <span className={styles.badgeNum}>{dir.badge.split(' ')[0]}</span>
-                                    <span className={styles.badgeMonth}>{dir.badge.split(' ')[1]}</span>
-                                </div>
-                            </div>
-
-                            <div className={styles.cardContent}>
-                                <div className={styles.cardHeader}>
-                                    <span className={styles.tag}>{dir.forWhom}</span>
-                                    <h3 className={styles.cardTitle}>{dir.title}</h3>
-                                </div>
-                                <p className={styles.cardText}>{dir.desc}</p>
-
-                                <div className={styles.cardFooter}>
-                                    {dir.isSpecial ? (
-                                        <Link href="/rehab" className={styles.plusLink}>ПОДРОБНЕЕ</Link>
-                                    ) : (
-                                        <span className={styles.plusIcon}>+</span>
-                                    )}
-                                </div>
+            <div className={styles.grid}>
+                {directions.map((dir, index) => (
+                    <div
+                        key={index}
+                        className={`${styles.card} animate-fade stagger-${index + 1}`}
+                    >
+                        <div className={styles.imageWrapper}>
+                            <img src={dir.img} alt={dir.title} className={styles.cardImage} />
+                            <div className={styles.badge}>
+                                <span className={styles.badgeNum}>{dir.badge.split(' ')[0]}</span>
+                                <span className={styles.badgeMonth}>{dir.badge.split(' ')[1]}</span>
                             </div>
                         </div>
-                    ))}
-                </div>
+
+                        <div className={styles.cardContent}>
+                            <div className={styles.cardHeader}>
+                                <span className={styles.tag}>{dir.forWhom}</span>
+                                <h3 className={styles.cardTitle}>{dir.title}</h3>
+                            </div>
+                            <p className={styles.cardText}>{dir.desc}</p>
+
+                            <div className={styles.cardFooter}>
+                                {dir.isSpecial ? (
+                                    <Link href="/rehab" className={styles.plusLink}>ПОДРОБНЕЕ</Link>
+                                ) : (
+                                    <span className={styles.plusIcon}>+</span>
+                                )}
+                            </div>
+                        </div>
+                    </div>
+                ))}
             </div>
         </section>
     );
