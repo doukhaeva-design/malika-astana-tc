@@ -31,8 +31,8 @@ export default function Home() {
       <HeroSectionComponent />
       <ForEverydayNeedsSectionComponent />
       <SpaceShowcaseComponent />
-      <CompactAdvantageSectionComponent />
       <RehabHighlightSectionComponent />
+      <CompactAdvantageSectionComponent />
       <SoftTenantSectionComponent />
       <VisitInfoSectionComponent />
 
