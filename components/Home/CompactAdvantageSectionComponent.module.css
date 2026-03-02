@@ -180,7 +180,17 @@
 @media (max-width: 700px) {
     .grid {
         grid-template-columns: 1fr;
-        grid-auto-rows: 260px;
+        grid-auto-rows: auto;
+        /* Do not force height on mobile, let content define it */
+        gap: 20px;
+    }
+
+    .card {
+        padding: 32px 24px;
+        min-height: 160px;
+        /* Elegant compact height */
+        justify-content: center;
+        /* Center the text vertically */
     }
 
     .large,

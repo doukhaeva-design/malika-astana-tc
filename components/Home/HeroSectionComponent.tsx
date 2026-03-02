@@ -16,18 +16,18 @@ export default function HeroSectionComponent() {
                     <div className={`${styles.content} animate-fade`}>
                         <div className={styles.taglineWrapper}>
                             <span className={styles.statusDot}></span>
-                            <span className={styles.tagline}>Добро пожаловать в MALIKA</span>
+                            <span className={styles.tagline}>Добро пожаловать<span className={styles.taglineMobileOnly}> в MALIKA</span></span>
                         </div>
                         <h1 className={styles.title}>
                             <span className={styles.titleLight}>Ваш</span> торговый центр <br />
                             в <span className={styles.accent}>Астане</span>
                         </h1>
                         <p className={styles.description}>
-                            Компактная структура, понятная навигация и широкий выбор товаров для дома, бизнеса и авто. <strong className={styles.boldText}>Всё необходимое рядом.</strong>
+                            Широкий выбор товаров для дома, бизнеса и авто. <strong className={styles.boldText}>Всё необходимое — рядом и без лишней суеты.</strong>
                         </p>
                         <div className={styles.actions}>
                             <Link href="/directions" className={styles.btnPrimary}>
-                                Направления
+                                Товары и услуги
                             </Link>
                             <Link href="/contacts" className={styles.btnSecondary}>
                                 Как добраться

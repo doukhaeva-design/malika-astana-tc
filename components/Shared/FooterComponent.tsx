@@ -23,7 +23,7 @@ export default function FooterComponent() {
                 </div>
                 <div className={styles.links}>
                     <p className={styles.footerLabel}>Навигация</p>
-                    <Link href="/directions" className={styles.footerLink}>Направления</Link>
+                    <Link href="/directions" className={styles.footerLink}>Магазины и сервисы</Link>
                     <Link href="/rehab" className={styles.footerLink}>Реабилитационный центр</Link>
                     <Link href="/rent" className={styles.footerLink}>Арендаторам</Link>
                     <Link href="/contacts" className={styles.footerLink}>Контакты</Link>
