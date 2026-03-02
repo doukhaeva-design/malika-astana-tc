@@ -83,11 +83,11 @@ h3 {
 .section-divider {
   height: 1px;
   background-color: var(--gray-medium);
-  margin: 6rem auto;
+  margin: 10rem auto;
   width: 90%;
-  max-width: 1400px;
+  max-width: var(--max-width);
 }
 
 .section-spacer {
-  height: 4rem;
+  height: 8rem;
 }

@@ -1,5 +1,6 @@
 .section {
-    padding: 120px 0;
+    padding: 160px 0;
+    /* from 120px */
     background-color: var(--background);
 }
 

@@ -1,5 +1,6 @@
 .section {
-    padding: 120px 0;
+    padding: 160px 0;
+    /* from 120px */
     background-color: var(--background);
 }
 
@@ -10,7 +11,8 @@
 }
 
 .header {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
+    /* from 60px */
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -76,11 +78,12 @@
 
 .grid {
     display: flex;
-    gap: 30px;
+    gap: 40px;
+    /* from 30px */
     overflow-x: auto;
-    padding: 20px 0 40px;
+    padding: 30px 0 60px;
+    /* added more air */
     scrollbar-width: none;
-    /* Hide scrollbar for clean look */
     -ms-overflow-style: none;
     scroll-snap-type: x mandatory;
 }
