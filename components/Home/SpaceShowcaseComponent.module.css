@@ -1,29 +1,52 @@
 .section {
-    padding: 8rem 0;
-    background-color: #fff;
+    padding: 100px 0;
+    background-color: var(--background);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 40px;
 }
 
-.grid {
+.wrapper {
     display: flex;
     align-items: center;
-    gap: 5rem;
+    gap: 100px;
 }
 
-.imageWrapper {
+.imageBox {
     flex: 1.2;
+    position: relative;
+    border-radius: 60px;
+    padding: 20px;
+    background-color: var(--accent-soft);
+    /* Colored block background */
 }
 
 .image {
     width: 100%;
-    height: auto;
-    border-radius: 4px;
-    filter: saturate(0.9);
+    height: 600px;
+    object-fit: cover;
+    border-radius: 40px;
+    display: block;
+}
+
+.overlayText {
+    position: absolute;
+    top: 50px;
+    right: -30px;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+}
+
+.overlayText h3 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1.2;
 }
 
 .content {
@@ -31,37 +54,57 @@
 }
 
 .title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    line-height: 1.2;
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
 }
 
 .text {
-    font-size: 1.25rem;
-    line-height: 1.8;
-    color: #444;
-    margin-bottom: 3rem;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 40px;
 }
 
-.decorationLine {
-    width: 60px;
-    height: 4px;
-    background-color: #000;
+.stats {
+    display: flex;
+    gap: 60px;
 }
 
-@media (max-width: 991px) {
-    .grid {
+.num {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--accent);
+}
+
+.label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #999;
+}
+
+@media (max-width: 1100px) {
+    .wrapper {
         flex-direction: column;
-        text-align: center;
-        gap: 3rem;
+        gap: 60px;
     }
 
-    .decorationLine {
-        margin: 0 auto;
+    .overlayText {
+        position: static;
+        margin: 20px auto 0;
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .image {
+        height: 400px;
     }
 
     .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }

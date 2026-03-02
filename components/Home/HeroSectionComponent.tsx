@@ -1,10 +1,6 @@
 /* 
   Главный баннер (HeroSectionComponent)
-  Показывает заголовок H1 и основные преимущества на фоне светлого холла.
-  Анимации:
-  - Плавное появление (fade-in) текста при загрузке.
-  - Микро-анимация при наведении на кнопки.
-  - Фоновый слой, имитирующий динамику пространства.
+  Pinterest-style: Асимметричная верстка, наложение изображений и крупная типографика.
 */
 
 import React from 'react';
@@ -14,36 +10,35 @@ import styles from './HeroSectionComponent.module.css';
 export default function HeroSectionComponent() {
     return (
         <section className={styles.hero}>
-            {/* Background layer */}
-            <div className={styles.bgWrapper}>
-                <div className={styles.bgOverlay}></div>
-                {/* We use an image as a placeholder for the video aspect */}
-                <img
-                    src="/hero_bg_1772459922450.png"
-                    alt="Malika Shopping Center Interior"
-                    className={styles.bgImage}
-                />
-            </div>
-
             <div className={styles.container}>
-                <div className={styles.content}>
-                    <h1 className={`${styles.title} animate-fade`}>
-                        Торговый центр MALIKA в Астане
-                    </h1>
-                    <p className={`${styles.subtitle} animate-fade stagger-1`}>
-                        Практичное пространство для покупок, бизнеса и повседневных решений.
-                    </p>
-                    <p className={`${styles.description} animate-fade stagger-2`}>
-                        MALIKA — это компактный торговый комплекс, где представлены востребованные товары и услуги для ежедневных задач.
-                        Удобное расположение и понятная структура делают визит быстрым и комфортным.
-                    </p>
-                    <div className={`${styles.actions} animate-fade stagger-3`}>
-                        <Link href="/directions" className={styles.btnPrimary}>
-                            Смотреть направления
-                        </Link>
-                        <Link href="/contacts" className={styles.btnSecondary}>
-                            Как добраться
-                        </Link>
+                <div className={styles.layout}>
+                    <div className={`${styles.content} animate-fade`}>
+                        <span className={styles.tagline}>Светлое пространство в Астане</span>
+                        <h1 className={styles.title}>
+                            MALIKA: Место, где <span className={styles.accent}>уютно</span> решать дела
+                        </h1>
+                        <p className={styles.description}>
+                            Мы объединили практичность торгового комплекса с атмосферой современного городского пространства.
+                            Заезжайте за покупками или просто на чашку кофе.
+                        </p>
+                        <div className={styles.actions}>
+                            <Link href="/directions" className={styles.btnPrimary}>
+                                Исследовать центр
+                            </Link>
+                            <Link href="/contacts" className={styles.btnSecondary}>
+                                Как добраться
+                            </Link>
+                        </div>
+                    </div>
+
+                    <div className={styles.visuals}>
+                        <div className={`${styles.imageMain} animate-fade stagger-1`}>
+                            <img src="/pinterest_hero_1_1772463234531.png" alt="Mall atmosphere" />
+                        </div>
+                        <div className={`${styles.imageOffset} animate-fade stagger-2`}>
+                            <img src="/pinterest_hero_2_1772463249311.png" alt="Shopping lifestyle" />
+                        </div>
+                        <div className={styles.blob}></div>
                     </div>
                 </div>
             </div>

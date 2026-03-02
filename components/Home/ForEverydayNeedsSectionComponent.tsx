@@ -1,7 +1,6 @@
 /* 
   Секция направлений (ForEverydayNeedsSectionComponent)
-  Показывает расширенный список категорий товаров и услуг.
-  Карточки с фоновыми изображениями, градиентом и плавными эффектами.
+  Pinterest-style: Карточки разного размера, скругленные углы, яркие акценты.
 */
 
 import React from 'react';
@@ -11,39 +10,44 @@ import styles from './ForEverydayNeedsSectionComponent.module.css';
 export default function ForEverydayNeedsSectionComponent() {
     const directions = [
         {
-            title: 'Автотовары и обслуживание',
-            forWhom: 'владельцы автомобилей и автосервисов',
-            desc: 'Товары и комплектующие для повседневной эксплуатации и обслуживания автомобилей. Всё необходимое без долгих поисков.',
+            title: 'Автотовары',
+            forWhom: 'владельцы авто',
+            desc: 'Всё для эксплуатации и обслуживания вашего автомобиля в одном месте.',
             img: '/category_auto_1772459952993.png',
-            tags: ['запчасти', 'расходные материалы', 'сопутствующие товары']
+            color: '#fef3c7' // Amber
         },
         {
-            title: 'Оборудование и технические решения',
-            forWhom: 'предприниматели и частные специалисты',
-            desc: 'Специализированные технические решения для бизнеса и частных задач. Практичные товары, востребованные в работе.',
-            img: '/category_tech_1772459982373.png'
+            title: 'Техника',
+            forWhom: 'профессионалы',
+            desc: 'Оборудование и технические решения для эффективного бизнеса.',
+            img: '/category_tech_1772459982373.png',
+            color: '#dcfce7' // Emerald
         },
         {
-            title: 'Товары для дома',
-            forWhom: 'повседневные покупки',
-            desc: 'Практичные товары для поддержания порядка и комфорта дома. Всё необходимое для бытовых задач в одном месте.',
-            img: '/category_home_1772459996707.png'
+            title: 'Дом',
+            forWhom: 'уют в мелочах',
+            desc: 'Практичные товары для порядка и комфорта в вашем доме.',
+            img: '/category_home_1772459996707.png',
+            color: '#dbeafe' // Blue
         },
         {
-            title: 'Товары для бизнеса',
-            forWhom: 'малый и средний бизнес',
-            desc: 'Продукция и решения для коммерческой деятельности. Удобно для быстрого решения рабочих задач предпринимателей.',
-            img: '/category_business_supply_1772462378450.png'
+            title: 'Бизнес',
+            forWhom: 'предприниматели',
+            desc: 'Продукция и решения для коммерческой деятельности.',
+            img: '/category_business_supply_v2_1772464118849.png',
+            color: '#ffedd5' // Orange
         },
         {
-            title: 'Сервисные услуги',
-            desc: 'Профессиональные услуги на территории комплекса. Совмещайте покупки и решение других задач за один визит.',
-            img: '/category_service_1772460173357.png'
+            title: 'Сервис',
+            desc: 'Мелкий ремонт и бытовые услуги за один визит.',
+            img: '/category_service_1772460173357.png',
+            color: '#f3e8ff' // Purple
         },
         {
-            title: 'Реабилитационный центр',
-            desc: 'Профессиональные услуги восстановления здоровья. Специализированное направление нашего комплекса.',
+            title: 'Здоровье',
+            desc: 'Реабилитационный центр с профессиональным подходом.',
             img: '/rehab_interior_v2_1772460250804.png',
+            color: '#faedcd', // Cream 
             hasAction: true
         }
     ];
@@ -52,33 +56,29 @@ export default function ForEverydayNeedsSectionComponent() {
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h2 className={`${styles.title} animate-fade`}>Что можно найти в MALIKA</h2>
-                    <p className={`${styles.subtitle} animate-fade stagger-1`}>
-                        Товары и услуги для повседневных задач, бизнеса и технических решений.
-                    </p>
+                    <h2 className={styles.title}>Что внутри MALIKA</h2>
+                    <p className={styles.subtitle}>Пространство, организованное для ваших задач. Исследуйте наши направления.</p>
                 </div>
+
                 <div className={styles.grid}>
                     {directions.map((dir, index) => (
                         <div
                             key={index}
-                            className={`${styles.card} animate-slide stagger-${index + 1}`}
+                            className={`${styles.card} animate-fade stagger-${index + 1}`}
+                            style={{ backgroundColor: dir.color }}
                         >
-                            <div className={styles.imageOverlay}></div>
-                            <img src={dir.img} alt={dir.title} className={styles.cardImage} />
-                            <div className={styles.content}>
+                            <div className={styles.cardContent}>
                                 {dir.forWhom && <span className={styles.forWhom}>{dir.forWhom}</span>}
                                 <h3 className={styles.cardTitle}>{dir.title}</h3>
                                 <p className={styles.cardText}>{dir.desc}</p>
-                                {dir.tags && (
-                                    <div className={styles.tags}>
-                                        {dir.tags.map(tag => <span key={tag} className={styles.tag}>{tag}</span>)}
-                                    </div>
-                                )}
                                 {dir.hasAction && (
                                     <Link href="/rehab" className={styles.cardBtn}>
-                                        Подробнее о центре
+                                        Перейти
                                     </Link>
                                 )}
+                            </div>
+                            <div className={styles.imageWrapper}>
+                                <img src={dir.img} alt={dir.title} className={styles.cardImage} />
                             </div>
                         </div>
                     ))}

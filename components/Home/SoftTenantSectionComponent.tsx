@@ -1,9 +1,6 @@
 /* 
-  Секция для арендаторов (SoftTenantSectionComponent)
-  Аккуратный темный (не черный) блок с призывом к действию.
-  Анимации:
-  - Плавное появление (fade-in).
-  - Эффект при наведении на светлую кнопку.
+  Секция для предпринимателей (SoftTenantSectionComponent)
+  Pinterest-style: Контрастный блок с яркой типографикой.
 */
 
 import React from 'react';
@@ -16,15 +13,21 @@ export default function SoftTenantSectionComponent() {
             <div className={styles.container}>
                 <div className={`${styles.box} animate-slide`}>
                     <div className={styles.content}>
-                        <h2 className={styles.title}>Ищете площадку для бизнеса?</h2>
+                        <h2 className={styles.title}>Ваш бизнес в <span className={styles.highlight}>MALIKA</span></h2>
                         <p className={styles.text}>
-                            MALIKA предлагает торговые и складские помещения в активной торговой зоне Астаны.
-                            Компактная структура и стабильный поток посетителей создают условия для устойчивой работы.
-                            Мы открыты к сотрудничеству с предпринимателями, заинтересованными в долгосрочном развитии.
+                            Присоединяйтесь к сообществу предпринимателей в динамично развивающемся районе Астаны.
+                            Удобные лояльные условия аренды и постоянный поток клиентов.
                         </p>
-                        <Link href="/rent" className={styles.btn}>
-                            Узнать условия аренды
-                        </Link>
+                        <div className={styles.actions}>
+                            <Link href="/rent" className={styles.btn}>
+                                Стать партнером
+                            </Link>
+                        </div>
+                    </div>
+                    <div className={styles.visuals}>
+                        <div className={styles.tag}>Доступные площади</div>
+                        <div className={styles.tag}>Прямая аренда</div>
+                        <div className={styles.tag}>Выгодное место</div>
                     </div>
                 </div>
             </div>

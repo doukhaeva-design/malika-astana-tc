@@ -1,9 +1,6 @@
 /* 
   Секция Реабилитационного центра (RehabHighlightSectionComponent)
-  Акцентный блок на светлом фоне с фото и кнопкой.
-  Анимации:
-  - Плавное появление (fade-in).
-  - Эффект при наведении на кнопку.
+  Pinterest-style: Яркий блок-наложение, крупная фото и современная кнопка.
 */
 
 import React from 'react';
@@ -18,17 +15,18 @@ export default function RehabHighlightSectionComponent() {
                     <div className={styles.imageWrapper}>
                         <img
                             src="/rehab_interior_v2_1772460250804.png"
-                            alt="Rehab Center Interior"
+                            alt="Rehab Center"
                             className={styles.image}
                         />
                     </div>
                     <div className={styles.content}>
+                        <span className={styles.badge}>Специальное направление</span>
                         <h2 className={styles.title}>
-                            Реабилитационный центр на территории
+                            Профессиональная реабилитация
                         </h2>
                         <p className={styles.text}>
-                            На территории комплекса работает центр реабилитации, предлагающий профессиональные услуги по восстановлению и поддержанию здоровья.
-                            Это удобное решение для тех, кто ценит возможность совмещать повседневные дела и заботу о здоровье.
+                            Современный медицинский центр на территории торгового комплекса.
+                            Удобно совмещать заботу о здоровье с повседневными делами.
                         </p>
                         <Link href="/rehab" className={styles.btn}>
                             Узнать подробнее
