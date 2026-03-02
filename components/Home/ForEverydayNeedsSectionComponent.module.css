@@ -126,38 +126,6 @@
     transform: scale(1.05);
 }
 
-.badge {
-    position: absolute;
-    bottom: 20px;
-    left: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 50px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    z-index: 2;
-}
-
-.badgeNum {
-    background-color: var(--accent-warm);
-    color: #fff;
-    width: 100%;
-    text-align: center;
-    padding: 4px 0;
-    font-weight: 800;
-    font-size: 0.9rem;
-}
-
-.badgeMonth {
-    color: var(--accent-warm);
-    padding: 2px 0 4px;
-    font-weight: 700;
-    font-size: 0.65rem;
-    text-transform: uppercase;
-}
 
 .cardContent {
     padding: 30px;
@@ -200,23 +168,31 @@
     align-items: center;
 }
 
-.plusLink {
-    color: var(--accent);
-    font-weight: 800;
-    font-size: 0.8rem;
+.btnSpecial {
+    display: inline-block;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.85rem;
     text-decoration: none;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
 }
 
-.plusIcon {
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gray-medium);
-    font-size: 1.5rem;
-    font-weight: 300;
+.btnSpecial:hover {
+    background-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.separator {
+    width: 30px;
+    height: 2px;
+    background-color: var(--gray-medium);
+    margin-top: 10px;
+    border-radius: 2px;
 }
 
 @media (max-width: 1100px) {
@@ -242,5 +218,13 @@
 
     .container {
         padding: 0 20px;
+    }
+
+    .grid {
+        padding: 10px 20px 40px;
+        /* Reduced top padding from 30px to 10px on mobile */
+        gap: 20px;
+        /* Also reduced gap slightly for a tighter mobile layout */
+        scroll-padding-left: 20px;
     }
 }

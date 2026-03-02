@@ -14,16 +14,20 @@ export default function HeroSectionComponent() {
             <div className={styles.container}>
                 <div className={styles.layout}>
                     <div className={`${styles.content} animate-fade`}>
-                        <span className={styles.tagline}>Пространство в ритме Астаны</span>
+                        <div className={styles.taglineWrapper}>
+                            <span className={styles.statusDot}></span>
+                            <span className={styles.tagline}>Добро пожаловать<span className={styles.taglineMobileOnly}> в MALIKA</span></span>
+                        </div>
                         <h1 className={styles.title}>
-                            MALIKA — <br /> время в <br /><span className={styles.accent}>вашем ритме</span>
+                            <span className={styles.titleLight}>Ваш</span> торговый центр <br />
+                            в <span className={styles.accent}>Астане</span>
                         </h1>
                         <p className={styles.description}>
-                            Компактная структура, понятная навигация и широкий выбор товаров для дома, бизнеса и авто.
+                            Широкий выбор товаров для дома, бизнеса и авто. <strong className={styles.boldText}>Всё необходимое — рядом и без лишней суеты.</strong>
                         </p>
                         <div className={styles.actions}>
                             <Link href="/directions" className={styles.btnPrimary}>
-                                Направления
+                                Товары и услуги
                             </Link>
                             <Link href="/contacts" className={styles.btnSecondary}>
                                 Как добраться
@@ -33,7 +37,7 @@ export default function HeroSectionComponent() {
 
                     <div className={styles.visuals}>
                         <div className={`${styles.imageMain} animate-fade stagger-1`}>
-                            <img src="/pinterest_hero_1_1772463234531.png" alt="Mall interior" />
+                            <img src="/malika-facade-new.jpg" alt="Фасад MALIKA Астана" />
                         </div>
                         <div className={`${styles.imageOffset} animate-fade stagger-2`}>
                             <img src="/pinterest_hero_2_1772463249311.png" alt="Customer lifestyle" />

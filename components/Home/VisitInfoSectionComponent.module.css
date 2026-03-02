@@ -211,7 +211,7 @@
 
 @media (max-width: 768px) {
     .mainBox {
-        padding: 40px;
+        padding: 40px 24px;
     }
 
     .title {
@@ -220,10 +220,16 @@
 
     .sideGrid {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .catCard {
-        padding: 30px;
+        padding: 30px 24px;
+        min-height: auto;
+    }
+
+    .catIconWrapper {
+        margin-bottom: 20px;
     }
 
     .catValue {

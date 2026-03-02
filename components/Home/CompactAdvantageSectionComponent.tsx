@@ -21,7 +21,7 @@ export default function CompactAdvantageSectionComponent() {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>Почему MALIKA?</h2>
-                    <p className={styles.subtitle}>Архитектурный подход к комфорту и эффективная среда для развития вашего дела.</p>
+                    <p className={styles.subtitle}>Перспективная локация, продуманная навигация и комфортные условия для арендаторов.</p>
                 </div>
 
                 <div className={styles.grid}>

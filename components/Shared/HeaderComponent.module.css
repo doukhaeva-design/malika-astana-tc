@@ -4,11 +4,22 @@
   left: 0;
   width: 100%;
   z-index: 1000;
+  background-color: transparent;
+  /* Transparent for Dark Hero */
+  border-bottom: 1px solid transparent;
+  padding: 1.5rem 0;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.scrolled {
   background-color: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--gray-medium);
-  padding: 1.25rem 0;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 1rem 0;
+  /* Compact padding on scroll */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  /* Soft premium shadow */
 }
 
 .container {
@@ -23,9 +34,16 @@
 .logo {
   font-weight: 800;
   font-size: 1.5rem;
-  color: var(--primary);
+  color: #fff;
+  /* White against Dark Hero */
   text-decoration: none;
   letter-spacing: -0.02em;
+  transition: color 0.4s ease;
+}
+
+.scrolled .logo {
+  color: var(--primary);
+  /* Corporate Blue on Scroll */
 }
 
 .nav {
@@ -36,14 +54,26 @@
 .link {
   font-size: 0.925rem;
   font-weight: 600;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.8);
+  /* Semi-transparent white against Dark Hero */
   text-decoration: none;
-  transition: all 0.2s ease;
-  padding: 8px 12px;
-  border-radius: var(--radius-sm);
+  transition: all 0.3s ease;
+  padding: 8px 14px;
+  border-radius: 50px;
 }
 
 .link:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Frosted hover effect */
+}
+
+/* Scrolled state links */
+.scrolled .link {
+  color: var(--text-muted);
+}
+
+.scrolled .link:hover {
   color: var(--primary);
   background-color: var(--accent-soft);
 }
@@ -56,20 +86,35 @@
 
 .btnRoute {
   padding: 12px 28px;
-  background-color: var(--primary);
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Glass button un-scrolled */
   color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(12px);
   border-radius: 50px;
-  /* Pillow shape from image */
   font-size: 0.875rem;
   font-weight: 700;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
-  box-shadow: 0 4px 15px rgba(42, 58, 96, 0.15);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .btnRoute:hover {
-  background-color: var(--accent);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
   transform: translateY(-2px);
+}
+
+/* Scrolled state button */
+.scrolled .btnRoute {
+  background-color: var(--primary);
+  border-color: transparent;
+  backdrop-filter: none;
+  box-shadow: 0 4px 15px rgba(42, 58, 96, 0.15);
+}
+
+.scrolled .btnRoute:hover {
+  background-color: var(--accent);
   box-shadow: 0 10px 25px rgba(42, 58, 96, 0.25);
 }
 
@@ -78,12 +123,22 @@
   gap: 12px;
   font-size: 0.8rem;
   font-weight: 700;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.4s ease;
+}
+
+.scrolled .langSwitch {
   color: var(--text-muted);
 }
 
 .activeLang {
-  color: var(--primary);
+  color: #fff;
   position: relative;
+  transition: color 0.4s ease;
+}
+
+.scrolled .activeLang {
+  color: var(--primary);
 }
 
 .activeLang::after {
@@ -93,12 +148,196 @@
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--primary);
+  background-color: #fff;
   border-radius: 2px;
+  transition: background-color 0.4s ease;
+}
+
+.scrolled .activeLang::after {
+  background-color: var(--primary);
+}
+
+.menuOpenHeader {
+  background-color: #fff !important;
+  /* Force white header when menu opens */
+  border-bottom: 1px solid var(--gray-medium) !important;
+}
+
+.menuOpenHeader .logo {
+  color: var(--primary) !important;
+}
+
+/* Mobile Menu Overlay */
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 999;
+  transform: translateY(-100%);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  padding: 80px 40px 140px;
+  /* Extra padding for bottom nav */
+}
+
+.mobileMenuOpen {
+  transform: translateY(0);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.mobileLink {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.mobileLink:hover {
+  color: var(--accent);
+}
+
+.mobileActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  width: 100%;
+}
+
+.btnRouteMobile {
+  padding: 16px 32px;
+  background-color: var(--primary);
+  color: #fff;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  width: 100%;
+  text-align: center;
+}
+
+.langSwitchMobile {
+  display: flex;
+  gap: 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.activeLangMobile {
+  color: var(--primary);
+}
+
+/* --- Bottom Navigation Styles --- */
+.bottomNav {
+  display: none;
 }
 
 @media (max-width: 1000px) {
+  .header {
+    pointer-events: none;
+    /* Let clicks pass through empty top */
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+  }
+
+  .mobileMenu {
+    pointer-events: auto;
+    /* Re-enable clicks for menu overlay */
+  }
+
+  .logo {
+    display: none;
+  }
+
   .nav {
     display: none;
+  }
+
+  .btnRoute {
+    display: none;
+  }
+
+  .langSwitch {
+    display: none;
+  }
+
+  .container {
+    display: none;
+  }
+
+  .bottomNav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 85px;
+    padding-bottom: env(safe-area-inset-bottom);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid var(--gray-medium);
+    z-index: 1001;
+    /* Stay above mobileMenu */
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 -4px 30px rgba(0, 0, 0, 0.08);
+    /* Premium bottom shadow */
+  }
+
+  .bottomNavItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    color: var(--text-muted);
+    text-decoration: none;
+    flex: 1;
+    height: 100%;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .bottomNavItem svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .bottomNavItem span {
+    font-size: 0.65rem;
+    font-weight: 700;
+  }
+
+  .bottomNavActive {
+    color: var(--primary);
+  }
+
+  .bottomNavActive svg {
+    transform: translateY(-4px);
+    color: var(--primary);
   }
 }
