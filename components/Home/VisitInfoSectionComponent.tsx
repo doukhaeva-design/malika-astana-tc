@@ -19,7 +19,7 @@ export default function VisitInfoSectionComponent() {
             <div className={styles.container}>
                 <div className={styles.layout}>
                     {/* Main Info Box */}
-                    <div className={styles.mainBox}>
+                    <div className={`${styles.mainBox} animate-fade`}>
                         <h2 className={styles.title}>Планируйте ваш визит</h2>
                         <p className={styles.text}>
                             Мы открыты для посетителей и партнеров ежедневно. Находите нужные контакты администрации и сервисного центра MALIKA.
@@ -32,7 +32,7 @@ export default function VisitInfoSectionComponent() {
                     {/* Smaller Cards Grid */}
                     <div className={styles.sideGrid}>
                         {categories.map((cat, index) => (
-                            <div key={index} className={styles.catCard}>
+                            <div key={index} className={`${styles.catCard} animate-fade stagger-${index + 1}`} style={{ transitionDelay: `${index * 0.15}s` }}>
                                 <div className={styles.catIconWrapper}>
                                     <span className={styles.catIcon}>{cat.icon}</span>
                                     <span className={styles.plus}>+</span>

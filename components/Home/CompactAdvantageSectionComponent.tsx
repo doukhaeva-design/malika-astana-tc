@@ -19,7 +19,7 @@ export default function CompactAdvantageSectionComponent() {
     return (
         <section className={styles.section} id="why-malika">
             <div className={styles.container}>
-                <div className={styles.header}>
+                <div className={`${styles.header} animate-fade`}>
                     <h2 className={styles.title}>Почему MALIKA?</h2>
                     <p className={styles.subtitle}>Перспективная локация, продуманная навигация и комфортные условия для арендаторов.</p>
                 </div>
@@ -28,10 +28,10 @@ export default function CompactAdvantageSectionComponent() {
                     {advantages.map((item, index) => (
                         <div
                             key={index}
-                            className={`${styles.card} ${styles[item.size]} ${item.type === 'dark' ? styles.darkCard : ''}`}
+                            className={`${styles.card} ${styles[item.size]} ${item.type === 'dark' ? styles.darkCard : ''} animate-fade`}
                             style={{
                                 backgroundColor: item.type === 'dark' ? '' : item.color,
-                                animationDelay: `${index * 0.1}s`
+                                transitionDelay: `${index * 0.1}s`
                             }}
                         >
                             <h3 className={styles.cardTitle}>{item.title}</h3>

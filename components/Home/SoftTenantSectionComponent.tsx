@@ -11,7 +11,7 @@ export default function SoftTenantSectionComponent() {
     return (
         <section className={styles.section} id="partnership">
             <div className={styles.container}>
-                <div className={styles.mainBox}>
+                <div className={`${styles.mainBox} animate-fade`}>
                     <div className={styles.content}>
                         <h3 className={styles.badge}>Партнерство</h3>
                         <h2 className={styles.title}>Ваш бизнес в <span className={styles.highlight}>MALIKA</span></h2>
