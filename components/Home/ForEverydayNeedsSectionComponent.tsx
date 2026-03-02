@@ -1,6 +1,6 @@
 /* 
   Секция направлений (ForEverydayNeedsSectionComponent)
-  Pinterest-style: Карточки разного размера, скругленные углы, яркие акценты.
+  Pinterest-style Commercial: Плотная сетка, профессиональные категории и четкие карточки.
 */
 
 import React from 'react';
@@ -12,42 +12,42 @@ export default function ForEverydayNeedsSectionComponent() {
         {
             title: 'Автотовары',
             forWhom: 'владельцы авто',
-            desc: 'Всё для эксплуатации и обслуживания вашего автомобиля в одном месте.',
+            desc: 'Всё для эксплуатации и обслуживания автомобилей. Запчасти и расходные материалы.',
             img: '/category_auto_1772459952993.png',
-            color: '#fef3c7' // Amber
+            color: '#f4f4f5' // Zinc light gray
         },
         {
             title: 'Техника',
-            forWhom: 'профессионалы',
-            desc: 'Оборудование и технические решения для эффективного бизнеса.',
+            forWhom: 'бизнес-решения',
+            desc: 'Оборудование и специализированные технические решения для предпринимателей.',
             img: '/category_tech_1772459982373.png',
-            color: '#dcfce7' // Emerald
+            color: '#e0f2fe' // Sky blue
         },
         {
             title: 'Дом',
-            forWhom: 'уют в мелочах',
-            desc: 'Практичные товары для порядка и комфорта в вашем доме.',
+            forWhom: 'быт и комфорт',
+            desc: 'Практичные товары для поддержания порядка и комфорта в вашем доме.',
             img: '/category_home_1772459996707.png',
-            color: '#dbeafe' // Blue
+            color: '#ecfdf5' // Emerald light
         },
         {
             title: 'Бизнес',
             forWhom: 'предприниматели',
-            desc: 'Продукция и решения для коммерческой деятельности.',
+            desc: 'Продукция и решения для коммерческой и офисной деятельности.',
             img: '/category_business_supply_v2_1772464118849.png',
-            color: '#ffedd5' // Orange
+            color: '#fff7ed' // Orange soft
         },
         {
             title: 'Сервис',
-            desc: 'Мелкий ремонт и бытовые услуги за один визит.',
+            desc: 'Профессиональный ремонт и бытовые услуги в одном месте.',
             img: '/category_service_1772460173357.png',
-            color: '#f3e8ff' // Purple
+            color: '#f5f5f4' // Stone
         },
         {
             title: 'Здоровье',
-            desc: 'Реабилитационный центр с профессиональным подходом.',
+            desc: 'Реабилитационный центр с медицинским оборудованием.',
             img: '/rehab_interior_v2_1772460250804.png',
-            color: '#faedcd', // Cream 
+            color: '#f1f5f9', // Slate
             hasAction: true
         }
     ];
@@ -56,8 +56,8 @@ export default function ForEverydayNeedsSectionComponent() {
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h2 className={styles.title}>Что внутри MALIKA</h2>
-                    <p className={styles.subtitle}>Пространство, организованное для ваших задач. Исследуйте наши направления.</p>
+                    <h2 className={styles.title}>Что можно найти в MALIKA</h2>
+                    <p className={styles.subtitle}>Пространство, организованное для эффективных решений ваших повседневных задач.</p>
                 </div>
 
                 <div className={styles.grid}>
@@ -73,7 +73,7 @@ export default function ForEverydayNeedsSectionComponent() {
                                 <p className={styles.cardText}>{dir.desc}</p>
                                 {dir.hasAction && (
                                     <Link href="/rehab" className={styles.cardBtn}>
-                                        Перейти
+                                        Узнать больше
                                     </Link>
                                 )}
                             </div>

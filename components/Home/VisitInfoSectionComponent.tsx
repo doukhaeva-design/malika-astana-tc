@@ -1,6 +1,6 @@
 /* 
   Секция контактов (VisitInfoSectionComponent)
-  Pinterest-style: Карточки с иконками, мягким фоном и акцентными кнопками.
+  Commercial Style: Четкие информационные блоки, акцент на контакты и навигацию.
 */
 
 import React from 'react';
@@ -9,17 +9,17 @@ import styles from './VisitInfoSectionComponent.module.css';
 
 export default function VisitInfoSectionComponent() {
     const contactLinks = [
-        { label: 'Адрес', value: 'Астана, район Орда Базар', icon: '📍', color: '#fef3c7' },
-        { label: 'Телефон', value: '+7 (701) 123 45 67', icon: '📞', color: '#dcfce7' },
-        { label: 'График', value: '09:00 — 21:00', icon: '🕒', color: '#faedcd' }
+        { label: 'Адрес центра', value: 'г. Астана, район Орда Базар', icon: '📍', color: '#f8fafc' },
+        { label: 'Контактный телефон', value: '+7 (701) 123 45 67', icon: '📞', color: '#f0f9ff' },
+        { label: 'Режим работы', value: 'Ежедневно, 09:00 — 21:00', icon: '🕒', color: '#f1f5f9' }
     ];
 
     return (
         <section className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.header}>
-                    <h2 className={styles.title}>Приходите в гости</h2>
-                    <p className={styles.subtitle}>Мы всегда рады видеть вас и партнеров нашего центра.</p>
+                    <h2 className={styles.title}>Планируйте ваш визит</h2>
+                    <p className={styles.subtitle}>Мы открыты для посетителей и партнеров ежедневно. Постройте удобный маршрут.</p>
                 </div>
 
                 <div className={styles.grid}>
@@ -43,7 +43,7 @@ export default function VisitInfoSectionComponent() {
                         Проложить маршрут
                     </Link>
                     <a href="tel:+77011234567" className={styles.btnCall}>
-                        Позвонить нам
+                        Позвонить администратору
                     </a>
                 </div>
             </div>

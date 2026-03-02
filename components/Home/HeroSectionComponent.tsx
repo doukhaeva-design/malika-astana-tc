@@ -1,6 +1,6 @@
 /* 
   Главный баннер (HeroSectionComponent)
-  Pinterest-style: Асимметричная верстка, наложение изображений и крупная типографика.
+  Modern Commercial Look: Четкая типографика, плотные цвета и акцент на практичность.
 */
 
 import React from 'react';
@@ -13,17 +13,17 @@ export default function HeroSectionComponent() {
             <div className={styles.container}>
                 <div className={styles.layout}>
                     <div className={`${styles.content} animate-fade`}>
-                        <span className={styles.tagline}>Светлое пространство в Астане</span>
+                        <span className={styles.tagline}>Практичный торговый комплекс</span>
                         <h1 className={styles.title}>
-                            MALIKA: Место, где <span className={styles.accent}>уютно</span> решать дела
+                            MALIKA — <span className={styles.accent}>эффективное</span> место для ваших покупок
                         </h1>
                         <p className={styles.description}>
-                            Мы объединили практичность торгового комплекса с атмосферой современного городского пространства.
-                            Заезжайте за покупками или просто на чашку кофе.
+                            Компактная структура, понятная навигация и широкий выбор товаров для дома, бизнеса и авто.
+                            Всё для тех, кто ценит своё время.
                         </p>
                         <div className={styles.actions}>
                             <Link href="/directions" className={styles.btnPrimary}>
-                                Исследовать центр
+                                Направления торговли
                             </Link>
                             <Link href="/contacts" className={styles.btnSecondary}>
                                 Как добраться
@@ -33,10 +33,10 @@ export default function HeroSectionComponent() {
 
                     <div className={styles.visuals}>
                         <div className={`${styles.imageMain} animate-fade stagger-1`}>
-                            <img src="/pinterest_hero_1_1772463234531.png" alt="Mall atmosphere" />
+                            <img src="/pinterest_hero_1_1772463234531.png" alt="Mall interior" />
                         </div>
                         <div className={`${styles.imageOffset} animate-fade stagger-2`}>
-                            <img src="/pinterest_hero_2_1772463249311.png" alt="Shopping lifestyle" />
+                            <img src="/pinterest_hero_2_1772463249311.png" alt="Customer lifestyle" />
                         </div>
                         <div className={styles.blob}></div>
                     </div>
