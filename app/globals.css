@@ -2,22 +2,29 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #09090b;
+  --foreground: #1e293b;
+  --primary: #2a3a60;
+  /* The corporate/municipal blue from the image */
   --accent: #2563eb;
-  /* Stronger, more commercial blue */
-  --accent-soft: #eff6ff;
-  --gray-light: #f4f4f5;
-  --gray-medium: #e4e4e7;
-  --text-muted: #71717a;
-  --card-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  --accent-soft: #f1f5f9;
+  --accent-warm: #f59e0b;
+  /* The yellow/orange for badges */
+  --gray-light: #f8fafc;
+  --gray-medium: #e2e8f0;
+  --text-muted: #64748b;
+  --radius-xl: 40px;
+  --radius-lg: 24px;
+  --radius-md: 16px;
+  --radius-sm: 8px;
+  --shadow-soft: 0 10px 40px rgba(0, 0, 0, 0.04);
+  --shadow-medium: 0 20px 60px rgba(0, 0, 0, 0.08);
+  --max-width: 1400px;
 }
 
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  letter-spacing: 0.01em;
-  /* Positive spacing for more air */
 }
 
 html,
@@ -29,6 +36,7 @@ body {
   color: var(--foreground);
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
 }
 
 h1,

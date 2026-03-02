@@ -1,6 +1,6 @@
 /* 
   Секция для предпринимателей (SoftTenantSectionComponent)
-  Pinterest-style: Контрастный блок с яркой типографикой.
+  Вдохновлено блоком 'À la une' с ярким акцентом.
 */
 
 import React from 'react';
@@ -9,25 +9,35 @@ import styles from './SoftTenantSectionComponent.module.css';
 
 export default function SoftTenantSectionComponent() {
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id="partnership">
             <div className={styles.container}>
-                <div className={`${styles.box} animate-slide`}>
+                <div className={styles.mainBox}>
                     <div className={styles.content}>
+                        <h3 className={styles.badge}>Партнерство</h3>
                         <h2 className={styles.title}>Ваш бизнес в <span className={styles.highlight}>MALIKA</span></h2>
                         <p className={styles.text}>
-                            Присоединяйтесь к сообществу предпринимателей в динамично развивающемся районе Астаны.
-                            Удобные лояльные условия аренды и постоянный поток клиентов.
+                            Присоединяйтесь к сообществу предпринимателей в самом сердце нового района.
+                            Мы предлагаем современные торговые площади, стабильный поток клиентов и гибкие условия аренды.
                         </p>
-                        <div className={styles.actions}>
-                            <Link href="/rent" className={styles.btn}>
-                                Стать партнером
+
+                        <div className={styles.linkWrapper}>
+                            <Link href="/rent" className={styles.moreLink}>
+                                <span className={styles.plus}>+</span> Узнать условия
                             </Link>
                         </div>
+
+                        <div className={styles.footer}>
+                            <div className={styles.arrows}>
+                                <button className={styles.arrow}>←</button>
+                                <button className={styles.arrow}>→</button>
+                            </div>
+                            <Link href="/rent" className={styles.actionBtn}>СТАТЬ АРЕНДАТОРОМ</Link>
+                        </div>
                     </div>
-                    <div className={styles.visuals}>
-                        <div className={styles.tag}>Доступные площади</div>
-                        <div className={styles.tag}>Прямая аренда</div>
-                        <div className={styles.tag}>Выгодное место</div>
+
+                    <div className={styles.visualCard}>
+                        <img src="/pinterest_hero_1_1772463234531.png" alt="Business Space" className={styles.image} />
+                        <div className={styles.imageOverlay}></div>
                     </div>
                 </div>
             </div>

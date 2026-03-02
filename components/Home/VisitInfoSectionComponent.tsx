@@ -1,6 +1,6 @@
 /* 
   Секция контактов (VisitInfoSectionComponent)
-  Commercial Style: Четкие информационные блоки, акцент на контакты и навигацию.
+  Вдохновлено блоком 'Annuaire de contacts' с карточками контактов.
 */
 
 import React from 'react';
@@ -8,43 +8,42 @@ import Link from 'next/link';
 import styles from './VisitInfoSectionComponent.module.css';
 
 export default function VisitInfoSectionComponent() {
-    const contactLinks = [
-        { label: 'Адрес центра', value: 'г. Астана, район Орда Базар', icon: '📍', color: '#f8fafc' },
-        { label: 'Контактный телефон', value: '+7 (701) 123 45 67', icon: '📞', color: '#f0f9ff' },
-        { label: 'Режим работы', value: 'Ежедневно, 09:00 — 21:00', icon: '🕒', color: '#f1f5f9' }
+    const categories = [
+        { label: 'Адрес центра', value: 'г. Астана, район Орда Базар', icon: '📍' },
+        { label: 'Контактный номер', value: '+7 (701) 123 45 67', icon: '📞' },
+        { label: 'Режим работы', value: '09:00 — 21:00, ежедневно', icon: '🕒' }
     ];
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id="visit">
             <div className={styles.container}>
-                <div className={styles.header}>
-                    <h2 className={styles.title}>Планируйте ваш визит</h2>
-                    <p className={styles.subtitle}>Мы открыты для посетителей и партнеров ежедневно. Постройте удобный маршрут.</p>
-                </div>
+                <div className={styles.layout}>
+                    {/* Main Info Box */}
+                    <div className={styles.mainBox}>
+                        <h2 className={styles.title}>Планируйте ваш визит</h2>
+                        <p className={styles.text}>
+                            Мы открыты для посетителей и партнеров ежедневно. Находите нужные контакты администрации и сервисного центра MALIKA.
+                        </p>
+                        <Link href="/contacts" className={styles.mainBtn}>
+                            ВСЕ КОНТАКТЫ
+                        </Link>
+                    </div>
 
-                <div className={styles.grid}>
-                    {contactLinks.map((item, index) => (
-                        <div
-                            key={index}
-                            className={`${styles.card} animate-fade stagger-${index + 1}`}
-                            style={{ backgroundColor: item.color }}
-                        >
-                            <span className={styles.icon}>{item.icon}</span>
-                            <div className={styles.cardInfo}>
-                                <p className={styles.label}>{item.label}</p>
-                                <p className={styles.value}>{item.value}</p>
+                    {/* Smaller Cards Grid */}
+                    <div className={styles.sideGrid}>
+                        {categories.map((cat, index) => (
+                            <div key={index} className={styles.catCard}>
+                                <div className={styles.catIconWrapper}>
+                                    <span className={styles.catIcon}>{cat.icon}</span>
+                                    <span className={styles.plus}>+</span>
+                                </div>
+                                <div className={styles.cardContent}>
+                                    <span className={styles.catLabel}>{cat.label}</span>
+                                    <h3 className={styles.catValue}>{cat.value}</h3>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-
-                <div className={styles.actions}>
-                    <Link href="/contacts" className={styles.btnRoute}>
-                        Проложить маршрут
-                    </Link>
-                    <a href="tel:+77011234567" className={styles.btnCall}>
-                        Позвонить администратору
-                    </a>
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
