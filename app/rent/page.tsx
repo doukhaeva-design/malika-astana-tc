@@ -5,12 +5,12 @@
 */
 
 import React from 'react';
-import HeaderComponent from '@/components/HeaderComponent/HeaderComponent';
-import RentHeroComponent from '@/components/RentHeroComponent/RentHeroComponent';
-import WhyBusinessHereComponent from '@/components/WhyBusinessHereComponent/WhyBusinessHereComponent';
-import AvailableSpacesComponent from '@/components/AvailableSpacesComponent/AvailableSpacesComponent';
-import FormComponent from '@/components/FormComponent/FormComponent';
-import FooterComponent from '@/components/FooterComponent/FooterComponent';
+import HeaderComponent from '@/components/Shared/HeaderComponent';
+import RentHeroComponent from '@/components/Rent/RentHeroComponent';
+import WhyBusinessHereComponent from '@/components/Rent/WhyBusinessHereComponent';
+import AvailableSpacesComponent from '@/components/Rent/AvailableSpacesComponent';
+import FormComponent from '@/components/Rent/FormComponent';
+import FooterComponent from '@/components/Shared/FooterComponent';
 
 export default function RentPage() {
     return (

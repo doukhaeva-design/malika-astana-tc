@@ -27,7 +27,7 @@ export default function HeaderComponent() {
                 <div className={styles.actions}>
                     <button className={styles.btnRoute}>Проложить маршрут</button>
                     <div className={styles.langSwitch}>
-                        <span className={styles.activeLang}>RU</span> | <span>KZ</span>
+                        <span className={styles.activeLang}>RU</span> | <span>EN</span>
                     </div>
                 </div>
             </div>

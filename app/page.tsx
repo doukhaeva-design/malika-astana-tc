@@ -1,31 +1,53 @@
 /* 
   Главная страница (Home)
-  Сборка основных секций торгового центра.
-  Пользователь может быстро ознакомиться со всем спектром услуг и преимуществ центра.
+  Сборка основных секций торгового центра в премиальном стиле.
+  Порядок блоков оптимизирован для эмоционального восприятия:
+  1. Hero
+  2. Направления
+  3. Пространство (визуальный экран)
+  4. Преимущества
+  5. Реабилитационный центр
+  6. Арендаторам
+  7. Контакты + Карта
 */
 
 import React from 'react';
-import HeaderComponent from '@/components/HeaderComponent/HeaderComponent';
-import HeroSectionComponent from '@/components/HeroSectionComponent/HeroSectionComponent';
-import ForEverydayNeedsSectionComponent from '@/components/ForEverydayNeedsSectionComponent/ForEverydayNeedsSectionComponent';
-import CompactAdvantageSectionComponent from '@/components/CompactAdvantageSectionComponent/CompactAdvantageSectionComponent';
-import LocationComfortSectionComponent from '@/components/LocationComfortSectionComponent/LocationComfortSectionComponent';
-import RehabHighlightSectionComponent from '@/components/RehabHighlightSectionComponent/RehabHighlightSectionComponent';
-import VisitInfoSectionComponent from '@/components/VisitInfoSectionComponent/VisitInfoSectionComponent';
-import SoftTenantSectionComponent from '@/components/SoftTenantSectionComponent/SoftTenantSectionComponent';
-import FooterComponent from '@/components/FooterComponent/FooterComponent';
+import HeaderComponent from '@/components/Shared/HeaderComponent';
+import HeroSectionComponent from '@/components/Home/HeroSectionComponent';
+import SpaceShowcaseComponent from '@/components/Home/SpaceShowcaseComponent';
+import CompactAdvantageSectionComponent from '@/components/Home/CompactAdvantageSectionComponent';
+import ForEverydayNeedsSectionComponent from '@/components/Home/ForEverydayNeedsSectionComponent';
+import RehabHighlightSectionComponent from '@/components/Home/RehabHighlightSectionComponent';
+import SoftTenantSectionComponent from '@/components/Home/SoftTenantSectionComponent';
+import VisitInfoSectionComponent from '@/components/Home/VisitInfoSectionComponent';
+import MapSectionComponent from '@/components/Contacts/MapSectionComponent';
+import FooterComponent from '@/components/Shared/FooterComponent';
 
 export default function Home() {
   return (
     <main>
       <HeaderComponent />
+
       <HeroSectionComponent />
+
       <ForEverydayNeedsSectionComponent />
+
+      <SpaceShowcaseComponent />
+
+      <div className="section-divider"></div>
+
       <CompactAdvantageSectionComponent />
-      <LocationComfortSectionComponent />
+
       <RehabHighlightSectionComponent />
-      <VisitInfoSectionComponent />
+
+      <div className="section-spacer"></div>
+
       <SoftTenantSectionComponent />
+
+      <VisitInfoSectionComponent />
+
+      <MapSectionComponent />
+
       <FooterComponent />
     </main>
   );

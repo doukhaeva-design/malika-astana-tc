@@ -5,11 +5,11 @@
 */
 
 import React from 'react';
-import HeaderComponent from '@/components/HeaderComponent/HeaderComponent';
-import PageHeaderComponent from '@/components/PageHeaderComponent/PageHeaderComponent';
-import ContactInfoSectionComponent from '@/components/ContactInfoSectionComponent/ContactInfoSectionComponent';
-import MapSectionComponent from '@/components/MapSectionComponent/MapSectionComponent';
-import FooterComponent from '@/components/FooterComponent/FooterComponent';
+import HeaderComponent from '@/components/Shared/HeaderComponent';
+import PageHeaderComponent from '@/components/Shared/PageHeaderComponent';
+import ContactInfoSectionComponent from '@/components/Contacts/ContactInfoSectionComponent';
+import MapSectionComponent from '@/components/Contacts/MapSectionComponent';
+import FooterComponent from '@/components/Shared/FooterComponent';
 
 export default function ContactsPage() {
     return (

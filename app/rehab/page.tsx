@@ -5,10 +5,10 @@
 */
 
 import React from 'react';
-import HeaderComponent from '@/components/HeaderComponent/HeaderComponent';
-import RehabHeroComponent from '@/components/RehabHeroComponent/RehabHeroComponent';
-import ContentSectionComponent from '@/components/ContentSectionComponent/ContentSectionComponent';
-import FooterComponent from '@/components/FooterComponent/FooterComponent';
+import HeaderComponent from '@/components/Shared/HeaderComponent';
+import RehabHeroComponent from '@/components/Rehab/RehabHeroComponent';
+import ContentSectionComponent from '@/components/Rehab/ContentSectionComponent';
+import FooterComponent from '@/components/Shared/FooterComponent';
 
 export default function RehabPage() {
     return (

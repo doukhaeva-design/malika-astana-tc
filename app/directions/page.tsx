@@ -5,10 +5,10 @@
 */
 
 import React from 'react';
-import HeaderComponent from '@/components/HeaderComponent/HeaderComponent';
-import PageHeaderComponent from '@/components/PageHeaderComponent/PageHeaderComponent';
-import CategoryDetailSectionComponent from '@/components/CategoryDetailSectionComponent/CategoryDetailSectionComponent';
-import FooterComponent from '@/components/FooterComponent/FooterComponent';
+import HeaderComponent from '@/components/Shared/HeaderComponent';
+import PageHeaderComponent from '@/components/Shared/PageHeaderComponent';
+import CategoryDetailSectionComponent from '@/components/Directions/CategoryDetailSectionComponent';
+import FooterComponent from '@/components/Shared/FooterComponent';
 
 export default function DirectionsPage() {
     return (
