@@ -35,11 +35,14 @@
 .layout {
     display: flex;
     align-items: center;
-    gap: 80px;
+    gap: 140px;
+    /* Maximum air between text and photo */
 }
 
 .content {
     flex: 1;
+    max-width: 650px;
+    /* Guarantee space for 3-line H1 */
 }
 
 .tagline {
@@ -56,17 +59,18 @@
 }
 
 .title {
-    font-size: 5.5rem;
+    font-size: 5rem;
+    /* Slightly smaller for better fit */
     font-weight: 800;
-    /* Reduced from 950 */
     margin-bottom: 30px;
     color: #000;
     line-height: 1.1;
-    letter-spacing: 0.01em;
-    /* More air between letters */
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+    /* Forces the 3-line structure */
 }
 
-.accent {
+Broadway .accent {
     color: var(--accent);
 }
 
@@ -118,20 +122,21 @@
 }
 
 .visuals {
-    flex: 1;
+    flex: 1.2;
     position: relative;
     display: flex;
     justify-content: flex-end;
 }
 
 .imageMain {
-    width: 450px;
-    height: 600px;
-    border-radius: 8px;
+    width: 420px;
+    height: 560px;
+    border-radius: 4px;
+    /* Sharper, more architectural */
     overflow: hidden;
     position: relative;
     z-index: 2;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.1);
 }
 
 .imageMain img {
@@ -141,16 +146,17 @@
 }
 
 .imageOffset {
-    width: 350px;
-    height: 450px;
-    border-radius: 8px;
+    width: 300px;
+    height: 400px;
+    border-radius: 4px;
     overflow: hidden;
     position: absolute;
-    bottom: -60px;
-    left: -80px;
+    bottom: -40px;
+    left: -40px;
+    /* Reduced overlap, further from text */
     z-index: 3;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
-    border: 15px solid #fff;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+    border: 12px solid #fff;
 }
 
 .imageOffset img {
