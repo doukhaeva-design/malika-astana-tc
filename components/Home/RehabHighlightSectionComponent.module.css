@@ -51,6 +51,7 @@
 .title {
     font-size: 3rem;
     font-weight: 800;
+    /* Reduced from 900 */
     margin-bottom: 20px;
     color: #000;
     line-height: 1.1;

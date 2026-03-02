@@ -57,11 +57,13 @@
 
 .title {
     font-size: 5.5rem;
-    font-weight: 950;
+    font-weight: 800;
+    /* Reduced from 950 */
     margin-bottom: 30px;
     color: #000;
-    line-height: 0.85;
-    letter-spacing: -4px;
+    line-height: 1.1;
+    letter-spacing: 0.01em;
+    /* More air between letters */
 }
 
 .accent {

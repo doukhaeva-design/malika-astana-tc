@@ -16,9 +16,10 @@
 
 .title {
     font-size: 3.5rem;
-    font-weight: 900;
+    font-weight: 800;
+    /* Reduced from 900 */
     color: #000;
-    letter-spacing: -2px;
+    letter-spacing: 0.01em;
     margin-bottom: 20px;
 }
 
@@ -74,9 +75,10 @@
 
 .value {
     font-size: 1.25rem;
-    font-weight: 900;
+    font-weight: 700;
+    /* Reduced from 900 */
     color: #000;
-    letter-spacing: -0.5px;
+    letter-spacing: 0.02em;
 }
 
 .actions {

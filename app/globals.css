@@ -16,6 +16,8 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  letter-spacing: 0.01em;
+  /* Positive spacing for more air */
 }
 
 html,
@@ -32,9 +34,9 @@ body {
 h1,
 h2,
 h3 {
-  letter-spacing: -0.04em;
-  /* Tighter for a more "solid" commercial look */
-  line-height: 1;
+  letter-spacing: 0;
+  /* No negative spacing */
+  line-height: 1.15;
 }
 
 /* Animations */

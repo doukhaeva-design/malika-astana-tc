@@ -32,7 +32,8 @@
 
 .title {
     font-size: 4rem;
-    font-weight: 900;
+    font-weight: 800;
+    /* Reduced from 900 */
     margin-bottom: 25px;
     line-height: 1;
 }
