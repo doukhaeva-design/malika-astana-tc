@@ -20,16 +20,16 @@ export default function RehabHighlightSectionComponent() {
                         />
                     </div>
                     <div className={styles.content}>
-                        <span className={styles.badge}>Специальное направление</span>
+                        <span className={styles.badge}>Здоровье</span>
                         <h2 className={styles.title}>
-                            Профессиональная реабилитация
+                            Профессиональный центр восстановления
                         </h2>
                         <p className={styles.text}>
                             Современный медицинский центр на территории торгового комплекса.
                             Удобно совмещать заботу о здоровье с повседневными делами.
                         </p>
                         <Link href="/rehab" className={styles.btn}>
-                            Узнать подробнее
+                            Подробнее
                         </Link>
                     </div>
                 </div>
