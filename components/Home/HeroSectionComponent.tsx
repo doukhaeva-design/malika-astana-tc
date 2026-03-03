@@ -26,11 +26,11 @@ export default function HeroSectionComponent() {
                             Широкий выбор товаров для дома, бизнеса и авто. <strong className={styles.boldText}>Всё необходимое — рядом и без лишней суеты.</strong>
                         </p>
                         <div className={styles.actions}>
-                            <Link href="/directions" className={styles.btnPrimary}>
-                                Товары и услуги
-                            </Link>
-                            <Link href="/contacts" className={styles.btnSecondary}>
+                            <Link href="/contacts" className={styles.btnPrimary}>
                                 Как добраться
+                            </Link>
+                            <Link href="/directions" className={styles.btnSecondary}>
+                                Магазины и услуги
                             </Link>
                         </div>
                     </div>

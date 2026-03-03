@@ -19,12 +19,6 @@ export default function SoftTenantSectionComponent() {
                             Станьте частью бизнес-сообщества MALIKA. Современные площади, стабильный трафик и выгодные локации для вашего роста.
                         </p>
 
-                        <div className={styles.linkWrapper}>
-                            <Link href="/rent" className={styles.moreLink}>
-                                <span className={styles.plus}>+</span> Узнать условия
-                            </Link>
-                        </div>
-
                         <div className={styles.footer}>
                             <Link href="/rent" className={styles.actionBtn}>СТАТЬ АРЕНДАТОРОМ</Link>
                         </div>
