@@ -16,7 +16,10 @@ export default function RentHeroComponent() {
                 <p className={styles.description}>
                     Торговый центр MALIKA расположен в активной торговой зоне и предлагает помещения различного формата.
                 </p>
-                <button className={styles.btn}>Оставить заявку</button>
+                <div className={styles.actions}>
+                    <a href="#apply" className={styles.btn}>Оставить заявку</a>
+                    <a href="tel:+77777777777" className={styles.btnOutline}>Позвонить</a>
+                </div>
             </div>
         </section>
     );

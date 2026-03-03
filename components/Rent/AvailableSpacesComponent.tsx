@@ -9,7 +9,7 @@ import styles from './AvailableSpacesComponent.module.css';
 
 export default function AvailableSpacesComponent() {
     const spaces = [
-        { title: 'Торговые помещения', desc: 'Под магазины и розничную торговлю.' },
+        { title: 'Торговые помещения', desc: 'Помещения в аренду от 50 м² под магазины и розничную торговлю.' },
         { title: 'Складские площади', desc: 'Для хранения и логистических задач.' },
         { title: 'Коммерческие участки', desc: 'Для специализированных проектов.' }
     ];
