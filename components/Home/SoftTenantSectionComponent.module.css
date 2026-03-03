@@ -58,37 +58,7 @@
     max-width: 500px;
 }
 
-.linkWrapper {
-    margin-bottom: 60px;
-}
 
-.moreLink {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    color: var(--primary);
-    font-weight: 700;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
-}
-
-.moreLink:hover {
-    color: var(--accent);
-}
-
-.plus {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    background-color: var(--accent-soft);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--accent);
-    font-size: 1.2rem;
-    font-weight: 400;
-}
 
 .footer {
     border-top: 1px solid var(--gray-medium);
@@ -103,7 +73,7 @@
     padding: 14px 28px;
     background-color: var(--primary);
     color: #fff;
-    border-radius: var(--radius-sm);
+    border-radius: 50px;
     font-size: 0.85rem;
     font-weight: 700;
     text-decoration: none;
