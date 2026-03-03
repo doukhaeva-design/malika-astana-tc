@@ -30,7 +30,7 @@ export default function ContactInfoSectionComponent() {
                     <div className={styles.infoCard}>
                         <h3>График работы</h3>
                         <p>Ежедневно</p>
-                        <p>09:00 — 21:00</p>
+                        <p>09:00 — 18:00</p>
                     </div>
                 </div>
             </div>
