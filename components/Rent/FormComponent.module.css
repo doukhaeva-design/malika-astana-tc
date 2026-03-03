@@ -1,18 +1,41 @@
 .section {
-    padding: 4rem 0;
-    background-color: #fff;
+    padding: 100px 0;
+    background-color: var(--gray-light);
 }
 
 .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.header {
+    margin-bottom: 3rem;
 }
 
 .title {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--primary);
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.formWrapper {
+    background: #fff;
+    padding: 40px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+    text-align: left;
 }
 
 .form {
@@ -28,32 +51,117 @@
 }
 
 .field label {
-    font-weight: bold;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.labelNote {
+    font-size: 0.75rem;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: normal;
+    color: #999;
+    font-style: italic;
 }
 
 .field input,
 .field textarea {
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 14px 18px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f9f9f9;
+}
+
+.field input:focus,
+.field textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.03);
 }
 
 .field textarea {
-    min-height: 100px;
+    min-height: 120px;
+    resize: vertical;
 }
 
-.btn {
-    padding: 1rem;
-    background-color: #000;
+
+.submitActions {
+    display: flex;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+.whatsappBtn,
+.emailBtn {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.whatsappBtn {
+    background-color: #128C7E;
     color: #fff;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
+}
+
+.whatsappBtn:hover {
+    background-color: #075E54;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(18, 140, 126, 0.2);
+}
+
+.emailBtn {
+    background-color: var(--primary);
+    color: #fff;
+}
+
+.emailBtn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
 }
 
 .note {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     text-align: center;
-    font-size: 0.9rem;
-    color: #666;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+    .submitActions {
+        flex-direction: column;
+    }
+
+    .formWrapper {
+        padding: 25px 20px;
+    }
+
+    .title {
+        font-size: 1.8rem;
+    }
 }
