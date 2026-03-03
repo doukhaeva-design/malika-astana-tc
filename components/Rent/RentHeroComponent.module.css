@@ -81,7 +81,8 @@
 
 @media (max-width: 991px) {
     .hero {
-        padding: 140px 0 50px;
+        padding: 115px 0 50px;
+        /* Reduced from 140px */
     }
 
     .title {
@@ -95,7 +96,8 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 130px 0 40px;
+        padding: 105px 0 40px;
+        /* Reduced from 130px */
     }
 
     .title {
