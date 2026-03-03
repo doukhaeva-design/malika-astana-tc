@@ -310,8 +310,8 @@
     .hero {
         height: auto;
         min-height: 100svh;
-        padding: 80px 0 120px;
-        /* Reduced top padding to lift text */
+        padding: 120px 0 120px;
+        /* More top padding to clear the top bar */
     }
 
     .taglineMobileOnly {
@@ -388,8 +388,8 @@
 
 @media (max-width: 480px) {
     .hero {
-        padding: 60px 0 100px;
-        /* Even higher for small mobiles */
+        padding: 110px 0 100px;
+        /* Balanced with top bar height */
     }
 
     .title {
@@ -398,7 +398,8 @@
 
     .taglineWrapper {
         padding: 6px 16px 6px 12px;
-        margin-bottom: 16px;
+        margin-bottom: 32px;
+        /* More space between tagline and title */
     }
 
     .tagline {
