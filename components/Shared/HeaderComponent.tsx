@@ -60,7 +60,7 @@ export default function HeaderComponent() {
                         </div>
                         <div className={styles.topItem}>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={styles.topIcon}><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                            <span>Ежедневно 09:00 — 21:00</span>
+                            <span>Ежедневно 09:00 — 18:00</span>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ export default function VisitInfoSectionComponent() {
     const categories = [
         { label: 'Адрес центра', value: 'г. Астана, район Орда Базар', icon: '📍' },
         { label: 'Контактный номер', value: '+7 (701) 123 45 67', icon: '📞' },
-        { label: 'Режим работы', value: '09:00 — 21:00, ежедневно', icon: '🕒' }
+        { label: 'Режим работы', value: '09:00 — 18:00, ежедневно', icon: '🕒' }
     ];
 
     return (

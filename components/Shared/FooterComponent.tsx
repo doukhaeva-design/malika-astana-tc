@@ -19,7 +19,7 @@ export default function FooterComponent() {
                 <div className={styles.contacts}>
                     <p>Адрес: г. Астана, район Орда Базар</p>
                     <p>Телефон: +7 (XXX) XXX-XX-XX</p>
-                    <p>График работы: Ежедневно, 09:00 — 21:00</p>
+                    <p>График работы: Ежедневно, 09:00 — 18:00</p>
                 </div>
                 <div className={styles.links}>
                     <p className={styles.footerLabel}>Навигация</p>
