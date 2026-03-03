@@ -210,6 +210,10 @@
 }
 
 @media (max-width: 768px) {
+    .section {
+        padding: 50px 0;
+    }
+
     .mainBox {
         padding: 40px 24px;
     }

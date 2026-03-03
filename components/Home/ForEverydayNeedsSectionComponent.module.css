@@ -202,10 +202,17 @@
 }
 
 @media (max-width: 768px) {
+    .section {
+        padding: 40px 0;
+        /* Radically reduced again on mobile */
+    }
+
     .header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 30px;
+        gap: 12px;
+        margin-bottom: 24px;
+        /* Pulled even tighter */
     }
 
     .title {
@@ -221,10 +228,8 @@
     }
 
     .grid {
-        padding: 10px 20px 40px;
-        /* Reduced top padding from 30px to 10px on mobile */
-        gap: 20px;
-        /* Also reduced gap slightly for a tighter mobile layout */
+        padding: 0 20px 30px;
+        gap: 15px;
         scroll-padding-left: 20px;
     }
 }
