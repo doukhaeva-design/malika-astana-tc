@@ -5,10 +5,49 @@
   width: 100%;
   z-index: 1000;
   background-color: transparent;
-  /* Transparent for Dark Hero */
   border-bottom: 1px solid transparent;
-  padding: 1.5rem 0;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.topBar {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px 0;
+  transition: all 0.4s ease;
+}
+
+.scrolled .topBar {
+  background-color: #ffffff;
+  border-bottom-color: var(--gray-medium);
+  padding: 4px 0;
+}
+
+.topContainer {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  gap: 24px;
+}
+
+.topItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.scrolled .topItem {
+  color: var(--text-muted);
+  opacity: 0.8;
+}
+
+.topIcon {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
 }
 
 .scrolled {
@@ -16,19 +55,22 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--gray-medium);
-  padding: 1rem 0;
-  /* Compact padding on scroll */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
   /* Soft premium shadow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 1.5rem 40px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: padding 0.4s ease;
+}
+
+.scrolled .container {
+  padding: 1rem 40px;
 }
 
 .logo {
@@ -178,12 +220,12 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: #fbfbfd;
   z-index: 999;
   transform: translateY(-100%);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   padding: 80px 40px 140px;
-  /* Extra padding for bottom nav */
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 
 .mobileMenuOpen {
@@ -250,12 +292,34 @@
 
 @media (max-width: 1000px) {
   .header {
-    pointer-events: none;
-    /* Let clicks pass through empty top */
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
     padding: 0 !important;
+    pointer-events: none;
+  }
+
+  .topBar {
+    pointer-events: auto;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--gray-medium);
+    padding: 10px 0;
+  }
+
+  .topContainer {
+    padding: 0 20px;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .topItem {
+    font-size: 0.65rem;
+    color: var(--primary);
+  }
+
+  .topIcon {
+    width: 12px;
+    height: 12px;
   }
 
   .mobileMenu {
@@ -287,27 +351,19 @@
     display: flex;
     position: fixed;
     bottom: calc(24px + env(safe-area-inset-bottom));
-    /* Lift up from bottom */
     left: 50%;
     transform: translateX(-50%);
-    /* Center it horizontally */
     width: calc(100% - 40px);
     max-width: 420px;
     height: 72px;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(42, 58, 96, 0.1);
+    background-color: #ffffff;
+    border: 1px solid rgba(42, 58, 96, 0.15);
     border-radius: 50px;
-    /* Fully rounded pill shape */
     z-index: 1001;
-    /* Stay above mobileMenu */
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 16px 40px rgba(42, 58, 96, 0.15);
-    /* Premium floating shadow */
+    box-shadow: 0 15px 50px rgba(42, 58, 96, 0.25);
     padding: 0 10px;
-    /* Padding on the edges */
   }
 
   .bottomNavItem {

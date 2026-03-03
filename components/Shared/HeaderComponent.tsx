@@ -52,6 +52,18 @@ export default function HeaderComponent() {
     return (
         <>
             <header className={`${styles.header} ${(!isHomePage || isScrolled) ? styles.scrolled : ''} ${isMenuOpen ? styles.menuOpenHeader : ''}`}>
+                <div className={styles.topBar}>
+                    <div className={styles.topContainer}>
+                        <div className={styles.topItem}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={styles.topIcon}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <span>Астана, Шоссе Алаш</span>
+                        </div>
+                        <div className={styles.topItem}>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={styles.topIcon}><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            <span>Ежедневно 09:00 — 21:00</span>
+                        </div>
+                    </div>
+                </div>
                 <div className={styles.container}>
                     <Link href="/" className={styles.logo} onClick={closeMenu}>
                         MALIKA
