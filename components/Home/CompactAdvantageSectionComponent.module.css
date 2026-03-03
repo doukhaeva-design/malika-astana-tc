@@ -1,8 +1,8 @@
 .section {
-    padding: 160px 0;
-    /* from 120px */
-    background-color: var(--gray-light);
-    /* Soft background for sections to pop */
+    padding: 200px 0;
+    /* More breathing room */
+    background-color: #ffffff;
+    /* Pure white for clean clarity */
 }
 
 .container {
@@ -18,16 +18,19 @@
 
 .title {
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: 700;
+    /* Thinner */
     color: var(--primary);
-    margin-bottom: 15px;
-    letter-spacing: -0.01em;
+    margin-bottom: 24px;
+    /* More space */
+    letter-spacing: -0.02em;
 }
 
 .subtitle {
     font-size: 1.15rem;
+    line-height: 1.7;
     color: var(--text-muted);
-    max-width: 600px;
+    max-width: 640px;
 }
 
 .grid {
@@ -39,8 +42,10 @@
 }
 
 .card {
-    border-radius: var(--radius-lg);
-    padding: 50px 40px;
+    border-radius: var(--radius-md);
+    /* Tighter precise radius */
+    padding: 60px 48px;
+    /* More internal space */
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -48,10 +53,8 @@
     overflow: hidden;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     background-color: #fff;
-    /* Reverted to solid to allow inline styles */
-    box-shadow: 0 4px 15px rgba(42, 58, 96, 0.03);
-    border: 1px solid rgba(42, 58, 96, 0.12);
-    /* Crisper professional border */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    border: 1px solid var(--gray-medium);
     animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) backwards;
 }
 
@@ -109,14 +112,14 @@
 }
 
 .cardTitle {
-    font-size: 1.85rem;
-    font-weight: 800;
+    font-size: 1.75rem;
+    font-weight: 700;
     color: var(--primary);
-    margin-bottom: 12px;
+    margin-bottom: 16px;
     position: relative;
     z-index: 2;
-    letter-spacing: -0.02em;
-    line-height: 1.1;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
 }
 
 .cardText {

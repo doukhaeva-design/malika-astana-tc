@@ -1,6 +1,6 @@
 .hero {
-    padding: 160px 0 80px;
-    background-color: var(--gray-light);
+    padding: 200px 0 100px;
+    background-color: #ffffff;
     text-align: center;
 }
 
@@ -12,8 +12,8 @@
 
 .title {
     font-size: 3.5rem;
-    font-weight: 800;
-    margin-bottom: 2rem;
+    font-weight: 700;
+    margin-bottom: 32px;
     color: var(--primary);
     letter-spacing: -0.02em;
 }
@@ -28,7 +28,7 @@
     font-size: 1.25rem;
     color: var(--text-muted);
     margin-bottom: 3rem;
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .actions {
@@ -39,19 +39,20 @@
 }
 
 .btn {
-    padding: 14px 32px;
+    padding: 16px 40px;
     background-color: var(--primary);
     color: #fff;
     border: none;
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
     cursor: pointer;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-sm);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: opacity 0.3s ease;
+    transition: all 0.3s ease-out;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .btn:hover {

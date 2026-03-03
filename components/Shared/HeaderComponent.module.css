@@ -358,15 +358,16 @@
     width: calc(100% - 32px);
     max-width: 400px;
     height: 70px;
-    background-color: rgba(255, 255, 255, 0.98);
+    background-color: var(--off-white);
     backdrop-filter: blur(20px) saturate(180%);
     -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: var(--radius-md);
+    /* Architectural tighter corners */
     z-index: 1001;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
     padding: 0 8px;
   }
 
