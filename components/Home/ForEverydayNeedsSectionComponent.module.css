@@ -208,11 +208,27 @@
     }
 
     .header {
+        margin-bottom: 32px;
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        gap: 12px;
-        margin-bottom: 24px;
-        /* Pulled even tighter */
+        gap: 24px;
+    }
+
+    .headerActions {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 0;
+    }
+
+    .arrowBtn {
+        display: none;
+        /* Hide on mobile to avoid confusion */
+    }
+
+    .viewAll {
+        margin-left: 0;
     }
 
     .title {
