@@ -1,5 +1,5 @@
 .hero {
-    height: 100vh;
+    height: 100svh;
     min-height: 850px;
     display: flex;
     align-items: center;
@@ -48,7 +48,7 @@
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    margin-bottom: 24px;
+    margin-bottom: 36px;
     padding: 8px 24px 8px 16px;
     background-color: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.15);
@@ -81,7 +81,7 @@
 .title {
     font-size: 5rem;
     font-weight: 800;
-    margin-bottom: 24px;
+    margin-bottom: 40px;
     color: #ffffff;
     line-height: 1.1;
     letter-spacing: -0.01em;
@@ -106,7 +106,7 @@
     font-size: 1.25rem;
     line-height: 1.6;
     color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 48px;
+    margin-bottom: 60px;
     max-width: 540px;
 }
 
@@ -188,7 +188,7 @@
     object-fit: cover;
     /* Very subtle base grading: just a tiny bit darker to fit the dark mode, natural colors */
     filter: brightness(0.95) contrast(1.05) saturate(0.95);
-    transition: all 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: filter 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .imageMain:hover img,
@@ -309,7 +309,7 @@
 @media (max-width: 991px) {
     .hero {
         height: auto;
-        min-height: 100vh;
+        min-height: 100svh;
         padding: 80px 0 120px;
         /* Reduced top padding to lift text */
     }
@@ -345,9 +345,9 @@
 
     .imageMain {
         width: 100%;
-        max-width: 500px;
-        height: auto;
-        aspect-ratio: 4/5;
+        max-width: 400px;
+        height: min(120vw, 500px);
+        /* Explicit computed height prevents glitching */
     }
 
     .actions {
@@ -363,12 +363,12 @@
 @media (max-width: 768px) {
     .title {
         font-size: 3.2rem;
-        margin-bottom: 20px;
+        margin-bottom: 28px;
     }
 
     .description {
         font-size: 1.1rem;
-        margin-bottom: 32px;
+        margin-bottom: 44px;
     }
 
     .actions {
