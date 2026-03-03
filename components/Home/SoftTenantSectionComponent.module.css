@@ -98,30 +98,6 @@
     align-items: center;
 }
 
-.arrows {
-    display: flex;
-    gap: 12px;
-}
-
-.arrow {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: 1px solid var(--gray-medium);
-    background: #fff;
-    color: var(--primary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.arrow:hover {
-    background-color: var(--primary);
-    color: #fff;
-    border-color: var(--primary);
-}
 
 .actionBtn {
     padding: 14px 28px;

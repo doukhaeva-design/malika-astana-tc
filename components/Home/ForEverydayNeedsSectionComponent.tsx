@@ -1,13 +1,40 @@
+"use client";
+
 /* 
   Секция направлений (ForEverydayNeedsSectionComponent)
   Вдохновлено муниципальным стилем с карточками (À vos agendas).
 */
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Link from 'next/link';
 import styles from './ForEverydayNeedsSectionComponent.module.css';
 
 export default function ForEverydayNeedsSectionComponent() {
+    const scrollRef = useRef<HTMLDivElement>(null);
+
+    const scroll = (direction: 'left' | 'right') => {
+        if (scrollRef.current) {
+            const { current } = scrollRef;
+            const scrollAmount = circularScrollAmount();
+            const targetScroll = direction === 'left'
+                ? current.scrollLeft - scrollAmount
+                : current.scrollLeft + scrollAmount;
+
+            current.scrollTo({
+                left: targetScroll,
+                behavior: 'smooth'
+            });
+        }
+    };
+
+    // Определяем шаг прокрутки (одна карточка + gap)
+    const circularScrollAmount = () => {
+        if (typeof window !== 'undefined' && window.innerWidth <= 768) {
+            return 315; // Ширина карточки 300 + gap 15
+        }
+        return 440; // Ширина карточки 400 + gap 40
+    };
+
     const directions = [
         {
             title: 'Здоровье',
@@ -57,14 +84,26 @@ export default function ForEverydayNeedsSectionComponent() {
                         <p className={styles.subtitle}>Находите всё необходимое для дела и жизни в одном месте.</p>
                     </div>
                     <div className={styles.headerActions}>
-                        <button className={styles.arrowBtn}>←</button>
-                        <button className={styles.arrowBtn}>→</button>
+                        <button
+                            className={styles.arrowBtn}
+                            onClick={() => scroll('left')}
+                            aria-label="Scroll left"
+                        >
+                            ←
+                        </button>
+                        <button
+                            className={styles.arrowBtn}
+                            onClick={() => scroll('right')}
+                            aria-label="Scroll right"
+                        >
+                            →
+                        </button>
                         <Link href="/directions" className={styles.viewAll}>ВСЕ НАПРАВЛЕНИЯ</Link>
                     </div>
                 </div>
             </div>
 
-            <div className={styles.grid}>
+            <div className={styles.grid} ref={scrollRef}>
                 {directions.map((dir, index) => (
                     <div
                         key={index}

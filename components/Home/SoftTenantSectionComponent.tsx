@@ -26,10 +26,6 @@ export default function SoftTenantSectionComponent() {
                         </div>
 
                         <div className={styles.footer}>
-                            <div className={styles.arrows}>
-                                <button className={styles.arrow}>←</button>
-                                <button className={styles.arrow}>→</button>
-                            </div>
                             <Link href="/rent" className={styles.actionBtn}>СТАТЬ АРЕНДАТОРОМ</Link>
                         </div>
                     </div>
