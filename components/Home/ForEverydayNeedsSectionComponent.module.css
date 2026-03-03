@@ -68,7 +68,7 @@
     padding: 12px 24px;
     background-color: var(--primary);
     color: #fff;
-    border-radius: 50px;
+    border-radius: var(--radius-sm);
     font-size: 0.8rem;
     font-weight: 700;
     text-decoration: none;
@@ -173,7 +173,7 @@
     background-color: var(--primary);
     color: #fff;
     padding: 10px 24px;
-    border-radius: 50px;
+    border-radius: var(--radius-sm);
     font-weight: 700;
     font-size: 0.85rem;
     text-decoration: none;

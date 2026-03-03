@@ -16,8 +16,7 @@ export default function SoftTenantSectionComponent() {
                         <h3 className={styles.badge}>Партнерство</h3>
                         <h2 className={styles.title}>Ваш бизнес в <span className={styles.highlight}>MALIKA</span></h2>
                         <p className={styles.text}>
-                            Присоединяйтесь к сообществу предпринимателей в самом сердце нового района.
-                            Мы предлагаем современные торговые площади, стабильный поток клиентов и гибкие условия аренды.
+                            Станьте частью бизнес-сообщества MALIKA. Современные площади, стабильный трафик и выгодные локации для вашего роста.
                         </p>
 
                         <div className={styles.linkWrapper}>
