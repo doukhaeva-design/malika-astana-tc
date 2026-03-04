@@ -355,8 +355,8 @@
   .bottomNav {
     display: flex;
     position: fixed;
-    bottom: calc(45px + env(safe-area-inset-bottom));
-    /* Lowered to be closer to the base */
+    bottom: calc(30px + env(safe-area-inset-bottom));
+    /* Lowered to be closer to the edge */
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 32px);
@@ -380,11 +380,10 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: calc(12px + env(safe-area-inset-bottom));
-    /* Reduced height to stay within the browser bar */
+    height: calc(2px + env(safe-area-inset-bottom));
+    /* Minimal height just for browser UI area */
     background-color: #ffffff;
     z-index: 1000;
-    border-top: 1px solid var(--gray-medium);
     pointer-events: none;
   }
 
