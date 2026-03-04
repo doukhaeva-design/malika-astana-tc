@@ -27,6 +27,10 @@
   --max-width: 1400px;
 }
 
+html {
+  background-color: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
