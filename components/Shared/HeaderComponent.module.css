@@ -247,12 +247,13 @@
   font-weight: 700;
   color: var(--primary);
   text-decoration: none;
-  transition: color 0.2s ease;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .mobileLink:hover,
 .mobileLinkActive {
   color: var(--accent);
+  padding-left: 10px;
 }
 
 .mobileActions {
@@ -403,7 +404,10 @@
 
   .bottomNavActive {
     color: var(--accent);
-    background: rgba(44, 78, 151, 0.08);
+    background: rgba(44, 78, 151, 0.12);
+    box-shadow: 0 4px 12px rgba(44, 78, 151, 0.08);
+    transform: scale(1.02);
+    /* Subtle pop for active state */
   }
 
   .bottomNavActive svg {
