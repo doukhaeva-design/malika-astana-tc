@@ -373,20 +373,17 @@
     pointer-events: auto;
   }
 
-  /* Safe area base now covers the entire bottom navigation area to make it non-transparent */
+  /* Safe area base covers the gap under the floating menu without being too high */
   .bottomBarBase {
     display: block;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: calc(100px + env(safe-area-inset-bottom));
+    height: calc(50px + env(safe-area-inset-bottom));
     background-color: #ffffff;
     z-index: 1001;
-    /* Between content and bottomNav */
-    border-top: 1px solid var(--gray-medium);
     pointer-events: none;
-    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.03);
   }
 
   .bottomNavItem {
