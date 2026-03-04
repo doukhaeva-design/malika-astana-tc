@@ -380,8 +380,8 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: calc(2px + env(safe-area-inset-bottom));
-    /* Minimal height just for browser UI area */
+    height: env(safe-area-inset-bottom);
+    /* Exactly matching the system bar area */
     background-color: #ffffff;
     z-index: 1000;
     pointer-events: none;
