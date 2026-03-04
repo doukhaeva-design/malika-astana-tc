@@ -307,7 +307,7 @@
     pointer-events: auto;
     background-color: #ffffff;
     border-bottom: 1px solid var(--gray-medium);
-    padding: 10px 0;
+    padding: calc(10px + env(safe-area-inset-top)) 0 10px;
   }
 
   .topContainer {
@@ -354,7 +354,7 @@
   .bottomNav {
     display: flex;
     position: fixed;
-    bottom: 12px;
+    bottom: calc(12px + env(safe-area-inset-bottom));
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 32px);
