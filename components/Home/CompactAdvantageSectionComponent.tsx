@@ -8,12 +8,12 @@ import styles from './CompactAdvantageSectionComponent.module.css';
 
 export default function CompactAdvantageSectionComponent() {
     const advantages = [
-        { title: 'Локация', desc: 'В центре активно развивающегося района с устойчивым пешеходным и автомобильным трафиком.', color: '#fef5e7', size: 'large', type: 'light' },
-        { title: 'Навигация', desc: 'Продуманные потоки посетителей и удобный доступ к пространствам.', color: '#e6f2ed', size: 'small', type: 'light' },
-        { title: 'Бизнес', desc: 'Форматы и условия, рассчитанные на устойчивый рост вашего бизнеса.', color: '#e2e8f0', size: 'small', type: 'light' },
-        { title: 'Комфорт', desc: 'Современные системы климата, светлые холлы и зоны ожидания.', color: '#e0f2fe', size: 'large', type: 'light' },
-        { title: 'Парковка', desc: 'Просторный и удобный паркинг для гостей.', color: '#f3f4f6', size: 'small', type: 'light' },
-        { title: 'Партнерство', desc: 'Гибкие условия сотрудничества для арендаторов центра.', color: '#faebd7', size: 'small', type: 'light' }
+        { title: 'Доступность', desc: 'Удобный заезд с главной дороги. Не нужно кружить по кварталам — мы прямо у шоссе.', color: '#fef5e7', size: 'large', type: 'light' },
+        { title: 'Экономия времени', desc: 'Формат «зашел — купил — вышел». Всё компактно и под рукой.', color: '#e6f2ed', size: 'small', type: 'light' },
+        { title: 'Ваш старт', desc: 'Помещения любого формата: от небольших точек до крупных отделов.', color: '#e2e8f0', size: 'small', type: 'light' },
+        { title: 'Порядок', desc: 'Чистая территория, охрана и коммуникации. Занимайтесь делом, об остальном позаботимся мы.', color: '#e0f2fe', size: 'large', type: 'light' },
+        { title: 'Место для авто', desc: 'Забудьте о проблемах с парковкой. У нас места хватит всем гостям.', color: '#f3f4f6', size: 'small', type: 'light' },
+        { title: 'Партнерство', desc: 'Гибко подходим к каждому арендатору. Нам важно, чтобы ваше дело росло.', color: '#faebd7', size: 'small', type: 'light' }
     ];
 
     return (
@@ -21,7 +21,7 @@ export default function CompactAdvantageSectionComponent() {
             <div className={styles.container}>
                 <div className={`${styles.header} animate-fade`}>
                     <h2 className={styles.title}>Почему MALIKA?</h2>
-                    <p className={styles.subtitle}>Перспективная локация, продуманная навигация и комфортные условия для арендаторов.</p>
+                    <p className={styles.subtitle}>Место, где удобно решать дела: от покупок для дома до сервисов для авто. Понятные условия аренды, свободная парковка и комфорт для ежедневных визитов.</p>
                 </div>
 
                 <div className={styles.grid}>

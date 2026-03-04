@@ -14,18 +14,15 @@ export default function ContactInfoSectionComponent() {
                 <div className={styles.infoGrid}>
                     <div className={styles.infoCard}>
                         <h3>Адрес</h3>
-                        <p>г. Астана, район Орда Базар</p>
-                        <p>вдоль Шоссе Алаш</p>
+                        <p>Астана, Байконыр, проезд 69, 1А</p>
                     </div>
                     <div className={styles.infoCard}>
                         <h3>Телефон</h3>
-                        <p>+7 (XXX) XXX-XX-XX</p>
-                        <p>+7 (XXX) XXX-XX-XX</p>
+                        <p>+7 (705) 555-76-09</p>
                     </div>
                     <div className={styles.infoCard}>
                         <h3>Email</h3>
-                        <p>info@malika-center.kz</p>
-                        <p>rent@malika-center.kz</p>
+                        <p>akasalym.renta@gmail.com</p>
                     </div>
                     <div className={styles.infoCard}>
                         <h3>График работы</h3>

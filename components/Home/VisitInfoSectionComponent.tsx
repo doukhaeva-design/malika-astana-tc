@@ -9,8 +9,8 @@ import styles from './VisitInfoSectionComponent.module.css';
 
 export default function VisitInfoSectionComponent() {
     const categories = [
-        { label: 'Адрес центра', value: 'г. Астана, р-н Орда Базар', icon: '📍' },
-        { label: 'Контактный номер', value: '+7 701 123 45 67', icon: '📞' },
+        { label: 'Адрес центра', value: 'Астана, Байконыр, пр. 69, 1А', icon: '📍' },
+        { label: 'Контактный номер', value: '+7 (705) 555-76-09', icon: '📞' },
         { label: 'Режим работы', value: '09:00 — 18:00, ежедневно', icon: '🕒' }
     ];
 

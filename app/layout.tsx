@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MALIKA — Торговый центр в Астане",
+  title: "ТЦ «Malika» — Торговый центр в Астане",
   description: "Практичное пространство для покупок, бизнеса и повседневных решений в Астане.",
 };
 

@@ -10,13 +10,13 @@ import styles from './HeroSectionComponent.module.css';
 export default function HeroSectionComponent() {
     return (
         <section className={styles.hero}>
-            <div className={styles.bgText}>MALIKA</div>
+            <div className={styles.bgText}>Malika</div>
             <div className={styles.container}>
                 <div className={styles.layout}>
                     <div className={`${styles.content} animate-fade`}>
                         <div className={styles.taglineWrapper}>
                             <span className={styles.statusDot}></span>
-                            <span className={styles.tagline}>Добро пожаловать<span className={styles.taglineMobileOnly}> в MALIKA</span></span>
+                            <span className={styles.tagline}>Добро пожаловать<span className={styles.taglineMobileOnly}> в Malika</span></span>
                         </div>
                         <h1 className={styles.title}>
                             <span className={styles.titleLight}>Ваш</span> торговый центр <br />

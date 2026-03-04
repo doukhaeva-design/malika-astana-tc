@@ -66,7 +66,7 @@ export default function HeaderComponent() {
                 </div>
                 <div className={styles.container}>
                     <Link href="/" className={styles.logo} onClick={closeMenu}>
-                        MALIKA
+                        Malika
                     </Link>
 
                     {/* Desktop Navigation */}
