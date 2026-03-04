@@ -355,7 +355,7 @@
   .bottomNav {
     display: flex;
     position: fixed;
-    bottom: calc(30px + env(safe-area-inset-bottom));
+    bottom: calc(20px + env(safe-area-inset-bottom));
     /* Lowered to be closer to the edge */
     left: 50%;
     transform: translateX(-50%);
@@ -380,7 +380,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: calc(10px + env(safe-area-inset-bottom));
+    height: env(safe-area-inset-bottom);
     background-color: #ffffff;
     z-index: 1001;
     pointer-events: none;
