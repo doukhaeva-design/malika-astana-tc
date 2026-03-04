@@ -373,18 +373,20 @@
     pointer-events: auto;
   }
 
-  /* Separate solid white base element to cover just the browser UI area */
+  /* Safe area base now covers the entire bottom navigation area to make it non-transparent */
   .bottomBarBase {
     display: block;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: env(safe-area-inset-bottom);
-    /* Exactly matching the system bar area */
+    height: calc(100px + env(safe-area-inset-bottom));
     background-color: #ffffff;
-    z-index: 1000;
+    z-index: 1001;
+    /* Between content and bottomNav */
+    border-top: 1px solid var(--gray-medium);
     pointer-events: none;
+    box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.03);
   }
 
   .bottomNavItem {
@@ -418,7 +420,9 @@
 
   .bottomNavActive {
     color: var(--accent);
-    background: rgba(44, 78, 151, 0.08);
+    background: #f0f4ff;
+    /* More solid background for active item */
+    border: 1px solid rgba(44, 78, 151, 0.1);
   }
 
   .bottomNavActive svg {
