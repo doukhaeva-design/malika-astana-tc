@@ -21,7 +21,7 @@ export default function ContentSectionComponent() {
                 </div>
                 <div className={styles.infoBlock}>
                     <h2>Контактная информация</h2>
-                    <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+                    <p>Телефон: +7 (705) 555-76-09</p>
                     <p>Адрес: Внутри ТЦ MALIKA, 2 этаж</p>
                 </div>
                 <div className={styles.infoBlock}>

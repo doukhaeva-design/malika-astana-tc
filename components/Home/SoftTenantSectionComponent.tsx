@@ -14,7 +14,7 @@ export default function SoftTenantSectionComponent() {
                 <div className={`${styles.mainBox} animate-fade`}>
                     <div className={styles.content}>
                         <h3 className={styles.badge}>Партнерство</h3>
-                        <h2 className={styles.title}>Ваш бизнес в <span className={styles.highlight}>MALIKA</span></h2>
+                        <h2 className={styles.title}>Ваш бизнес в <span className={styles.highlight}>Malika</span></h2>
                         <p className={styles.text}>
                             Станьте частью бизнес-сообщества MALIKA. Современные площади, стабильный трафик и выгодные локации для вашего роста.
                         </p>

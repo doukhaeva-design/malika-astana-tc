@@ -18,7 +18,7 @@ export default function MapSectionComponent() {
                             <div className={styles.markerDot}></div>
                         </div>
                         <h3 className={styles.mapTitle}>MALIKA</h3>
-                        <p className={styles.mapAddress}>г. Астана, район Орда Базар</p>
+                        <p className={styles.mapAddress}>Астана, Байконыр, проезд 69, 1А</p>
                         <button className={styles.btn}>ОТКРЫТЬ КАРТУ</button>
                     </div>
                 </div>

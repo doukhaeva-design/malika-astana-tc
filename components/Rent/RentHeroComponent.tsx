@@ -18,7 +18,7 @@ export default function RentHeroComponent() {
                 </p>
                 <div className={styles.actions}>
                     <a href="#apply" className={styles.btn}>Оставить заявку</a>
-                    <a href="tel:+77777777777" className={styles.btnOutline}>Позвонить</a>
+                    <a href="tel:+77055557609" className={styles.btnOutline}>Позвонить</a>
                 </div>
             </div>
         </section>
