@@ -290,7 +290,8 @@
 }
 
 /* --- Bottom Navigation Styles --- */
-.bottomNav {
+.bottomNav,
+.bottomBarBase {
   display: none;
 }
 
@@ -354,17 +355,17 @@
   .bottomNav {
     display: flex;
     position: fixed;
-    bottom: calc(20px + env(safe-area-inset-bottom));
+    bottom: calc(85px + env(safe-area-inset-bottom));
+    /* Floating higher to be a clear island */
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 32px);
     max-width: 420px;
     height: 70px;
     background-color: #ffffff;
-    /* Solid white background */
     border: 1px solid rgba(0, 0, 0, 0.08);
     border-radius: 20px;
-    z-index: 1001;
+    z-index: 1002;
     justify-content: space-around;
     align-items: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
@@ -372,18 +373,20 @@
     pointer-events: auto;
   }
 
-  /* Solid white base to cover the browser's bottom navigation/link area */
-  .bottomNav::after {
-    content: '';
+  /* Separate solid white base element to cover the browser's UI bar area */
+  .bottomBarBase {
+    display: block;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: calc(20px + env(safe-area-inset-bottom));
+    height: calc(56px + env(safe-area-inset-bottom));
+    /* Taller to cover the URL bar area */
     background-color: #ffffff;
-    z-index: -1;
-    pointer-events: none;
+    z-index: 1000;
     border-top: 1px solid var(--gray-medium);
+    pointer-events: none;
+    /* Crucial so it doesn't block scrolling/clicks */
   }
 
   .bottomNavItem {
