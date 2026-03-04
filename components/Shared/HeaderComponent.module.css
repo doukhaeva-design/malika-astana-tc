@@ -354,7 +354,7 @@
   .bottomNav {
     display: flex;
     position: fixed;
-    bottom: calc(16px + env(safe-area-inset-bottom));
+    bottom: calc(20px + env(safe-area-inset-bottom));
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 32px);
@@ -372,9 +372,18 @@
     pointer-events: auto;
   }
 
-  /* No longer need the after hack since bottomNav is solid */
+  /* Solid white base to cover the browser's bottom navigation/link area */
   .bottomNav::after {
-    display: none;
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: calc(20px + env(safe-area-inset-bottom));
+    background-color: #ffffff;
+    z-index: -1;
+    pointer-events: none;
+    border-top: 1px solid var(--gray-medium);
   }
 
   .bottomNavItem {
