@@ -354,36 +354,24 @@
   .bottomNav {
     display: flex;
     position: fixed;
-    bottom: calc(12px + env(safe-area-inset-bottom));
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 32px);
-    max-width: 400px;
-    height: 70px;
-    background-color: var(--off-white);
-    backdrop-filter: blur(20px) saturate(180%);
-    -webkit-backdrop-filter: blur(20px) saturate(180%);
-    border: 1px solid rgba(0, 0, 0, 0.05);
-    border-radius: var(--radius-md);
-    /* Architectural tighter corners */
-    z-index: 1001;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-    padding: 0 8px;
-  }
-
-  /* Opaque background for iOS safe area to prevent content bleed */
-  .bottomNav::after {
-    content: '';
-    position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
-    height: env(safe-area-inset-bottom);
+    width: 100%;
+    max-width: none;
+    height: calc(70px + env(safe-area-inset-bottom));
     background-color: #ffffff;
-    z-index: -2;
-    pointer-events: none;
+    border-top: 1px solid var(--gray-medium);
+    border-radius: 0;
+    z-index: 1001;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 10px 0 0;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.05);
+  }
+
+  /* No longer need the after hack since bottomNav is solid and full width */
+  .bottomNav::after {
+    display: none;
   }
 
   .bottomNavItem {
@@ -395,35 +383,39 @@
     color: var(--text-muted);
     text-decoration: none;
     flex: 1;
-    height: calc(100% - 12px);
-    margin: 6px 12px;
+    height: 50px;
+    /* Fixed height for active area */
+    margin: 0;
     border: none;
     background: transparent;
-    border-radius: 14px;
+    border-radius: 0;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .bottomNavItem svg {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .bottomNavItem span {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 700;
   }
 
   .bottomNavActive {
     color: var(--accent);
-    background: rgba(44, 78, 151, 0.12);
-    box-shadow: 0 4px 12px rgba(44, 78, 151, 0.08);
-    transform: scale(1.02);
-    /* Subtle pop for active state */
+    background: transparent;
+    transform: none;
   }
 
   .bottomNavActive svg {
+    color: var(--accent);
+    transform: translateY(-2px);
+  }
+
+  .bottomNavActive span {
     color: var(--accent);
   }
 }
