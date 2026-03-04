@@ -355,8 +355,8 @@
   .bottomNav {
     display: flex;
     position: fixed;
-    bottom: calc(85px + env(safe-area-inset-bottom));
-    /* Floating higher to be a clear island */
+    bottom: calc(45px + env(safe-area-inset-bottom));
+    /* Lowered to be closer to the base */
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 32px);
@@ -373,20 +373,19 @@
     pointer-events: auto;
   }
 
-  /* Separate solid white base element to cover the browser's UI bar area */
+  /* Separate solid white base element to cover just the browser UI area */
   .bottomBarBase {
     display: block;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: calc(56px + env(safe-area-inset-bottom));
-    /* Taller to cover the URL bar area */
+    height: calc(12px + env(safe-area-inset-bottom));
+    /* Reduced height to stay within the browser bar */
     background-color: #ffffff;
     z-index: 1000;
     border-top: 1px solid var(--gray-medium);
     pointer-events: none;
-    /* Crucial so it doesn't block scrolling/clicks */
   }
 
   .bottomNavItem {
