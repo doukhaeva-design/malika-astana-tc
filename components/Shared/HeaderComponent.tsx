@@ -91,11 +91,11 @@ export default function HeaderComponent() {
                 {/* Mobile Menu Overlay */}
                 <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
                     <nav className={styles.mobileNav}>
-                        <Link href="/" className={styles.mobileLink} onClick={closeMenu}>О центре</Link>
-                        <Link href="/directions" className={styles.mobileLink} onClick={closeMenu}>Магазины и сервисы</Link>
-                        <Link href="/rehab" className={styles.mobileLink} onClick={closeMenu}>Реабилитационный центр</Link>
-                        <Link href="/rent" className={styles.mobileLink} onClick={closeMenu}>Арендаторам</Link>
-                        <Link href="/contacts" className={styles.mobileLink} onClick={closeMenu}>Контакты</Link>
+                        <Link href="/" className={`${styles.mobileLink} ${pathname === '/' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>О центре</Link>
+                        <Link href="/directions" className={`${styles.mobileLink} ${pathname === '/directions' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>Магазины и сервисы</Link>
+                        <Link href="/rehab" className={`${styles.mobileLink} ${pathname === '/rehab' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>Реабилитационный центр</Link>
+                        <Link href="/rent" className={`${styles.mobileLink} ${pathname === '/rent' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>Арендаторам</Link>
+                        <Link href="/contacts" className={`${styles.mobileLink} ${pathname === '/contacts' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>Контакты</Link>
                     </nav>
                     <div className={styles.mobileActions}>
                         <Link href="/contacts" className={styles.btnRouteMobile} onClick={closeMenu}>
