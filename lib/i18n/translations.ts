@@ -129,8 +129,6 @@ export const translations = {
             statsUnits: 'Свободных мест',
             statsFormat: 'Удобные форматы',
 
-            whyTitle: 'Преимущества для бизнеса',
-            whySubtitle: 'Почему выбирают MALIKA?',
             whyReasons: [
                 { title: 'Активная торговая зона', desc: 'Расположение в районе с устойчивым потоком посетителей.' },
                 { title: 'Компактная структура', desc: 'Понятная планировка без лишних переходов.' },
@@ -138,6 +136,7 @@ export const translations = {
                 { title: 'Потенциал развития', desc: 'Возможность расширения и долгосрочного сотрудничества.' }
             ],
 
+            availableIntro: 'Мы предлагаем различные форматы коммерческих помещений.',
             availableTitle: 'Форматы коммерческих помещений',
             availableSpaces: [
                 { title: 'Торговые помещения', desc: 'Площади от 50 м² для магазинов и розничной торговли.' },
@@ -326,25 +325,19 @@ export const translations = {
             statsUnits: 'Available spaces',
             statsFormat: 'Convenient formats',
 
-            whyTitle: 'Business Advantages',
-            whySubtitle: 'Why choose MALIKA?',
-            whyDocs: [
-                {
-                    title: 'Prime Location',
-                    desc: 'Excellent transport accessibility and a convenient exit from Alash Highway.'
-                },
-                {
-                    title: 'Stable Traffic',
-                    desc: 'A constant flow of visitors thanks to a well-selected pool of tenants.'
-                },
-                {
-                    title: 'Modern Infrastructure',
-                    desc: 'New engineering systems, climate control, and high-speed internet.'
-                },
-                {
-                    title: 'Security',
-                    desc: 'Round-the-clock security, video surveillance, and fire safety systems.'
-                }
+            whyReasons: [
+                { title: 'Active Trading Zone', desc: 'Location in an area with a steady flow of visitors.' },
+                { title: 'Compact Structure', desc: 'Clear layout without unnecessary transitions.' },
+                { title: 'Convenient Logistics', desc: 'Accessibility for clients and suppliers.' },
+                { title: 'Development Potential', desc: 'Opportunity for expansion and long-term cooperation.' }
+            ],
+
+            availableIntro: 'We offer various formats of commercial premises.',
+            availableTitle: 'Commercial Space Formats',
+            availableSpaces: [
+                { title: 'Retail Spaces', desc: 'Premises for rent from 50 square meters for shops and retail.' },
+                { title: 'Warehouse Areas', desc: 'For storage and logistics tasks.' },
+                { title: 'Commercial Lots', desc: 'For specialized projects.' }
             ],
 
             formTitle: 'Interested in renting a space?',
@@ -362,20 +355,6 @@ export const translations = {
             formWhatsappBtn: 'Send via WhatsApp',
             formNote: 'We will contact you to clarify the details and discuss the conditions.',
 
-            availableIntro: 'We offer various formats of commercial premises.',
-            availableSpaces: [
-                { title: 'Retail Spaces', desc: 'Premises for rent from 50 square meters for shops and retail.' },
-                { title: 'Warehouse Areas', desc: 'For storage and logistics tasks.' },
-                { title: 'Commercial Lots', desc: 'For specialized projects.' }
-            ],
-
-            whyReasons: [
-                { title: 'Active Trading Zone', desc: 'Location in an area with a steady flow of visitors.' },
-                { title: 'Compact Structure', desc: 'Clear layout without unnecessary transitions.' },
-                { title: 'Convenient Logistics', desc: 'Accessibility for clients and suppliers.' },
-                { title: 'Development Potential', desc: 'Opportunity for expansion and long-term cooperation.' }
-            ],
-
             formCompany: 'Company Name',
             formSpace: 'Required Area (sq.m)',
             formSubmit: 'SUBMIT REQUEST',
@@ -384,6 +363,7 @@ export const translations = {
             title: 'Commercial Space Rental',
             subtitle: 'A convenient platform for stable operation and business development.',
             btn: 'Submit Application',
+            btnCTA: 'Submit Application',
             btnCall: 'Call',
         },
         rehabPage: {
