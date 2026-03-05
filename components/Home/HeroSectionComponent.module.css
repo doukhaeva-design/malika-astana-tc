@@ -418,8 +418,8 @@
         font-size: 3.5rem;
         /* Increased from 3.2rem */
         margin-bottom: 32px;
-        line-height: 1.05;
-        /* Tighter for large size */
+        line-height: 1.1;
+        /* Increased from 1.05 for micro-breathing */
         font-weight: 700;
         color: var(--off-white);
     }
@@ -459,7 +459,7 @@
     .title {
         font-size: 3.3rem;
         /* Increased from 3.0rem */
-        line-height: 1.05;
+        line-height: 1.1;
     }
 
     .visuals {
