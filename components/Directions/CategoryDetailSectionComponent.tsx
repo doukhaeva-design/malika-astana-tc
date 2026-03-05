@@ -17,93 +17,93 @@ export default function CategoryDetailSectionComponent() {
     const categories = language === 'ru' ? [
         {
             id: 'auto',
-            title: 'Автотовары',
+            title: 'АВТОТОВАРЫ',
             desc: 'Крупнейший выбор комплектующих, расходных материалов и аксессуаров для всех марок автомобилей.',
             img: '/category_auto_1772459952993.png',
-            items: ['Запчасти', 'Шины и диски', 'Масла', 'Аксессуары']
+            items: ['ЗАПЧАСТИ', 'ШИНЫ И ДИСКИ', 'МАСЛА', 'АКСЕССУАРЫ']
         },
         {
             id: 'tech',
-            title: 'Техника',
+            title: 'ТЕХНИКА',
             desc: 'Специализированное оборудование и технические решения для офиса и производства.',
             img: '/category_tech_1772459982373.png',
-            items: ['Оргтехника', 'Инструменты', 'Станки']
+            items: ['ОРГТЕХНИКА', 'ИНСТРУМЕНТЫ', 'СТАНКИ']
         },
         {
             id: 'home',
-            title: 'Товары для дома',
+            title: 'ТОВАРЫ ДЛЯ ДОМА',
             desc: 'Все необходимое для ремонта, декора и создания уюта в вашем жилом пространстве.',
             img: '/category_home_1772459996707.png',
-            items: ['Мебель', 'Декор', 'Текстиль', 'Хозтовары']
+            items: ['МЕБЕЛЬ', 'ДЕКОР', 'ТЕКСТИЛЬ', 'ХОЗТОВАРЫ']
         },
         {
             id: 'business',
-            title: 'Бизнес',
+            title: 'БИЗНЕС',
             desc: 'Расходные материалы, канцелярия и оборудование для коммерческой деятельности.',
             img: '/category_business_supply_v2_1772464118849.png',
-            items: ['Канцелярия', 'Торговое оборудование']
+            items: ['КАНЦЕЛЯРИЯ', 'ТОРГОВОЕ ОБОРУДОВАНИЕ']
         },
         {
             id: 'service',
-            title: 'Сервис',
+            title: 'СЕРВИС',
             desc: 'Бытовые и профессиональные услуги по обслуживанию техники и решению повседневных задач.',
             img: '/category_service_1772460173357.png',
-            items: ['Ремонт телефонов', 'Чистка', 'Швейный сервис']
+            items: ['РЕМОНТ ТЕЛЕФОНОВ', 'ЧИСТКА', 'ШВЕЙНЫЙ СЕРВИС']
         },
         {
             id: 'rehab',
-            title: 'Здоровье',
+            title: 'ЗДОРОВЬЕ',
             desc: 'Медицинские и восстановительные услуги в современном реабилитационном центре внутри ТЦ.',
             img: '/rehab_interior_v2_1772460250804.png',
-            items: ['Массаж', 'ЛФК', 'Консультации']
+            items: ['МАССАЖ', 'ЛФК', 'КОНСУЛЬТАЦИИ']
         }
     ] : [
         {
             id: 'auto',
-            title: 'Auto Goods',
+            title: 'AUTO GOODS',
             desc: 'The widest selection of components, consumables, and accessories for all car brands.',
             img: '/category_auto_1772459952993.png',
-            items: ['Parts', 'Tires', 'Oils', 'Accessories']
+            items: ['PARTS', 'TIRES', 'OILS', 'ACCESSORIES']
         },
         {
             id: 'tech',
-            title: 'Equipment',
+            title: 'EQUIPMENT',
             desc: 'Specialized equipment and technical solutions for office and production.',
             img: '/category_tech_1772459982373.png',
-            items: ['Office tech', 'Tools', 'Machinery']
+            items: ['OFFICE TECH', 'TOOLS', 'MACHINERY']
         },
         {
             id: 'home',
-            title: 'Home Goods',
+            title: 'HOME GOODS',
             desc: 'Everything needed for renovation, decor, and creating comfort in your living space.',
             img: '/category_home_1772459996707.png',
-            items: ['Furniture', 'Decor', 'Textiles', 'Household']
+            items: ['FURNITURE', 'DECOR', 'TEXTILES', 'HOUSEHOLD']
         },
         {
             id: 'business',
-            title: 'Business',
+            title: 'BUSINESS',
             desc: 'Consumables, stationery, and equipment for commercial activities.',
             img: '/category_business_supply_v2_1772464118849.png',
-            items: ['Stationery', 'Retail equipment']
+            items: ['STATIONERY', 'RETAIL EQUIPMENT']
         },
         {
             id: 'service',
-            title: 'Service',
+            title: 'SERVICE',
             desc: 'Domestic and professional services for technical maintenance and daily tasks.',
             img: '/category_service_1772460173357.png',
-            items: ['Phone repair', 'Cleaning', 'Tailoring']
+            items: ['PHONE REPAIR', 'CLEANING', 'TAILORING']
         },
         {
             id: 'rehab',
-            title: 'Health',
+            title: 'HEALTH',
             desc: 'Medical and restorative services in a modern rehabilitation center inside center.',
             img: '/rehab_interior_v2_1772460250804.png',
-            items: ['Massage', 'Exercises', 'Consultations']
+            items: ['MASSAGE', 'EXERCISES', 'CONSULTATIONS']
         }
     ];
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id="catalog-grid">
             <div className={styles.container}>
                 <div className={styles.grid}>
                     {categories.map((cat, index) => (
@@ -112,7 +112,7 @@ export default function CategoryDetailSectionComponent() {
                                 <img src={cat.img} alt={cat.title} className={styles.image} />
                             </div>
                             <div className={styles.contentSide}>
-                                <div className={styles.header}>
+                                <div className={styles.cardHeader}>
                                     <span className={styles.number}>0{index + 1}</span>
                                     <h3 className={styles.cardTitle}>{cat.title}</h3>
                                 </div>
