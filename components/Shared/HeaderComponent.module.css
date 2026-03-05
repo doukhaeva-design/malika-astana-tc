@@ -355,11 +355,25 @@
 
 
   /* 2. FLOATING NAV (МЕНЮ) - Всегда сверху */
+  /* 1. SOLID SYSTEM BASE (БЕЛЫЙ НИЗ ДЛЯ SAFARI) */
+  .bottomBarBase {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    /* Закрывает только системную зону iOS */
+    height: calc(16px + env(safe-area-inset-bottom, 0px));
+    background-color: #ffffff;
+    z-index: 10;
+    pointer-events: none;
+  }
+
   .bottomNav {
     display: flex;
     position: fixed;
     /* Lifted with a gap above the system area */
-    bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    bottom: calc(36px + env(safe-area-inset-bottom, 0px));
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 32px);

@@ -134,6 +134,8 @@ export default function HeaderComponent() {
 
             {/* Solid white base for mobile browser navigation area */}
 
+            {/* Solid white base for mobile browser navigation area */}
+            <div className={styles.bottomBarBase} />
         </>
     );
 }
