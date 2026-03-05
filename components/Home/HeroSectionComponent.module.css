@@ -128,8 +128,8 @@
 
 .btnPrimary {
     padding: 16px 48px;
-    background-color: rgba(255, 255, 255, 0.85);
-    /* Холодный фарфор */
+    background-color: rgba(255, 255, 255, 0.92);
+    /* Холодный фарфор 92% */
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     color: #131a28;
