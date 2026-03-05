@@ -11,11 +11,16 @@ import styles from './RehabHeroComponent.module.css';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function RehabHeroComponent() {
-    const { t } = useLanguage();
+    const { language, t } = useLanguage();
 
     return (
         <section className={styles.hero}>
-            <div className={styles.container}>
+            <div className={`${styles.container} animate-fade`}>
+                <div className={styles.subtitleWrapper}>
+                    <span className={`${styles.serifSubtitle} serif-accent`}>
+                        {language === 'ru' ? 'Забота о вашем здоровье' : 'Care for your health'}
+                    </span>
+                </div>
                 <h1 className={styles.title}>{t.rehabPage.heroTitle}</h1>
                 <p className={styles.subtitle}>{t.rehabPage.heroDesc}</p>
             </div>

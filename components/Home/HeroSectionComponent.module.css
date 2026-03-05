@@ -12,17 +12,14 @@
 }
 
 
-.bgText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 20vw;
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.03);
-    z-index: 0;
-    user-select: none;
-    pointer-events: none;
+.visuals {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    transition: transform 0.2s ease-out;
+    /* Плавность для параллакса */
+    will-change: transform;
 }
 
 .container {
@@ -45,56 +42,24 @@
     max-width: 700px;
 }
 
-.taglineWrapper {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 36px;
-    padding: 8px 24px 8px 16px;
-    background-color: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 50px;
-    backdrop-filter: blur(8px);
+.subtitleWrapper {
+    margin-bottom: 24px;
 }
 
-.statusDot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: var(--accent-warm);
-    /* Golden/Amber warm accent */
-    box-shadow: 0 0 8px var(--accent-warm);
-}
-
-.tagline {
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    /* Increased for breathing */
-    color: var(--off-white);
-    font-weight: 600;
-    /* Thinner for elegance */
-}
-
-.boldMalika {
-    font-weight: 800;
-    color: #ffffff;
-}
-
-.taglineMobileOnly {
-    display: none;
-    /* Hide 'в MALIKA' on desktop to avoid repetition with the massive logo */
+.serifSubtitle {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--accent-warm);
+    opacity: 0.9;
 }
 
 .title {
     font-size: 5rem;
-    font-weight: 700;
-    /* Reduced from 800 */
-    margin-bottom: 48px;
-    /* More space */
+    font-weight: 800;
+    margin-bottom: 1.5rem;
     color: var(--off-white);
-    line-height: 1.1;
-    letter-spacing: -0.02em;
+    line-height: 1;
+    letter-spacing: -0.03em;
 }
 
 .titleLight {
@@ -113,12 +78,11 @@
 }
 
 .description {
-    font-size: 1.25rem;
-    line-height: 1.7;
-    /* Breathes more */
-    color: rgba(248, 249, 250, 0.75);
-    margin-bottom: 64px;
-    max-width: 580px;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 3rem;
+    max-width: 540px;
 }
 
 .boldText {

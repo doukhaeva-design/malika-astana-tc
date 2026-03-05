@@ -337,8 +337,10 @@
 }
 
 .mobileLogo {
-  font-weight: 800;
-  font-size: 1.25rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.5rem;
   color: var(--primary);
   text-decoration: none;
   letter-spacing: -0.02em;
@@ -410,7 +412,6 @@
   width: 20px;
   height: 20px;
   stroke: var(--primary);
-  opacity: 0.6;
   flex-shrink: 0;
   transition: all 0.3s ease;
 }
@@ -421,9 +422,9 @@
 }
 
 .linkText {
-  font-size: 1.5rem;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
   color: var(--primary);
   line-height: 1.1;
 }

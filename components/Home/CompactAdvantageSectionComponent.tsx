@@ -32,6 +32,11 @@ export default function CompactAdvantageSectionComponent() {
         <section className={styles.section} id="why-malika">
             <div className={styles.container}>
                 <div className={`${styles.header} animate-fade`}>
+                    <div className={styles.subtitleWrapper}>
+                        <span className={`${styles.serifSubtitle} serif-accent`}>
+                            {language === 'ru' ? 'Преимущества выбора' : 'Why choice matters'}
+                        </span>
+                    </div>
                     <h2 className={styles.title}>{language === 'ru' ? 'Почему MALIKA?' : 'Why MALIKA?'}</h2>
                     <p className={styles.subtitle}>
                         {language === 'ru'
@@ -44,10 +49,9 @@ export default function CompactAdvantageSectionComponent() {
                     {advantages.map((item, index) => (
                         <div
                             key={index}
-                            className={`${styles.card} ${styles[item.size]} ${item.type === 'dark' ? styles.darkCard : ''} animate-fade`}
+                            className={`${styles.card} ${styles[item.size]} ${item.type === 'dark' ? styles.darkCard : ''} animate-fade stagger-${(index % 4) + 1}`}
                             style={{
-                                backgroundColor: item.type === 'dark' ? '' : item.color,
-                                transitionDelay: `${index * 0.1}s`
+                                backgroundColor: item.type === 'dark' ? '' : item.color
                             }}
                         >
                             <h3 className={styles.cardTitle}>{item.title}</h3>
