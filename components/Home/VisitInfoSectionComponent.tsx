@@ -3,15 +3,20 @@
   Вдохновлено блоком 'Annuaire de contacts' с карточками контактов.
 */
 
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import styles from './VisitInfoSectionComponent.module.css';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function VisitInfoSectionComponent() {
+    const { language, t } = useLanguage();
+
     const categories = [
-        { label: 'Адрес центра', value: 'Астана, Байконыр, пр. 69, 1А', icon: '📍' },
-        { label: 'Контактный номер', value: '+7 (705) 555-76-09', icon: '📞' },
-        { label: 'Режим работы', value: '09:00 — 18:00, ежедневно', icon: '🕒' }
+        { label: t.visit.addressLabel, value: t.visit.addressVal, icon: '📍' },
+        { label: t.visit.phoneLabel, value: t.visit.phoneVal, icon: '📞' },
+        { label: t.visit.hoursLabel, value: t.visit.hoursVal, icon: '🕒' }
     ];
 
     return (
@@ -20,12 +25,12 @@ export default function VisitInfoSectionComponent() {
                 <div className={styles.layout}>
                     {/* Main Info Box */}
                     <div className={`${styles.mainBox} animate-fade`}>
-                        <h2 className={styles.title}>Планируйте ваш визит</h2>
+                        <h2 className={styles.title}>{t.visit.title}</h2>
                         <p className={styles.text}>
-                            MALIKA открыт для вас ежедневно. Прямая связь с администрацией и сервисными службами центра.
+                            {t.visit.subtitle}
                         </p>
                         <Link href="/contacts" className={styles.mainBtn}>
-                            ВСЕ КОНТАКТЫ
+                            {language === 'ru' ? 'ВСЕ КОНТАКТЫ' : 'ALL CONTACTS'}
                         </Link>
                     </div>
 

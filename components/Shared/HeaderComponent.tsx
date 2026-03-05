@@ -11,12 +11,14 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './HeaderComponent.module.css';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function HeaderComponent() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isLangOpen, setIsLangOpen] = useState(false);
     const pathname = usePathname();
+    const { language, setLanguage, t } = useLanguage();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -62,11 +64,11 @@ export default function HeaderComponent() {
                     <div className={styles.topContainer}>
                         <div className={styles.topItem}>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={styles.topIcon}><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <span>Астана, Шоссе Алаш</span>
+                            <span>{t.common.address}</span>
                         </div>
                         <div className={styles.topItem}>
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className={styles.topIcon}><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                            <span>Ежедневно 09:00 — 18:00</span>
+                            <span>{t.common.hours}</span>
                         </div>
                     </div>
                 </div>
@@ -77,19 +79,33 @@ export default function HeaderComponent() {
 
                     {/* Desktop Navigation */}
                     <nav className={styles.nav}>
-                        <Link href="/" className={styles.link}>Главная</Link>
-                        <Link href="/directions" className={styles.link}>Магазины и сервисы</Link>
-                        <Link href="/rehab" className={styles.link}>Реабилитация</Link>
-                        <Link href="/rent" className={styles.link}>Арендаторам</Link>
-                        <Link href="/contacts" className={styles.link}>Контакты</Link>
+                        <Link href="/" className={styles.link}>{t.common.home}</Link>
+                        <Link href="/directions" className={styles.link}>{t.common.directions}</Link>
+                        <Link href="/rehab" className={styles.link}>{t.common.rehab}</Link>
+                        <Link href="/rent" className={styles.link}>{t.common.rent}</Link>
+                        <Link href="/contacts" className={styles.link}>{t.common.contacts}</Link>
                     </nav>
 
                     <div className={styles.actions}>
                         <Link href="/contacts" className={styles.btnRoute}>
-                            Проложить маршрут
+                            {t.common.route}
                         </Link>
                         <div className={styles.langSwitch}>
-                            <span className={styles.activeLang}>RU</span> | <span>EN</span>
+                            <span
+                                className={language === 'ru' ? styles.activeLang : ''}
+                                onClick={() => setLanguage('ru')}
+                                style={{ cursor: 'pointer' }}
+                            >
+                                RU
+                            </span>
+                            |
+                            <span
+                                className={language === 'en' ? styles.activeLang : ''}
+                                onClick={() => setLanguage('en')}
+                                style={{ cursor: 'pointer' }}
+                            >
+                                EN
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -108,11 +124,11 @@ export default function HeaderComponent() {
                             <div className={styles.langWrapperMobile}>
                                 <button className={styles.langToggleBtn} onClick={toggleLang} aria-label="Switch language">
                                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.planetIcon}><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                                    <span className={styles.activeLangText}>RU</span>
+                                    <span className={styles.activeLangText}>{language.toUpperCase()}</span>
                                 </button>
                                 <div className={`${styles.langDropdownMobile} ${isLangOpen ? styles.langDropdownOpen : ''}`}>
-                                    <span className={styles.langOption}>RU</span>
-                                    <span className={styles.langOption}>EN</span>
+                                    <span className={styles.langOption} onClick={() => { setLanguage('ru'); setIsLangOpen(false); }}>RU</span>
+                                    <span className={styles.langOption} onClick={() => { setLanguage('en'); setIsLangOpen(false); }}>EN</span>
                                 </div>
                             </div>
                             <button className={styles.closeBtn} onClick={closeMenu} aria-label="Close menu">
@@ -125,23 +141,23 @@ export default function HeaderComponent() {
                         <nav className={styles.mobileNav}>
                             <Link href="/" className={`${styles.mobileLink} ${pathname === '/' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                                <span className={styles.linkText}>Главная</span>
+                                <span className={styles.linkText}>{t.common.home}</span>
                             </Link>
                             <Link href="/directions" className={`${styles.mobileLink} ${pathname === '/directions' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                <span className={styles.linkText}>Магазины и сервисы</span>
+                                <span className={styles.linkText}>{t.common.directions}</span>
                             </Link>
                             <Link href="/rehab" className={`${styles.mobileLink} ${pathname === '/rehab' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
-                                <span className={styles.linkText}>Реабилитация</span>
+                                <span className={styles.linkText}>{t.common.rehab}</span>
                             </Link>
                             <Link href="/rent" className={`${styles.mobileLink} ${pathname === '/rent' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M3 21h18"></path><path d="M9 8h1"></path><path d="M9 12h1"></path><path d="M9 16h1"></path><path d="M14 8h1"></path><path d="M14 12h1"></path><path d="M14 16h1"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path></svg>
-                                <span className={styles.linkText}>Арендаторам</span>
+                                <span className={styles.linkText}>{t.common.rent}</span>
                             </Link>
                             <Link href="/contacts" className={`${styles.mobileLink} ${pathname === '/contacts' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                                <span className={styles.linkText}>Контакты</span>
+                                <span className={styles.linkText}>{t.common.contacts}</span>
                             </Link>
                         </nav>
                     </div>
@@ -149,7 +165,7 @@ export default function HeaderComponent() {
                     <div className={styles.mobileMenuFooter}>
                         <div className={styles.mobileActions}>
                             <Link href="/contacts" className={styles.btnRouteMobile} onClick={closeMenu}>
-                                Проложить маршрут
+                                {t.common.route}
                             </Link>
                         </div>
                     </div>
@@ -160,15 +176,15 @@ export default function HeaderComponent() {
             <nav className={styles.bottomNav}>
                 <Link href="/" className={`${styles.bottomNavItem} ${pathname === '/' ? styles.bottomNavActive : ''}`} onClick={closeMenu}>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                    <span>Главная</span>
+                    <span>{t.common.home}</span>
                 </Link>
                 <Link href="/directions" className={`${styles.bottomNavItem} ${pathname === '/directions' ? styles.bottomNavActive : ''}`} onClick={closeMenu}>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                    <span>Магазины</span>
+                    <span>{t.common.directions}</span>
                 </Link>
                 <Link href="/rent" className={`${styles.bottomNavItem} ${pathname === '/rent' ? styles.bottomNavActive : ''}`} onClick={closeMenu}>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 21h18"></path><path d="M9 8h1"></path><path d="M9 12h1"></path><path d="M9 16h1"></path><path d="M14 8h1"></path><path d="M14 12h1"></path><path d="M14 16h1"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path></svg>
-                    <span>Аренда</span>
+                    <span>{t.common.rent}</span>
                 </Link>
                 <button className={`${styles.bottomNavItem} ${isMenuOpen ? styles.bottomNavActive : ''}`} onClick={toggleMenu} aria-label="Toggle menu">
                     {isMenuOpen ? (
@@ -176,7 +192,7 @@ export default function HeaderComponent() {
                     ) : (
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="1.5"></circle><circle cx="12" cy="5" r="1.5"></circle><circle cx="12" cy="19" r="1.5"></circle></svg>
                     )}
-                    <span>Ещё</span>
+                    <span>{t.common.more}</span>
                 </button>
             </nav>
         </>
