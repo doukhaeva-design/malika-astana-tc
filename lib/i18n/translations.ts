@@ -32,6 +32,7 @@ export const translations = {
             desc: 'Современный торговый центр MALIKA — это место, где шопинг, здоровье и бизнес встречаются в идеальном балансе. Пространство, созданное для вашего удобства.',
             about: 'О центре',
             scroll: 'Листайте вниз',
+            btnDirections: 'Как добраться',
         },
         advantages: {
             title: 'Почему выбирают нас',
@@ -84,6 +85,23 @@ export const translations = {
             hoursLabel: 'Режим работы',
             hoursVal: '09:00 — 18:00, ежедневно',
         },
+        contactInfo: {
+            addressTitle: 'Адрес',
+            phoneTitle: 'Телефон',
+            hoursTitle: 'График работы',
+            hoursDaily: 'Ежедневно',
+        },
+        softTenant: {
+            badge: 'Партнерство',
+            titlePart1: 'Ваш бизнес в',
+            text: 'Станьте частью бизнес-сообщества MALIKA. Современные площади, стабильный трафик и выгодные локации для вашего роста.',
+            btn: 'СТАТЬ АРЕНДАТОРОМ',
+        },
+        footer: {
+            tagline: 'Профессиональное пространство для вашего бизнеса и здоровья.',
+            rights: 'Все права защищены.',
+            privacy: 'Политика конфиденциальности',
+        },
         map: {
             subtitle: 'Маршрут',
             title: 'Торговый центр MALIKA',
@@ -131,13 +149,44 @@ export const translations = {
                 }
             ],
 
-            formTitle: 'Стать арендатором',
-            formSubtitle: 'Оставьте заявку, и мы свяжемся с вами',
+            formTitle: 'Интересует аренда помещения?',
+            formSubtitle: 'Свяжитесь с командой MALIKA — мы предоставим всю необходимую информацию.',
             formName: 'Ваше имя',
-            formPhone: 'Номер телефона',
+            formNamePlaceholder: 'Сергей',
+            formEmailNote: '— обязателен для Email-заявки',
+            formPhone: 'Телефон',
+            formPhoneOptional: '(необязательно)',
+            formBusiness: 'Тип бизнеса',
+            formBusinessPlaceholder: 'Магазин одежды, Кофейня...',
+            formMessage: 'Ваше сообщение',
+            formMessagePlaceholder: 'Какая площадь вас интересует?',
+            formEmailBtn: 'Отправить через Email',
+            formWhatsappBtn: 'Отправить в WhatsApp',
+            formNote: 'Мы свяжемся с вами для уточнения деталей и обсуждения условий.',
+
+            availableIntro: 'Мы предлагаем различные форматы коммерческих помещений.',
+            availableSpaces: [
+                { title: 'Торговые помещения', desc: 'Помещения в аренду от 50 м² под магазины и розничную торговлю.' },
+                { title: 'Складские площади', desc: 'Для хранения и логистических задач.' },
+                { title: 'Коммерческие участки', desc: 'Для специализированных проектов.' }
+            ],
+
+            whyReasons: [
+                { title: 'Активная торговая зона', desc: 'Расположение в районе с устойчивым потоком посетителей.' },
+                { title: 'Компактная структура', desc: 'Понятная планировка без лишних переходов.' },
+                { title: 'Удобная логистика', desc: 'Доступность для клиентов и поставщиков.' },
+                { title: 'Потенциал развития', desc: 'Возможность расширения и долгосрочного сотрудничества.' }
+            ],
+
             formCompany: 'Название компании',
             formSpace: 'Требуемая площадь (м²)',
             formSubmit: 'ОТПРАВИТЬ ЗАЯВКУ',
+        },
+        rentHero: {
+            title: 'Аренда коммерческих помещений',
+            subtitle: 'Удобная площадка для стабильной работы и развития бизнеса.',
+            btn: 'Оставить заявку',
+            btnCall: 'Позвонить',
         },
         rehabPage: {
             heroTitle: 'Профессиональная реабилитация',
@@ -197,6 +246,7 @@ export const translations = {
             desc: 'The modern MALIKA shopping center is a place where shopping, health, and business meet in perfect balance. A space designed for your convenience.',
             about: 'About Center',
             scroll: 'Scroll Down',
+            btnDirections: 'How to get here',
         },
         advantages: {
             title: 'Why Choose Us',
@@ -249,6 +299,23 @@ export const translations = {
             hoursLabel: 'Working Hours',
             hoursVal: '09:00 — 18:00, daily',
         },
+        contactInfo: {
+            addressTitle: 'Address',
+            phoneTitle: 'Phone',
+            hoursTitle: 'Working hours',
+            hoursDaily: 'Daily',
+        },
+        softTenant: {
+            badge: 'Partnership',
+            titlePart1: 'Your business at',
+            text: 'Become part of the MALIKA business community. Modern spaces, stable traffic, and profitable locations for your growth.',
+            btn: 'BECOME A TENANT',
+        },
+        footer: {
+            tagline: 'Professional space for your business and health.',
+            rights: 'All rights reserved.',
+            privacy: 'Privacy Policy',
+        },
         map: {
             subtitle: 'Route',
             title: 'MALIKA Shopping Center',
@@ -296,13 +363,44 @@ export const translations = {
                 }
             ],
 
-            formTitle: 'Become a Tenant',
-            formSubtitle: 'Leave a request, and we will contact you',
-            formName: 'Your Name',
-            formPhone: 'Phone Number',
+            formTitle: 'Interested in renting a space?',
+            formSubtitle: 'Contact the MALIKA team — we will provide all the necessary information.',
+            formName: 'Your name',
+            formNamePlaceholder: 'John',
+            formEmailNote: '— required for Email application',
+            formPhone: 'Phone',
+            formPhoneOptional: '(optional)',
+            formBusiness: 'Business type',
+            formBusinessPlaceholder: 'Clothing store, coffee shop...',
+            formMessage: 'Your message',
+            formMessagePlaceholder: 'What area are you interested in?',
+            formEmailBtn: 'Send via Email',
+            formWhatsappBtn: 'Send via WhatsApp',
+            formNote: 'We will contact you to clarify the details and discuss the conditions.',
+
+            availableIntro: 'We offer various formats of commercial premises.',
+            availableSpaces: [
+                { title: 'Retail Spaces', desc: 'Premises for rent from 50 square meters for shops and retail.' },
+                { title: 'Warehouse Areas', desc: 'For storage and logistics tasks.' },
+                { title: 'Commercial Lots', desc: 'For specialized projects.' }
+            ],
+
+            whyReasons: [
+                { title: 'Active Trading Zone', desc: 'Location in an area with a steady flow of visitors.' },
+                { title: 'Compact Structure', desc: 'Clear layout without unnecessary transitions.' },
+                { title: 'Convenient Logistics', desc: 'Accessibility for clients and suppliers.' },
+                { title: 'Development Potential', desc: 'Opportunity for expansion and long-term cooperation.' }
+            ],
+
             formCompany: 'Company Name',
             formSpace: 'Required Area (sq.m)',
             formSubmit: 'SUBMIT REQUEST',
+        },
+        rentHero: {
+            title: 'Commercial Space Rental',
+            subtitle: 'A convenient platform for stable operation and business development.',
+            btn: 'Submit Application',
+            btnCall: 'Call',
         },
         rehabPage: {
             heroTitle: 'Professional Rehabilitation',

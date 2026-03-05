@@ -11,24 +11,20 @@ import styles from './SoftTenantSectionComponent.module.css';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function SoftTenantSectionComponent() {
-    const { language } = useLanguage();
+    const { t } = useLanguage();
 
     return (
         <section className={styles.section} id="partnership">
             <div className={styles.container}>
                 <div className={`${styles.mainBox} animate-fade`}>
                     <div className={styles.content}>
-                        <h3 className={styles.badge}>{language === 'ru' ? 'Партнерство' : 'Partnership'}</h3>
-                        <h2 className={styles.title}>{language === 'ru' ? 'Ваш бизнес в' : 'Your business at'} <span className={styles.highlight}>Malika</span></h2>
-                        <p className={styles.text}>
-                            {language === 'ru'
-                                ? 'Станьте частью бизнес-сообщества MALIKA. Современные площади, стабильный трафик и выгодные локации для вашего роста.'
-                                : 'Become part of the MALIKA business community. Modern spaces, stable traffic, and profitable locations for your growth.'}
-                        </p>
+                        <h3 className={styles.badge}>{t.softTenant.badge}</h3>
+                        <h2 className={styles.title}>{t.softTenant.titlePart1} <span className={styles.highlight}>Malika</span></h2>
+                        <p className={styles.text}>{t.softTenant.text}</p>
 
                         <div className={styles.footer}>
                             <Link href="/rent" className={styles.actionBtn}>
-                                {language === 'ru' ? 'СТАТЬ АРЕНДАТОРОМ' : 'BECOME A TENANT'}
+                                {t.softTenant.btn}
                             </Link>
                         </div>
                     </div>
