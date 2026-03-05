@@ -352,38 +352,38 @@
     display: none;
   }
 
-  .bottomNav {
-    display: flex;
-    position: fixed;
-    bottom: calc(36px + env(safe-area-inset-bottom));
-    /* Lowered to be closer to the edge */
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 32px);
-    max-width: 420px;
-    height: 70px;
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 20px;
-    z-index: 1002;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-    padding: 0 10px;
-    pointer-events: auto;
-  }
-
-  /* Safe area base covers the gap under the floating menu without being too high */
+  /* 1. LAYERED BASE (ПОДЛОЖКА) - Ниже всех */
   .bottomBarBase {
     display: block;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: calc(16px + env(safe-area-inset-bottom));
+    height: calc(16px + env(safe-area-inset-bottom, 0px));
     background-color: #ffffff;
-    z-index: 1001;
+    z-index: 10;
     pointer-events: none;
+  }
+
+  /* 2. FLOATING NAV (МЕНЮ) - Выше всех */
+  .bottomNav {
+    display: flex;
+    position: fixed;
+    bottom: calc(32px + env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 500px;
+    height: 65px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-md);
+    z-index: 9999;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    padding: 0 10px;
+    pointer-events: auto;
   }
 
   .bottomNavItem {
