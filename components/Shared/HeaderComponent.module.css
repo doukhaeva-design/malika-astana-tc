@@ -352,38 +352,41 @@
     display: none;
   }
 
-  /* 1. LAYERED BASE (ПОДЛОЖКА) - Твердый фундамент */
   .bottomBarBase {
     display: block;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    /* Гарантированные 16px + системный отступ iOS */
-    height: calc(16px + env(safe-area-inset-bottom, 0px));
-    background-color: #ffffff;
-    z-index: 10;
+    height: env(safe-area-inset-bottom, 0px);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 9998;
     pointer-events: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
   }
 
   /* 2. FLOATING NAV (МЕНЮ) - Всегда сверху */
   .bottomNav {
     display: flex;
     position: fixed;
-    /* Высота подложки (16px) + Зазор (10px) + Отступ iOS */
-    bottom: calc(26px + env(safe-area-inset-bottom, 0px));
+    bottom: env(safe-area-inset-bottom, 0px);
     left: 50%;
     transform: translateX(-50%);
-    width: calc(100% - 40px);
+    width: calc(100% - 24px);
     max-width: 500px;
     height: 65px;
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: var(--radius-md);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-bottom: none;
+    border-radius: 16px 16px 0 0;
     z-index: 9999;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.05);
     padding: 0 10px;
     pointer-events: auto;
   }
