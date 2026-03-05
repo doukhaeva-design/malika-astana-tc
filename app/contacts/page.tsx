@@ -15,12 +15,12 @@ export default function ContactsPage() {
     return (
         <main>
             <HeaderComponent />
+            <MapSectionComponent />
             <PageHeaderComponent
                 title="Контакты"
                 description="Свяжитесь с нами удобным для вас способом. Мы всегда рады ответить на ваши вопросы."
             />
             <ContactInfoSectionComponent />
-            <MapSectionComponent />
             <FooterComponent />
         </main>
     );

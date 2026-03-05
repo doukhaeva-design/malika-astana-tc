@@ -456,6 +456,11 @@
         padding-top: 110px;
     }
 
+    .taglineWrapper {
+        margin-bottom: 24px;
+        /* Reduced from 36px for tighter grouping */
+    }
+
     .title {
         font-size: 3.3rem;
         /* Increased from 3.0rem */

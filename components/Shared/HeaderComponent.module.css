@@ -243,11 +243,12 @@
 }
 
 .mobileLink {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
   color: var(--primary);
   text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .mobileLink:hover,
@@ -265,28 +266,48 @@
 }
 
 .btnRouteMobile {
-  padding: 16px 32px;
-  background-color: var(--primary);
-  color: #fff;
-  border-radius: 50px;
-  font-size: 1rem;
-  font-weight: 700;
+  padding: 18px 32px;
+  background-color: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  border-radius: 14px;
+  font-size: 0.9rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
   text-decoration: none;
   transition: all 0.3s ease;
   width: 100%;
   text-align: center;
 }
 
+.btnRouteMobile:active {
+  background-color: var(--primary);
+  color: #fff;
+}
+
 .langSwitchMobile {
   display: flex;
-  gap: 20px;
-  font-size: 1.2rem;
-  font-weight: 700;
+  background: #f1f5f9;
+  padding: 4px;
+  border-radius: 100px;
+  gap: 5px;
+}
+
+.langSwitchMobile span {
+  padding: 8px 16px;
+  font-size: 0.75rem;
+  font-weight: 800;
   color: var(--text-muted);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .activeLangMobile {
-  color: var(--primary);
+  background: #fff;
+  color: var(--primary) !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 /* --- Bottom Navigation Styles --- */
