@@ -132,41 +132,63 @@
 }
 
 .btnPrimary {
-    padding: 16px 48px;
+    padding: 0 48px;
+    height: 54px;
+    /* Фиксированная премиальная высота */
     background: rgba(255, 255, 255, 0.10);
-    /* Идеальный баланс: ровно посередине */
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 16px;
+    /* Баланс 14-18px */
     font-weight: 700;
     font-size: 0.95rem;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
+    /* Мягкое свечение вместо тени */
     display: inline-flex;
     align-items: center;
     justify-content: center;
 }
 
 .btnPrimary:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.18);
+    /* На ~8% светлее */
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+    /* Усиление glow */
+}
+
+.btnPrimary:active {
+    transform: scale(0.99);
+    /* Микро-отклик при нажатии */
 }
 
 .btnSecondary {
-    padding: 16px 48px;
+    padding: 0 48px;
+    height: 54px;
     background-color: transparent;
     color: var(--off-white);
-    border: 1px solid rgba(248, 249, 250, 0.3);
-    border-radius: var(--radius-sm);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.3s ease;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btnSecondary:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.btnSecondary:active {
+    transform: scale(0.99);
 }
 
 .btnSecondary:hover {
@@ -416,10 +438,10 @@
 
     .btnPrimary,
     .btnSecondary {
-        width: 100%;
-        padding: 16px 24px;
+        height: 54px;
+        padding: 0 24px;
         text-align: center;
-        border-radius: var(--radius-sm);
+        border-radius: 16px;
         /* Tight corners */
         font-weight: 600;
     }
