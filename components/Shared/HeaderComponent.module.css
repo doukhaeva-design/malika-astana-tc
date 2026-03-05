@@ -608,6 +608,7 @@
   .bottomNavItem span {
     font-size: 0.625rem;
     font-weight: 700;
+    white-space: nowrap;
   }
 
   .bottomNavActive {
