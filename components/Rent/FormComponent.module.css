@@ -1,6 +1,7 @@
 .section {
     padding: 100px 0 140px;
     background-color: #ffffff;
+    scroll-margin-top: 100px;
 }
 
 .container {
@@ -119,15 +120,16 @@
 
 .whatsappBtn {
     background-color: #ffffff;
-    color: #128C7E;
-    border: 1.5px solid #128C7E;
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
 }
 
 .whatsappBtn:hover {
-    background-color: #128C7E;
+    background-color: var(--primary-hover);
     color: #ffffff;
+    border-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(18, 140, 126, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .emailBtn {
@@ -137,9 +139,11 @@
 }
 
 .emailBtn:hover {
-    background-color: var(--primary-dark, #1a2a4b);
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(44, 78, 151, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .icon {

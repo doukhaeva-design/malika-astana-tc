@@ -178,8 +178,8 @@
 .btnSpecial {
     display: inline-block;
     background-color: transparent;
-    color: var(--accent);
-    border: 1.5px solid var(--accent);
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
     padding: 10px 24px;
     border-radius: 50px;
     font-weight: 700;
@@ -190,10 +190,11 @@
 }
 
 .btnSpecial:hover {
-    background-color: var(--accent);
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
     color: #fff;
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(44, 78, 151, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .btnRegular {
