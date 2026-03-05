@@ -361,7 +361,7 @@
     left: 0;
     width: 100%;
     height: calc(56px + env(safe-area-inset-bottom, 0px));
-    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.85) 100%);
+    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 100%);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
     border-top: 1px solid var(--gray-medium);
