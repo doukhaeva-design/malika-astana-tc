@@ -12,20 +12,14 @@ import styles from './FooterComponent.module.css';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function FooterComponent() {
-    const { language, t } = useLanguage();
+    const { t } = useLanguage();
 
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
                 <div className={styles.info}>
                     <p className={styles.logo}>Malika</p>
-                    <p className={styles.tagline}>
-                        {language === 'ru' ? (
-                            <>Профессиональное пространство <br /> для вашего бизнеса и здоровья.</>
-                        ) : (
-                            <>Professional space <br /> for your business and health.</>
-                        )}
-                    </p>
+                    <p className={styles.tagline}>{t.footer.tagline}</p>
                     <div className={styles.socials}>
                         <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className={styles.socialIcon} aria-label="Instagram">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
@@ -64,9 +58,9 @@ export default function FooterComponent() {
                 </div>
 
                 <div className={styles.copyright}>
-                    <p>&copy; {new Date().getFullYear()} {t.common.company}. {language === 'ru' ? 'Все права защищены.' : 'All rights reserved.'}</p>
+                    <p>&copy; {new Date().getFullYear()} {t.common.company}. {t.footer.rights}</p>
                     <div className={styles.legal}>
-                        <span>{language === 'ru' ? 'Политика конфиденциальности' : 'Privacy Policy'}</span>
+                        <span>{t.footer.privacy}</span>
                     </div>
                 </div>
             </div>

@@ -48,10 +48,10 @@ export default function HeroSectionComponent() {
                         </p>
                         <div className={styles.actions}>
                             <Link href="/contacts" className={styles.btnPrimary}>
-                                {language === 'ru' ? 'Как добраться' : 'How to get here'}
+                                {t.hero.btnDirections}
                             </Link>
                             <Link href="/directions" className={styles.btnSecondary}>
-                                {language === 'ru' ? 'Магазины и услуги' : 'Shops and services'}
+                                {t.common.directions}
                             </Link>
                         </div>
                     </div>
@@ -68,7 +68,7 @@ export default function HeroSectionComponent() {
             </div>
             <div className={styles.scrollDown}>
                 <div className={styles.mouse}></div>
-                <span>{language === 'ru' ? 'Листайте ниже' : 'Scroll down'}</span>
+                <span>{t.hero.scroll}</span>
             </div>
         </section>
     );

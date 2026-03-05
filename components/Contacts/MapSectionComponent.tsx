@@ -11,7 +11,7 @@ import styles from './MapSectionComponent.module.css';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function MapSectionComponent() {
-    const { language } = useLanguage();
+    const { t } = useLanguage();
     const [showSelection, setShowSelection] = useState(false);
     const [selectedNav, setSelectedNav] = useState<string | null>(null);
 
@@ -21,6 +21,7 @@ export default function MapSectionComponent() {
         { id: 'google', name: 'Google Maps', url: 'https://www.google.com/maps/dir/?api=1&destination=51.203432,71.495665', icon: '🌍', color: '#3498db' }
     ];
 
+    // Открываем выбранный навигатор и сбрасываем состояние панели
     const handleNavigate = () => {
         const nav = navigators.find(n => n.id === selectedNav);
         if (nav) {
@@ -46,20 +47,16 @@ export default function MapSectionComponent() {
                         ></iframe>
                     </div>
                     <div className={styles.mapContent}>
-                        <span className={styles.accent}>{language === 'ru' ? 'Маршрут' : 'Route'}</span>
-                        <h2 className={styles.mapTitle}>{language === 'ru' ? 'Торговый центр MALIKA' : 'MALIKA Shopping Center'}</h2>
-                        <p className={styles.mapDescription}>
-                            {language === 'ru'
-                                ? 'Район Байконыр, Проезд 69, 1А, Астана. Проложите удобный маршрут прямо сейчас.'
-                                : 'Baikonyr District, Proyezd 69, 1A, Astana. Get directions right now.'}
-                        </p>
+                        <span className={styles.accent}>{t.map.subtitle}</span>
+                        <h2 className={styles.mapTitle}>{t.map.title}</h2>
+                        <p className={styles.mapDescription}>{t.map.desc}</p>
 
                         <div className={styles.selectionWrapper}>
                             <button
                                 className={styles.btn}
                                 onClick={() => setShowSelection(true)}
                             >
-                                {language === 'ru' ? 'ПРОЛОЖИТЬ МАРШРУТ' : 'GET DIRECTIONS'}
+                                {t.common.route}
                             </button>
                         </div>
 
@@ -69,7 +66,7 @@ export default function MapSectionComponent() {
                                 <div className={styles.overlay} onClick={() => { setShowSelection(false); setSelectedNav(null); }} />
                                 <div className={styles.popup}>
                                     <div className={styles.popupHeader}>
-                                        <h3>{language === 'ru' ? 'Выбор навигатора' : 'Select Navigator'}</h3>
+                                        <h3>{t.map.chooseNav}</h3>
                                         <button className={styles.closeBtn} onClick={() => { setShowSelection(false); setSelectedNav(null); }}>
                                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                                         </button>
@@ -94,7 +91,7 @@ export default function MapSectionComponent() {
                                             disabled={!selectedNav}
                                             onClick={handleNavigate}
                                         >
-                                            {language === 'ru' ? 'ПОЕХАЛИ' : "LET'S GO"}
+                                            {t.map.go}
                                         </button>
                                     </div>
                                 </div>
