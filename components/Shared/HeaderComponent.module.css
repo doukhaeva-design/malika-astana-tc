@@ -352,20 +352,7 @@
     display: none;
   }
 
-  .bottomBarBase {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: env(safe-area-inset-bottom, 0px);
-    background-color: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    z-index: 9998;
-    pointer-events: none;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
-  }
+
 
   /* 2. FLOATING NAV (МЕНЮ) - Всегда сверху */
   .bottomNav {

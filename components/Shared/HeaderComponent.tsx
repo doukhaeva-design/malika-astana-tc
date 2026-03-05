@@ -133,7 +133,7 @@ export default function HeaderComponent() {
             </nav>
 
             {/* Solid white base for mobile browser navigation area */}
-            <div className={styles.bottomBarBase} />
+
         </>
     );
 }
