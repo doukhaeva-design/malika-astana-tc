@@ -375,7 +375,9 @@
     width: calc(100% - 32px);
     max-width: 420px;
     height: 65px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-md);
     justify-content: space-around;
@@ -383,7 +385,7 @@
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
     padding: 0 10px;
     margin-bottom: 28px;
-    /* ФИКСИРОВАННЫЙ ЗАЗОР + 8px */
+    /* ЗАЗОР 28px */
     pointer-events: auto;
   }
 
