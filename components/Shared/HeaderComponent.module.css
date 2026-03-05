@@ -352,39 +352,40 @@
     display: none;
   }
 
-  .bottomNav {
-    display: flex;
-    position: fixed;
-    bottom: calc(30px + env(safe-area-inset-bottom));
-    /* Lowered to be closer to the edge */
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 32px);
-    max-width: 420px;
-    height: 70px;
-    background-color: #ffffff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 20px;
-    z-index: 1002;
-    justify-content: space-around;
-    align-items: center;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-    padding: 0 10px;
-    pointer-events: auto;
-  }
-
-  /* Separate solid white base element to cover just the browser UI area */
+  /* 1. LAYERED BASE (ПОДЛОЖКА) - Твердый фундамент */
   .bottomBarBase {
     display: block;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    height: env(safe-area-inset-bottom);
-    /* Exactly matching the system bar area */
+    /* Гарантированные 16px + системный отступ iOS */
+    height: calc(16px + env(safe-area-inset-bottom, 0px));
     background-color: #ffffff;
-    z-index: 1000;
+    z-index: 10;
     pointer-events: none;
+  }
+
+  /* 2. FLOATING NAV (МЕНЮ) - Всегда сверху */
+  .bottomNav {
+    display: flex;
+    position: fixed;
+    /* Высота подложки (16px) + Зазор (10px) + Отступ iOS */
+    bottom: calc(26px + env(safe-area-inset-bottom, 0px));
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 500px;
+    height: 65px;
+    background-color: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-md);
+    z-index: 9999;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+    padding: 0 10px;
+    pointer-events: auto;
   }
 
   .bottomNavItem {
@@ -400,7 +401,7 @@
     margin: 0;
     border: none;
     background: transparent;
-    border-radius: 12px;
+    border-radius: 6px;
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   }
@@ -418,15 +419,17 @@
 
   .bottomNavActive {
     color: var(--accent);
-    background: rgba(44, 78, 151, 0.08);
+    background: rgba(44, 78, 151, 0.06);
+    border: none;
   }
 
   .bottomNavActive svg {
     color: var(--accent);
-    transform: translateY(-1px);
+    transform: scale(1.1);
   }
 
   .bottomNavActive span {
     color: var(--accent);
+    font-weight: 800;
   }
 }

@@ -26,8 +26,6 @@ import FooterComponent from '@/components/Shared/FooterComponent';
 export default function Home() {
   return (
     <main>
-      <HeaderComponent />
-
       <HeroSectionComponent />
       <ForEverydayNeedsSectionComponent />
       <SpaceShowcaseComponent />
