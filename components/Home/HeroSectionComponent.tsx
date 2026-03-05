@@ -16,7 +16,7 @@ export default function HeroSectionComponent() {
                     <div className={`${styles.content} animate-fade`}>
                         <div className={styles.taglineWrapper}>
                             <span className={styles.statusDot}></span>
-                            <span className={styles.tagline}>Добро пожаловать<span className={styles.taglineMobileOnly}> в malika</span></span>
+                            <span className={styles.tagline}>Добро пожаловать<span className={styles.taglineMobileOnly}> в <span className={styles.boldMalika}>malika</span></span></span>
                         </div>
                         <h1 className={styles.title}>
                             <span className={styles.titleLight}>Ваш</span> торговый центр <br />

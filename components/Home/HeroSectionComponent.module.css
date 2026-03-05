@@ -76,6 +76,11 @@
     /* Thinner for elegance */
 }
 
+.boldMalika {
+    font-weight: 800;
+    color: #ffffff;
+}
+
 .taglineMobileOnly {
     display: none;
     /* Hide 'в MALIKA' on desktop to avoid repetition with the massive logo */
@@ -430,8 +435,7 @@
     }
 
     .title {
-        font-size: 2.8rem;
-        /* Increased from 2.5rem */
+        font-size: 3.0rem;
     }
 
     .visuals {
@@ -451,6 +455,11 @@
 
     .bgText {
         display: none;
+    }
+
+    .tagline {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
     }
 
     .taglineMobileOnly {
