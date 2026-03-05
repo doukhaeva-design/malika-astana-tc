@@ -9,20 +9,28 @@
     padding: 0 40px;
 }
 
-/* Page Header with Accent Line */
 .pageHeader {
-    margin-bottom: 60px;
-    padding-left: 20px;
-    border-left: 4px solid #1a56db;
-    /* Яркий акцент как на фото, но можно заменить на --accent */
+    margin-bottom: 40px;
+}
+
+.subtitleWrapper {
+    margin-bottom: 0.5rem;
+}
+
+.serifSubtitle {
+    display: block;
+    font-size: 1.5rem;
+    color: var(--text-muted);
+    opacity: 0.8;
 }
 
 .pageTitle {
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-weight: 800;
     color: var(--primary);
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
     margin: 0;
+    text-transform: uppercase;
 }
 
 /* Main Layout */

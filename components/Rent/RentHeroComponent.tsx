@@ -23,9 +23,14 @@ export default function RentHeroComponent() {
 
     return (
         <section className={styles.hero}>
-            <div className={styles.container}>
+            <div className={`${styles.container} animate-fade`}>
                 {/* Заголовок страницы с акцентом */}
                 <div className={styles.pageHeader}>
+                    <div className={styles.subtitleWrapper}>
+                        <span className={`${styles.serifSubtitle} serif-accent`}>
+                            {t.rentHero.title}
+                        </span>
+                    </div>
                     <h1 className={styles.pageTitle}>{t.rentHero.title}</h1>
                 </div>
 
