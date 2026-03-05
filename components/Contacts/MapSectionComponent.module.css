@@ -32,17 +32,17 @@
 @keyframes pulse {
     0% {
         transform: scale(0.9);
-        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0.2);
+        box-shadow: 0 0 0 0 rgba(27, 58, 109, 0.2);
     }
 
     70% {
         transform: scale(1.1);
-        box-shadow: 0 0 0 20px rgba(37, 99, 235, 0);
+        box-shadow: 0 0 0 20px rgba(27, 58, 109, 0);
     }
 
     100% {
         transform: scale(0.9);
-        box-shadow: 0 0 0 0 rgba(37, 99, 235, 0);
+        box-shadow: 0 0 0 0 rgba(27, 58, 109, 0);
     }
 }
 
@@ -97,9 +97,9 @@
 }
 
 .btn:hover {
-    background-color: var(--accent);
+    background-color: var(--primary-hover);
     transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(19, 26, 40, 0.2);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
 .selectionWrapper {

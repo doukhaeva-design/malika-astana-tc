@@ -61,7 +61,7 @@ export default function FormComponent() {
     };
 
     return (
-        <section className={styles.section} id="apply">
+        <section className={styles.section} id="rent-form">
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.title}>{t.rentPage.formTitle}</h2>

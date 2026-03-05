@@ -156,8 +156,16 @@
 }
 
 .scrolled .btnRoute:hover {
-  background-color: var(--accent);
-  box-shadow: 0 10px 25px rgba(42, 58, 96, 0.25);
+  background-color: var(--primary-hover);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.scrolled .whatsappBtn:hover {
+  background-color: var(--primary-hover);
+  color: #ffffff;
+  border-color: var(--primary-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .langSwitch {
@@ -445,6 +453,28 @@
   gap: 16px;
 }
 
+.btnSpecial {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--primary);
+  border: 1.5px solid var(--primary);
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.btnSpecial:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
 .btnRouteMobile {
   padding: 16px;
   background-color: transparent;
@@ -460,8 +490,7 @@
 
 .btnRouteMobile:active {
   transform: scale(0.98);
-  background-color: rgba(44, 78, 151, 0.05);
-  /* very faint blue hover */
+  background-color: var(--accent-soft);
 }
 
 .langSwitchMobile {

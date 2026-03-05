@@ -3,10 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #232d3f;
-  /* Deep Slate/Navy */
+  /* Deep Slate/Navy - Наш основной архитектурный код */
   --primary: #1a2033;
-  /* Muted Gold/Amber */
-  --accent: #2c4e97;
+  --primary-hover: #212c4d;
+
+  /* Accent Blue - Для акцентов, спокойный и глубокий */
+  --accent: #1e3a63;
   --accent-soft: #f4f6f9;
   --accent-warm: #d4a13d;
   /* Off-White for dark backgrounds */
