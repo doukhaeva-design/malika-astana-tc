@@ -14,11 +14,14 @@ export default function ContactsHeroComponent() {
 
     return (
         <section className={styles.hero}>
-            <div className={styles.container}>
+            <div className={`${styles.container} animate-fade`}>
                 {/* Элемент разделитель сверху */}
                 <div className={styles.topDivider}></div>
 
                 <div className={styles.content}>
+                    <span className={`${styles.serifSubtitle} serif-accent`}>
+                        {language === 'ru' ? 'Будем на связи' : 'Stay in touch'}
+                    </span>
                     <h1 className={styles.title}>
                         {language === 'ru' ? 'КОНТАКТЫ' : 'CONTACTS'}
                     </h1>

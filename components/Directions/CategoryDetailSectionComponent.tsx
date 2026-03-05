@@ -107,7 +107,10 @@ export default function CategoryDetailSectionComponent() {
             <div className={styles.container}>
                 <div className={styles.grid}>
                     {categories.map((cat, index) => (
-                        <div key={cat.id} className={styles.card}>
+                        <div
+                            key={cat.id}
+                            className={`${styles.card} animate-fade stagger-${(index % 4) + 1}`}
+                        >
                             <div className={styles.imageSide}>
                                 <img src={cat.img} alt={cat.title} className={styles.image} />
                             </div>
@@ -126,7 +129,7 @@ export default function CategoryDetailSectionComponent() {
                     ))}
                 </div>
 
-                <div className={styles.infoBlock}>
+                <div className={`${styles.infoBlock} animate-fade`}>
                     <h3 className={styles.infoTitle}>
                         {language === 'ru' ? 'Не нашли нужный сервис?' : 'Looking for a specific service?'}
                     </h3>
