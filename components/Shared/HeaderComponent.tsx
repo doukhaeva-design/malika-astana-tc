@@ -2,8 +2,9 @@
 
 /* 
   Шапка сайта (HeaderComponent)
-  Desktop: Logo + Links + Route Btn + Lang.
-  Mobile: Logo top, Bottom Navigation (App-like).
+  - Desktop: Верхняя инфо-панель + Навигация с логотипом.
+  - Mobile: Компактная инфо-панель + Нижняя навигация (App-like).
+  - Mobile Menu Overlay: Полноэкранное премиум-меню с улучшенной иерархией.
 */
 
 import React, { useState, useEffect } from 'react';
@@ -14,6 +15,7 @@ import styles from './HeaderComponent.module.css';
 export default function HeaderComponent() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isLangOpen, setIsLangOpen] = useState(false);
     const pathname = usePathname();
 
     useEffect(() => {
@@ -45,7 +47,11 @@ export default function HeaderComponent() {
     }, [isMenuOpen]);
 
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-    const closeMenu = () => setIsMenuOpen(false);
+    const closeMenu = () => {
+        setIsMenuOpen(false);
+        setIsLangOpen(false);
+    };
+    const toggleLang = () => setIsLangOpen(!isLangOpen);
 
     const isHomePage = pathname === '/';
 
@@ -71,9 +77,9 @@ export default function HeaderComponent() {
 
                     {/* Desktop Navigation */}
                     <nav className={styles.nav}>
-                        <Link href="/" className={styles.link}>О центре</Link>
+                        <Link href="/" className={styles.link}>Главная</Link>
                         <Link href="/directions" className={styles.link}>Магазины и сервисы</Link>
-                        <Link href="/rehab" className={styles.link}>Реабилитационный центр</Link>
+                        <Link href="/rehab" className={styles.link}>Реабилитация</Link>
                         <Link href="/rent" className={styles.link}>Арендаторам</Link>
                         <Link href="/contacts" className={styles.link}>Контакты</Link>
                     </nav>
@@ -88,21 +94,63 @@ export default function HeaderComponent() {
                     </div>
                 </div>
 
-                {/* Mobile Menu Overlay */}
+                {/* 
+                    Полноэкранное меню для мобильных устройств.
+                    Открывается при клике на 'Ещё' в нижней навигации.
+                */}
                 <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
-                    <nav className={styles.mobileNav}>
-                        <Link href="/" className={`${styles.mobileLink} ${pathname === '/' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>О центре</Link>
-                        <Link href="/directions" className={`${styles.mobileLink} ${pathname === '/directions' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>Магазины и сервисы</Link>
-                        <Link href="/rehab" className={`${styles.mobileLink} ${pathname === '/rehab' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>Реабилитационный центр</Link>
-                        <Link href="/rent" className={`${styles.mobileLink} ${pathname === '/rent' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>Арендаторам</Link>
-                        <Link href="/contacts" className={`${styles.mobileLink} ${pathname === '/contacts' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>Контакты</Link>
-                    </nav>
-                    <div className={styles.mobileActions}>
-                        <Link href="/contacts" className={styles.btnRouteMobile} onClick={closeMenu}>
-                            Проложить маршрут
+                    {/* Хедер меню с лого и кнопкой закрытия */}
+                    <div className={styles.mobileMenuHeader}>
+                        <Link href="/" className={styles.mobileLogo} onClick={closeMenu}>
+                            Malika
                         </Link>
-                        <div className={styles.langSwitchMobile}>
-                            <span className={styles.activeLangMobile}>RU</span> | <span>EN</span>
+                        <div className={styles.headerActionsMobile}>
+                            <div className={styles.langWrapperMobile}>
+                                <button className={styles.langToggleBtn} onClick={toggleLang} aria-label="Switch language">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.planetIcon}><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                                    <span className={styles.activeLangText}>RU</span>
+                                </button>
+                                <div className={`${styles.langDropdownMobile} ${isLangOpen ? styles.langDropdownOpen : ''}`}>
+                                    <span className={styles.langOption}>RU</span>
+                                    <span className={styles.langOption}>EN</span>
+                                </div>
+                            </div>
+                            <button className={styles.closeBtn} onClick={closeMenu} aria-label="Close menu">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className={styles.mobileMenuContent}>
+                        <nav className={styles.mobileNav}>
+                            <Link href="/" className={`${styles.mobileLink} ${pathname === '/' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+                                <span className={styles.linkText}>Главная</span>
+                            </Link>
+                            <Link href="/directions" className={`${styles.mobileLink} ${pathname === '/directions' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
+                                <span className={styles.linkText}>Магазины и сервисы</span>
+                            </Link>
+                            <Link href="/rehab" className={`${styles.mobileLink} ${pathname === '/rehab' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                                <span className={styles.linkText}>Реабилитация</span>
+                            </Link>
+                            <Link href="/rent" className={`${styles.mobileLink} ${pathname === '/rent' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M3 21h18"></path><path d="M9 8h1"></path><path d="M9 12h1"></path><path d="M9 16h1"></path><path d="M14 8h1"></path><path d="M14 12h1"></path><path d="M14 16h1"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path></svg>
+                                <span className={styles.linkText}>Арендаторам</span>
+                            </Link>
+                            <Link href="/contacts" className={`${styles.mobileLink} ${pathname === '/contacts' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                                <span className={styles.linkText}>Контакты</span>
+                            </Link>
+                        </nav>
+                    </div>
+
+                    <div className={styles.mobileMenuFooter}>
+                        <div className={styles.mobileActions}>
+                            <Link href="/contacts" className={styles.btnRouteMobile} onClick={closeMenu}>
+                                Проложить маршрут
+                            </Link>
                         </div>
                     </div>
                 </div>
