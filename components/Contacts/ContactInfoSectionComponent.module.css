@@ -1,34 +1,81 @@
 .section {
-    padding: 4rem 0;
-    background-color: #fff;
+    padding: 2rem 0 10rem;
+    background-color: #ffffff;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 40px;
 }
 
 .infoGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
 }
 
 .infoCard {
-    border: 1px solid #eee;
-    padding: 1.5rem;
-    border-radius: 4px;
+    background: #fff;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    border: 1px solid #f1f3f5;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: all 0.3s ease;
 }
 
-.infoCard h3 {
-    font-size: 1.25rem;
-    margin-bottom: 1rem;
-    font-weight: bold;
+.iconBox {
+    width: 48px;
+    height: 48px;
+    background: #f8fafc;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
 }
 
-.infoCard p {
-    line-height: 1.5;
-    color: #555;
-    margin: 0.2rem 0;
+.cardLabel {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #94a3b8;
+    margin-bottom: 0.75rem;
+}
+
+.cardValue {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--primary);
+    line-height: 1.4;
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .infoGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 0 0 6rem;
+    }
+
+    .container {
+        padding: 0 20px;
+    }
+
+    .infoGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .infoCard {
+        padding: 2rem;
+    }
 }
