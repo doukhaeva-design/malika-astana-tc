@@ -431,12 +431,12 @@
 }
 
 .mobileMenuFooter {
-  padding: 0 24px calc(90px + env(safe-area-inset-bottom));
+  padding: 0 24px calc(80px + env(safe-area-inset-bottom));
   background-color: #fff;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-top: 40px;
+  margin-top: auto;
 }
 
 .mobileActions {

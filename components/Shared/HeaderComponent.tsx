@@ -77,9 +77,9 @@ export default function HeaderComponent() {
 
                     {/* Desktop Navigation */}
                     <nav className={styles.nav}>
-                        <Link href="/" className={styles.link}>О центре</Link>
+                        <Link href="/" className={styles.link}>Главная</Link>
                         <Link href="/directions" className={styles.link}>Магазины и сервисы</Link>
-                        <Link href="/rehab" className={styles.link}>Реабилитационный центр</Link>
+                        <Link href="/rehab" className={styles.link}>Реабилитация</Link>
                         <Link href="/rent" className={styles.link}>Арендаторам</Link>
                         <Link href="/contacts" className={styles.link}>Контакты</Link>
                     </nav>
@@ -125,7 +125,7 @@ export default function HeaderComponent() {
                         <nav className={styles.mobileNav}>
                             <Link href="/" className={`${styles.mobileLink} ${pathname === '/' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
-                                <span className={styles.linkText}>О центре</span>
+                                <span className={styles.linkText}>Главная</span>
                             </Link>
                             <Link href="/directions" className={`${styles.mobileLink} ${pathname === '/directions' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
