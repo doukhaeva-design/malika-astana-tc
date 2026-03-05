@@ -38,7 +38,7 @@ export default function AvailableSpacesComponent() {
     return (
         <section className={styles.section}>
             <div className={styles.container}>
-                <p className={styles.intro}>{t.rentPage.availableIntro}</p>
+                <h2 className={styles.mainTitle}>{t.rentPage.availableTitle}</h2>
                 <div className={styles.list}>
                     {t.rentPage.availableSpaces.map((space, index) => (
                         <div key={index} className={styles.spaceItem}>

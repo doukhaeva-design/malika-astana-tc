@@ -48,10 +48,6 @@ export default function WhyBusinessHereComponent() {
                 <div className={styles.grid}>
                     {t.rentPage.whyReasons.map((reason, index) => (
                         <div key={index} className={styles.card}>
-                            {/* Иконка направления */}
-                            <div className={styles.iconBox}>
-                                {reasonIcons[index] ?? reasonIcons[0]}
-                            </div>
                             <h3 className={styles.cardTitle}>{reason.title}</h3>
                             <p className={styles.cardText}>{reason.desc}</p>
                         </div>
