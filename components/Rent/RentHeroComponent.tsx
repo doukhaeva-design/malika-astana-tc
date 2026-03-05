@@ -16,11 +16,12 @@ export default function RentHeroComponent() {
     return (
         <section className={styles.hero}>
             <div className={styles.container}>
+                <div className={styles.divider} />
                 <h1 className={styles.title}>{t.rentHero.title}</h1>
                 <p className={styles.subtitle}>{t.rentHero.subtitle}</p>
                 <div className={styles.actions}>
-                    <a href="#apply" className={styles.btn}>{t.rentHero.btn}</a>
-                    <a href="tel:+77055557609" className={styles.btnOutline}>{t.rentHero.btnCall}</a>
+                    <a href="#apply" className={styles.primaryBtn}>{t.rentHero.btn}</a>
+                    <a href="tel:+77055557609" className={styles.secondaryBtn}>{t.rentHero.btnCall}</a>
                 </div>
             </div>
         </section>

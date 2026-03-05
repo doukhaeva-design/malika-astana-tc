@@ -1,44 +1,59 @@
 .section {
-    padding: 6rem 0;
-    background-color: #fff;
+    padding: 100px 0;
+    background-color: #ffffff;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 40px;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
 }
 
 .card {
     padding: 2.5rem 2rem;
-    border: 1px solid var(--gray-medium);
-    border-radius: 16px;
+    border: 1px solid #f1f3f5;
+    border-radius: 20px;
     background: #fff;
-    transition: all 0.3s ease;
+    /* Ультра-плавный переход для эффекта "свечения" */
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    border-color: var(--primary);
+    transform: none;
+    /* Стабильность как в каталоге */
+    box-shadow:
+        0 30px 60px -12px rgba(0, 0, 0, 0.08),
+        0 18px 36px -18px rgba(0, 0, 0, 0.1);
+    border-color: rgba(44, 78, 151, 0.15);
 }
 
 .iconBox {
     width: 52px;
     height: 52px;
-    background: var(--primary);
+    background: #f8fafc;
+    border: 1px solid #edf2f7;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.card:hover .iconBox {
+    background-color: var(--primary);
     color: #fff;
+    border-color: var(--primary);
+    transform: scale(1.1);
 }
 
 .iconBox svg {
@@ -47,10 +62,12 @@
 }
 
 .cardTitle {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 0.75rem;
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
     color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
 }
 
 .cardText {
@@ -59,8 +76,22 @@
     line-height: 1.6;
 }
 
+@media (max-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 @media (max-width: 600px) {
     .grid {
         grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .container {
+        padding: 0 24px;
     }
 }
