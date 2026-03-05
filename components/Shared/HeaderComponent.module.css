@@ -360,7 +360,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: calc(56px + env(safe-area-inset-bottom, 0px));
+    height: auto;
+    min-height: calc(52px + env(safe-area-inset-bottom, 0px));
     background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.8) 100%);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -377,15 +378,18 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    /* Центрируем, но управляем отступами */
+    padding: 12px 0 6px 0;
+    /* 12 сверху, 6 снизу */
     gap: 4px;
     color: var(--text-muted);
     text-decoration: none;
     flex: 1;
-    height: 100%;
     border: none;
     background: transparent;
     cursor: pointer;
     transition: all 0.3s ease;
+    font: inherit;
   }
 
   .bottomNavItem svg {
