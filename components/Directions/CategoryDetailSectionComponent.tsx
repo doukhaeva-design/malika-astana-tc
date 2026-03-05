@@ -113,7 +113,6 @@ export default function CategoryDetailSectionComponent() {
                             </div>
                             <div className={styles.contentSide}>
                                 <div className={styles.cardHeader}>
-                                    <span className={styles.number}>0{index + 1}</span>
                                     <h3 className={styles.cardTitle}>{cat.title}</h3>
                                 </div>
                                 <p className={styles.cardDesc}>{cat.desc}</p>
@@ -133,8 +132,8 @@ export default function CategoryDetailSectionComponent() {
                     </h3>
                     <p className={styles.infoText}>
                         {language === 'ru'
-                            ? 'Свыше 250 бутиков работают для вас ежедневно. Наша администрация поможет найти конкретный магазин или услугу.'
-                            : 'Over 250 boutiques are open for you daily. Our administration will help you find a specific store or service.'}
+                            ? 'Магазины и сервисы работают для вас ежедневно. Наша администрация всегда готова помочь вам найти нужный товар или услугу.'
+                            : 'Stores and services are open for you daily. Our administration is always ready to help you find a specific product or service.'}
                     </p>
                     <div className={styles.infoActions}>
                         <Link href="/contacts" className={styles.infoBtn}>
