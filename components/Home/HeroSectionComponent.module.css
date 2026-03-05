@@ -128,24 +128,27 @@
 
 .btnPrimary {
     padding: 16px 48px;
-    /* Slightly thinner/wider */
-    background-color: var(--off-white);
-    color: var(--primary);
-    border: 1px solid var(--off-white);
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Холодный фарфор */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    color: #131a28;
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: var(--radius-sm);
-    /* Tighter corners */
-    font-weight: 600;
+    font-weight: 700;
     font-size: 0.95rem;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     text-decoration: none;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btnPrimary:hover {
-    background-color: transparent;
-    color: var(--off-white);
+    background-color: #ffffff;
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .btnSecondary {
