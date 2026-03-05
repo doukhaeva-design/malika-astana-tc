@@ -43,7 +43,8 @@ export default function ForEverydayNeedsSectionComponent() {
             forWhom: 'Реабилитация',
             desc: 'Профессиональный центр восстановления',
             img: '/rehab_interior_v2_1772460250804.png',
-            isSpecial: true
+            isSpecial: true,
+            href: '/rehab'
         },
         {
             title: 'Автотовары',
@@ -81,7 +82,8 @@ export default function ForEverydayNeedsSectionComponent() {
             forWhom: 'Rehabilitation',
             desc: 'Professional recovery center',
             img: '/rehab_interior_v2_1772460250804.png',
-            isSpecial: true
+            isSpecial: true,
+            href: '/rehab'
         },
         {
             title: 'Auto Goods',
@@ -173,8 +175,10 @@ export default function ForEverydayNeedsSectionComponent() {
                             <p className={styles.cardText}>{dir.desc}</p>
 
                             <div className={styles.cardFooter}>
-                                {dir.isSpecial ? (
-                                    <Link href="/rehab" className={styles.btnSpecial}>{language === 'ru' ? 'Подробнее' : 'Learn more'}</Link>
+                                {dir.isSpecial && dir.href ? (
+                                    <Link href={dir.href} className={styles.btnSpecial}>
+                                        {language === 'ru' ? 'Подробнее' : 'Learn more'}
+                                    </Link>
                                 ) : (
                                     <div className={styles.separator}></div>
                                 )}

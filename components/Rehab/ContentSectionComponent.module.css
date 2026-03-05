@@ -1,36 +1,118 @@
 .section {
-    padding: 4rem 0;
-    background-color: #fff;
+    padding: 5rem 0;
+    background-color: #f7fafd;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
+    gap: 2rem;
+    align-items: start;
 }
 
-.infoBlock h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
+/* Каждый блок — карточка с тенью */
+.infoBlock {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(11, 74, 122, 0.06);
+    border: 1px solid #e8f0f8;
+}
+
+.blockTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
     color: #0b4a7a;
-    border-bottom: 2px solid #f1f8fc;
-    display: inline-block;
-    padding-bottom: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
-.infoBlock ul {
-    padding-left: 1.25rem;
+/* Направления — карточки горизонтальные */
+.directionCards {
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+}
+
+.directionCard {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.875rem 1rem;
+    background: #f0f7ff;
+    border-radius: 10px;
+    border-left: 3px solid #0b4a7a;
+    transition: background 0.2s ease;
+}
+
+.directionCard:hover {
+    background: #e1eefa;
+}
+
+.iconBox {
+    width: 40px;
+    height: 40px;
+    background: #0b4a7a;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.iconBox svg {
+    width: 20px;
+    height: 20px;
+}
+
+.directionLabel {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #1a2e40;
+    line-height: 1.4;
+}
+
+/* Контакты и расписание — строки с иконкой */
+.contactRow,
+.scheduleRow {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid #f0f0f0;
     color: #333;
+    font-size: 0.95rem;
+    line-height: 1.5;
 }
 
-.infoBlock li {
-    margin-bottom: 0.5rem;
+.contactRow:last-child,
+.scheduleRow:last-child {
+    border-bottom: none;
 }
 
-.infoBlock p {
-    line-height: 1.6;
-    color: #444;
+.scheduleList {
+    display: flex;
+    flex-direction: column;
+}
+
+.contactIcon {
+    width: 18px;
+    height: 18px;
+    color: #0b4a7a;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 }

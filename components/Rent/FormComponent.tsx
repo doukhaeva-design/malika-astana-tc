@@ -1,7 +1,7 @@
 /* 
   Форма обратной связи (FormComponent)
   Позволяет пользователю оставить заявку на аренду.
-  Два способа отправки: Email (открывает почту) или WhatsApp (с данными из формы).
+  Два способа отправки: Email или WhatsApp (с данными из формы).
 */
 
 "use client";
@@ -20,8 +20,8 @@ export default function FormComponent() {
     const [businessType, setBusinessType] = useState('');
     const [comment, setComment] = useState('');
 
-    // Формируем текст сообщения для WhatsApp из данных формы
-    const buildWhatsAppMessage = () => {
+    // Формируем текст сообщения для WhatsApp и Email
+    const buildMessage = () => {
         const lines = language === 'ru'
             ? [
                 '📋 Заявка на аренду — ТЦ MALIKA',
@@ -40,15 +40,24 @@ export default function FormComponent() {
                 comment ? `💬 Message: ${comment}` : '',
             ];
 
-        // Убираем пустые строки и объединяем
         return lines.filter(Boolean).join('\n');
     };
 
-    // Открываем WhatsApp с готовым текстом из формы
+    // Отправка в WhatsApp
     const handleWhatsApp = () => {
-        const message = buildWhatsAppMessage();
-        const encoded = encodeURIComponent(message);
-        window.open(`https://wa.me/77055557609?text=${encoded}`, '_blank', 'noopener,noreferrer');
+        const text = buildMessage();
+        const encodedText = encodeURIComponent(text);
+        // Используем api.whatsapp.com/send для лучшей поддержки передачи текста
+        const url = `https://api.whatsapp.com/send?phone=77055557609&text=${encodedText}`;
+        window.open(url, '_blank', 'noopener,noreferrer');
+    };
+
+    // Отправка через Email (mailto)
+    const handleEmail = () => {
+        const subject = language === 'ru' ? 'Заявка на аренду — MALIKA' : 'Rental Application — MALIKA';
+        const body = buildMessage();
+        const mailtoUrl = `mailto:akasalym.renta@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
     };
 
     return (
@@ -117,13 +126,17 @@ export default function FormComponent() {
                         </div>
 
                         <div className={styles.submitActions}>
-                            {/* Email: открывает почтовый клиент */}
-                            <a href="mailto:akasalym.renta@gmail.com" className={styles.emailBtn}>
+                            {/* Кнопка Email: теперь тоже вызывает функцию для формирования письма */}
+                            <button
+                                type="button"
+                                className={styles.emailBtn}
+                                onClick={handleEmail}
+                            >
                                 <svg className={styles.icon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                                 {t.rentPage.formEmailBtn}
-                            </a>
+                            </button>
 
-                            {/* WhatsApp: передаёт данные из формы в сообщение */}
+                            {/* Кнопка WhatsApp */}
                             <button
                                 type="button"
                                 className={styles.whatsappBtn}

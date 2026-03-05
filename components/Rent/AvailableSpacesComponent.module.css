@@ -1,40 +1,90 @@
 .section {
-    padding: 4rem 0;
-    background-color: #f7f7f7;
+    padding: 5rem 0;
+    background-color: #f7fafd;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 860px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
 .intro {
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     margin-bottom: 3rem;
-    font-weight: bold;
+    font-weight: 600;
+    color: #1a2e40;
 }
 
 .list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    gap: 1rem;
 }
 
+/* Карточка помещения — горизонтальная с иконкой слева */
 .spaceItem {
     background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 16px rgba(11, 74, 122, 0.06);
+    border: 1px solid #e8f0f8;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.spaceItem:hover {
+    transform: translateX(4px);
+    box-shadow: 0 8px 24px rgba(11, 74, 122, 0.1);
+    border-left: 3px solid #0b4a7a;
+}
+
+/* Иконка помещения */
+.iconBox {
+    width: 52px;
+    height: 52px;
+    background: #0b4a7a;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.iconBox svg {
+    width: 24px;
+    height: 24px;
+}
+
+.spaceContent {
+    flex: 1;
 }
 
 .title {
-    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+    color: #1a2e40;
 }
 
 .text {
-    color: #666;
+    color: #5a6a7a;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+    .spaceItem {
+        padding: 1.25rem;
+        gap: 1rem;
+    }
+
+    .iconBox {
+        width: 44px;
+        height: 44px;
+    }
 }

@@ -102,6 +102,9 @@
     border: 1px solid var(--gray-medium);
     flex: 0 0 400px;
     scroll-snap-align: start;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 .card:hover {
@@ -187,6 +190,24 @@
     color: #fff;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(44, 78, 151, 0.15);
+}
+
+.btnRegular {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--gray-medium);
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.card:hover .btnRegular {
+    border-color: var(--primary);
+    color: var(--primary);
 }
 
 .separator {
