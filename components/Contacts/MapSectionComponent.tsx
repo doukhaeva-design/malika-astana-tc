@@ -46,7 +46,7 @@ export default function MapSectionComponent() {
                     <div className={styles.mapContent}>
                         <span className={styles.accent}>Маршрут</span>
                         <h2 className={styles.mapTitle}>Торговый центр MALIKA</h2>
-                        <p className={styles.mapDescription}>Мы находимся в районе Байконыр. Проложите удобный маршрут прямо сейчас.</p>
+                        <p className={styles.mapDescription}>Адрес: г. Астана, район Орда Базар, вдоль Шоссе Алаш. Проложите удобный маршрут прямо сейчас.</p>
 
                         <div className={styles.selectionWrapper}>
                             <button
