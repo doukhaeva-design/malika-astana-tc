@@ -307,9 +307,17 @@
 
   .topBar {
     pointer-events: auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: calc(10px + env(safe-area-inset-top)) 0 10px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
+  }
+
+  .scrolled .topBar {
     background-color: #ffffff;
     border-bottom: 1px solid var(--gray-medium);
-    padding: calc(10px + env(safe-area-inset-top)) 0 10px;
   }
 
   .topContainer {
@@ -320,7 +328,12 @@
 
   .topItem {
     font-size: 0.65rem;
-    color: var(--primary);
+    color: rgba(255, 255, 255, 0.7);
+    transition: color 0.4s ease;
+  }
+
+  .scrolled .topItem {
+    color: var(--text-muted);
   }
 
   .topIcon {
