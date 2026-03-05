@@ -50,8 +50,8 @@ export default function MapSectionComponent() {
                         <h2 className={styles.mapTitle}>{language === 'ru' ? 'Торговый центр MALIKA' : 'MALIKA Shopping Center'}</h2>
                         <p className={styles.mapDescription}>
                             {language === 'ru'
-                                ? 'Адрес: г. Астана, район Орда Базар, вдоль Шоссе Алаш. Проложите удобный маршрут прямо сейчас.'
-                                : 'Address: Astana, Orda Bazar district, along Alash Highway. Get directions right now.'}
+                                ? 'Район Байконыр, Проезд 69, 1А, Астана. Проложите удобный маршрут прямо сейчас.'
+                                : 'Baikonyr District, Proyezd 69, 1A, Astana. Get directions right now.'}
                         </p>
 
                         <div className={styles.selectionWrapper}>
