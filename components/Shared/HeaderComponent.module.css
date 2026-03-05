@@ -365,12 +365,11 @@
     left: 0;
     right: 0;
     z-index: 9999;
-    padding-bottom: env(safe-area-inset-bottom, 0px);
     pointer-events: none;
-    /* Пропускает клики сквозь зазор */
+    /* Allows scrolling content through the gap */
   }
 
-  /* 1. ПАРЯЩЕЕ МЕНЮ - Приподнято над системной зоной */
+  /* 1. ПАРЯЩЕЕ МЕНЮ */
   .bottomNav {
     display: flex;
     width: calc(100% - 32px);
@@ -383,21 +382,18 @@
     align-items: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
     padding: 0 10px;
-    margin-bottom: 20px;
-    /* ТОТ САМЫЙ ЗАЗОР */
+    margin-bottom: 28px;
+    /* ФИКСИРОВАННЫЙ ЗАЗОР + 8px */
     pointer-events: auto;
-    /* Возвращаем кликабельность кнопкам */
   }
 
-  /* 2. ПОДЛОЖКА - Строго под меню, в системной зоне */
+  /* 2. ПОДЛОЖКА - Фундамент */
   .bottomBarBase {
     display: block;
     width: 100%;
-    height: 16px;
-    /* Фиксированная высота белого фундамента */
+    /* Высота фундамента (16px) + Зона системного индикатора iOS */
+    height: calc(16px + env(safe-area-inset-bottom, 0px));
     background-color: #ffffff;
-    margin-top: -16px;
-    /* Пододвигаем к самому низу */
   }
 
   .bottomNavItem {
