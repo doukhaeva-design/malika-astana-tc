@@ -16,6 +16,7 @@ export default function PageHeaderComponent({ title, description }: PageHeaderPr
     return (
         <section className={styles.section}>
             <div className={styles.container}>
+                <div className={styles.divider} />
                 <h1 className={styles.title}>{title}</h1>
                 <p className={styles.description}>{description}</p>
             </div>

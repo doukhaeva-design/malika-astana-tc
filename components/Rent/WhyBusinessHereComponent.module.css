@@ -1,12 +1,12 @@
 .section {
-    padding: 4rem 0;
+    padding: 6rem 0;
     background-color: #fff;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
 .grid {
@@ -16,18 +16,51 @@
 }
 
 .card {
-    padding: 2rem;
-    border: 1px solid #eee;
-    border-radius: 4px;
+    padding: 2.5rem 2rem;
+    border: 1px solid var(--gray-medium);
+    border-radius: 16px;
+    background: #fff;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    border-color: var(--primary);
+}
+
+.iconBox {
+    width: 52px;
+    height: 52px;
+    background: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: #fff;
+}
+
+.iconBox svg {
+    width: 24px;
+    height: 24px;
 }
 
 .cardTitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 700;
     margin-bottom: 0.75rem;
-    font-weight: bold;
+    color: var(--primary);
 }
 
 .cardText {
-    color: #555;
-    line-height: 1.5;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
 }

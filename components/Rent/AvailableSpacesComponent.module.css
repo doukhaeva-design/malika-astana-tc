@@ -1,40 +1,89 @@
 .section {
-    padding: 4rem 0;
-    background-color: #f7f7f7;
+    padding: 6rem 0;
+    background-color: var(--gray-light);
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
 .intro {
     text-align: center;
     font-size: 1.5rem;
-    margin-bottom: 3rem;
-    font-weight: bold;
+    margin-bottom: 3.5rem;
+    font-weight: 700;
+    color: var(--primary);
 }
 
 .list {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
+    gap: 1rem;
 }
 
 .spaceItem {
     background-color: #fff;
-    padding: 1.5rem;
-    border-radius: 4px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--gray-medium);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.spaceItem:hover {
+    border-color: var(--primary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+}
+
+.iconBox {
+    width: 48px;
+    height: 48px;
+    background: var(--gray-light);
+    color: var(--primary);
+    border: 1px solid var(--gray-medium);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.spaceItem:hover .iconBox {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+.iconBox svg {
+    width: 20px;
+    height: 20px;
+}
+
+.spaceContent {
+    flex: 1;
 }
 
 .title {
-    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
 }
 
 .text {
-    color: #666;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+    .spaceItem {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
 }

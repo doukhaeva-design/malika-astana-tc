@@ -1,115 +1,82 @@
 .hero {
-    padding: 200px 0 100px;
-    background-color: #ffffff;
+    padding: 160px 0 120px;
+    background-color: var(--primary);
+    /* Строго основной цвет */
+    position: relative;
+    overflow: hidden;
+    color: #fff;
     text-align: center;
 }
 
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -10%;
+    width: 120%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
 .container {
-    max-width: 800px;
+    max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 40px;
+    position: relative;
+    z-index: 2;
 }
 
 .title {
-    font-size: 3.5rem;
-    font-weight: 700;
-    margin-bottom: 32px;
-    color: var(--primary);
-    letter-spacing: -0.02em;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
 }
 
 .subtitle {
-    font-size: 1.5rem;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
-}
-
-.description {
-    font-size: 1.25rem;
-    color: var(--text-muted);
-    margin-bottom: 3rem;
-    line-height: 1.7;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 0 auto 40px;
 }
 
 .actions {
     display: flex;
-    gap: 1rem;
+    gap: 20px;
     justify-content: center;
-    flex-wrap: wrap;
 }
 
-.btn {
-    padding: 16px 40px;
-    background-color: var(--primary);
-    color: #fff;
-    border: none;
-    font-size: 0.95rem;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: var(--radius-sm);
-    text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease-out;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.btn:hover {
-    opacity: 0.9;
-}
-
-.btnOutline {
-    padding: 14px 32px;
-    background-color: transparent;
+.primaryBtn {
+    padding: 18px 36px;
+    background: #fff;
     color: var(--primary);
-    border: 2px solid var(--primary);
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    border-radius: var(--radius-sm);
+    border-radius: 12px;
+    font-weight: 700;
     text-decoration: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-.btnOutline:hover {
-    background-color: var(--primary);
+.secondaryBtn {
+    padding: 18px 36px;
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
-}
-
-@media (max-width: 991px) {
-    .hero {
-        padding: 115px 0 50px;
-        /* Reduced from 140px */
-    }
-
-    .title {
-        font-size: 2.8rem;
-    }
-
-    .container {
-        padding: 0 20px;
-    }
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
 }
 
 @media (max-width: 768px) {
-    .hero {
-        padding: 105px 0 40px;
-        /* Reduced from 130px */
-    }
-
     .title {
-        font-size: 2.2rem;
+        font-size: 2.5rem;
     }
 
-    .subtitle {
-        font-size: 1.1rem;
-    }
-
-    .description {
-        font-size: 1.05rem;
+    .actions {
+        flex-direction: column;
+        width: 100%;
     }
 }

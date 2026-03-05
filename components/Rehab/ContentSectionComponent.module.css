@@ -1,36 +1,99 @@
 .section {
-    padding: 4rem 0;
+    padding: 6rem 0;
     background-color: #fff;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
 }
 
-.infoBlock h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.25rem;
-    color: #0b4a7a;
-    border-bottom: 2px solid #f1f8fc;
-    display: inline-block;
-    padding-bottom: 0.25rem;
+.infoBlock {
+    background: #fff;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--gray-medium);
 }
 
-.infoBlock ul {
-    padding-left: 1.25rem;
-    color: #333;
+.blockTitle {
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
-.infoBlock li {
-    margin-bottom: 0.5rem;
+.directionCards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-.infoBlock p {
-    line-height: 1.6;
-    color: #444;
+.directionCard {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1rem;
+    background: var(--gray-light);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.iconBox {
+    width: 44px;
+    height: 44px;
+    background: var(--primary);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+}
+
+.iconBox svg {
+    width: 20px;
+    height: 20px;
+}
+
+.directionLabel {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.contactRow,
+.scheduleRow {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--gray-medium);
+    color: var(--foreground);
+    font-size: 0.95rem;
+}
+
+.contactRow:last-child,
+.scheduleRow:last-child {
+    border-bottom: none;
+}
+
+.contactIcon {
+    width: 18px;
+    height: 18px;
+    color: var(--primary);
+    flex-shrink: 0;
+    margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
 }

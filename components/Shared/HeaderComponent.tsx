@@ -80,7 +80,7 @@ export default function HeaderComponent() {
                     {/* Desktop Navigation */}
                     <nav className={styles.nav}>
                         <Link href="/" className={styles.link}>{t.common.home}</Link>
-                        <Link href="/directions" className={styles.link}>{t.common.directions}</Link>
+                        <Link href="/directions" className={styles.link}>{t.common.directionsShort}</Link>
                         <Link href="/rehab" className={styles.link}>{t.common.rehab}</Link>
                         <Link href="/rent" className={styles.link}>{t.common.rent}</Link>
                         <Link href="/contacts" className={styles.link}>{t.common.contacts}</Link>
@@ -145,7 +145,7 @@ export default function HeaderComponent() {
                             </Link>
                             <Link href="/directions" className={`${styles.mobileLink} ${pathname === '/directions' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path><line x1="3" y1="6" x2="21" y2="6"></line><path d="M16 10a4 4 0 0 1-8 0"></path></svg>
-                                <span className={styles.linkText}>{t.common.directions}</span>
+                                <span className={styles.linkText}>{t.common.directionsShort}</span>
                             </Link>
                             <Link href="/rehab" className={`${styles.mobileLink} ${pathname === '/rehab' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
