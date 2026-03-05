@@ -1,5 +1,5 @@
 .footer {
-    background: linear-gradient(180deg, var(--primary) 0%, #1a253a 100%);
+    background: var(--primary);
     color: #fff;
     padding: 120px 0 60px;
     position: relative;
@@ -78,11 +78,11 @@
 }
 
 .socialIcon:hover {
-    background: var(--accent);
+    background: rgba(255, 255, 255, 0.1);
     color: #fff;
-    border-color: var(--accent);
+    border-color: rgba(255, 255, 255, 0.3);
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .contacts {
@@ -104,8 +104,7 @@
     width: 20px;
     height: 20px;
     flex-shrink: 0;
-    color: var(--accent);
-    opacity: 0.8;
+    color: rgba(255, 255, 255, 0.5);
 }
 
 .footerLabel {
@@ -134,7 +133,7 @@
 }
 
 .footerLink:hover {
-    color: var(--accent);
+    color: #fff;
     transform: translateX(8px);
 }
 

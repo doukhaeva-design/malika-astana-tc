@@ -33,7 +33,7 @@ export default function MapSectionComponent() {
 
     return (
         <section className={styles.section}>
-            <div className={styles.container}>
+            <div className={`${styles.container} animate-fade`}>
                 <div className={styles.mapHero}>
                     <div className={styles.mapVisual}>
                         <iframe
