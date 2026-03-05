@@ -12,18 +12,23 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function HeroSectionComponent() {
     const { language, t } = useLanguage();
+    const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
+
+    const handleMouseMove = (e: React.MouseEvent) => {
+        const { clientX, clientY } = e;
+        const x = (clientX / window.innerWidth - 0.5) * 20;
+        const y = (clientY / window.innerHeight - 0.5) * 20;
+        setMousePos({ x, y });
+    };
 
     return (
-        <section className={styles.hero}>
-            <div className={styles.bgText}>Malika</div>
+        <section className={styles.hero} onMouseMove={handleMouseMove}>
             <div className={styles.container}>
                 <div className={styles.layout}>
                     <div className={`${styles.content} animate-fade`}>
-                        <div className={styles.taglineWrapper}>
-                            <span className={styles.statusDot}></span>
-                            <span className={styles.tagline}>
-                                {t.hero.welcome}
-                                <span className={styles.taglineMobileOnly}> {t.hero.in} <span className={styles.boldMalika}>{t.hero.malika}</span></span>
+                        <div className={styles.subtitleWrapper}>
+                            <span className={`${styles.serifSubtitle} serif-accent`}>
+                                {language === 'ru' ? 'Добро пожаловать' : 'Welcome'}
                             </span>
                         </div>
                         <h1 className={styles.title}>
@@ -56,7 +61,9 @@ export default function HeroSectionComponent() {
                         </div>
                     </div>
 
-                    <div className={styles.visuals}>
+                    <div className={styles.visuals} style={{
+                        transform: `translate3d(${mousePos.x}px, ${mousePos.y}px, 0)`
+                    }}>
                         <div className={`${styles.imageMain} animate-fade stagger-1`}>
                             <img src="/malika-facade-new.jpg" alt="Фасад MALIKA Астана" />
                         </div>

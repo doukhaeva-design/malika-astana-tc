@@ -42,11 +42,11 @@ export default function ContentSectionComponent() {
             <div className={styles.container}>
 
                 {/* Направления работы — карточки с иконками */}
-                <div className={styles.infoBlock}>
+                <div className={`${styles.infoBlock} animate-fade stagger-1`}>
                     <h2 className={styles.blockTitle}>{t.rehabPage.directionsTitle}</h2>
                     <div className={styles.directionCards}>
                         {t.rehabPage.directionsDocs.map((item, i) => (
-                            <div key={i} className={styles.directionCard}>
+                            <div key={i} className={`${styles.directionCard} animate-fade stagger-${(i % 3) + 1}`}>
                                 <div className={styles.iconBox}>
                                     {directionIcons[i] ?? directionIcons[0]}
                                 </div>
@@ -57,7 +57,7 @@ export default function ContentSectionComponent() {
                 </div>
 
                 {/* Контактная информация */}
-                <div className={styles.infoBlock}>
+                <div className={`${styles.infoBlock} animate-fade stagger-2`}>
                     <h2 className={styles.blockTitle}>{t.rehabPage.contactsTitle}</h2>
                     <div className={styles.contactRow}>
                         <svg className={styles.contactIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -75,7 +75,7 @@ export default function ContentSectionComponent() {
                 </div>
 
                 {/* Расписание приёма */}
-                <div className={styles.infoBlock}>
+                <div className={`${styles.infoBlock} animate-fade stagger-3`}>
                     <h2 className={styles.blockTitle}>{t.rehabPage.scheduleTitle}</h2>
                     <div className={styles.scheduleList}>
                         {t.rehabPage.scheduleDocs.map((line, i) => (
