@@ -352,40 +352,51 @@
     display: none;
   }
 
-  /* 1. LAYERED BASE (ПОДЛОЖКА) - Твердый фундамент */
-  .bottomBarBase {
-    display: block;
+
+
+  /* 2. FLOATING NAV (МЕНЮ) - Всегда сверху */
+  /* ГЛОБАЛЬНАЯ ОБЕРТКА - Отвечает за связь с Safari */
+  .bottomWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
-    /* Гарантированные 16px + системный отступ iOS */
-    height: calc(16px + env(safe-area-inset-bottom, 0px));
-    background-color: #ffffff;
-    z-index: 10;
+    z-index: 9999;
+    gap: 10px;
+    /* ТЕПЕРЬ ЗАЗОР ТУТ (10px) */
     pointer-events: none;
+    /* Allows scrolling content through the gap */
   }
 
-  /* 2. FLOATING NAV (МЕНЮ) - Всегда сверху */
+  /* 1. ПАРЯЩЕЕ МЕНЮ */
   .bottomNav {
     display: flex;
-    position: fixed;
-    /* Высота подложки (16px) + Зазор (10px) + Отступ iOS */
-    bottom: calc(26px + env(safe-area-inset-bottom, 0px));
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100% - 40px);
-    max-width: 500px;
+    width: calc(100% - 32px);
+    max-width: 420px;
     height: 65px;
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-md);
-    z-index: 9999;
     justify-content: space-around;
     align-items: center;
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
     padding: 0 10px;
+    margin-bottom: 0px;
     pointer-events: auto;
+  }
+
+  /* 2. ПОДЛОЖКА - Фундамент */
+  .bottomBarBase {
+    display: block;
+    width: 100%;
+    /* Высота фундамента (16px) + Зона системного индикатора iOS */
+    height: calc(16px + env(safe-area-inset-bottom, 0px));
+    background-color: #ffffff;
   }
 
   .bottomNavItem {
