@@ -379,8 +379,8 @@
     align-items: center;
     justify-content: center;
     /* Центрируем, но управляем отступами */
-    padding: 8px 0 4px 0;
-    /* 8 сверху, 4 снизу */
+    padding: 6px 0 6px 0;
+    /* 6 сверху, 6 снизу */
     gap: 4px;
     color: var(--text-muted);
     text-decoration: none;
