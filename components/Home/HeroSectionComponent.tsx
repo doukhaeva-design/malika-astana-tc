@@ -3,11 +3,16 @@
   Modern Commercial Look: Четкая типографика, плотные цвета и акцент на практичность.
 */
 
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import styles from './HeroSectionComponent.module.css';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function HeroSectionComponent() {
+    const { language, t } = useLanguage();
+
     return (
         <section className={styles.hero}>
             <div className={styles.bgText}>Malika</div>
@@ -16,21 +21,37 @@ export default function HeroSectionComponent() {
                     <div className={`${styles.content} animate-fade`}>
                         <div className={styles.taglineWrapper}>
                             <span className={styles.statusDot}></span>
-                            <span className={styles.tagline}>Добро пожаловать<span className={styles.taglineMobileOnly}> в <span className={styles.boldMalika}>malika</span></span></span>
+                            <span className={styles.tagline}>
+                                {t.hero.welcome}
+                                <span className={styles.taglineMobileOnly}> {t.hero.in} <span className={styles.boldMalika}>{t.hero.malika}</span></span>
+                            </span>
                         </div>
                         <h1 className={styles.title}>
-                            <span className={styles.titleLight}>Ваш</span> торговый центр <br />
-                            в <span className={styles.accent}>Астане</span>
+                            {language === 'ru' ? (
+                                <>
+                                    <span className={styles.titleLight}>Ваш</span> торговый центр <br />
+                                    в <span className={styles.accent}>Астане</span>
+                                </>
+                            ) : (
+                                <>
+                                    <span className={styles.titleLight}>Your</span> shopping center <br />
+                                    in <span className={styles.accent}>Astana</span>
+                                </>
+                            )}
                         </h1>
                         <p className={styles.description}>
-                            Широкий выбор товаров для дома, бизнеса и авто. <strong className={styles.boldText}>Всё необходимое — рядом и без лишней суеты.</strong>
+                            {language === 'ru' ? (
+                                <>Широкий выбор товаров для дома, бизнеса и авто. <strong className={styles.boldText}>Всё необходимое — рядом и без лишней суеты.</strong></>
+                            ) : (
+                                <>A wide selection of goods for home, business, and auto. <strong className={styles.boldText}>Everything you need — close by and hassle-free.</strong></>
+                            )}
                         </p>
                         <div className={styles.actions}>
                             <Link href="/contacts" className={styles.btnPrimary}>
-                                Как добраться
+                                {language === 'ru' ? 'Как добраться' : 'How to get here'}
                             </Link>
                             <Link href="/directions" className={styles.btnSecondary}>
-                                Магазины и услуги
+                                {language === 'ru' ? 'Магазины и услуги' : 'Shops and services'}
                             </Link>
                         </div>
                     </div>
@@ -47,7 +68,7 @@ export default function HeroSectionComponent() {
             </div>
             <div className={styles.scrollDown}>
                 <div className={styles.mouse}></div>
-                <span>Листайте ниже</span>
+                <span>{language === 'ru' ? 'Листайте ниже' : 'Scroll down'}</span>
             </div>
         </section>
     );

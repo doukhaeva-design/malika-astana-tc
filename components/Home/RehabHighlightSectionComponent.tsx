@@ -3,11 +3,16 @@
   Pinterest-style: Яркий блок-наложение, крупная фото и современная кнопка.
 */
 
+"use client";
+
 import React from 'react';
 import Link from 'next/link';
 import styles from './RehabHighlightSectionComponent.module.css';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function RehabHighlightSectionComponent() {
+    const { language } = useLanguage();
+
     return (
         <section className={styles.section}>
             <div className={styles.container}>
@@ -20,16 +25,17 @@ export default function RehabHighlightSectionComponent() {
                         />
                     </div>
                     <div className={styles.content}>
-                        <span className={styles.badge}>Здоровье</span>
+                        <span className={styles.badge}>{language === 'ru' ? 'Здоровье' : 'Health'}</span>
                         <h2 className={styles.title}>
-                            Профессиональный центр восстановления
+                            {language === 'ru' ? 'Профессиональный центр восстановления' : 'Professional Rehabilitation Center'}
                         </h2>
                         <p className={styles.text}>
-                            Современный медицинский центр на территории торгового комплекса.
-                            Удобно совмещать заботу о здоровье с повседневными делами.
+                            {language === 'ru'
+                                ? 'Современный медицинский центр на территории торгового комплекса. Удобно совмещать заботу о здоровье с повседневными делами.'
+                                : 'A modern medical center located within the shopping complex. It is convenient to combine health care with daily errands.'}
                         </p>
                         <Link href="/rehab" className={styles.btn}>
-                            Подробнее
+                            {language === 'ru' ? 'Подробнее' : 'Learn more'}
                         </Link>
                     </div>
                 </div>

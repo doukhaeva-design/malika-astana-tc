@@ -8,9 +8,11 @@
 import React, { useRef } from 'react';
 import Link from 'next/link';
 import styles from './ForEverydayNeedsSectionComponent.module.css';
+import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function ForEverydayNeedsSectionComponent() {
     const scrollRef = useRef<HTMLDivElement>(null);
+    const { language } = useLanguage();
 
     const scroll = (direction: 'left' | 'right') => {
         if (scrollRef.current) {
@@ -35,7 +37,7 @@ export default function ForEverydayNeedsSectionComponent() {
         return 440; // Ширина карточки 400 + gap 40
     };
 
-    const directions = [
+    const directions = language === 'ru' ? [
         {
             title: 'Здоровье',
             forWhom: 'Реабилитация',
@@ -73,6 +75,44 @@ export default function ForEverydayNeedsSectionComponent() {
             desc: 'Ремонт и обслуживание в одном месте',
             img: '/category_service_1772460173357.png'
         }
+    ] : [
+        {
+            title: 'Health',
+            forWhom: 'Rehabilitation',
+            desc: 'Professional recovery center',
+            img: '/rehab_interior_v2_1772460250804.png',
+            isSpecial: true
+        },
+        {
+            title: 'Auto Goods',
+            forWhom: 'Car owners',
+            desc: 'Full range of spare parts and accessories',
+            img: '/category_auto_1772459952993.png'
+        },
+        {
+            title: 'Technology',
+            forWhom: 'Business solutions',
+            desc: 'Industrial and office equipment',
+            img: '/category_tech_1772459982373.png'
+        },
+        {
+            title: 'Business',
+            forWhom: 'Entrepreneurs',
+            desc: 'Everything for commercial activities',
+            img: '/category_business_supply_v2_1772464118849.png'
+        },
+        {
+            title: 'Home',
+            forWhom: 'Comfort & Life',
+            desc: 'Interior and everyday goods',
+            img: '/category_home_1772459996707.png'
+        },
+        {
+            title: 'Service',
+            forWhom: 'Household services',
+            desc: 'Repair and maintenance in one place',
+            img: '/category_service_1772460173357.png'
+        }
     ];
 
     return (
@@ -80,8 +120,18 @@ export default function ForEverydayNeedsSectionComponent() {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <div className={styles.headerLeft}>
-                        <h2 className={styles.title}>Магазины и сервисы <br /> для <span className={styles.accent}>важных задач</span></h2>
-                        <p className={styles.subtitle}>Находите всё необходимое для дела и жизни в одном месте.</p>
+                        <h2 className={styles.title}>
+                            {language === 'ru' ? (
+                                <>Магазины и сервисы <br /> для <span className={styles.accent}>важных задач</span></>
+                            ) : (
+                                <>Shops and services <br /> for <span className={styles.accent}>important tasks</span></>
+                            )}
+                        </h2>
+                        <p className={styles.subtitle}>
+                            {language === 'ru'
+                                ? 'Находите всё необходимое для дела и жизни в одном месте.'
+                                : 'Find everything you need for business and life in one place.'}
+                        </p>
                     </div>
                     <div className={styles.headerActions}>
                         <button
@@ -98,7 +148,9 @@ export default function ForEverydayNeedsSectionComponent() {
                         >
                             →
                         </button>
-                        <Link href="/directions" className={styles.viewAll}>ВСЕ НАПРАВЛЕНИЯ</Link>
+                        <Link href="/directions" className={styles.viewAll}>
+                            {language === 'ru' ? 'ВСЕ НАПРАВЛЕНИЯ' : 'ALL DIRECTIONS'}
+                        </Link>
                     </div>
                 </div>
             </div>
@@ -122,7 +174,7 @@ export default function ForEverydayNeedsSectionComponent() {
 
                             <div className={styles.cardFooter}>
                                 {dir.isSpecial ? (
-                                    <Link href="/rehab" className={styles.btnSpecial}>Подробнее</Link>
+                                    <Link href="/rehab" className={styles.btnSpecial}>{language === 'ru' ? 'Подробнее' : 'Learn more'}</Link>
                                 ) : (
                                     <div className={styles.separator}></div>
                                 )}

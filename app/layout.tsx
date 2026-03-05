@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import ScrollObserver from "@/components/Shared/ScrollObserver";
 import HeaderComponent from "@/components/Shared/HeaderComponent";
+import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -35,9 +36,11 @@ export default function RootLayout({
   return (
     <html lang="ru" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
-        <ScrollObserver />
-        <HeaderComponent />
-        {children}
+        <LanguageProvider>
+          <ScrollObserver />
+          <HeaderComponent />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );
