@@ -431,7 +431,7 @@
 }
 
 .mobileMenuFooter {
-  padding: 0 24px calc(80px + env(safe-area-inset-bottom));
+  padding: 0 24px calc(120px + env(safe-area-inset-bottom));
   background-color: #fff;
   display: flex;
   flex-direction: column;
