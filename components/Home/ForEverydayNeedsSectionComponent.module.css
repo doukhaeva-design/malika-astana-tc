@@ -179,7 +179,7 @@
     display: inline-block;
     background-color: transparent;
     color: var(--accent);
-    border: 1px solid var(--accent);
+    border: 1.5px solid var(--accent);
     padding: 10px 24px;
     border-radius: 50px;
     font-weight: 700;
