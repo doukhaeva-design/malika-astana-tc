@@ -393,11 +393,11 @@
     }
 
     .title {
-        font-size: 3.2rem;
-        /* Increased from 2.8rem */
+        font-size: 3.5rem;
+        /* Increased from 3.2rem */
         margin-bottom: 32px;
-        /* Increased */
-        line-height: 1.1;
+        line-height: 1.05;
+        /* Tighter for large size */
         font-weight: 700;
         color: var(--off-white);
     }
@@ -435,7 +435,9 @@
     }
 
     .title {
-        font-size: 3.0rem;
+        font-size: 3.3rem;
+        /* Increased from 3.0rem */
+        line-height: 1.05;
     }
 
     .visuals {
