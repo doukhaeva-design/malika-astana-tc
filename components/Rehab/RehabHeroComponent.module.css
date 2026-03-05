@@ -1,46 +1,52 @@
 .hero {
-    padding: 160px 0 80px;
-    background-color: var(--gray-light);
+    padding: 140px 0 100px;
+    background-color: var(--primary);
+    /* Строго основной цвет */
+    position: relative;
+    overflow: hidden;
+    color: #fff;
     text-align: center;
 }
 
+/* Мягкое благородное свечение, одинаковое для всех */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -10%;
+    width: 120%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    pointer-events: none;
+}
+
 .container {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 20px;
+    position: relative;
+    z-index: 2;
 }
 
 .title {
     font-size: 3.5rem;
     font-weight: 800;
-    margin-bottom: 1rem;
-    color: var(--primary);
+    margin-bottom: 20px;
     letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .subtitle {
     font-size: 1.25rem;
     line-height: 1.6;
-    color: var(--text-muted);
-}
-
-@media (max-width: 991px) {
-    .hero {
-        padding: 115px 0 50px;
-    }
-
-    .title {
-        font-size: 2.8rem;
-    }
-
-    .container {
-        padding: 0 20px;
-    }
+    color: rgba(255, 255, 255, 0.8);
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding: 105px 0 40px;
+        padding: 100px 0 60px;
     }
 
     .title {
@@ -48,6 +54,6 @@
     }
 
     .subtitle {
-        font-size: 1.05rem;
+        font-size: 1rem;
     }
 }

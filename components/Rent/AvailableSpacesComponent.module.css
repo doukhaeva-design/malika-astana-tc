@@ -1,20 +1,20 @@
 .section {
-    padding: 5rem 0;
-    background-color: #f7fafd;
+    padding: 6rem 0;
+    background-color: var(--gray-light);
 }
 
 .container {
-    max-width: 860px;
+    max-width: 900px;
     margin: 0 auto;
     padding: 0 1.5rem;
 }
 
 .intro {
     text-align: center;
-    font-size: 1.3rem;
-    margin-bottom: 3rem;
-    font-weight: 600;
-    color: #1a2e40;
+    font-size: 1.5rem;
+    margin-bottom: 3.5rem;
+    font-weight: 700;
+    color: var(--primary);
 }
 
 .list {
@@ -23,41 +23,44 @@
     gap: 1rem;
 }
 
-/* Карточка помещения — горизонтальная с иконкой слева */
 .spaceItem {
     background-color: #fff;
     padding: 1.5rem 2rem;
-    border-radius: 16px;
-    box-shadow: 0 4px 16px rgba(11, 74, 122, 0.06);
-    border: 1px solid #e8f0f8;
+    border-radius: 12px;
+    border: 1px solid var(--gray-medium);
     display: flex;
-    align-items: flex-start;
-    gap: 1.25rem;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    align-items: center;
+    gap: 1.5rem;
+    transition: all 0.2s ease;
 }
 
 .spaceItem:hover {
-    transform: translateX(4px);
-    box-shadow: 0 8px 24px rgba(11, 74, 122, 0.1);
-    border-left: 3px solid #0b4a7a;
+    border-color: var(--primary);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
 }
 
-/* Иконка помещения */
 .iconBox {
-    width: 52px;
-    height: 52px;
-    background: #0b4a7a;
-    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    background: var(--gray-light);
+    color: var(--primary);
+    border: 1px solid var(--gray-medium);
+    border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+}
+
+.spaceItem:hover .iconBox {
+    background: var(--primary);
     color: #fff;
+    border-color: var(--primary);
 }
 
 .iconBox svg {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
 }
 
 .spaceContent {
@@ -65,26 +68,22 @@
 }
 
 .title {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    margin-bottom: 0.35rem;
-    color: #1a2e40;
+    color: var(--primary);
+    margin-bottom: 0.25rem;
 }
 
 .text {
-    color: #5a6a7a;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    color: var(--text-muted);
+    font-size: 0.95rem;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .spaceItem {
-        padding: 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
         gap: 1rem;
-    }
-
-    .iconBox {
-        width: 44px;
-        height: 44px;
     }
 }

@@ -1,6 +1,6 @@
 .section {
-    padding: 5rem 0;
-    background-color: #f7fafd;
+    padding: 6rem 0;
+    background-color: #fff;
 }
 
 .container {
@@ -8,58 +8,47 @@
     margin: 0 auto;
     padding: 0 1.5rem;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    align-items: start;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
 }
 
-/* Каждый блок — карточка с тенью */
 .infoBlock {
     background: #fff;
     border-radius: 16px;
-    padding: 2rem;
-    box-shadow: 0 4px 20px rgba(11, 74, 122, 0.06);
-    border: 1px solid #e8f0f8;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--gray-medium);
 }
 
 .blockTitle {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: #0b4a7a;
+    font-size: 1.15rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    color: var(--primary);
     text-transform: uppercase;
-    letter-spacing: 0.06em;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+    letter-spacing: 0.05em;
 }
 
-/* Направления — карточки горизонтальные */
 .directionCards {
     display: flex;
     flex-direction: column;
-    gap: 0.875rem;
+    gap: 1rem;
 }
 
 .directionCard {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding: 0.875rem 1rem;
-    background: #f0f7ff;
-    border-radius: 10px;
-    border-left: 3px solid #0b4a7a;
-    transition: background 0.2s ease;
-}
-
-.directionCard:hover {
-    background: #e1eefa;
+    gap: 1.25rem;
+    padding: 1rem;
+    background: var(--gray-light);
+    border-radius: 12px;
+    transition: all 0.2s ease;
 }
 
 .iconBox {
-    width: 40px;
-    height: 40px;
-    background: #0b4a7a;
+    width: 44px;
+    height: 44px;
+    background: var(--primary);
     border-radius: 10px;
     display: flex;
     align-items: center;
@@ -75,22 +64,19 @@
 
 .directionLabel {
     font-size: 0.95rem;
-    font-weight: 500;
-    color: #1a2e40;
-    line-height: 1.4;
+    font-weight: 600;
+    color: var(--primary);
 }
 
-/* Контакты и расписание — строки с иконкой */
 .contactRow,
 .scheduleRow {
     display: flex;
     align-items: flex-start;
-    gap: 0.75rem;
-    padding: 0.625rem 0;
-    border-bottom: 1px solid #f0f0f0;
-    color: #333;
+    gap: 1rem;
+    padding: 0.8rem 0;
+    border-bottom: 1px solid var(--gray-medium);
+    color: var(--foreground);
     font-size: 0.95rem;
-    line-height: 1.5;
 }
 
 .contactRow:last-child,
@@ -98,17 +84,12 @@
     border-bottom: none;
 }
 
-.scheduleList {
-    display: flex;
-    flex-direction: column;
-}
-
 .contactIcon {
     width: 18px;
     height: 18px;
-    color: #0b4a7a;
+    color: var(--primary);
     flex-shrink: 0;
-    margin-top: 2px;
+    margin-top: 4px;
 }
 
 @media (max-width: 768px) {
