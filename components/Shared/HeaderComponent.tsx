@@ -55,6 +55,12 @@ export default function HeaderComponent() {
     };
     const toggleLang = () => setIsLangOpen(!isLangOpen);
 
+    // При нажатии на «Главная» — всегда прокручиваем страницу наверх
+    const handleHomeClick = () => {
+        closeMenu();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     const isHomePage = pathname === '/';
 
     return (
@@ -174,7 +180,7 @@ export default function HeaderComponent() {
 
             {/* Simple Bottom Menu (Mobile Only) */}
             <nav className={styles.bottomNav}>
-                <Link href="/" className={`${styles.bottomNavItem} ${pathname === '/' ? styles.bottomNavActive : ''}`} onClick={closeMenu}>
+                <Link href="/" className={`${styles.bottomNavItem} ${pathname === '/' ? styles.bottomNavActive : ''}`} onClick={handleHomeClick}>
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
                     <span>{t.common.home}</span>
                 </Link>
