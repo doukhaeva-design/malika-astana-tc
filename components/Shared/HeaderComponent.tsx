@@ -172,8 +172,9 @@ export default function HeaderComponent() {
                 </div>
             </header>
 
-            {/* Подложки для безопасных зон мобильных устройств */}
+            {/* Подложки для системных зон (Notch и Home Indicator) на iOS/Android */}
             <div className={`${styles.topSafeBase} ${(!isHomePage || isScrolled || isMenuOpen) ? styles.topSafeBaseVisible : ''}`}></div>
+            <div className={styles.bottomNavBase}></div>
 
             {/* Simple Bottom Menu (Mobile Only) */}
             <nav className={styles.bottomNav}>
@@ -198,7 +199,6 @@ export default function HeaderComponent() {
                     <span>{t.common.more}</span>
                 </button>
             </nav>
-            <div className={styles.bottomNavBase}></div>
         </>
     );
 }
