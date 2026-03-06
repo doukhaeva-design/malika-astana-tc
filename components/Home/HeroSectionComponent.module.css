@@ -4,12 +4,23 @@
     display: flex;
     align-items: center;
     padding-top: 80px;
-    /* Offset for the header to give 'air' */
     background-color: var(--primary);
     overflow: hidden;
     position: relative;
-    /* Clean, slightly cold dark slate gradient. Never turns pitch black. No dirty color mixes. */
     background: linear-gradient(135deg, #131a28 0%, #080c14 100%);
+}
+
+.mouseGlow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1), top 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: blur(80px);
 }
 
 /* Background floating auroras for premium depth */
@@ -89,8 +100,17 @@
 .serifSubtitle {
     display: block;
     font-size: 1.5rem;
-    color: var(--accent-warm);
-    opacity: 0.9;
+    /* Crisp Architectural Blue Gradient */
+    background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding-left: 4px;
+    /* Space for the letter to render fully */
+    margin-left: -4px;
+    /* Align back to the text column */
+    line-height: 1.2;
 }
 
 .title {
@@ -109,8 +129,8 @@
 
 .accent {
     position: relative;
-    /* Muted Copper/Gold gradient */
-    background: linear-gradient(135deg, #d4a13d 0%, #a87f2a 100%);
+    /* Crisp Architectural Blue Gradient */
+    background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -159,10 +179,20 @@
 
 .btnPrimary:hover {
     background: rgba(255, 255, 255, 0.18);
-    /* На ~8% светлее */
-    border-color: rgba(255, 255, 255, 0.4);
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
-    /* Усиление glow */
+    border-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+.btnIcon {
+    width: 18px;
+    height: 18px;
+    margin-left: 12px;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btnPrimary:hover .btnIcon {
+    transform: translate(3px, -3px);
 }
 
 .btnPrimary:active {
@@ -201,6 +231,8 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
+    margin-top: -40px;
+    /* Pull images up to balance with large title on the left */
 }
 
 .imageMain {
@@ -211,7 +243,19 @@
     position: relative;
     z-index: 2;
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-    /* Deep grounding shadow */
+    animation: float 8s infinite ease-in-out;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 .imageMain img,
@@ -258,12 +302,11 @@
     overflow: hidden;
     position: absolute;
     bottom: -50px;
-    /* Moved to the right to free up the center space near the text */
     left: -10px;
     z-index: 3;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    /* Strict border matched exactly to the bottom right color of the cold blue background */
     border: 8px solid #15223c;
+    animation: float 10s infinite ease-in-out -2s;
 }
 
 .scrollDown {
