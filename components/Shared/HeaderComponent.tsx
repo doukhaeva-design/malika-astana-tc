@@ -79,17 +79,11 @@ export default function HeaderComponent() {
                     </div>
                 </div>
                 <div className={styles.container}>
-                    {/* Row 1: Top Centered Logo */}
-                    <div className={styles.logoRow}>
+                    <div className={styles.mainRow}>
                         <Link href="/" className={styles.logo} onClick={closeMenu}>
                             Malika
                         </Link>
-                    </div>
 
-                    <div className={styles.rowDivider}></div>
-
-                    {/* Row 2: Bottom Row with Nav on left and Lang on right */}
-                    <div className={styles.bottomRow}>
                         <nav className={styles.nav}>
                             <Link href="/" className={`${styles.link} ${pathname === '/' ? styles.activeLink : ''}`}>{t.common.home}</Link>
                             <Link href="/directions" className={`${styles.link} ${pathname === '/directions' ? styles.activeLink : ''}`}>{t.common.directionsShort}</Link>
