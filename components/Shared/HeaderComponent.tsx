@@ -79,36 +79,40 @@ export default function HeaderComponent() {
                     </div>
                 </div>
                 <div className={styles.container}>
-                    <Link href="/" className={styles.logo} onClick={closeMenu}>
-                        Malika
-                    </Link>
+                    {/* Row 1: Top Centered Logo */}
+                    <div className={styles.logoRow}>
+                        <Link href="/" className={`${styles.logo} serif-accent`} onClick={closeMenu}>
+                            Malika
+                        </Link>
+                    </div>
 
-                    {/* Desktop Navigation */}
-                    <nav className={styles.nav}>
-                        <Link href="/" className={styles.link}>{t.common.home}</Link>
-                        <Link href="/directions" className={styles.link}>{t.common.directionsShort}</Link>
-                        <Link href="/rehab" className={styles.link}>{t.common.rehab}</Link>
-                        <Link href="/rent" className={styles.link}>{t.common.rent}</Link>
-                        <Link href="/contacts#contacts-header" className={styles.link}>{t.common.contacts}</Link>
-                    </nav>
+                    <div className={styles.rowDivider}></div>
 
-                    <div className={styles.actions}>
-                        <div className={styles.langSwitch}>
-                            <span
-                                className={language === 'ru' ? styles.activeLang : ''}
-                                onClick={() => setLanguage('ru')}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                RU
-                            </span>
-                            |
-                            <span
-                                className={language === 'en' ? styles.activeLang : ''}
-                                onClick={() => setLanguage('en')}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                EN
-                            </span>
+                    {/* Row 2: Bottom Row with Nav on left and Lang on right */}
+                    <div className={styles.bottomRow}>
+                        <nav className={styles.nav}>
+                            <Link href="/" className={`${styles.link} ${pathname === '/' ? styles.activeLink : ''}`}>{t.common.home}</Link>
+                            <Link href="/directions" className={`${styles.link} ${pathname === '/directions' ? styles.activeLink : ''}`}>{t.common.directionsShort}</Link>
+                            <Link href="/rehab" className={`${styles.link} ${pathname === '/rehab' ? styles.activeLink : ''}`}>{t.common.rehab}</Link>
+                            <Link href="/rent" className={`${styles.link} ${pathname === '/rent' ? styles.activeLink : ''}`}>{t.common.rent}</Link>
+                            <Link href="/contacts#contacts-header" className={`${styles.link} ${pathname === '/contacts' ? styles.activeLink : ''}`}>{t.common.contacts}</Link>
+                        </nav>
+
+                        <div className={styles.actions}>
+                            <div className={styles.langSwitchPill}>
+                                <button
+                                    className={`${styles.langBtn} ${language === 'ru' ? styles.activeLang : ''}`}
+                                    onClick={() => setLanguage('ru')}
+                                >
+                                    RU
+                                </button>
+                                <button
+                                    className={`${styles.langBtn} ${language === 'en' ? styles.activeLang : ''}`}
+                                    onClick={() => setLanguage('en')}
+                                >
+                                    EN
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>

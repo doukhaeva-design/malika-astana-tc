@@ -23,15 +23,19 @@ export default function HeroSectionComponent() {
 
     return (
         <section className={styles.hero} onMouseMove={handleMouseMove}>
+            {/* Animated Background Glows */}
+            <div className={styles.glow1}></div>
+            <div className={styles.glow2}></div>
+
             <div className={styles.container}>
                 <div className={styles.layout}>
-                    <div className={`${styles.content} animate-fade`}>
-                        <div className={styles.subtitleWrapper}>
+                    <div className={styles.content}>
+                        <div className={`${styles.subtitleWrapper} ${styles.reveal}`}>
                             <span className={`${styles.serifSubtitle} serif-accent`}>
                                 {language === 'ru' ? 'Добро пожаловать' : 'Welcome'}
                             </span>
                         </div>
-                        <h1 className={styles.title}>
+                        <h1 className={`${styles.title} ${styles.reveal} ${styles.delay1}`}>
                             {language === 'ru' ? (
                                 <>
                                     <span className={styles.titleLight}>Ваш</span> торговый центр <br />
@@ -44,14 +48,14 @@ export default function HeroSectionComponent() {
                                 </>
                             )}
                         </h1>
-                        <p className={styles.description}>
+                        <p className={`${styles.description} ${styles.reveal} ${styles.delay2}`}>
                             {language === 'ru' ? (
                                 <>Широкий выбор товаров для дома, бизнеса и авто. <strong className={styles.boldText}>Всё необходимое — рядом и без лишней суеты.</strong></>
                             ) : (
                                 <>A wide selection of goods for home, business, and auto. <strong className={styles.boldText}>Everything you need — close by and hassle-free.</strong></>
                             )}
                         </p>
-                        <div className={styles.actions}>
+                        <div className={`${styles.actions} ${styles.reveal} ${styles.delay3}`}>
                             <Link href="/contacts" className={styles.btnPrimary}>
                                 {t.hero.btnDirections}
                             </Link>
@@ -64,10 +68,10 @@ export default function HeroSectionComponent() {
                     <div className={styles.visuals} style={{
                         transform: `translate3d(${mousePos.x}px, ${mousePos.y}px, 0)`
                     }}>
-                        <div className={`${styles.imageMain} animate-fade stagger-1`}>
+                        <div className={`${styles.imageMain} ${styles.reveal} ${styles.delay2}`}>
                             <img src="/malika-facade-new.jpg" alt="Фасад MALIKA Астана" />
                         </div>
-                        <div className={`${styles.imageOffset} animate-fade stagger-2`}>
+                        <div className={`${styles.imageOffset} ${styles.reveal} ${styles.delay3}`}>
                             <img src="/pinterest_hero_2_1772463249311.png" alt="Customer lifestyle" />
                         </div>
                     </div>
