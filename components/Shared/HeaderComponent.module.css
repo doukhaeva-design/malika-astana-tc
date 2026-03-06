@@ -106,44 +106,19 @@
   /* Minimal height for info bar */
 }
 
-.logoRow {
-  display: flex;
-  justify-content: center;
+.mainRow {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
   width: 100%;
-}
-
-.rowDivider {
-  height: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
-  margin: 0 auto;
-  width: 0%;
-  animation: drawLine 1s cubic-bezier(0.16, 1, 0.3, 1) forwards 0.3s;
+  padding: 12px 0;
   transition: all 0.4s ease;
 }
 
-@keyframes drawLine {
-  to {
-    width: 100%;
-  }
+.scrolled .mainRow {
+  padding: 8px 0;
 }
 
-.scrolled .rowDivider {
-  opacity: 1;
-  height: 1px;
-  margin: 5px auto;
-  /* Reduced from 12px to keep height stable */
-  background-color: var(--gray-medium);
-  width: 100%;
-  pointer-events: none;
-}
-
-.bottomRow {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
 
 .logo {
   font-size: 1.4rem;
@@ -166,14 +141,15 @@
 }
 
 .scrolled .logo {
-  font-size: 1.5rem;
-  /* Even more compact to ensure it feels smaller */
+  font-size: 1.3rem;
+  /* Slightly smaller on scroll */
   color: var(--primary);
 }
 
 .nav {
   display: flex;
-  gap: 30px;
+  gap: 24px;
+  /* More collected rhythm */
 }
 
 .link {
@@ -204,8 +180,10 @@
   bottom: 0;
   left: 50%;
   width: 0;
-  height: 1.5px;
-  background: #ffffff;
+  height: 1px;
+  /* Thinner for precision */
+  background: rgba(255, 255, 255, 0.6);
+  /* Softer white, less aggressive */
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   transform: translateX(-50%);
   opacity: 0;
@@ -216,12 +194,14 @@
 }
 
 .activeLink::after {
-  width: 100% !important;
+  width: 70% !important;
+  /* Shorter length as requested */
   opacity: 1 !important;
 }
 
 .activeLink {
-  text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  /* Reduced glow */
 }
 
 /* Scrolled state links */
@@ -236,57 +216,76 @@
 
 .scrolled .link::after {
   background: var(--primary);
+  opacity: 0.4;
 }
 
 .scrolled .activeLink::after {
-  width: 100% !important;
+  width: 70% !important;
   opacity: 1 !important;
 }
 
 .actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+  /* Right align in its grid cell */
   gap: 20px;
 }
 
 .langSwitchPill {
   display: flex;
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 100px;
-  padding: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.scrolled .langSwitchPill {
-  background-color: rgba(0, 0, 0, 0.04);
-  border-color: rgba(0, 0, 0, 0.08);
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  padding: 0;
 }
 
 .langBtn {
   background: none;
   border: none;
-  padding: 5px 12px;
-  font-size: 0.65rem;
-  font-weight: 800;
-  color: rgba(255, 255, 255, 0.5);
+  padding: 4px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.4);
+  /* Muted by default */
   cursor: pointer;
-  border-radius: 100px;
   transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+  position: relative;
+}
+
+.langBtn:hover {
+  color: #fff;
+}
+
+.activeLang {
+  color: #fff !important;
+}
+
+/* Subtle separator dot */
+.langBtn:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -6px;
+  top: 50%;
+  width: 2px;
+  height: 2px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 
 .scrolled .langBtn {
   color: var(--text-muted);
 }
 
-.activeLang {
-  background-color: #fff;
-  color: var(--primary) !important;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+.scrolled .langBtn:not(:last-child)::after {
+  background-color: var(--gray-medium);
 }
 
 .scrolled .activeLang {
-  background-color: var(--primary);
-  color: #fff !important;
+  color: var(--primary) !important;
 }
 
 .menuOpenHeader {
