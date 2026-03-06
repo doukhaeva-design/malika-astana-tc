@@ -40,7 +40,7 @@
 .topContainer {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 var(--container-padding);
   display: flex;
   gap: 24px;
 }
@@ -80,7 +80,7 @@
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem 40px;
+  padding: 1.5rem var(--container-padding);
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -91,13 +91,13 @@
 .scrolled .topContainer {
   max-width: var(--max-width);
   width: 100%;
-  padding: 1.25rem 40px;
+  padding: 1.25rem var(--container-padding);
   /* maintained airiness */
   gap: 16px;
 }
 
 .scrolled .topContainer {
-  padding: 8px 40px;
+  padding: 8px var(--container-padding);
 }
 
 .logoRow {
