@@ -7,7 +7,6 @@
 */
 
 import React from 'react';
-import HeaderComponent from '@/components/Shared/HeaderComponent';
 import ContactsHeroComponent from '@/components/Contacts/ContactsHeroComponent';
 import ContactInfoSectionComponent from '@/components/Contacts/ContactInfoSectionComponent';
 import MapSectionComponent from '@/components/Contacts/MapSectionComponent';
@@ -16,7 +15,6 @@ import FooterComponent from '@/components/Shared/FooterComponent';
 export default function ContactsPage() {
     return (
         <main>
-            <HeaderComponent />
             <MapSectionComponent />
             <ContactsHeroComponent />
             <ContactInfoSectionComponent />

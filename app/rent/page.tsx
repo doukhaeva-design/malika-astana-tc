@@ -5,7 +5,6 @@
 */
 
 import React from 'react';
-import HeaderComponent from '@/components/Shared/HeaderComponent';
 import RentHeroComponent from '@/components/Rent/RentHeroComponent';
 import WhyBusinessHereComponent from '@/components/Rent/WhyBusinessHereComponent';
 import AvailableSpacesComponent from '@/components/Rent/AvailableSpacesComponent';
@@ -15,7 +14,6 @@ import FooterComponent from '@/components/Shared/FooterComponent';
 export default function RentPage() {
     return (
         <main>
-            <HeaderComponent />
             <RentHeroComponent />
             <WhyBusinessHereComponent />
             <AvailableSpacesComponent />
