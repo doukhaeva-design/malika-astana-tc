@@ -172,10 +172,6 @@ export default function HeaderComponent() {
                 </div>
             </header>
 
-            {/* Подложки для системных зон (Notch и Home Indicator) на iOS/Android */}
-            <div className={`${styles.topSafeBase} ${(!isHomePage || isScrolled || isMenuOpen) ? styles.topSafeBaseVisible : ''}`}></div>
-            <div className={styles.bottomNavBase}></div>
-
             {/* Simple Bottom Menu (Mobile Only) */}
             <nav className={styles.bottomNav}>
                 <Link href="/" className={`${styles.bottomNavItem} ${pathname === '/' ? styles.bottomNavActive : ''}`} onClick={closeMenu}>
