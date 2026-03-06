@@ -36,6 +36,9 @@ export default function RootLayout({
   return (
     <html lang="ru" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`} suppressHydrationWarning>
+        {/* Глобальные подложки для безопасных зон (Notch/Home Indicator) */}
+        <div className="safe-area-top"></div>
+        <div className="safe-area-bottom"></div>
         <LanguageProvider>
           <ScrollObserver />
           <HeaderComponent />

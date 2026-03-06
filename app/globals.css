@@ -33,7 +33,7 @@ body::before {
   inset: 0;
   opacity: 0.03;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 99;
   background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
 }
 
@@ -56,6 +56,42 @@ body {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   line-height: 1.75;
+}
+
+/*
+  Глобальные подложки для безопасных зон iOS/Android.
+  Используем глобальные классы, чтобы CSS Modules не мешали.
+  Скрыты на десктопе, видны только на мобилке.
+*/
+.safe-area-top,
+.safe-area-bottom {
+  display: none;
+}
+
+@media (max-width: 1000px) {
+  .safe-area-top {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-top, 0px);
+    background-color: #ffffff;
+    z-index: 10000;
+    pointer-events: none;
+  }
+
+  .safe-area-bottom {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-bottom, 0px);
+    background-color: #ffffff;
+    z-index: 10000;
+    pointer-events: none;
+  }
 }
 
 h1,
