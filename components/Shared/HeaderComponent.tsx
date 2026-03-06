@@ -81,7 +81,7 @@ export default function HeaderComponent() {
                 <div className={styles.container}>
                     {/* Row 1: Top Centered Logo */}
                     <div className={styles.logoRow}>
-                        <Link href="/" className={`${styles.logo} serif-accent`} onClick={closeMenu}>
+                        <Link href="/" className={styles.logo} onClick={closeMenu}>
                             Malika
                         </Link>
                     </div>

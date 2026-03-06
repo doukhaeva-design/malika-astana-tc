@@ -80,16 +80,10 @@ export default function HeroSectionComponent() {
 
                     <div className={styles.visuals}>
                         <div
-                            className={`${styles.imageMain} ${styles.reveal} ${styles.delay2}`}
+                            className={`${styles.imageWrapper} ${styles.reveal} ${styles.delay2}`}
                             style={{ transform: `translate3d(${mousePos.x * 0.5}px, ${mousePos.y * 0.5}px, 0)` }}
                         >
-                            <img src="/malika-facade-new.jpg" alt="Фасад MALIKA Астана" />
-                        </div>
-                        <div
-                            className={`${styles.imageOffset} ${styles.reveal} ${styles.delay3}`}
-                            style={{ transform: `translate3d(${mousePos.x * 1.2}px, ${mousePos.y * 1.2}px, 0)` }}
-                        >
-                            <img src="/pinterest_hero_2_1772463249311.png" alt="Customer lifestyle" />
+                            <img src="/malika-facade-new.jpg" alt="Фасад MALIKA Астана" className={styles.heroImage} />
                         </div>
                     </div>
                 </div>
