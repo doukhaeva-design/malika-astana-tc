@@ -166,6 +166,8 @@ export const translations = {
         rentHero: {
             title: 'Аренда коммерческих помещений',
             subtitle: 'Удобная площадка для стабильной работы и развития бизнеса в торговом центре MALIKA.',
+            mainTitle: 'Ваш бизнес в центре внимания',
+            mainDesc: 'Удобная площадка для стабильной работы и развития бизнеса в торговом центре MALIKA. Современная инфраструктура, высокий трафик посетителей и выгодное расположение.',
             btn: 'Оставить заявку',
             btnCTA: 'Оставить заявку',
             btnCall: 'Позвонить',
@@ -362,6 +364,8 @@ export const translations = {
         rentHero: {
             title: 'Commercial Space Rental',
             subtitle: 'A convenient platform for stable operation and business development.',
+            mainTitle: 'Your business in the spotlight',
+            mainDesc: 'A convenient platform for stable business operations and growth at the MALIKA shopping center. Modern infrastructure, high visitor traffic, and a prime location.',
             btn: 'Submit Application',
             btnCTA: 'Submit Application',
             btnCall: 'Call',

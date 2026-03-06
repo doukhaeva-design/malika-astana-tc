@@ -12,7 +12,6 @@
 */
 
 import React from 'react';
-import HeaderComponent from '@/components/Shared/HeaderComponent';
 import HeroSectionComponent from '@/components/Home/HeroSectionComponent';
 import SpaceShowcaseComponent from '@/components/Home/SpaceShowcaseComponent';
 import CompactAdvantageSectionComponent from '@/components/Home/CompactAdvantageSectionComponent';

@@ -46,11 +46,9 @@ export default function RentHeroComponent() {
 
                     {/* Правая колонка - Тексты и статика */}
                     <div className={styles.textSide}>
-                        <h2 className={styles.mainTitle}>Ваш бизнес в центре внимания</h2>
+                        <h2 className={styles.mainTitle}>{t.rentHero.mainTitle}</h2>
                         <p className={styles.description}>
-                            Удобная площадка для стабильной работы и развития бизнеса в
-                            торговом центре MALIKA. Современная инфраструктура, высокий
-                            трафик посетителей и выгодное расположение.
+                            {t.rentHero.mainDesc}
                         </p>
 
                         <div className={styles.actions}>
