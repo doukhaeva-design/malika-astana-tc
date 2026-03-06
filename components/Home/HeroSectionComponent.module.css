@@ -296,11 +296,13 @@
     border-radius: var(--radius-xl);
     overflow: hidden;
     z-index: 2;
-    /* Subtle blue outer glow for "illumination" */
+    /* Premium glow and depth */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    /* Thin light outline */
     box-shadow:
-        0 40px 100px rgba(0, 0, 0, 0.4),
-        0 0 45px rgba(56, 189, 248, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+        0 20px 60px rgba(0, 0, 0, 0.45),
+        0 0 80px rgba(40, 120, 255, 0.15);
+    /* Multi-layered glow */
     transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -313,11 +315,11 @@
     z-index: 3;
     border-radius: var(--radius-lg);
     overflow: hidden;
-    /* Subtle blue outer glow for "illumination" */
+    /* Matching premium style */
+    border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow:
-        0 50px 120px rgba(0, 0, 0, 0.5),
-        0 0 55px rgba(56, 189, 248, 0.25);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+        0 30px 80px rgba(0, 0, 0, 0.5),
+        0 0 100px rgba(40, 120, 255, 0.18);
     transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -462,17 +464,7 @@
         margin-top: 20px;
     }
 
-    /* Industrial Accent Line */
-    .visuals::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 10%;
-        width: 1px;
-        height: 100%;
-        background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.1), transparent);
-        z-index: 5;
-    }
+
 
     .imageMain {
         width: 82%;
