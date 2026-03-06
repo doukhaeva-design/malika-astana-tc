@@ -1,27 +1,30 @@
 .hero {
     height: 100svh;
+    min-width: 100%;
     min-height: 850px;
     display: flex;
     align-items: center;
     padding-top: 80px;
-    background-color: var(--primary);
+    background-color: #05080f;
+    /* Purest deep base */
     overflow: hidden;
     position: relative;
-    background: linear-gradient(135deg, #131a28 0%, #080c14 100%);
+    /* Sophisticated diagonal flow instead of centered spotlight */
+    background: linear-gradient(135deg, #0d1a30 0%, #070c14 40%, #05080f 100%);
 }
 
-.mouseGlow {
+/* Subtle texture softening - reducing the impact of global grain if present */
+.hero::before {
+    content: '';
     position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
-    border-radius: 50%;
+    inset: 0;
+    background: inherit;
+    opacity: 0.4;
+    z-index: 0;
     pointer-events: none;
-    z-index: 1;
-    transform: translate(-50%, -50%);
-    transition: left 0.5s cubic-bezier(0.16, 1, 0.3, 1), top 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    filter: blur(80px);
 }
+
+
 
 /* Background floating auroras for premium depth */
 .glow1,
@@ -99,42 +102,53 @@
 
 .serifSubtitle {
     display: block;
-    font-size: 1.5rem;
-    /* Crisp Architectural Blue Gradient */
-    background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%);
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    /* Noble Gold Gradient - lightened shadow phase */
+    background: linear-gradient(135deg, #fde68a 0%, #d4a13d 50%, #c58e3e 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
     padding-left: 4px;
-    /* Space for the letter to render fully */
     margin-left: -4px;
-    /* Align back to the text column */
     line-height: 1.2;
+    filter: drop-shadow(0 0 10px rgba(212, 161, 61, 0.1));
 }
 
 .title {
-    font-size: 5.5rem;
-    font-weight: 800;
+    font-family: var(--font-display);
+    font-size: 4.8rem;
+    font-weight: 700;
     margin-bottom: 1.5rem;
     color: var(--off-white);
-    line-height: 0.95;
-    letter-spacing: -0.04em;
+    line-height: 1.05;
+    /* Increased for better breathing */
+    letter-spacing: -0.015em;
+    /* Less aggressive compression */
 }
 
 .titleLight {
-    font-weight: 300;
-    color: rgba(248, 249, 250, 0.6);
+    font-weight: 200;
+    /* Even thinner for drama */
+    color: rgba(248, 249, 250, 0.45);
+    /* Slightly more visible grey-white */
 }
 
 .accent {
     position: relative;
-    /* Crisp Architectural Blue Gradient */
-    background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%);
+    /* Noble Gold Gradient - lightened shadow phase */
+    background: linear-gradient(135deg, #fde68a 0%, #d4a13d 50%, #c58e3e 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
+    filter: drop-shadow(0 0 15px rgba(212, 161, 61, 0.15));
+    /* Space for letters to render fully */
+    padding: 0 10px;
+    margin: 0 -10px;
 }
 
 .description {
@@ -156,25 +170,24 @@
 }
 
 .btnPrimary {
-    padding: 0 48px;
-    height: 54px;
-    /* Фиксированная премиальная высота */
-    background: rgba(255, 255, 255, 0.10);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    padding: 0 54px;
+    height: 58px;
+    /* Premium frosted glass with a subtle blue tint */
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.15) 0%, rgba(56, 189, 248, 0.05) 100%);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
     color: white;
-    border: 1px solid rgba(255, 255, 255, 0.20);
-    border-radius: 16px;
-    /* Баланс 14-18px */
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
     font-weight: 700;
     font-size: 0.95rem;
-    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     text-decoration: none;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
-    /* Мягкое свечение вместо тени */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05) inset;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .btnPrimary:hover {
@@ -201,15 +214,15 @@
 }
 
 .btnSecondary {
-    padding: 0 48px;
-    height: 54px;
+    padding: 0 54px;
+    height: 58px;
     background-color: transparent;
-    color: var(--off-white);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 16px;
+    color: rgba(248, 249, 250, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 18px;
     font-weight: 600;
     font-size: 0.95rem;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     text-decoration: none;
     display: inline-flex;
     align-items: center;
@@ -227,86 +240,77 @@
 }
 
 .visuals {
-    flex: 1;
+    flex: 0 0 500px;
+    /* Constrain width to keep it right of middle */
     position: relative;
     display: flex;
     justify-content: flex-end;
     margin-top: -40px;
-    /* Pull images up to balance with large title on the left */
+    margin-left: auto;
 }
 
 .imageMain {
-    width: 440px;
+    width: 420px;
     height: 580px;
+    position: relative;
     border-radius: var(--radius-xl);
     overflow: hidden;
-    position: relative;
     z-index: 2;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
-    animation: float 8s infinite ease-in-out;
-}
-
-@keyframes float {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-15px);
-    }
-}
-
-.imageMain img,
-.imageOffset img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Very subtle base grading: just a tiny bit darker to fit the dark mode, natural colors */
-    filter: brightness(0.95) contrast(1.05) saturate(0.95);
-    transition: filter 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.imageMain:hover img,
-.imageOffset:hover img {
-    /* Full brightness on hover */
-    filter: brightness(1.05) contrast(1.05) saturate(1.1);
-    transform: scale(1.03);
-}
-
-/* Subtle Amethyst/Slate Overlay */
-.imageMain::after,
-.imageOffset::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    /* Much lighter, elegant tint */
-    background: linear-gradient(135deg, rgba(3, 7, 18, 0.15) 0%, rgba(139, 92, 246, 0.05) 100%);
-    mix-blend-mode: overlay;
-    pointer-events: none;
-    z-index: 5;
-    transition: opacity 0.7s ease;
-}
-
-.imageMain:hover::after,
-.imageOffset:hover::after {
-    /* Fade out the heavy tint on hover */
-    opacity: 0;
+    /* Subtle blue outer glow for "illumination" */
+    box-shadow:
+        0 40px 100px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(56, 189, 248, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .imageOffset {
-    width: 320px;
-    height: 420px;
+    width: 290px;
+    height: 400px;
+    position: absolute;
+    bottom: -40px;
+    left: -50px;
+    z-index: 3;
     border-radius: var(--radius-lg);
     overflow: hidden;
+    /* Subtle blue outer glow for "illumination" */
+    box-shadow:
+        0 50px 120px rgba(0, 0, 0, 0.5),
+        0 0 40px rgba(56, 189, 248, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.heroImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
+    filter: brightness(1.05) contrast(1.05);
+    /* Illuminated look */
+}
+
+.imageOverlay {
     position: absolute;
-    bottom: -50px;
-    left: -10px;
-    z-index: 3;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-    border: 8px solid #15223c;
-    animation: float 10s infinite ease-in-out -2s;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.15), transparent);
+    /* Lightened overlay */
+    pointer-events: none;
+}
+
+.imageMain:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 60px 140px rgba(0, 0, 0, 0.5);
+}
+
+.imageOffset:hover {
+    transform: translateY(-20px) scale(1.05);
+    box-shadow: 0 80px 160px rgba(0, 0, 0, 0.6);
+}
+
+.imageMain:hover .heroImage,
+.imageOffset:hover .heroImage {
+    transform: scale(1.1);
 }
 
 .scrollDown {

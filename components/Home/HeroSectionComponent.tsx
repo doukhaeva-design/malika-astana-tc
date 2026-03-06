@@ -27,14 +27,7 @@ export default function HeroSectionComponent() {
             <div className={styles.glow1}></div>
             <div className={styles.glow2}></div>
 
-            {/* Interactive Mouse Glow */}
-            <div
-                className={styles.mouseGlow}
-                style={{
-                    left: `${(mousePos.x / 20 * 50 + 50)}%`,
-                    top: `${(mousePos.y / 20 * 50 + 50)}%`
-                }}
-            ></div>
+
 
             <div className={styles.container}>
                 <div className={styles.layout}>
@@ -83,13 +76,15 @@ export default function HeroSectionComponent() {
                             className={`${styles.imageMain} ${styles.reveal} ${styles.delay2}`}
                             style={{ transform: `translate3d(${mousePos.x * 0.5}px, ${mousePos.y * 0.5}px, 0)` }}
                         >
-                            <img src="/malika-facade-new.jpg" alt="Фасад MALIKA Астана" />
+                            <img src="/malika-facade-new.jpg" alt="MALIKA Astana Facade" className={styles.heroImage} />
+                            <div className={styles.imageOverlay}></div>
                         </div>
                         <div
                             className={`${styles.imageOffset} ${styles.reveal} ${styles.delay3}`}
-                            style={{ transform: `translate3d(${mousePos.x * 1.2}px, ${mousePos.y * 1.2}px, 0)` }}
+                            style={{ transform: `translate3d(${mousePos.x * -0.3}px, ${mousePos.y * -0.3}px, 0)` }}
                         >
-                            <img src="/pinterest_hero_2_1772463249311.png" alt="Customer lifestyle" />
+                            <img src="/pinterest_hero_1_1772463234531.png" alt="Lifestyle MALIKA" className={styles.heroImage} />
+                            <div className={styles.imageOverlay}></div>
                         </div>
                     </div>
                 </div>
