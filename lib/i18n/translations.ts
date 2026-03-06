@@ -95,7 +95,7 @@ export const translations = {
         softTenant: {
             badge: 'Партнерство',
             titlePart1: 'Ваш бизнес в',
-            text: 'Станьте частью бизнес-сообщества MALIKA. Современные площади, стабильный трафик и выгодные локации для вашего роста.',
+            text: 'Станьте частью бизнес-сообщества MALIKA. Современные площади, надежная инфраструктура и выгодные локации для вашего роста.',
             btn: 'СТАТЬ АРЕНДАТОРОМ',
         },
         footer: {
@@ -122,7 +122,7 @@ export const translations = {
         },
         rentPage: {
             heroTitle: 'Аренда в MALIKA',
-            heroDesc: 'Присоединяйтесь к числу успешных предпринимателей. Мы предлагаем комфортные помещения, высокий трафик и премиальный уровень сервиса для развития вашего бизнеса.',
+            heroDesc: 'Присоединяйтесь к числу успешных предпринимателей. Мы предлагаем современные помещения, надежное партнерство и комфортную среду для развития вашего бизнеса.',
             heroBtn: 'Оставить заявку на аренду',
             heroBtnSecondary: 'Позвонить в отдел аренды',
             status: 'Открыт прием заявок',
@@ -143,31 +143,12 @@ export const translations = {
                 { title: 'Складские помещения', desc: 'Пространства для хранения и логистических задач.' },
                 { title: 'Коммерческие участки', desc: 'Площадки для специализированных проектов и индивидуальных решений.' }
             ],
-
-            formTitle: 'Интересует аренда помещения?',
-            formSubtitle: 'Свяжитесь с командой MALIKA — мы предоставим всю необходимую информацию и поможем подобрать подходящий формат.',
-            formNote: 'Мы свяжемся с вами для уточнения деталей и обсуждения условий аренды.',
-
-            formName: 'Имя',
-            formNamePlaceholder: 'Имя',
-            formEmailNote: '— обязателен для Email-заявки',
-            formPhone: 'Телефон',
-            formPhoneOptional: '(необязательно)',
-            formBusiness: 'Тип бизнеса',
-            formBusinessPlaceholder: 'Магазин одежды, Кофейня...',
-            formMessage: 'Ваше сообщение',
-            formMessagePlaceholder: 'Какая площадь вас интересует?',
-            formEmailBtn: 'Отправить через Email',
-            formWhatsappBtn: 'Отправить в WhatsApp',
-            formCompany: 'Название компании',
-            formSpace: 'Требуемая площадь (м²)',
-            formSubmit: 'ОТПРАВИТЬ ЗАЯВКУ',
         },
         rentHero: {
             title: 'Аренда коммерческих помещений',
             subtitle: 'Удобная площадка для стабильной работы и развития бизнеса в торговом центре MALIKA.',
             mainTitle: 'Ваш бизнес в центре внимания',
-            mainDesc: 'Удобная площадка для стабильной работы и развития бизнеса в торговом центре MALIKA. Современная инфраструктура, высокий трафик посетителей и выгодное расположение.',
+            mainDesc: 'Удобная площадка для стабильной работы и развития бизнеса в торговом центре MALIKA. Современная инфраструктура, индивидуальный подход к арендаторам и выгодное расположение.',
             btn: 'Оставить заявку',
             btnCTA: 'Оставить заявку',
             btnCall: 'Позвонить',
@@ -199,6 +180,14 @@ export const translations = {
         directionsPage: {
             heroTitle: 'Магазины и сервисы',
             heroDesc: 'Откройте для себя разнообразие товаров и услуг в нашем торговом центре.',
+        },
+        rentContact: {
+            title: 'Готовы обсудить аренду?',
+            text: 'Свяжитесь с администрацией напрямую — ответим на все вопросы, покажем помещения и расскажем об условиях.',
+            waBtn: 'Написать в WhatsApp',
+            callBtn: 'Позвонить',
+            waMessage: 'Здравствуйте! Интересует аренда помещения в ТЦ MALIKA.',
+            hint: 'Администрация на связи ежедневно с 09:00 до 18:00',
         }
     },
     en: {
@@ -293,7 +282,7 @@ export const translations = {
         softTenant: {
             badge: 'Partnership',
             titlePart1: 'Your business at',
-            text: 'Become part of the MALIKA business community. Modern spaces, stable traffic, and profitable locations for your growth.',
+            text: 'Become part of the MALIKA business community. Modern spaces, reliable infrastructure, and profitable locations for your growth.',
             btn: 'BECOME A TENANT',
         },
         footer: {
@@ -320,7 +309,7 @@ export const translations = {
         },
         rentPage: {
             heroTitle: 'Rent at MALIKA',
-            heroDesc: 'Join the ranks of successful entrepreneurs. We offer comfortable premises, high traffic, and premium service to grow your business.',
+            heroDesc: 'Join the ranks of successful entrepreneurs. We offer modern premises, reliable partnership, and a comfortable environment to grow your business.',
             heroBtn: 'Submit a rental request',
             heroBtnSecondary: 'Call leasing department',
             status: 'Accepting applications',
@@ -341,31 +330,12 @@ export const translations = {
                 { title: 'Warehouse Areas', desc: 'For storage and logistics tasks.' },
                 { title: 'Commercial Lots', desc: 'For specialized projects.' }
             ],
-
-            formTitle: 'Interested in renting a space?',
-            formSubtitle: 'Contact the MALIKA team — we will provide all the necessary information.',
-            formName: 'Name',
-            formNamePlaceholder: 'Name',
-            formEmailNote: '— required for Email application',
-            formPhone: 'Phone',
-            formPhoneOptional: '(optional)',
-            formBusiness: 'Business type',
-            formBusinessPlaceholder: 'Clothing store, coffee shop...',
-            formMessage: 'Your message',
-            formMessagePlaceholder: 'What area are you interested in?',
-            formEmailBtn: 'Send via Email',
-            formWhatsappBtn: 'Send via WhatsApp',
-            formNote: 'We will contact you to clarify the details and discuss the conditions.',
-
-            formCompany: 'Company Name',
-            formSpace: 'Required Area (sq.m)',
-            formSubmit: 'SUBMIT REQUEST',
         },
         rentHero: {
             title: 'Commercial Space Rental',
             subtitle: 'A convenient platform for stable operation and business development.',
             mainTitle: 'Your business in the spotlight',
-            mainDesc: 'A convenient platform for stable business operations and growth at the MALIKA shopping center. Modern infrastructure, high visitor traffic, and a prime location.',
+            mainDesc: 'A convenient platform for stable business operations and growth at the MALIKA shopping center. Modern infrastructure, individual approach to tenants, and a prime location.',
             btn: 'Submit Application',
             btnCTA: 'Submit Application',
             btnCall: 'Call',
@@ -397,6 +367,14 @@ export const translations = {
         directionsPage: {
             heroTitle: 'Shops & Services',
             heroDesc: 'Discover a variety of goods and services in our shopping center.',
+        },
+        rentContact: {
+            title: 'Ready to discuss rental?',
+            text: 'Contact the administration directly — we will answer all questions, show available spaces, and explain the terms.',
+            waBtn: 'Message on WhatsApp',
+            callBtn: 'Call Us',
+            waMessage: 'Hello! I am interested in renting a space at MALIKA shopping center.',
+            hint: 'Administration is available daily from 09:00 to 18:00',
         }
     }
 };
