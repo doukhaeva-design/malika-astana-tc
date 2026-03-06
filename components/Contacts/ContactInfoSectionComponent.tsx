@@ -14,7 +14,7 @@ export default function ContactInfoSectionComponent() {
     const { language, t } = useLanguage();
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id="contact-info">
             <div className={styles.container}>
                 <div className={styles.infoGrid}>
                     {/* Адрес */}
