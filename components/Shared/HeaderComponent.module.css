@@ -87,17 +87,18 @@
   transition: all 0.4s ease;
 }
 
-.scrolled .container,
-.scrolled .topContainer {
+.scrolled .container {
   max-width: var(--max-width);
   width: 100%;
-  padding: 1.25rem var(--container-padding);
-  /* maintained airiness */
-  gap: 16px;
+  padding: 0.8rem var(--container-padding);
+  /* Significantly more compact */
+  gap: 8px;
+  /* Tighter spacing */
 }
 
 .scrolled .topContainer {
-  padding: 8px var(--container-padding);
+  padding: 4px var(--container-padding);
+  /* Minimal height for info bar */
 }
 
 .logoRow {
@@ -125,7 +126,8 @@
 .scrolled .rowDivider {
   opacity: 1;
   height: 1px;
-  margin: 12px auto;
+  margin: 8px auto;
+  /* Reduced from 12px to keep height stable */
   background-color: var(--gray-medium);
   width: 100%;
   pointer-events: none;
@@ -153,8 +155,8 @@
 }
 
 .scrolled .logo {
-  font-size: 2.2rem;
-  /* Closer to the liked Home state */
+  font-size: 2rem;
+  /* Even more compact to ensure it feels smaller */
   color: var(--primary);
 }
 
