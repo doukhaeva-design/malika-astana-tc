@@ -3,13 +3,53 @@
     min-height: 850px;
     display: flex;
     align-items: center;
+    padding-top: 80px;
+    /* Offset for the header to give 'air' */
     background-color: var(--primary);
     overflow: hidden;
     position: relative;
     /* Clean, slightly cold dark slate gradient. Never turns pitch black. No dirty color mixes. */
-    /* Deepened gradient: less blue, more slate-black depth */
     background: linear-gradient(135deg, #131a28 0%, #080c14 100%);
 }
+
+/* Background floating auroras for premium depth */
+.glow1,
+.glow2 {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(140px);
+    z-index: 0;
+    opacity: 0.5;
+    pointer-events: none;
+    animation: drift 20s infinite alternate cubic-bezier(0.5, 0, 0.5, 1);
+}
+
+.glow1 {
+    top: -20vh;
+    left: -10vw;
+    background: radial-gradient(circle, rgba(30, 58, 99, 0.6) 0%, transparent 60%);
+}
+
+.glow2 {
+    bottom: -10vh;
+    right: -10vw;
+    background: radial-gradient(circle, rgba(212, 161, 61, 0.15) 0%, transparent 60%);
+    animation-delay: -10s;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes drift {
+    0% {
+        transform: scale(1) translate(0, 0);
+    }
+
+    100% {
+        transform: scale(1.1) translate(5%, 10%);
+    }
+}
+
 
 
 .visuals {
@@ -26,7 +66,7 @@
     width: 100%;
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 var(--container-padding);
     position: relative;
     z-index: 2;
 }
@@ -54,12 +94,12 @@
 }
 
 .title {
-    font-size: 5rem;
+    font-size: 5.5rem;
     font-weight: 800;
     margin-bottom: 1.5rem;
     color: var(--off-white);
-    line-height: 1;
-    letter-spacing: -0.03em;
+    line-height: 0.95;
+    letter-spacing: -0.04em;
 }
 
 .titleLight {
@@ -452,5 +492,39 @@
 
     .taglineMobileOnly {
         display: inline;
+    }
+}
+
+/* Intro Animations */
+.reveal {
+    animation: fadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    opacity: 0;
+}
+
+.delay1 {
+    animation-delay: 0.2s;
+}
+
+.delay2 {
+    animation-delay: 0.4s;
+}
+
+.delay3 {
+    animation-delay: 0.6s;
+}
+
+.delay4 {
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.98);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }

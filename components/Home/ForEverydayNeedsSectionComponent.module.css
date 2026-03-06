@@ -7,7 +7,7 @@
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0 var(--container-padding);
 }
 
 .header {
@@ -80,11 +80,11 @@
     display: flex;
     gap: 40px;
     overflow-x: auto;
-    padding: 30px max(40px, calc((100vw - var(--max-width)) / 2 + 40px)) 60px;
+    padding: 30px max(var(--container-padding), calc((100vw - var(--max-width)) / 2 + var(--container-padding))) 60px;
     scrollbar-width: none;
     -ms-overflow-style: none;
     scroll-snap-type: x mandatory;
-    scroll-padding-left: max(40px, calc((100vw - var(--max-width)) / 2 + 40px));
+    scroll-padding-left: max(var(--container-padding), calc((100vw - var(--max-width)) / 2 + var(--container-padding)));
 }
 
 .grid::-webkit-scrollbar {
