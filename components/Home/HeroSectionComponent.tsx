@@ -77,10 +77,6 @@ export default function HeroSectionComponent() {
                     </div>
                 </div>
             </div>
-            <div className={styles.scrollDown}>
-                <div className={styles.mouse}></div>
-                <span>{t.hero.scroll}</span>
-            </div>
         </section>
     );
 }

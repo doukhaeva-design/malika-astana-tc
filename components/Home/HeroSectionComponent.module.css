@@ -201,6 +201,8 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
+    margin-top: -40px;
+    /* Pull images up to balance with large title on the left */
 }
 
 .imageMain {
