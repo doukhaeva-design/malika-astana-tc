@@ -598,6 +598,40 @@
     display: none;
   }
 
+  /* BOTTOM NAV BASE - Сплошная белая полоса под системным индикатором Home */
+  .bottomNavBase {
+    display: block;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: env(safe-area-inset-bottom, 20px);
+    background: #ffffff;
+    z-index: 999;
+    /* Чуть ниже основного меню */
+    pointer-events: none;
+  }
+
+  /* TOP SAFE BASE - Сплошная белая полоса под "челкой" */
+  .topSafeBase {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: env(safe-area-inset-top, 20px);
+    background: transparent;
+    z-index: 1001;
+    /* Поверх хедера */
+    pointer-events: none;
+    transition: background-color 0.4s ease;
+  }
+
+  .topSafeBaseVisible {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
   /* SIMPLE FIXED BOTTOM BAR */
   .bottomNav {
     display: flex;
@@ -656,4 +690,9 @@
   .bottomNavActive span {
     font-weight: 800;
   }
+}
+
+.topSafeBase,
+.bottomNavBase {
+  display: none;
 }

@@ -172,6 +172,9 @@ export default function HeaderComponent() {
                 </div>
             </header>
 
+            {/* Подложки для безопасных зон мобильных устройств */}
+            <div className={`${styles.topSafeBase} ${(!isHomePage || isScrolled || isMenuOpen) ? styles.topSafeBaseVisible : ''}`}></div>
+
             {/* Simple Bottom Menu (Mobile Only) */}
             <nav className={styles.bottomNav}>
                 <Link href="/" className={`${styles.bottomNavItem} ${pathname === '/' ? styles.bottomNavActive : ''}`} onClick={closeMenu}>
@@ -195,6 +198,7 @@ export default function HeaderComponent() {
                     <span>{t.common.more}</span>
                 </button>
             </nav>
+            <div className={styles.bottomNavBase}></div>
         </>
     );
 }
