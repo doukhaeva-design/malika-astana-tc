@@ -7,6 +7,8 @@
 import React from 'react';
 import RehabHeroComponent from '@/components/Rehab/RehabHeroComponent';
 import ContentSectionComponent from '@/components/Rehab/ContentSectionComponent';
+import SpecialistsSectionComponent from '@/components/Rehab/SpecialistsSectionComponent';
+import MethodsSectionComponent from '@/components/Rehab/MethodsSectionComponent';
 import FooterComponent from '@/components/Shared/FooterComponent';
 
 export default function RehabPage() {
@@ -14,6 +16,8 @@ export default function RehabPage() {
         <main>
             <RehabHeroComponent />
             <ContentSectionComponent />
+            <MethodsSectionComponent />
+            <SpecialistsSectionComponent />
             <FooterComponent />
         </main>
     );

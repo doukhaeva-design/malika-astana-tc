@@ -18,7 +18,7 @@ export default function RehabHeroComponent() {
             <div className={`${styles.container} animate-fade`}>
                 <div className={styles.subtitleWrapper}>
                     <span className={`${styles.serifSubtitle} serif-accent`}>
-                        {language === 'ru' ? 'Забота о вашем здоровье' : 'Care for your health'}
+                        {t.rehabPage.heroSubtitle}
                     </span>
                 </div>
                 <h1 className={styles.title}>{t.rehabPage.heroTitle}</h1>

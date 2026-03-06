@@ -114,6 +114,9 @@ export const translations = {
             title: 'Контакты',
             subtitle: 'Свяжитесь с нами',
             desc: 'Остались вопросы? Мы всегда готовы помочь. Выберите удобный способ связи.',
+            heroSubtitle: 'Будем на связи',
+            heroTitle: 'КОНТАКТЫ',
+            heroDesc: 'Свяжитесь с нами удобным для вас способом. Мы всегда рады ответить на ваши вопросы.',
             addressTitle: 'Адрес',
             address1: 'Астана, район Байконыр, Проезд 69, 1А',
             emailTitle: 'Email',
@@ -156,6 +159,7 @@ export const translations = {
         rehabPage: {
             heroTitle: 'Профессиональная реабилитация',
             heroDesc: 'Специализированный центр восстановления здоровья, расположенный в комфортной инфраструктуре ТЦ MALIKA. Инновационные методы и заботливый подход к каждому пациенту.',
+            heroSubtitle: 'Забота о вашем здоровье',
             heroBtn: 'Записаться на прием',
             heroBtnSecondary: 'Прайс-лист',
 
@@ -164,6 +168,20 @@ export const translations = {
                 'Физическая реабилитация',
                 'Восстановление после травм',
                 'Консультации специалистов',
+            ],
+
+            specialistsTitle: 'Наши специалисты',
+            specialists: [
+                { name: 'Марат Ахметов', role: 'Главный врач, реабилитолог' },
+                { name: 'Елена Соколова', role: 'Специалист по ЛФК' },
+                { name: 'Арман Ибраев', role: 'Мануальный терапевт' },
+            ],
+
+            methodsTitle: 'Методики восстановления',
+            methods: [
+                { title: 'Кинезиотерапия', desc: 'Лечение движением для восстановления функций суставов.' },
+                { title: 'Мануальная терапия', desc: 'Ручные техники для снятия боли и коррекции осанки.' },
+                { title: 'Физиолечение', desc: 'Использование современного оборудования для ускорения регенерации.' }
             ],
 
             contactsTitle: 'Контактная информация',
@@ -301,6 +319,9 @@ export const translations = {
             title: 'Contacts',
             subtitle: 'Get in Touch',
             desc: 'Have questions? We are always ready to help. Choose a convenient way to contact us.',
+            heroSubtitle: 'Stay in touch',
+            heroTitle: 'CONTACTS',
+            heroDesc: 'Contact us in a way that is convenient for you. We are always happy to answer your questions.',
             addressTitle: 'Address',
             address1: 'Astana, Baikonyr District, Proyezd 69, 1A',
             emailTitle: 'Email',
@@ -343,6 +364,7 @@ export const translations = {
         rehabPage: {
             heroTitle: 'Professional Rehabilitation',
             heroDesc: 'A specialized health recovery center located within the comfortable infrastructure of the MALIKA shopping center. Innovative methods and a caring approach to every patient.',
+            heroSubtitle: 'Care for your health',
             heroBtn: 'Book an Appointment',
             heroBtnSecondary: 'Price List',
 
@@ -351,6 +373,20 @@ export const translations = {
                 'Physical rehabilitation',
                 'Recovery after injuries',
                 'Specialist consultations',
+            ],
+
+            specialistsTitle: 'Our Specialists',
+            specialists: [
+                { name: 'Marat Akhmetov', role: 'Head Physician, Rehabilitation Specialist' },
+                { name: 'Elena Sokolova', role: 'Physiotherapist' },
+                { name: 'Arman Ibrayev', role: 'Manual Therapist' },
+            ],
+
+            methodsTitle: 'Recovery Methods',
+            methods: [
+                { title: 'Kinesitherapy', desc: 'Movement therapy to restore joint function.' },
+                { title: 'Manual Therapy', desc: 'Hands-on techniques for pain relief and posture correction.' },
+                { title: 'Physiotherapy', desc: 'Using modern equipment to accelerate regeneration.' }
             ],
 
             contactsTitle: 'Contact Information',
