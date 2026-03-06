@@ -220,7 +220,7 @@
 .mobileMenu {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100dvh;
   width: 100%;
   position: fixed;
   top: 0;
@@ -439,7 +439,7 @@
 }
 
 .mobileMenuFooter {
-  padding: 0 24px calc(120px + env(safe-area-inset-bottom));
+  padding: 0 24px calc(40px + env(safe-area-inset-bottom));
   background-color: #fff;
   display: flex;
   flex-direction: column;
@@ -535,16 +535,23 @@
 
 @media (max-width: 1000px) {
   .header {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+    pointer-events: none;
+  }
+
+  /* When menu is open, we need to make sure the header area doesn't have conflicting bg */
+  .menuOpenHeader {
     background: transparent !important;
     border: none !important;
-    box-shadow: none !important;
-    padding: 0 !important;
-    pointer-events: none;
   }
 
   .topBar {
     pointer-events: auto;
     background-color: rgba(255, 255, 255, 0.05);
+    /* Default subtle glass */
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: calc(10px + env(safe-area-inset-top)) 0 10px;
     backdrop-filter: blur(10px);
@@ -555,6 +562,7 @@
   .scrolled .topBar {
     background-color: #ffffff;
     border-bottom: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
   }
 
   .topContainer {
@@ -599,9 +607,8 @@
     width: 100%;
     height: auto;
     min-height: calc(46px + env(safe-area-inset-bottom, 0px));
-    background: linear-gradient(to top, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.84) 100%);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
+    background: #ffffff;
+    /* Use solid background instead of gradient to avoid "holes" */
     border-top: 1px solid var(--gray-medium);
     z-index: 1000;
     justify-content: space-around;
@@ -615,9 +622,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* Центрируем, но управляем отступами */
     padding: 8px 0 6px 0;
-    /* 8 сверху, 6 снизу */
     gap: 4px;
     color: var(--text-muted);
     text-decoration: none;
