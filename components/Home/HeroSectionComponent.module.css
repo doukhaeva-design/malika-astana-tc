@@ -14,7 +14,7 @@
     position: absolute;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(212, 161, 61, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(56, 189, 248, 0.08) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
     z-index: 1;
@@ -100,8 +100,17 @@
 .serifSubtitle {
     display: block;
     font-size: 1.5rem;
-    color: var(--accent-warm);
-    opacity: 0.9;
+    /* Crisp Architectural Blue Gradient */
+    background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+    padding-left: 4px;
+    /* Space for the letter to render fully */
+    margin-left: -4px;
+    /* Align back to the text column */
+    line-height: 1.2;
 }
 
 .title {
@@ -120,8 +129,8 @@
 
 .accent {
     position: relative;
-    /* Rich Copper/Gold gradient with higher contrast */
-    background: linear-gradient(135deg, #f3c16a 0%, #d4a13d 50%, #a87f2a 100%);
+    /* Crisp Architectural Blue Gradient */
+    background: linear-gradient(135deg, #7dd3fc 0%, #38bdf8 50%, #0284c7 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
