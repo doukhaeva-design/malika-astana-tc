@@ -26,14 +26,16 @@
 .topBar {
   background-color: rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 8px 0;
+  padding: 5px 0;
+  /* Reduced from 8px */
   transition: all 0.4s ease;
 }
 
 .scrolled .topBar {
   background-color: transparent;
   border-bottom: none;
-  padding: 8px 0 0;
+  padding: 5px 0 0;
+  /* Reduced from 8px */
   /* Add a bit of space on top within the pill */
 }
 
@@ -80,19 +82,22 @@
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 1.5rem var(--container-padding);
+  padding: 1rem var(--container-padding);
+  /* Reduced from 1.5rem */
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 12px;
+  /* Tighter vertical stack */
   transition: all 0.4s ease;
 }
 
 .scrolled .container {
   max-width: var(--max-width);
   width: 100%;
-  padding: 0.8rem var(--container-padding);
+  padding: 0.5rem var(--container-padding);
+  /* Reduced from 0.8rem */
   /* Significantly more compact */
-  gap: 8px;
+  gap: 6px;
   /* Tighter spacing */
 }
 
@@ -126,7 +131,7 @@
 .scrolled .rowDivider {
   opacity: 1;
   height: 1px;
-  margin: 8px auto;
+  margin: 5px auto;
   /* Reduced from 12px to keep height stable */
   background-color: var(--gray-medium);
   width: 100%;
@@ -141,7 +146,8 @@
 }
 
 .logo {
-  font-size: 2.8rem;
+  font-size: 2rem;
+  /* Reduced from 2.8rem */
   color: #fff;
   text-decoration: none;
   letter-spacing: -0.01em;
@@ -155,7 +161,7 @@
 }
 
 .scrolled .logo {
-  font-size: 2rem;
+  font-size: 1.5rem;
   /* Even more compact to ensure it feels smaller */
   color: var(--primary);
 }
