@@ -125,40 +125,6 @@
   gap: 30px;
 }
 
-.btnRoute {
-  padding: 12px 28px;
-  background-color: rgba(255, 255, 255, 0.1);
-  /* Glass button un-scrolled */
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(12px);
-  border-radius: 50px;
-  font-size: 0.875rem;
-  font-weight: 700;
-  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  text-decoration: none;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.btnRoute:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-color: rgba(255, 255, 255, 0.4);
-  transform: translateY(-2px);
-}
-
-/* Scrolled state button */
-.scrolled .btnRoute {
-  background-color: var(--primary);
-  border-color: transparent;
-  backdrop-filter: none;
-  box-shadow: 0 4px 15px rgba(42, 58, 96, 0.15);
-}
-
-.scrolled .btnRoute:hover {
-  background-color: var(--primary-hover);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
 
 
 .langSwitch {
@@ -439,30 +405,6 @@
   flex-direction: column;
   gap: 20px;
   margin-top: auto;
-}
-
-.mobileActions {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.btnRouteMobile {
-  padding: 16px;
-  background-color: transparent;
-  color: var(--accent);
-  border: 1.5px solid var(--accent);
-  border-radius: var(--radius-lg);
-  font-size: 0.85rem;
-  font-weight: 700;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-}
-
-.btnRouteMobile:active {
-  transform: scale(0.98);
-  background-color: var(--accent-soft);
 }
 
 /* --- Bottom Navigation Styles --- */

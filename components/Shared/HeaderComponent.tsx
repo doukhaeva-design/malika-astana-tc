@@ -93,9 +93,6 @@ export default function HeaderComponent() {
                     </nav>
 
                     <div className={styles.actions}>
-                        <Link href="/contacts#contacts-header" className={styles.btnRoute}>
-                            {t.common.route}
-                        </Link>
                         <div className={styles.langSwitch}>
                             <span
                                 className={language === 'ru' ? styles.activeLang : ''}
@@ -169,11 +166,6 @@ export default function HeaderComponent() {
                     </div>
 
                     <div className={styles.mobileMenuFooter}>
-                        <div className={styles.mobileActions}>
-                            <Link href="/contacts#contacts-header" className={styles.btnRouteMobile} onClick={closeMenu}>
-                                {t.common.route}
-                            </Link>
-                        </div>
                     </div>
                 </div>
             </header>
