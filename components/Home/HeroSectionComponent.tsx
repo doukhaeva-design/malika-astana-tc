@@ -27,6 +27,15 @@ export default function HeroSectionComponent() {
             <div className={styles.glow1}></div>
             <div className={styles.glow2}></div>
 
+            {/* Interactive Mouse Glow */}
+            <div
+                className={styles.mouseGlow}
+                style={{
+                    left: `${(mousePos.x / 20 * 50 + 50)}%`,
+                    top: `${(mousePos.y / 20 * 50 + 50)}%`
+                }}
+            ></div>
+
             <div className={styles.container}>
                 <div className={styles.layout}>
                     <div className={styles.content}>
@@ -57,7 +66,11 @@ export default function HeroSectionComponent() {
                         </p>
                         <div className={`${styles.actions} ${styles.reveal} ${styles.delay3}`}>
                             <Link href="/contacts" className={styles.btnPrimary}>
-                                {t.hero.btnDirections}
+                                <span>{t.hero.btnDirections}</span>
+                                <svg className={styles.btnIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                                    <line x1="7" y1="17" x2="17" y2="7"></line>
+                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                </svg>
                             </Link>
                             <Link href="/directions" className={styles.btnSecondary}>
                                 {t.common.directions}
@@ -65,13 +78,17 @@ export default function HeroSectionComponent() {
                         </div>
                     </div>
 
-                    <div className={styles.visuals} style={{
-                        transform: `translate3d(${mousePos.x}px, ${mousePos.y}px, 0)`
-                    }}>
-                        <div className={`${styles.imageMain} ${styles.reveal} ${styles.delay2}`}>
+                    <div className={styles.visuals}>
+                        <div
+                            className={`${styles.imageMain} ${styles.reveal} ${styles.delay2}`}
+                            style={{ transform: `translate3d(${mousePos.x * 0.5}px, ${mousePos.y * 0.5}px, 0)` }}
+                        >
                             <img src="/malika-facade-new.jpg" alt="Фасад MALIKA Астана" />
                         </div>
-                        <div className={`${styles.imageOffset} ${styles.reveal} ${styles.delay3}`}>
+                        <div
+                            className={`${styles.imageOffset} ${styles.reveal} ${styles.delay3}`}
+                            style={{ transform: `translate3d(${mousePos.x * 1.2}px, ${mousePos.y * 1.2}px, 0)` }}
+                        >
                             <img src="/pinterest_hero_2_1772463249311.png" alt="Customer lifestyle" />
                         </div>
                     </div>
