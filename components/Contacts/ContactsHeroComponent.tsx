@@ -13,7 +13,7 @@ export default function ContactsHeroComponent() {
     const { language, t } = useLanguage();
 
     return (
-        <section className={styles.hero}>
+        <section className={styles.hero} id="contacts-header">
             <div className={`${styles.container} animate-fade`}>
                 {/* Элемент разделитель сверху */}
                 <div className={styles.topDivider}></div>

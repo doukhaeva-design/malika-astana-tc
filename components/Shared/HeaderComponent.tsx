@@ -89,11 +89,11 @@ export default function HeaderComponent() {
                         <Link href="/directions" className={styles.link}>{t.common.directionsShort}</Link>
                         <Link href="/rehab" className={styles.link}>{t.common.rehab}</Link>
                         <Link href="/rent" className={styles.link}>{t.common.rent}</Link>
-                        <Link href="/contacts#contact-info" className={styles.link}>{t.common.contacts}</Link>
+                        <Link href="/contacts#contacts-header" className={styles.link}>{t.common.contacts}</Link>
                     </nav>
 
                     <div className={styles.actions}>
-                        <Link href="/contacts#contact-info" className={styles.btnRoute}>
+                        <Link href="/contacts#contacts-header" className={styles.btnRoute}>
                             {t.common.route}
                         </Link>
                         <div className={styles.langSwitch}>
@@ -161,7 +161,7 @@ export default function HeaderComponent() {
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M3 21h18"></path><path d="M9 8h1"></path><path d="M9 12h1"></path><path d="M9 16h1"></path><path d="M14 8h1"></path><path d="M14 12h1"></path><path d="M14 16h1"></path><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16"></path></svg>
                                 <span className={styles.linkText}>{t.common.rent}</span>
                             </Link>
-                            <Link href="/contacts#contact-info" className={`${styles.mobileLink} ${pathname === '/contacts' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
+                            <Link href="/contacts#contacts-header" className={`${styles.mobileLink} ${pathname === '/contacts' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
                                 <span className={styles.linkText}>{t.common.contacts}</span>
                             </Link>
@@ -170,7 +170,7 @@ export default function HeaderComponent() {
 
                     <div className={styles.mobileMenuFooter}>
                         <div className={styles.mobileActions}>
-                            <Link href="/contacts#contact-info" className={styles.btnRouteMobile} onClick={closeMenu}>
+                            <Link href="/contacts#contacts-header" className={styles.btnRouteMobile} onClick={closeMenu}>
                                 {t.common.route}
                             </Link>
                         </div>
