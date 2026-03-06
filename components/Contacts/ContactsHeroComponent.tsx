@@ -20,16 +20,14 @@ export default function ContactsHeroComponent() {
 
                 <div className={styles.content}>
                     <span className={`${styles.serifSubtitle} serif-accent`}>
-                        {language === 'ru' ? 'Будем на связи' : 'Stay in touch'}
+                        {t.contactPage.heroSubtitle}
                     </span>
                     <h1 className={styles.title}>
-                        {language === 'ru' ? 'КОНТАКТЫ' : 'CONTACTS'}
+                        {t.contactPage.heroTitle}
                     </h1>
 
                     <p className={styles.description}>
-                        {language === 'ru'
-                            ? "Свяжитесь с нами удобным для вас способом. Мы всегда рады ответить на ваши вопросы."
-                            : "Contact us in a way that is convenient for you. We are always happy to answer your questions."}
+                        {t.contactPage.heroDesc}
                     </p>
                 </div>
             </div>
