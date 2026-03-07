@@ -1,5 +1,5 @@
 .hero {
-    padding: 160px 0 80px;
+    padding: 180px 0 70px;
     background-color: #ffffff;
 }
 
@@ -10,7 +10,7 @@
 }
 
 .pageHeader {
-    margin-bottom: 30px;
+    margin-bottom: 50px;
 }
 
 .subtitleWrapper {
@@ -25,10 +25,11 @@
 }
 
 .pageTitle {
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 2.3rem;
+    /* Slightly smaller */
+    font-weight: 600;
     color: var(--primary);
-    letter-spacing: -0.02em;
+    letter-spacing: 0.05em;
     margin: 0;
     text-transform: uppercase;
 }
@@ -37,7 +38,7 @@
 .layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 60px;
+    gap: 50px;
     align-items: center;
     /* Vertical alignment */
 }
@@ -190,7 +191,7 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 120px 0 60px;
+        padding: 90px 0 60px;
     }
 
     .actions {
