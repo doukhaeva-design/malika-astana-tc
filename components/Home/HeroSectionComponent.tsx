@@ -38,35 +38,22 @@ export default function HeroSectionComponent() {
                             </span>
                         </div>
                         <h1 className={`${styles.title} ${styles.reveal} ${styles.delay1}`}>
-                            {language === 'ru' ? (
-                                <>
-                                    <span className={styles.titleLight}>Ваш</span> торговый центр <br />
-                                    в <span className={styles.accent}>Астане</span>
-                                </>
-                            ) : (
-                                <>
-                                    <span className={styles.titleLight}>Your</span> shopping center <br />
-                                    in <span className={styles.accent}>Astana</span>
-                                </>
-                            )}
+                            <span className={styles.titleLight}>{t.hero.title1}</span> <br />
+                            <span className={styles.accent}>{t.hero.title2}</span>
                         </h1>
                         <p className={`${styles.description} ${styles.reveal} ${styles.delay2}`}>
-                            {language === 'ru' ? (
-                                <>Широкий выбор товаров для дома, бизнеса и авто. <strong className={styles.boldText}>Всё необходимое — рядом и без лишней суеты.</strong></>
-                            ) : (
-                                <>A wide selection of goods for home, business, and auto. <strong className={styles.boldText}>Everything you need — close by and hassle-free.</strong></>
-                            )}
+                            {t.hero.desc}
                         </p>
                         <div className={`${styles.actions} ${styles.reveal} ${styles.delay3}`}>
-                            <Link href="/contacts" className={styles.btnPrimary}>
-                                <span>{t.hero.btnDirections}</span>
+                            <Link href="/directions" className={styles.btnPrimary}>
+                                <span>{t.common.directions}</span>
                                 <svg className={styles.btnIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="7" y1="17" x2="17" y2="7"></line>
                                     <polyline points="7 7 17 7 17 17"></polyline>
                                 </svg>
                             </Link>
-                            <Link href="/directions" className={styles.btnSecondary}>
-                                {t.common.directions}
+                            <Link href="/contacts" className={styles.btnSecondary}>
+                                {t.hero.btnDirections}
                             </Link>
                         </div>
                     </div>

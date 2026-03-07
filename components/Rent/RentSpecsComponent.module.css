@@ -1,0 +1,268 @@
+/* components/Rent/RentSpecsComponent.module.css */
+.section {
+    padding: 120px 0;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Subtle background texture */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-image: radial-gradient(#f0f0f0 1px, transparent 1px);
+    background-size: 40px 40px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    position: relative;
+    z-index: 1;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+}
+
+.leftCol {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+.rightCol {
+    background: rgba(249, 249, 249, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 60px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.02);
+}
+
+.blockTitle {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    letter-spacing: -0.02em;
+}
+
+/* Why Us List */
+.reasonsList {
+    display: grid;
+    gap: 40px;
+}
+
+.reasonItem {
+    display: flex;
+    gap: 24px;
+    transition: transform 0.3s ease;
+}
+
+.reasonItem:hover {
+    transform: translateX(10px);
+}
+
+.iconCircle {
+    width: 56px;
+    height: 56px;
+    background: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--accent-color);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+}
+
+.reasonContent h4 {
+    font-size: 1.25rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.reasonContent p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Specs Tables */
+.specsTable {
+    margin-bottom: 60px;
+}
+
+.specsTable:last-child {
+    margin-bottom: 0;
+}
+
+.tableRow {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+.tableRow:last-child {
+    border-bottom: none;
+}
+
+.tableLabel {
+    color: #999;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 500;
+}
+
+.tableValue {
+    font-weight: 500;
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+/* Formats Grid */
+.formatsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.formatCard {
+    background: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.formatCard:hover {
+    border-color: var(--accent-color);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    transform: translateY(-5px);
+}
+
+.formatCard h5 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.formatCard p {
+    font-size: 0.95rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+/* Process Steps */
+.processSection {
+    margin-top: 100px;
+    padding-top: 80px;
+    border-top: 1px dashed #ddd;
+}
+
+.processGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.stepCard {
+    text-align: center;
+    position: relative;
+}
+
+.stepNumber {
+    width: 60px;
+    height: 60px;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 auto 24px;
+    position: relative;
+    z-index: 2;
+}
+
+.stepCard:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 30px;
+    left: 60%;
+    width: 80%;
+    height: 1px;
+    background: #eee;
+    z-index: 1;
+}
+
+.stepTitle {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.stepDesc {
+    font-size: 1rem;
+    color: #888;
+    line-height: 1.5;
+}
+
+@media (max-width: 1200px) {
+    .grid {
+        gap: 40px;
+    }
+
+    .processGrid {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 60px;
+    }
+
+    .rightCol {
+        padding: 40px 30px;
+    }
+
+    .processGrid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .stepCard:not(:last-child)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .formatsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .blockTitle {
+        font-size: 1.75rem;
+    }
+}

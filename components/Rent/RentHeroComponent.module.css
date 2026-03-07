@@ -79,10 +79,12 @@
 .actions {
     display: flex;
     gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
 .waBtn,
-.callBtn {
+.callBtn,
+.downloadBtn {
     padding: 16px 36px;
     border-radius: 12px;
     font-weight: 700;
@@ -96,6 +98,12 @@
     cursor: pointer;
 }
 
+.callBtn {
+    background-color: var(--primary);
+    color: #ffffff;
+    border: 1.5px solid var(--primary);
+}
+
 .waBtn {
     background-color: #25D366;
     color: #ffffff;
@@ -107,17 +115,33 @@
     box-shadow: 0 10px 20px rgba(37, 211, 102, 0.25);
 }
 
-.callBtn {
-    background-color: var(--primary);
-    color: #ffffff;
-    border: 1.5px solid var(--primary);
-}
-
 .callBtn:hover {
     background-color: var(--primary-hover);
     border-color: var(--primary-hover);
     transform: translateY(-2px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.downloadBtn {
+    padding: 16px 36px;
+    border-radius: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.95rem;
+    background-color: transparent;
+    color: var(--primary);
+    border: 1.5px solid #eee;
+}
+
+.downloadBtn:hover {
+    border-color: var(--accent-color);
+    background-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
 }
 
 .icon {
