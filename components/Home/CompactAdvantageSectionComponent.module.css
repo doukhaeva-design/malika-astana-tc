@@ -1,8 +1,7 @@
 .section {
     padding: 200px 0;
     /* More breathing room */
-    background-color: #ffffff;
-    /* Pure white for clean clarity */
+    background-color: #f7f6f3;
 }
 
 .container {
@@ -23,7 +22,7 @@
 .serifSubtitle {
     display: block;
     font-size: 0.75rem;
-    color: var(--accent);
+    color: var(--accent-warm);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-weight: 700;

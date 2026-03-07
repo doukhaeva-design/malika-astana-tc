@@ -1,7 +1,7 @@
 /* components/Home/FinalCTAComponent.module.css */
 .section {
     padding: 140px 0;
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     color: #fff;
     position: relative;
     overflow: hidden;
@@ -55,7 +55,7 @@
 
 .btnPrimary {
     background-color: #fff;
-    color: var(--primary-color);
+    color: var(--primary);
     padding: 22px 48px;
     text-decoration: none;
     font-size: 1.1rem;
@@ -66,7 +66,7 @@
 }
 
 .btnPrimary:hover {
-    background-color: var(--accent-color);
+    background-color: var(--accent-warm);
     color: #fff;
     transform: translateY(-5px);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);

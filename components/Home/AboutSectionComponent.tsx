@@ -28,14 +28,13 @@ export default function AboutSectionComponent() {
                         </p>
                     </div>
 
-                    <div className={`${styles.visuals} animate-fade-up`}>
+                    <div className={`${styles.visuals} animate-fade`}>
                         <div className={styles.imageWrapper}>
                             <img
                                 src="/pinterest_hero_1_1772463234531.png"
                                 alt="MALIKA Concept"
                                 className={styles.image}
                             />
-                            <div className={styles.imageOverlay}></div>
                         </div>
                     </div>
                 </div>

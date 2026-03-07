@@ -1,7 +1,7 @@
 .section {
     padding: 160px 0;
     /* from 120px */
-    background-color: var(--background);
+    background-color: var(--gray-light);
 }
 
 .container {
@@ -68,7 +68,7 @@
     padding: 12px 24px;
     background-color: var(--primary);
     color: #fff;
-    border-radius: 50px;
+    border-radius: 6px;
     font-size: 0.8rem;
     font-weight: 700;
     text-decoration: none;
@@ -97,9 +97,8 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: var(--shadow-soft);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    border: 1px solid var(--gray-medium);
     flex: 0 0 400px;
     scroll-snap-align: start;
     text-decoration: none;
@@ -112,8 +111,8 @@
     /* No movement to avoid fake clickability feel */
     box-shadow:
         0 20px 40px -12px rgba(0, 0, 0, 0.08),
-        0 0 25px rgba(44, 78, 151, 0.04);
-    border-color: rgba(44, 78, 151, 0.2);
+        0 0 25px rgba(212, 161, 61, 0.04);
+    border-color: rgba(212, 161, 61, 0.3);
 }
 
 .imageWrapper {
@@ -181,7 +180,7 @@
     color: var(--primary);
     border: 1.5px solid var(--primary);
     padding: 10px 24px;
-    border-radius: 50px;
+    border-radius: 6px;
     font-weight: 700;
     font-size: 0.85rem;
     text-decoration: none;
@@ -203,7 +202,7 @@
     color: var(--text-muted);
     border: 1px solid var(--gray-medium);
     padding: 10px 24px;
-    border-radius: 50px;
+    border-radius: 6px;
     font-weight: 600;
     font-size: 0.85rem;
     letter-spacing: 0.5px;

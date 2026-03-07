@@ -49,7 +49,7 @@
 .glow2 {
     bottom: -10vh;
     right: -10vw;
-    background: radial-gradient(circle, rgba(212, 161, 61, 0.15) 0%, transparent 60%);
+    background: radial-gradient(circle, rgba(212, 161, 61, 0.35) 0%, transparent 60%);
     animation-delay: -10s;
     animation-direction: alternate-reverse;
 }
@@ -181,11 +181,11 @@
     font-family: var(--font-display);
     /* Architectural font */
     /* Clean platinum-tinted frosted glass */
-    background: rgba(255, 255, 255, 0.04);
+    background: rgba(212, 161, 61, 0.15);
     backdrop-filter: blur(12px) saturate(180%);
     -webkit-backdrop-filter: blur(12px) saturate(180%);
     color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(212, 161, 61, 0.4);
     /* Balanced idle border */
     border-radius: 4px;
     /* Slightly sharper radius */
