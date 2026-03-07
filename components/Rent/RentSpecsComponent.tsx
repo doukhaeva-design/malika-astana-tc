@@ -33,7 +33,7 @@ export default function RentSpecsComponent() {
 
                 {/* 1. БЛОК: ПОЧЕМУ МЫ */}
                 <div className={`${styles.whySection} animate-fade`}>
-                    <h2 className={`${styles.blockTitle} serif-accent`}>{t.rentPage.whyTitle}</h2>
+                    <h2 className={styles.blockTitle}>{t.rentPage.whyTitle}</h2>
                     <div className={styles.whyGrid}>
                         {t.rentPage.whyReasons.map((reason, idx) => (
                             <div key={idx} className={styles.whyCard}>
@@ -52,7 +52,7 @@ export default function RentSpecsComponent() {
 
                     {/* Форматы */}
                     <div className={`${styles.formatsCol} animate-fade`}>
-                        <h2 className={`${styles.blockTitle} serif-accent`}>{t.rentPage.formatsTitle}</h2>
+                        <h2 className={styles.blockTitle}>{t.rentPage.formatsTitle}</h2>
                         <div className={styles.formatsList}>
                             {t.rentPage.availableSpaces.map((space, idx) => (
                                 <div key={idx} className={styles.formatCard}>
@@ -94,7 +94,7 @@ export default function RentSpecsComponent() {
 
                 {/* 3. БЛОК: ПРОЦЕСС */}
                 <div className={`${styles.processSection} animate-fade-up`}>
-                    <h2 className={`${styles.blockTitle} ${styles.blockTitleTextCenter} serif-accent`}>
+                    <h2 className={`${styles.blockTitle} ${styles.blockTitleTextCenter}`}>
                         {t.rentPage.processTitle}
                     </h2>
                     <div className={styles.processGrid}>

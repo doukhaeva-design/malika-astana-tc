@@ -45,7 +45,7 @@ export default function RentHeroComponent() {
 
                     {/* Правая колонка - Тексты и статика */}
                     <div className={styles.textSide}>
-                        <h2 className={`${styles.mainTitle} serif-accent`}>{t.rentHero.mainTitle}</h2>
+                        <h2 className={styles.mainTitle}>{t.rentHero.mainTitle}</h2>
                         <p className={styles.description}>
                             {t.rentHero.mainDesc}
                         </p>

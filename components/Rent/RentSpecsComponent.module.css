@@ -15,12 +15,13 @@
 
 /* Section Headlines */
 .blockTitle {
-    font-size: clamp(2rem, 4vw, 3rem);
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
     margin-bottom: 40px;
-    /* Reduced from 60px */
     color: var(--primary);
-    letter-spacing: -0.04em;
-    line-height: 1;
+    font-weight: 800;
+    /* Matching bold site style */
+    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .blockTitleTextCenter {
@@ -44,7 +45,7 @@
 .whyCard {
     padding: 40px;
     background: #ffffff;
-    border-radius: 4px;
+    border-radius: var(--radius-lg);
     border: 1px solid transparent;
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
     display: flex;
@@ -82,11 +83,12 @@
 }
 
 .whyCard h4 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 12px;
-    font-weight: 600;
-    /* Bolder */
+    font-weight: 800;
+    /* Bolder for site consistency */
     color: var(--primary);
+    letter-spacing: -0.01em;
 }
 
 .whyCard p {
@@ -136,8 +138,8 @@
     background-color: var(--primary);
     color: #fff;
     padding: 70px;
-    border-radius: 8px;
-    box-shadow: 0 40px 80px rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-medium);
 }
 
 .specsTable {

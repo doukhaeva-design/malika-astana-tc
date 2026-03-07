@@ -17,7 +17,7 @@
     margin: 0 auto;
     background: #fff;
     padding: 70px;
-    border-radius: 4px;
+    border-radius: var(--radius-lg);
     box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
     border: 1px solid #f0f0f0;
 }
@@ -30,7 +30,8 @@
 .title {
     font-size: clamp(2.2rem, 4vw, 3rem);
     margin-bottom: 15px;
-    font-weight: 500;
+    font-weight: 800;
+    /* Bold site style */
     color: var(--primary);
     letter-spacing: -0.02em;
 }
@@ -103,7 +104,7 @@
 .submitBtn {
     background-color: var(--primary);
     color: #fff;
-    padding: 22px;
+    padding: 20px 32px;
     border: none;
     font-size: 1rem;
     cursor: pointer;
@@ -112,7 +113,8 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    border-radius: 4px;
+    border-radius: 50px;
+    /* Aligned pill button */
 }
 
 .submitBtn:hover {
