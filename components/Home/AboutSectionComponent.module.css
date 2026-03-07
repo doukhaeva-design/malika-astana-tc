@@ -49,7 +49,8 @@
 .text {
     font-size: 1.2rem;
     line-height: 1.7;
-    color: #444;
+    color: var(--text-dim);
+    /* Breathing graphite */
     margin-bottom: 0;
     font-weight: 400;
 }

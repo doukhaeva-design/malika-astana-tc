@@ -56,7 +56,7 @@ export default function RentSpecsComponent() {
                         <div className={styles.formatsList}>
                             {t.rentPage.availableSpaces.map((space, idx) => (
                                 <div key={idx} className={styles.formatCard}>
-                                    <div style={{ color: 'var(--accent-warm)', flexShrink: 0 }}>
+                                    <div style={{ color: 'var(--accent-blue)', flexShrink: 0 }}>
                                         {formatIcons[idx]}
                                     </div>
                                     <div className={styles.formatInfo}>

@@ -91,7 +91,8 @@
 .callBtn,
 .downloadBtn {
     padding: 14px 32px;
-    border-radius: 50px;
+    border-radius: var(--radius-lg);
+    /* Business-square style */
     font-weight: 700;
     text-decoration: none;
     transition: all 0.3s ease;
@@ -138,7 +139,7 @@
 }
 
 .downloadBtn:hover {
-    border-color: var(--accent-warm);
+    border-color: var(--accent-blue);
     background-color: #fff;
     transform: translateY(-2px);
 }
@@ -168,8 +169,8 @@
 }
 
 .presentationLink:hover {
-    color: var(--accent-warm);
-    border-bottom-color: var(--accent-warm);
+    color: var(--accent-blue);
+    border-bottom-color: var(--accent-blue);
     transform: translateX(5px);
 }
 

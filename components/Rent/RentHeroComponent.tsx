@@ -37,7 +37,7 @@ export default function RentHeroComponent() {
                     {/* Левая колонка - Визуал */}
                     <div className={styles.imageSide}>
                         <img
-                            src="/malika-interior-rent.png"
+                            src="/Pomeshenie.png"
                             alt="ТЦ Малика Интерьер"
                             className={styles.mainImage}
                         />
