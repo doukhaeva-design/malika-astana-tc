@@ -85,6 +85,14 @@
     letter-spacing: 1px;
 }
 
+.actionBtn:hover {
+    background-color: var(--primary-hover);
+    border-color: var(--primary-hover);
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
 .visualCard {
     flex: 1;
     position: relative;

@@ -80,7 +80,7 @@ export default function HeaderComponent() {
                 </div>
                 <div className={styles.container}>
                     <div className={styles.mainRow}>
-                        <Link href="/" className={styles.logo} onClick={closeMenu}>
+                        <Link href="/" className={styles.logo} onClick={handleHomeClick}>
                             Malika
                         </Link>
 
@@ -118,7 +118,7 @@ export default function HeaderComponent() {
                 <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
                     {/* Хедер меню с лого и кнопкой закрытия */}
                     <div className={styles.mobileMenuHeader}>
-                        <Link href="/" className={styles.mobileLogo} onClick={closeMenu}>
+                        <Link href="/" className={styles.mobileLogo} onClick={handleHomeClick}>
                             Malika
                         </Link>
                         <div className={styles.headerActionsMobile}>

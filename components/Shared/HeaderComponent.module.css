@@ -228,7 +228,7 @@
 }
 
 .scrolled .link::after {
-  background: var(--primary);
+  background: var(--accent-warm);
   opacity: 0.4;
 }
 
