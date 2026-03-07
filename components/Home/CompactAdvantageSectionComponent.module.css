@@ -1,8 +1,7 @@
 .section {
     padding: 200px 0;
     /* More breathing room */
-    background-color: #ffffff;
-    /* Pure white for clean clarity */
+    background-color: #0d1520;
 }
 
 .container {
@@ -23,7 +22,7 @@
 .serifSubtitle {
     display: block;
     font-size: 0.75rem;
-    color: var(--accent);
+    color: var(--accent-warm);
     text-transform: uppercase;
     letter-spacing: 0.15em;
     font-weight: 700;
@@ -32,7 +31,7 @@
 .title {
     font-size: 3.5rem;
     font-weight: 800;
-    color: var(--primary);
+    color: #ffffff;
     margin-bottom: 24px;
     letter-spacing: -0.02em;
     text-transform: uppercase;
@@ -41,7 +40,7 @@
 .subtitle {
     font-size: 1.15rem;
     line-height: 1.7;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.6);
     max-width: 640px;
 }
 

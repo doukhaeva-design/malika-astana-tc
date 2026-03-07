@@ -27,9 +27,9 @@ export default function ScrollObserver() {
 
         // Allow DOM to paint before querying elements
         const timeoutId = setTimeout(() => {
-            const elements = document.querySelectorAll('.animate-fade');
+            const elements = document.querySelectorAll('.animate-fade, .animate-fade-up');
             elements.forEach((el) => observer.observe(el));
-        }, 100);
+        }, 200);
 
         return () => {
             clearTimeout(timeoutId);

@@ -30,7 +30,7 @@
 .serifSubtitle {
     display: block;
     font-size: 1.1rem;
-    color: var(--accent-color);
+    color: var(--accent-warm);
     letter-spacing: 0.1em;
     text-transform: uppercase;
     font-weight: 500;

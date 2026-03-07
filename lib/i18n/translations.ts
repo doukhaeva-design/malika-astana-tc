@@ -24,6 +24,8 @@ export const translations = {
             nav: 'Навигация',
             rights: '© 2024 MALIKA. Все права защищены.',
             call: 'Позвонить',
+            instagram: 'https://www.instagram.com/malika_astana/',
+            whatsapp: 'https://wa.me/77055557609',
         },
         hero: {
             welcome: 'Добро пожаловать',
@@ -271,6 +273,8 @@ export const translations = {
             nav: 'Navigation',
             rights: '© 2024 MALIKA. All rights reserved.',
             call: 'Call Us',
+            instagram: 'https://www.instagram.com/malika_astana/',
+            whatsapp: 'https://wa.me/77055557609',
         },
         hero: {
             welcome: 'Welcome',

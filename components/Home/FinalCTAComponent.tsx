@@ -17,7 +17,7 @@ export default function FinalCTAComponent() {
         <section className={styles.section}>
             <div className={styles.bgText}>MALIKA</div>
             <div className={styles.container}>
-                <div className={`${styles.box} animate-fade-up`}>
+                <div className={`${styles.box} animate-fade`}>
                     <h2 className={styles.title}>{t.finalCta.title}</h2>
                     <p className={styles.desc}>
                         {t.finalCta.desc}
