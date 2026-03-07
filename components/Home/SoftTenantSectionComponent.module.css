@@ -34,9 +34,11 @@
 
 .serifSubtitle {
     display: block;
-    font-size: 1.5rem;
-    color: var(--text-muted);
-    opacity: 0.8;
+    font-size: 0.75rem;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    font-weight: 700;
 }
 
 .title {

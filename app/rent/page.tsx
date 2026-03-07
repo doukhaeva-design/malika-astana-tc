@@ -6,16 +6,16 @@
 
 import React from 'react';
 import RentHeroComponent from '@/components/Rent/RentHeroComponent';
-import WhyBusinessHereComponent from '@/components/Rent/WhyBusinessHereComponent';
-import AvailableSpacesComponent from '@/components/Rent/AvailableSpacesComponent';
+import RentSpecsComponent from '@/components/Rent/RentSpecsComponent';
+import RentApplicationForm from '@/components/Rent/RentApplicationForm';
 import FooterComponent from '@/components/Shared/FooterComponent';
 
 export default function RentPage() {
     return (
         <main>
             <RentHeroComponent />
-            <WhyBusinessHereComponent />
-            <AvailableSpacesComponent />
+            <RentSpecsComponent />
+            <RentApplicationForm />
             <FooterComponent />
         </main>
     );

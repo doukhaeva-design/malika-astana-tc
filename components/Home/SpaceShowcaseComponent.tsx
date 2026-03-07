@@ -26,7 +26,7 @@ export default function SpaceShowcaseComponent() {
             <div className={styles.container}>
                 <div className={`${styles.content} animate-fade`}>
                     <div className={styles.subtitleWrapper}>
-                        <span className={`${styles.serifSubtitle} serif-accent`}>
+                        <span className={styles.serifSubtitle}>
                             {language === 'ru' ? 'Ваш комфорт — наш приоритет' : 'Your comfort is our priority'}
                         </span>
                     </div>

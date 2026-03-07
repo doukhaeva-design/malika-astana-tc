@@ -1,0 +1,138 @@
+/* components/Rent/RentApplicationForm.module.css */
+.section {
+    padding: 100px 0;
+    background-color: #fbfbfb;
+    position: relative;
+    border-top: 1px solid #f0f0f0;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.box {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 70px;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.05);
+    border: 1px solid #f0f0f0;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.title {
+    font-size: clamp(2.2rem, 4vw, 3rem);
+    margin-bottom: 15px;
+    font-weight: 800;
+    /* Bold site style */
+    color: var(--primary);
+    letter-spacing: -0.02em;
+}
+
+.desc {
+    color: #666;
+    font-size: 1.05rem;
+    max-width: 540px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.form {
+    display: grid;
+    gap: 30px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary);
+    /* Increased contrast */
+    opacity: 0.6;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.input,
+.textarea {
+    padding: 16px 0;
+    border: none;
+    border-bottom: 1.5px solid #e0e0e0;
+    /* Darker border */
+    background: transparent;
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    color: var(--primary);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+    color: #ccc;
+    font-weight: 300;
+}
+
+.input:focus,
+.textarea:focus {
+    border-bottom-color: var(--accent-warm);
+    padding-left: 8px;
+}
+
+.textarea {
+    min-height: 100px;
+    resize: none;
+}
+
+.submitBtn {
+    background-color: var(--primary);
+    color: #fff;
+    padding: 20px 32px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 50px;
+    /* Aligned pill button */
+}
+
+.submitBtn:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .box {
+        padding: 50px 25px;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}

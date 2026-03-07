@@ -16,7 +16,7 @@ export default function DirectionsHeroComponent() {
         <section className={styles.hero}>
             <div className={styles.container}>
                 <div className={`${styles.content} animate-fade`}>
-                    <span className={`${styles.serifSubtitle} serif-accent`}>
+                    <span className={styles.serifSubtitle}>
                         {language === 'ru' ? 'Выбор MALIKA' : 'Curated by MALIKA'}
                     </span>
                     <h1 className={styles.title}>

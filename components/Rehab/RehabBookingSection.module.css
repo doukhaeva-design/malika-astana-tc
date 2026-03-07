@@ -1,0 +1,97 @@
+/* components/Rehab/RehabBookingSection.module.css */
+.section {
+    padding: 140px 0;
+    background-color: var(--primary-color);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 10% 10%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 90% 90%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+    position: relative;
+    z-index: 2;
+}
+
+.title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    line-height: 1.1;
+    margin-bottom: 30px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+}
+
+.desc {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 50px;
+}
+
+.actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.btnPrimary {
+    background-color: #fff;
+    color: var(--primary-color);
+    padding: 22px 48px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btnPrimary:hover {
+    background-color: var(--accent-color);
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.btnSecondary {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 22px 48px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btnSecondary:hover {
+    border-color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 100px 0;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+}
