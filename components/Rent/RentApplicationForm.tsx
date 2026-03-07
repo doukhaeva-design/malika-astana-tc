@@ -24,7 +24,7 @@ export default function RentApplicationForm() {
                 <div className={`${styles.box} animate-fade`}>
                     <div className={styles.header}>
                         <h2 className={styles.title}>{t.rentHero.btnCTA}</h2>
-                        <p className={styles.desc}>{t.rent.desc}</p>
+                        <p className={styles.desc}>{t.rentPage.formDesc}</p>
                     </div>
 
                     <form className={styles.form} onSubmit={handleSubmit}>

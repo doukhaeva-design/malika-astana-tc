@@ -146,19 +146,19 @@ export const translations = {
             statsUnits: 'Свободных мест',
             statsFormat: 'Удобные форматы',
             whyTitle: 'Почему MALIKA',
-            formatsTitle: 'Какие есть форматы помещений',
+            formatsTitle: 'Форматы помещений',
             infraTitle: 'Инфраструктура',
             termsTitle: 'Условия сотрудничества',
 
             whyReasons: [
                 { title: 'Активная торговая зона', desc: 'Расположение в районе с устойчивым потоком посетителей.' },
-                { title: 'Компактная структура', desc: 'Понятная планировка без лишних переходов.' },
-                { title: 'Удобная логистика', desc: 'Доступность для клиентов и поставщиков.' },
-                { title: 'Потенциал развития', desc: 'Возможность расширения и долгосрочного сотрудничества.' }
+                { title: 'Понятная планировка', desc: 'Удобная структура пространства без лишних переходов.' },
+                { title: 'Удобная логистика', desc: 'Комфортный доступ для клиентов и поставщиков.' },
+                { title: 'Условия для роста', desc: 'Форматы помещений для стабильной работы и развития бизнеса.' }
             ],
 
             availableIntro: 'Мы предлагаем различные форматы коммерческих помещений.',
-            availableTitle: 'Форматы коммерческих помещений',
+            availableTitle: 'Форматы помещений',
             availableSpaces: [
                 { title: 'Торговые помещения', desc: 'Площади от 50 м² для магазинов и розничной торговли.' },
                 { title: 'Складские помещения', desc: 'Пространства для хранения и логистических задач.' },
@@ -175,18 +175,19 @@ export const translations = {
                 { label: 'Депозит', value: '1 месяц' },
                 { label: 'Каникулы', value: 'Индивидуально' }
             ],
-            processTitle: 'Как начать работу с нами',
+            processTitle: 'Как стать арендатором',
             processSteps: [
                 { title: 'Заявка', desc: 'Оставьте запрос на сайте или позвоните нам.' },
                 { title: 'Просмотр', desc: 'Мы покажем подходящие варианты на месте.' },
                 { title: 'Договор', desc: 'Быстрое оформление и заезд в помещение.' }
-            ]
+            ],
+            formDesc: 'Расскажите, какое помещение вам интересно, и мы свяжемся с вами для обсуждения условий.'
         },
         rentHero: {
             title: 'Аренда коммерческих помещений',
-            subtitle: 'Удобная площадка для стабильной работы и развития бизнеса в торговом центре MALIKA.',
-            mainTitle: 'Ваш бизнес в центре внимания',
-            mainDesc: 'Удобная площадка для стабильной работы и развития бизнеса в торговом центре MALIKA. Современная инфраструктура, индивидуальный подход к арендаторам и выгодное расположение.',
+            subtitle: 'Ваш бизнес в центре внимания',
+            mainTitle: 'Пространство для стабильного бизнеса',
+            mainDesc: 'Удобные помещения для торговли, услуг и повседневного спроса в торговом центре MALIKA. Гибкие условия, заметная локация и инфраструктура для стабильной работы.',
             btn: 'Оставить заявку',
             btnCTA: 'Оставить заявку',
             btnCall: 'Позвонить',
@@ -421,18 +422,19 @@ export const translations = {
                 { label: 'Deposit', value: '1 month' },
                 { label: 'Grace period', value: 'Individual' }
             ],
-            processTitle: 'How to Start Working with Us',
+            processTitle: 'How to become a tenant',
             processSteps: [
                 { title: 'Inquiry', desc: 'Leave a request on the website or call us.' },
                 { title: 'Viewing', desc: 'We will show you suitable options on-site.' },
                 { title: 'Agreement', desc: 'Quick paperwork and moving into the space.' }
-            ]
+            ],
+            formDesc: 'Tell us which space you are interested in, and we will contact you to discuss the terms.'
         },
         rentHero: {
             title: 'Commercial Space Rental',
-            subtitle: 'A convenient platform for stable operation and business development.',
-            mainTitle: 'Your business in the spotlight',
-            mainDesc: 'A convenient platform for stable business operations and growth at the MALIKA shopping center. Modern infrastructure, individual approach to tenants, and a prime location.',
+            subtitle: 'Your business in the spotlight',
+            mainTitle: 'Space for a stable business',
+            mainDesc: 'Convenient premises for trade, services, and everyday demand at the MALIKA shopping center. Flexible terms, prime location, and infrastructure for stable operation.',
             btn: 'Submit Application',
             btnCTA: 'Submit Application',
             btnCall: 'Call',
