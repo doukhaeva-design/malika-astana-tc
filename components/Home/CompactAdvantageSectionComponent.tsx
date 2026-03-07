@@ -19,7 +19,7 @@ export default function CompactAdvantageSectionComponent() {
             <div className={styles.container}>
                 <div className={`${styles.header} animate-fade`}>
                     <div className={styles.subtitleWrapper}>
-                        <span className={`${styles.serifSubtitle} serif-accent`}>
+                        <span className={styles.serifSubtitle}>
                             {t.about.title}
                         </span>
                     </div>

@@ -19,7 +19,7 @@ export default function ContactsHeroComponent() {
                 <div className={styles.topDivider}></div>
 
                 <div className={styles.content}>
-                    <span className={`${styles.serifSubtitle} serif-accent`}>
+                    <span className={styles.serifSubtitle}>
                         {t.contactPage.heroSubtitle}
                     </span>
                     <h1 className={styles.title}>

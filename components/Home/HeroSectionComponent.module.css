@@ -102,21 +102,11 @@
 
 .serifSubtitle {
     display: block;
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: 0.75rem;
+    font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    /* Noble Champagne/Platinum Gradient - less yellow, more metallic */
-    background: linear-gradient(135deg,
-            #fef9e7 0%,
-            /* Soft Ivory */
-            #d1b07a 40%,
-            /* Muted Champagne */
-            #c49d60 70%,
-            /* Antique Gold */
-            #b28a50 100%
-            /* Deep Bronze */
-        );
+    background: linear-gradient(135deg, #fef9e7 0%, #d1b07a 40%, #c49d60 70%, #b28a50 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -124,7 +114,6 @@
     padding-left: 4px;
     margin-left: -4px;
     line-height: 1.4;
-    /* Balanced breathing */
     filter: drop-shadow(0 0 10px rgba(209, 176, 122, 0.15));
 }
 
@@ -198,7 +187,7 @@
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.1);
     /* Balanced idle border */
-    border-radius: 12px;
+    border-radius: 4px;
     /* Slightly sharper radius */
     font-weight: 500;
     font-size: 0.9rem;
@@ -246,7 +235,7 @@
     color: rgba(248, 249, 250, 0.7);
     /* Slightly brighter for better reading */
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
+    border-radius: 4px;
     font-weight: 500;
     font-size: 0.9rem;
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
@@ -293,7 +282,7 @@
     width: 420px;
     height: 580px;
     position: relative;
-    border-radius: var(--radius-xl);
+    border-radius: var(--radius-lg);
     overflow: hidden;
     z-index: 2;
     /* Premium glow and depth */
@@ -375,7 +364,7 @@
     width: 22px;
     height: 38px;
     border: 2px solid rgba(255, 255, 255, 0.4);
-    border-radius: 12px;
+    border-radius: 4px;
     position: relative;
 }
 
@@ -470,7 +459,7 @@
         width: 82%;
         height: 440px;
         margin-left: auto;
-        border-radius: var(--radius-lg);
+        border-radius: 4px;
         overflow: hidden;
         z-index: 2;
         box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);

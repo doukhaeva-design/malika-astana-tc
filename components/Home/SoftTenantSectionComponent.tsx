@@ -19,7 +19,7 @@ export default function SoftTenantSectionComponent() {
                 <div className={`${styles.mainBox} animate-fade`}>
                     <div className={styles.content}>
                         <div className={styles.subtitleWrapper}>
-                            <span className={`${styles.serifSubtitle} serif-accent`}>
+                            <span className={styles.serifSubtitle}>
                                 {t.softTenant.badge}
                             </span>
                         </div>

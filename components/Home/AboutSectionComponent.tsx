@@ -18,7 +18,7 @@ export default function AboutSectionComponent() {
                 <div className={styles.layout}>
                     <div className={`${styles.content} animate-fade`}>
                         <div className={styles.subtitleWrapper}>
-                            <span className={`${styles.serifSubtitle} serif-accent`}>
+                            <span className={styles.serifSubtitle}>
                                 {t.about.title}
                             </span>
                         </div>

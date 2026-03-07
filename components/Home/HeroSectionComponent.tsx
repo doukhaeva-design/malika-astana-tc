@@ -33,7 +33,7 @@ export default function HeroSectionComponent() {
                 <div className={styles.layout}>
                     <div className={styles.content}>
                         <div className={`${styles.subtitleWrapper} ${styles.reveal}`}>
-                            <span className={`${styles.serifSubtitle} serif-accent`}>
+                            <span className={styles.serifSubtitle}>
                                 {language === 'ru' ? 'Добро пожаловать' : 'Welcome'}
                             </span>
                         </div>
