@@ -12,12 +12,12 @@
     background-size: cover;
 }
 
-/* Dark gradient overlay for text readability */
+/* Soft dark gradient overlay for text readability */
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(5, 8, 15, 0.95) 0%, rgba(5, 8, 15, 0.5) 50%, rgba(5, 8, 15, 0.1) 100%);
+    background: linear-gradient(to right, rgba(5, 8, 15, 0.8) 0%, rgba(5, 8, 15, 0.4) 45%, rgba(5, 8, 15, 0) 80%);
     z-index: 1;
     pointer-events: none;
 }
@@ -297,13 +297,13 @@
         height: auto;
         min-height: calc(100svh - 40px);
         margin-top: 40px;
-        padding: 50px 0 100px;
+        padding: 30px 0 80px;
         background: url('/HeroDevushkiPokupki.png') no-repeat center top;
         background-size: cover;
     }
 
     .hero::before {
-        background: linear-gradient(to bottom, rgba(5, 8, 15, 0.9) 0%, rgba(5, 8, 15, 0.4) 60%, rgba(5, 8, 15, 0.9) 100%);
+        background: linear-gradient(to bottom, rgba(5, 8, 15, 0.95) 0%, rgba(5, 8, 15, 0.6) 40%, rgba(5, 8, 15, 0.8) 100%);
     }
 
     .container {
@@ -329,18 +329,19 @@
 
     .title {
         font-size: 3.5rem;
-        /* Increased from 3.2rem */
         margin-bottom: 32px;
         line-height: 1.1;
-        /* Increased from 1.05 for micro-breathing */
         font-weight: 700;
-        color: var(--off-white);
+        color: #ffffff;
+        text-shadow: 0 4px 60px rgba(0, 0, 0, 0.8), 0 2px 20px rgba(0, 0, 0, 0.8);
     }
 
     .description {
         font-size: 1.15rem;
         margin-bottom: 40px;
-        color: rgba(255, 255, 255, 0.95);
+        color: #ffffff;
+        text-shadow: 0 2px 30px rgba(0, 0, 0, 0.9), 0 1px 10px rgba(0, 0, 0, 0.8);
+        font-weight: 500;
     }
 
     .actions {
@@ -366,7 +367,7 @@
 
 @media (max-width: 480px) {
     .hero {
-        padding-top: 110px;
+        padding-top: 20px;
     }
 
     .taglineWrapper {
