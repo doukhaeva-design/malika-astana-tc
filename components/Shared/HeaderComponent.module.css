@@ -30,6 +30,7 @@
   margin: 0 auto;
   padding: 0 var(--container-padding);
   display: flex;
+  justify-content: flex-end;
   gap: 24px;
 }
 
@@ -38,8 +39,8 @@
   align-items: center;
   gap: 6px;
   font-size: 0.75rem;
-  font-weight: 600;
-  color: var(--text-main);
+  font-weight: 500;
+  color: var(--text-muted);
   letter-spacing: 0.05em;
   transition: all 0.3s ease;
 }
@@ -112,7 +113,7 @@
   /* Broad tracking for luxury feel */
   text-transform: uppercase;
   /* Formal and strict */
-  font-weight: 300;
+  font-weight: 700;
   transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
   line-height: 1;
   display: block;
@@ -127,7 +128,7 @@
   font-size: 1.3rem;
   /* Slightly smaller on scroll */
   color: var(--primary);
-  font-weight: 300;
+  font-weight: 700;
 }
 
 .nav {
@@ -404,7 +405,7 @@
 .mobileLogo {
   font-family: var(--font-display);
   font-style: normal;
-  font-weight: 300;
+  font-weight: 700;
   font-size: 1.5rem;
   color: var(--primary);
   text-decoration: none;
@@ -518,6 +519,8 @@
 }
 
 @media (max-width: 1000px) {
+
+  /* When under 1000px, top bar is transparent but bottom menu is white. The header itself is white. */
   .header {
     background: #ffffff;
     border-bottom: 1px solid var(--gray-medium);
@@ -552,8 +555,8 @@
 
   .topItem {
     font-size: 0.65rem;
-    font-weight: 600;
-    color: var(--primary);
+    font-weight: 500;
+    color: var(--text-muted);
     transition: color 0.4s ease;
   }
 
