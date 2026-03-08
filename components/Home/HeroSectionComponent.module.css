@@ -1,26 +1,24 @@
 .hero {
-    height: 100svh;
+    height: calc(100svh - 76px);
+    margin-top: 76px;
     min-width: 100%;
-    min-height: 850px;
+    min-height: 750px;
     display: flex;
     align-items: center;
-    padding-top: 80px;
-    background-color: #05080f;
-    /* Purest deep base */
+    padding-top: 40px;
     overflow: hidden;
     position: relative;
-    /* Sophisticated diagonal flow instead of centered spotlight */
-    background: linear-gradient(135deg, #0d1a30 0%, #070c14 40%, #05080f 100%);
+    background: url('/HeroDevushkiPokupki.png') no-repeat 65% center;
+    background-size: cover;
 }
 
-/* Subtle texture softening - reducing the impact of global grain if present */
+/* Dark gradient overlay for text readability */
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: inherit;
-    opacity: 0.4;
-    z-index: 0;
+    background: linear-gradient(to right, rgba(5, 8, 15, 0.95) 0%, rgba(5, 8, 15, 0.5) 50%, rgba(5, 8, 15, 0.1) 100%);
+    z-index: 1;
     pointer-events: none;
 }
 
@@ -66,15 +64,7 @@
 
 
 
-.visuals {
-    flex: 1;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    transition: transform 0.2s ease-out;
-    /* Плавность для параллакса */
-    will-change: transform;
-}
+
 
 .container {
     width: 100%;
@@ -88,7 +78,6 @@
 .layout {
     display: flex;
     align-items: center;
-    gap: 100px;
 }
 
 .content {
@@ -267,82 +256,7 @@
 
 
 
-.visuals {
-    flex: 0 0 500px;
-    /* Constrain width to keep it right of middle */
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    margin-top: -10px;
-    /* Lowered by 30px for more "air" above */
-    margin-left: auto;
-}
 
-.imageMain {
-    width: 420px;
-    height: 580px;
-    position: relative;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    z-index: 2;
-    /* Premium glow and depth */
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    /* Thin light outline */
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.45),
-        0 0 80px rgba(40, 120, 255, 0.15);
-    /* Multi-layered glow */
-    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.imageOffset {
-    width: 290px;
-    height: 400px;
-    position: absolute;
-    bottom: -40px;
-    left: -50px;
-    z-index: 3;
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    /* Matching premium style */
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow:
-        0 30px 80px rgba(0, 0, 0, 0.5),
-        0 0 100px rgba(40, 120, 255, 0.18);
-    transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.heroImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1);
-    filter: brightness(1.05) contrast(1.05);
-    /* Illuminated look */
-}
-
-.imageOverlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(0, 20, 50, 0.25), transparent);
-    /* Subtle blue-tinted dark overlay */
-    pointer-events: none;
-}
-
-.imageMain:hover {
-    transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 60px 140px rgba(0, 0, 0, 0.5);
-}
-
-.imageOffset:hover {
-    transform: translateY(-20px) scale(1.05);
-    box-shadow: 0 80px 160px rgba(0, 0, 0, 0.6);
-}
-
-.imageMain:hover .heroImage,
-.imageOffset:hover .heroImage {
-    transform: scale(1.1);
-}
 
 .scrollDown {
     position: absolute;
@@ -396,33 +310,23 @@
 /* --- RESPONSIVE DESIGN --- */
 
 @media (max-width: 1200px) {
-    .layout {
-        gap: 40px;
-    }
-
     .title {
         font-size: 4rem;
-    }
-
-    .imageMain {
-        width: 380px;
-        height: 500px;
-    }
-
-    .imageOffset {
-        width: 260px;
-        height: 360px;
-        bottom: -30px;
-        left: -40px;
     }
 }
 
 @media (max-width: 991px) {
     .hero {
         height: auto;
-        min-height: 100svh;
-        padding: 100px 0 100px;
-        background: linear-gradient(135deg, #131a28 0%, #080c14 100%);
+        min-height: calc(100svh - 40px);
+        margin-top: 40px;
+        padding: 50px 0 100px;
+        background: url('/HeroDevushkiPokupki.png') no-repeat center top;
+        background-size: cover;
+    }
+
+    .hero::before {
+        background: linear-gradient(to bottom, rgba(5, 8, 15, 0.9) 0%, rgba(5, 8, 15, 0.4) 60%, rgba(5, 8, 15, 0.9) 100%);
     }
 
     .container {
@@ -444,42 +348,7 @@
         z-index: 10;
     }
 
-    /* Refined Architectural 'Windows' Layout */
-    .visuals {
-        display: flex;
-        position: relative;
-        width: 100%;
-        height: 480px;
-        margin-top: 20px;
-    }
 
-
-
-    .imageMain {
-        width: 82%;
-        height: 440px;
-        margin-left: auto;
-        border-radius: 4px;
-        overflow: hidden;
-        z-index: 2;
-        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        position: relative;
-    }
-
-
-    .imageOffset {
-        display: block;
-        width: 240px;
-        height: 320px;
-        position: absolute;
-        bottom: -30px;
-        left: 0px;
-        z-index: 6;
-        border-radius: var(--radius-md);
-        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-    }
 
     .title {
         font-size: 3.5rem;
@@ -534,20 +403,7 @@
         line-height: 1.1;
     }
 
-    .visuals {
-        height: 400px;
-    }
 
-    .imageMain {
-        height: 350px;
-    }
-
-    .imageOffset {
-        width: 210px;
-        height: 280px;
-        left: -10px;
-        bottom: -30px;
-    }
 
     .bgText {
         display: none;

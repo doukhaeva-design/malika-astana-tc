@@ -57,23 +57,6 @@ export default function HeroSectionComponent() {
                             </Link>
                         </div>
                     </div>
-
-                    <div className={styles.visuals}>
-                        <div
-                            className={`${styles.imageMain} ${styles.reveal} ${styles.delay2}`}
-                            style={{ transform: `translate3d(${mousePos.x * 0.5}px, ${mousePos.y * 0.5}px, 0)` }}
-                        >
-                            <img src="/malika-facade-new.jpg" alt="MALIKA Astana Facade" className={styles.heroImage} />
-                            <div className={styles.imageOverlay}></div>
-                        </div>
-                        <div
-                            className={`${styles.imageOffset} ${styles.reveal} ${styles.delay3}`}
-                            style={{ transform: `translate3d(${mousePos.x * -0.3}px, ${mousePos.y * -0.3}px, 0)` }}
-                        >
-                            <img src="/pinterest_hero_1_1772463234531.png" alt="Lifestyle MALIKA" className={styles.heroImage} />
-                            <div className={styles.imageOverlay}></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
