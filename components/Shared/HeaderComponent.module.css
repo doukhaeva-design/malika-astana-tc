@@ -552,7 +552,8 @@
 
   .topItem {
     font-size: 0.65rem;
-    color: rgba(255, 255, 255, 0.7);
+    font-weight: 600;
+    color: var(--primary);
     transition: color 0.4s ease;
   }
 
