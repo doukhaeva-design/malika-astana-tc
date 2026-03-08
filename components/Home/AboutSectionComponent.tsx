@@ -31,7 +31,7 @@ export default function AboutSectionComponent() {
                     <div className={`${styles.visuals} animate-fade`}>
                         <div className={styles.imageWrapper}>
                             <img
-                                src="/pinterest_hero_1_1772463234531.png"
+                                src="/malika-facade-new.jpg"
                                 alt="MALIKA Concept"
                                 className={styles.image}
                             />
