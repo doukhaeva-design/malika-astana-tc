@@ -10,7 +10,10 @@
   --font-display: 'Outfit', sans-serif;
 
   --accent-soft: #f4f6f9;
-  --accent-warm: #B87333;
+  --accent-warm: #C79100;
+  /* Deep rich gold for light backgrounds */
+  --accent-gold: #FFC837;
+  /* Vibrant gold for dark backgrounds */
   --accent-blue: #475569;
   --off-white: #f8f9fa;
 
