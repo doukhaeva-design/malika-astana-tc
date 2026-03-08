@@ -12,12 +12,12 @@
     background-size: cover;
 }
 
-/* Dark gradient overlay for text readability */
+/* Soft dark gradient overlay for text readability */
 .hero::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(5, 8, 15, 0.95) 0%, rgba(5, 8, 15, 0.5) 50%, rgba(5, 8, 15, 0.1) 100%);
+    background: linear-gradient(to right, rgba(5, 8, 15, 0.8) 0%, rgba(5, 8, 15, 0.4) 45%, rgba(5, 8, 15, 0) 80%);
     z-index: 1;
     pointer-events: none;
 }
