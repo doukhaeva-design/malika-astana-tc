@@ -13,6 +13,8 @@ import { usePathname } from 'next/navigation';
 import styles from './HeaderComponent.module.css';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
+
+
 export default function HeaderComponent() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
