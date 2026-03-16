@@ -59,7 +59,7 @@ export const translations = {
         spaceShowcase: {
             title: 'Развитие территории',
             subtitle: 'MALIKA растёт',
-            desc: 'На территории комплекса около 3 га земли. Уже построено новое здание, ведётся подготовка дополнительных площадей — склады, торговые помещения.'
+            desc: 'На территории комплекса около 3 га земли. На территории уже построено отдельное здание, строится ещё одно — торговые и складские площади. Заезд с двух улиц, удобный въезд с первой линии.'
         },
         visit: {
             title: 'ТЦ MALIKA',
@@ -132,7 +132,7 @@ export const translations = {
             termsTitle: 'Условия аренды',
 
             whyReasons: [
-                { title: 'Удобное расположение', desc: 'Торговый центр расположен рядом с основными транспортными направлениями города. До комплекса удобно добираться как клиентам, так и поставщикам.' },
+                { title: 'Удобное расположение', desc: 'Торговый центр расположен рядом с основными транспортными направлениями города. Заезд с двух улиц — удобно для клиентов и поставщиков.' },
                 { title: 'Парковка', desc: 'Для посетителей и сотрудников предусмотрена парковка более чем на 50 мест.' },
                 { title: 'Грузовой лифт', desc: 'Грузовой лифт упрощает перемещение товаров и оборудования между этажами.' },
                 { title: 'Зона разгрузки', desc: 'Для приёма поставок предусмотрена отдельная зона разгрузки. Также доступна техника для перемещения грузов.' }
@@ -147,6 +147,9 @@ export const translations = {
                 { label: 'Парковка', value: 'более 50 мест' },
                 { label: 'Грузовой лифт', value: 'для перевозки габаритных грузов' },
                 { label: 'Зона разгрузки', value: 'удобный дебаркадер для поставок' },
+                { label: 'Отдельные входы', value: 'независимые входы для арендаторов' },
+                { label: 'Независимое отопление', value: 'автономная система отопления' },
+                { label: 'Работа в ночное время', value: 'возможность круглосуточной работы' },
                 { label: 'Интернет и связь', value: 'высокоскоростной интернет для работы бизнеса' }
             ],
             termItems: [
@@ -287,7 +290,7 @@ export const translations = {
         spaceShowcase: {
             title: 'Territory Development',
             subtitle: 'MALIKA is growing',
-            desc: 'The complex has about 3 hectares of land. A new building is already constructed, additional warehouse and retail spaces are being prepared.'
+            desc: 'The complex has about 3 hectares of land. A separate building is already constructed on the territory, another is under construction — retail and warehouse spaces. Access from two streets with a convenient entrance from the main road.'
         },
         visit: {
             title: 'MALIKA TC',
@@ -360,7 +363,7 @@ export const translations = {
             termsTitle: 'Lease Terms',
 
             whyReasons: [
-                { title: 'Convenient Location', desc: 'The shopping center is located near the city\'s main transport routes. Easy to reach for both clients and suppliers.' },
+                { title: 'Convenient Location', desc: 'The shopping center is located near the city\'s main transport routes. Access from two streets — convenient for clients and suppliers.' },
                 { title: 'Parking', desc: 'Parking for over 50 vehicles is available for visitors and staff.' },
                 { title: 'Cargo Lift', desc: 'The cargo lift simplifies moving goods and equipment between floors.' },
                 { title: 'Loading Zone', desc: 'A dedicated unloading zone is available for receiving deliveries. Equipment for moving cargo is also provided.' }
@@ -375,6 +378,9 @@ export const translations = {
                 { label: 'Parking', value: 'over 50 spots' },
                 { label: 'Cargo Lift', value: 'for transporting bulky goods' },
                 { label: 'Loading Zone', value: 'convenient dock for deliveries' },
+                { label: 'Separate Entrances', value: 'independent entrances for tenants' },
+                { label: 'Independent Heating', value: 'autonomous heating system' },
+                { label: 'Night Operations', value: '24/7 work capability' },
                 { label: 'Internet', value: 'high-speed internet for business' }
             ],
             termItems: [
