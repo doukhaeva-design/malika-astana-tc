@@ -23,7 +23,7 @@ export default function FinalCTAComponent() {
                         {t.finalCta.desc}
                     </p>
                     <div className={styles.actions}>
-                        <Link href="/directions" className={styles.btnPrimary}>
+                        <Link href="/shops" className={styles.btnPrimary}>
                             {t.finalCta.btnRoute}
                         </Link>
                         <Link href="/contacts" className={styles.btnSecondary}>

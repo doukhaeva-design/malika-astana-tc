@@ -20,13 +20,11 @@ export default function DirectionsHeroComponent() {
                         {language === 'ru' ? 'Выбор MALIKA' : 'Curated by MALIKA'}
                     </span>
                     <h1 className={styles.title}>
-                        {language === 'ru' ? 'КАТАЛОГ МАГАЗИНОВ И СЕРВИСОВ' : 'STORES & SERVICES CATALOG'}
+                        {t.directionsPage.heroTitle}
                     </h1>
                     <div className={styles.divider}></div>
                     <p className={styles.description}>
-                        {language === 'ru'
-                            ? "В торговом центре MALIKA представлены магазины, сервисные компании и профессиональные услуги для бизнеса и повседневных задач."
-                            : "The MALIKA shopping center presents stores, service companies, and professional services for business and daily tasks."}
+                        {t.directionsPage.heroDesc}
                     </p>
                 </div>
             </div>

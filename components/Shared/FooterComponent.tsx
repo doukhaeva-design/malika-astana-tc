@@ -51,9 +51,10 @@ export default function FooterComponent() {
 
                 <div className={styles.links}>
                     <p className={styles.footerLabel}>{t.common.nav}</p>
-                    <Link href="/directions" className={styles.footerLink}>{t.common.directions}</Link>
+                    <Link href="/shops" className={styles.footerLink}>{t.common.directionsShort}</Link>
                     <Link href="/rehab" className={styles.footerLink}>{t.common.rehab}</Link>
-                    <Link href="/rent" className={styles.footerLink}>{t.common.rent}</Link>
+                    <Link href="/tenants" className={styles.footerLink}>{t.common.rent}</Link>
+                    <Link href="/about" className={styles.footerLink}>{t.common.aboutCenter}</Link>
                     <Link href="/contacts" className={styles.footerLink}>{t.common.contacts}</Link>
                 </div>
 

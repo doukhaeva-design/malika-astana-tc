@@ -22,7 +22,7 @@ export default function RehabBookingSection() {
                         <a href={`tel:${t.rehabPage.phone.replace(/[^0-9+]/g, '')}`} className={styles.btnPrimary}>
                             {t.common.call}
                         </a>
-                        <a href="https://wa.me/77055557609" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
+                        <a href="https://wa.me/77003053536" target="_blank" rel="noopener noreferrer" className={styles.btnSecondary}>
                             WhatsApp
                         </a>
                     </div>

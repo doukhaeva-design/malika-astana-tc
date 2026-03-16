@@ -72,8 +72,16 @@
 .text {
     font-size: 1.25rem;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 50px;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 30px;
+    max-width: 650px;
+}
+
+.extraText {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--accent);
+    font-style: italic;
     max-width: 600px;
 }
 
