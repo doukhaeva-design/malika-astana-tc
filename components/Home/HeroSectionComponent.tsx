@@ -6,7 +6,6 @@
 "use client";
 
 import React from 'react';
-import Link from 'next/link';
 import styles from './HeroSectionComponent.module.css';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
@@ -35,9 +34,6 @@ export default function HeroSectionComponent() {
             <div className={styles.container}>
                 <div className={styles.layout}>
                     <div className={styles.content}>
-                        <div className={`${styles.badgeWrapper} ${styles.reveal}`}>
-                            <span className={styles.badge}>{t.hero.badge}</span>
-                        </div>
                         <h1 className={`${styles.title} ${styles.reveal} ${styles.delay1}`}>
                             <span className={styles.titleLight}>{t.hero.title1}</span> <br />
                             <span className={styles.accent}>{t.hero.title2}</span>
@@ -46,20 +42,16 @@ export default function HeroSectionComponent() {
                             {t.hero.desc}
                         </p>
                         <div className={`${styles.actions} ${styles.reveal} ${styles.delay3}`}>
-                            <Link href="/shops" className={styles.btnPrimary}>
+                            <a href="#map" className={styles.btnPrimary}>
                                 <span>{t.hero.btnPrimary}</span>
                                 <svg className={styles.btnIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <line x1="7" y1="17" x2="17" y2="7" />
-                                    <polyline points="7 7 17 7 17 17" />
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
                                 </svg>
-                            </Link>
-                        </div>
-                        <div className={`${styles.metrics} ${styles.reveal} ${styles.delay4}`}>
-                            <span className={styles.metric}>{t.hero.metric1}</span>
-                            <span className={styles.metricDot}>·</span>
-                            <span className={styles.metric}>{t.hero.metric2}</span>
-                            <span className={styles.metricDot}>·</span>
-                            <span className={styles.metric}>{t.hero.metric3}</span>
+                            </a>
+                            <a href="/shops" className={styles.btnSecondary}>
+                                <span>{language === 'ru' ? 'Каталог' : 'Catalog'}</span>
+                            </a>
                         </div>
                     </div>
                 </div>
