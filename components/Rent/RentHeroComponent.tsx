@@ -46,6 +46,11 @@ export default function RentHeroComponent() {
                     {/* Правая колонка - Тексты и статика */}
                     <div className={styles.textSide}>
                         <h2 className={styles.mainTitle}>{t.rentHero.mainTitle}</h2>
+                        <p className={styles.highlight}>
+                            {language === 'ru'
+                                ? 'Помещения от 50 м² · Гибкая планировка'
+                                : 'Spaces from 50 m² · Flexible layout'}
+                        </p>
                         <p className={styles.description}>
                             {t.rentPage.heroDesc}
                         </p>

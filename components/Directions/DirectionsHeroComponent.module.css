@@ -1,31 +1,26 @@
 .hero {
-    padding: 180px 0 var(--section-padding);
-    background-color: #ffffff;
+    padding: 140px 0 60px;
+    background-color: var(--background);
 }
 
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--container-padding);
-    display: flex;
-    justify-content: center;
 }
 
 .content {
-    max-width: 800px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 700px;
 }
 
-.badge {
-    font-size: 0.75rem;
-    font-weight: var(--subtitle-weight);
+.serifSubtitle {
+    display: block;
+    font-size: var(--subtitle-size);
     color: var(--subtitle-color);
-    letter-spacing: var(--subtitle-spacing);
     text-transform: uppercase;
-    margin-bottom: 2rem;
+    letter-spacing: var(--subtitle-spacing);
+    font-weight: var(--subtitle-weight);
+    margin-bottom: 12px;
 }
 
 .title {
@@ -33,28 +28,16 @@
     font-weight: var(--title-weight);
     color: var(--primary);
     line-height: 1.1;
-    margin-bottom: 2rem;
-    letter-spacing: 0.02em;
-    text-transform: uppercase;
-}
-
-.serifSubtitle {
-    display: block;
-    font-size: 1.5rem;
-    color: var(--text-muted);
-    margin-bottom: 0.5rem;
-    opacity: 0.8;
+    margin-bottom: 16px;
+    letter-spacing: var(--title-spacing);
 }
 
 .divider {
-    width: 60px;
-    height: 1px;
-    background-color: var(--primary);
-    margin-bottom: 2.5rem;
+    display: none;
 }
 
 .description {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     color: var(--text-muted);
     font-weight: 400;
@@ -62,14 +45,14 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 120px 0 var(--section-padding-mobile);
+        padding: 110px 0 40px;
     }
 
     .title {
-        font-size: 2.25rem;
+        font-size: 2rem;
     }
 
     .description {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }

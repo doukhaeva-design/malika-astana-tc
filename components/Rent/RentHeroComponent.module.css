@@ -69,10 +69,17 @@
 .mainTitle {
     font-size: 2.5rem;
     font-weight: var(--title-weight);
-    /* Back to bold site style */
     color: var(--primary);
-    margin-bottom: 20px;
+    margin-bottom: 12px;
     line-height: 1.1;
+}
+
+.highlight {
+    font-size: 0.9rem;
+    font-weight: var(--subtitle-weight);
+    color: var(--accent-warm);
+    letter-spacing: 0.03em;
+    margin-bottom: 20px;
 }
 
 .description {

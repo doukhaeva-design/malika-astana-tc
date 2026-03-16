@@ -11,7 +11,7 @@ export const translations = {
             route: 'Проложить маршрут',
             home: 'Главная',
             directions: 'Магазины и услуги',
-            directionsShort: 'Магазины и услуги',
+            directionsShort: 'Каталог',
             rehab: 'Реабилитация',
             aboutCenter: 'О центре',
             rent: 'Арендаторам',
@@ -71,10 +71,10 @@ export const translations = {
             subtitle: 'В MALIKA представлены разные категории товаров и сервисов.',
             all: 'Все направления',
             categories: [
-                { title: 'Автотовары', desc: 'Запчасти, комплектующие и аксессуары для автомобилей.' },
-                { title: 'Оборудование и техника', desc: 'Промышленное, торговое и офисное оборудование.' },
-                { title: 'Товары для дома', desc: 'Хозяйственные и бытовые товары.' },
-                { title: 'Сервисы и услуги', desc: 'Ремонт, обслуживание и бытовые сервисы.' },
+                { title: 'Автотовары', desc: 'Запчасти, инструменты и аксессуары для автомобилей.' },
+                { title: 'Оборудование и техника', desc: 'Профессиональная техника и оборудование.' },
+                { title: 'Товары для дома', desc: 'Всё необходимое для дома и ремонта.' },
+                { title: 'Сервисы и услуги', desc: 'Ремонт, обслуживание и профессиональные услуги.' },
                 { title: 'Медицина', desc: 'Современный центр реабилитации и восстановления здоровья.' }
             ]
         },
@@ -181,18 +181,18 @@ export const translations = {
             termsTitle: 'Условия сотрудничества',
 
             whyReasons: [
-                { title: 'Удобное расположение', desc: 'Рядом с трассой Алаш, обеспечивающей высокий трафик.' },
-                { title: 'Парковка', desc: 'Просторная зона для посетителей и сотрудников центра.' },
+                { title: 'Удобное расположение', desc: 'Расположение рядом с крупными транспортными магистралями и удобный подъезд для клиентов.' },
+                { title: 'Парковка', desc: 'Просторная парковка на 50+ мест для посетителей и сотрудников центра.' },
                 { title: 'Грузовой лифт', desc: 'Для удобной транспортировки товаров на этажи.' },
-                { title: 'Зона разгрузки', desc: 'Отдельная зона для приема грузов и логистики.' }
+                { title: 'Зона разгрузки', desc: 'Специальная зона для приёма поставок и разгрузки товаров. Доступна техника для перемещения грузов.' }
             ],
 
             availableIntro: 'Мы предлагаем различные форматы коммерческих помещений.',
             availableTitle: 'Форматы помещений',
             availableSpaces: [
-                { title: 'Торговые помещения', desc: 'Площади от 50 м² для магазинов и розничной торговли.' },
-                { title: 'Складские помещения', desc: 'Пространства для хранения и логистических задач.' },
-                { title: 'Коммерческие участки', desc: 'Площадки для специализированных проектов и индивидуальных решений.' }
+                { title: 'Торговые помещения', desc: 'Площади от 50 м². Помещения могут быть адаптированы под формат вашего бизнеса. При необходимости пространство делится перегородками.' },
+                { title: 'Складские помещения', desc: 'Подходят для хранения товаров, запасов и логистики.' },
+                { title: 'Коммерческие участки', desc: 'Помещения для сервисных компаний и обслуживания клиентов.' }
             ],
             infraItems: [
                 { label: 'Парковка', value: 'Зона на 50+ мест' },
@@ -201,23 +201,32 @@ export const translations = {
                 { label: 'Связь', value: 'Высокоскоростной Wi-Fi' }
             ],
             termItems: [
-                { label: 'Срок аренды', value: 'от 11 месяцев' },
+                { label: 'Минимальный срок аренды', value: 'от 11 месяцев' },
                 { label: 'Депозит', value: '1 месяц' },
-                { label: 'Каникулы', value: 'Индивидуально' }
+                { label: 'Арендные каникулы', value: 'Индивидуально' },
+                { label: 'Планировка', value: 'Возможность разделения площади' }
+            ],
+            targetTitle: 'Кому подойдут помещения',
+            targetDesc: 'Помещения торгового центра MALIKA подходят для разных форматов бизнеса:',
+            targetItems: [
+                { title: 'Магазины и торговые точки', desc: 'Автотовары, товары для дома, специализированная торговля.' },
+                { title: 'Сервисные компании', desc: 'Ремонт, обслуживание, услуги.' },
+                { title: 'Складские и логистические форматы', desc: 'Помещения для хранения и работы с товарами.' }
             ],
             processTitle: 'Как стать арендатором',
             processSteps: [
-                { title: 'Заявка', desc: 'Оставьте запрос на сайте или позвоните нам.' },
-                { title: 'Просмотр', desc: 'Мы покажем подходящие варианты на месте.' },
-                { title: 'Договор', desc: 'Быстрое оформление и заезд в помещение.' }
+                { title: 'Заявка', desc: 'Оставьте заявку на сайте или свяжитесь с нами.' },
+                { title: 'Просмотр', desc: 'Мы организуем просмотр подходящих помещений.' },
+                { title: 'Договор', desc: 'Подписываем договор и готовим помещение к работе.' }
             ],
-            formDesc: 'Расскажите, какое помещение вам интересно, и мы свяжемся с вами для обсуждения условий.'
+            formTitle: 'Интересует аренда?',
+            formDesc: 'Оставьте заявку, и мы свяжемся с вами для обсуждения условий.'
         },
         rentHero: {
-            title: 'Аренда коммерческих помещений',
-            subtitle: 'Ваш бизнес в центре внимания',
-            mainTitle: 'Пространство для стабильного бизнеса',
-            mainDesc: 'Удобные помещения для торговли, услуг и повседневного спроса в торговом центре MALIKA. Гибкие условия, заметная локация и инфраструктура для стабильной работы.',
+            title: 'Аренда помещений в ТЦ MALIKA',
+            subtitle: 'Для магазинов, автотоваров и сервисов',
+            mainTitle: 'Пространство для вашего бизнеса',
+            mainDesc: 'Торговый центр MALIKA объединяет магазины, автотовары, сервисы и реабилитационный центр. Помещения подходят для розничной торговли, услуг и складских форматов.',
             btn: 'Оставить заявку',
             btnCTA: 'Оставить заявку',
             btnCall: 'Позвонить',
@@ -268,8 +277,8 @@ export const translations = {
             ctaDesc: 'Оставьте заявку или позвоните нам для первичной консультации и составления плана реабилитации.'
         },
         directionsPage: {
-            heroTitle: 'Магазины и сервисы центра',
-            heroDesc: 'В торговом центре MALIKA представлены магазины и сервисные компании, работающие в разных направлениях. Здесь можно найти товары для автомобилей, оборудование для бизнеса, бытовые товары и необходимые услуги.',
+            heroTitle: 'Магазины и сервисы MALIKA',
+            heroDesc: 'Автозапчасти, оборудование, товары для дома, бытовые услуги и медицинский центр — всё в одном месте.',
         },
         rentContact: {
             title: 'Готовы обсудить аренду?',
@@ -288,7 +297,7 @@ export const translations = {
             route: 'Get Directions',
             home: 'Home',
             directions: 'Shops & Services',
-            directionsShort: 'Shops & Services',
+            directionsShort: 'Catalog',
             rehab: 'Rehabilitation',
             aboutCenter: 'About Center',
             rent: 'For Tenants',
@@ -348,10 +357,10 @@ export const translations = {
             subtitle: 'Different categories of goods and services are presented in MALIKA.',
             all: 'All Categories',
             categories: [
-                { title: 'Auto Goods', desc: 'Spare parts, components, and accessories for cars.' },
-                { title: 'Equipment & Tech', desc: 'Industrial, commercial, and office equipment.' },
-                { title: 'Home Goods', desc: 'Household and domestic goods.' },
-                { title: 'Services', desc: 'Repair, maintenance, and household services.' },
+                { title: 'Auto Goods', desc: 'Spare parts, tools, and accessories for cars.' },
+                { title: 'Equipment & Tech', desc: 'Professional equipment and machinery.' },
+                { title: 'Home Goods', desc: 'Everything you need for home and renovation.' },
+                { title: 'Services', desc: 'Repair, maintenance, and professional services.' },
                 { title: 'Medicine', desc: 'Modern rehabilitation and health recovery center.' }
             ]
         },
@@ -458,18 +467,18 @@ export const translations = {
             termsTitle: 'Terms of Cooperation',
 
             whyReasons: [
-                { title: 'Convenient Location', desc: 'Near Alash highway, ensuring high traffic.' },
-                { title: 'Parking', desc: 'Spacious area for visitors and center employees.' },
+                { title: 'Convenient Location', desc: 'Located near major highways with easy access for clients.' },
+                { title: 'Parking', desc: 'Spacious parking area with 50+ spots for visitors and employees.' },
                 { title: 'Cargo Lift', desc: 'For convenient transportation of goods to the floors.' },
-                { title: 'Loading Zone', desc: 'Separate area for receiving goods and logistics.' }
+                { title: 'Loading Zone', desc: 'Dedicated area for receiving deliveries and unloading goods. Equipment available for moving cargo.' }
             ],
 
             availableIntro: 'We offer various formats of commercial premises.',
             availableTitle: 'Commercial Space Formats',
             availableSpaces: [
-                { title: 'Retail Spaces', desc: 'Premises for rent from 50 square meters for shops and retail.' },
-                { title: 'Warehouse Areas', desc: 'For storage and logistics tasks.' },
-                { title: 'Commercial Lots', desc: 'For specialized projects.' }
+                { title: 'Retail Spaces', desc: 'From 50 m². Space can be adapted to your business format — partitions available if needed.' },
+                { title: 'Warehouse Areas', desc: 'For storing goods, inventory, and logistics.' },
+                { title: 'Commercial Spaces', desc: 'Premises for service companies and client-facing businesses.' }
             ],
             infraItems: [
                 { label: 'Parking', value: '50+ spots area' },
@@ -478,23 +487,32 @@ export const translations = {
                 { label: 'Internet', value: 'High-speed Wi-Fi' }
             ],
             termItems: [
-                { label: 'Lease term', value: 'from 11 months' },
+                { label: 'Minimum lease term', value: 'from 11 months' },
                 { label: 'Deposit', value: '1 month' },
-                { label: 'Grace period', value: 'Individual' }
+                { label: 'Rent-free period', value: 'Individual' },
+                { label: 'Layout', value: 'Flexible space configuration' }
+            ],
+            targetTitle: 'Who are the spaces for',
+            targetDesc: 'MALIKA Shopping Center premises suit various business formats:',
+            targetItems: [
+                { title: 'Shops & retail', desc: 'Auto goods, home goods, specialized retail.' },
+                { title: 'Service companies', desc: 'Repair, maintenance, and services.' },
+                { title: 'Warehouse & logistics', desc: 'Storage and goods handling.' }
             ],
             processTitle: 'How to become a tenant',
             processSteps: [
-                { title: 'Inquiry', desc: 'Leave a request on the website or call us.' },
-                { title: 'Viewing', desc: 'We will show you suitable options on-site.' },
-                { title: 'Agreement', desc: 'Quick paperwork and moving into the space.' }
+                { title: 'Inquiry', desc: 'Leave a request on the website or contact us directly.' },
+                { title: 'Viewing', desc: 'We will arrange a viewing of suitable spaces.' },
+                { title: 'Agreement', desc: 'Sign the contract and prepare the space for work.' }
             ],
-            formDesc: 'Tell us which space you are interested in, and we will contact you to discuss the terms.'
+            formTitle: 'Interested in rental?',
+            formDesc: 'Leave a request, and we will contact you to discuss the terms.'
         },
         rentHero: {
-            title: 'Commercial Space Rental',
-            subtitle: 'Your business in the spotlight',
-            mainTitle: 'Space for a stable business',
-            mainDesc: 'Convenient premises for trade, services, and everyday demand at the MALIKA shopping center. Flexible terms, prime location, and infrastructure for stable operation.',
+            title: 'Rental at MALIKA Shopping Center',
+            subtitle: 'For shops, auto goods, and services',
+            mainTitle: 'Space for your business',
+            mainDesc: 'MALIKA Shopping Center houses shops, auto goods, services, and a rehabilitation center. Premises are suitable for retail, services, and warehouse formats.',
             btn: 'Submit Application',
             btnCTA: 'Submit Application',
             btnCall: 'Call',
@@ -545,8 +563,8 @@ export const translations = {
             ctaDesc: 'Leave a request or call us for an initial consultation and creation of a rehabilitation plan.'
         },
         directionsPage: {
-            heroTitle: 'Shops and Services',
-            heroDesc: 'MALIKA Trading Center features shops and service companies operating in different directions. Here you can find auto goods, business equipment, household goods, and necessary services.',
+            heroTitle: 'Shops & Services at MALIKA',
+            heroDesc: 'Auto parts, equipment, home goods, household services, and a medical center — all in one place.',
         },
         rentContact: {
             title: 'Ready to discuss rental?',
