@@ -42,25 +42,33 @@ export default function ForEverydayNeedsSectionComponent() {
             title: t.directions.categories[0].title,
             forWhom: language === 'ru' ? 'Авто' : 'Auto',
             desc: t.directions.categories[0].desc,
-            img: '/category_auto_1772459952993.jpg'
+            img: '/category_auto_1772459952993.jpg',
+            tagColor: '#f0a04b',
+            tagBg: 'rgba(240, 160, 75, 0.1)',
         },
         {
             title: t.directions.categories[1].title,
             forWhom: language === 'ru' ? 'Для бизнеса' : 'For business',
             desc: t.directions.categories[1].desc,
-            img: '/category_tech_1772459982373.jpg'
+            img: '/category_tech_1772459982373.jpg',
+            tagColor: '#5dade2',
+            tagBg: 'rgba(93, 173, 226, 0.1)',
         },
         {
             title: t.directions.categories[2].title,
             forWhom: language === 'ru' ? 'Для дома' : 'For home',
             desc: t.directions.categories[2].desc,
-            img: '/category_home_1772459996707.jpg'
+            img: '/category_home_1772459996707.jpg',
+            tagColor: '#58d68d',
+            tagBg: 'rgba(88, 214, 141, 0.1)',
         },
         {
             title: t.directions.categories[3].title,
             forWhom: language === 'ru' ? 'Услуги' : 'Services',
             desc: t.directions.categories[3].desc,
-            img: '/category_service_1772460173357.jpg'
+            img: '/category_service_1772460173357.jpg',
+            tagColor: '#bb8fce',
+            tagBg: 'rgba(187, 143, 206, 0.1)',
         }
     ];
 
@@ -110,13 +118,14 @@ export default function ForEverydayNeedsSectionComponent() {
                         key={index}
                         className={`${styles.card} animate-fade stagger-${index + 1}`}
                     >
+                        <div className={styles.cardStripe} style={{ background: dir.tagColor }} />
                         <div className={styles.imageWrapper}>
                             <img src={dir.img} alt={dir.title} className={styles.cardImage} />
                         </div>
 
                         <div className={styles.cardContent}>
                             <div className={styles.cardHeader}>
-                                <span className={styles.tag}>{dir.forWhom}</span>
+                                <span className={styles.tag} style={{ color: dir.tagColor, background: dir.tagBg }}>{dir.forWhom}</span>
                                 <h3 className={styles.cardTitle}>{dir.title}</h3>
                             </div>
                             <p className={styles.cardText}>{dir.desc}</p>

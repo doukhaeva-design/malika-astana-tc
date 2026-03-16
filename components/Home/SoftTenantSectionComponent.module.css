@@ -64,7 +64,7 @@
     display: flex;
     flex-direction: column;
     gap: 18px;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .infraCard:hover {
@@ -74,15 +74,13 @@
 }
 
 .infraIcon {
-    width: 44px;
-    height: 44px;
+    width: 48px;
+    height: 48px;
     border-radius: var(--radius-md);
-    background: rgba(199, 145, 0, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--accent-warm);
-    transition: all 0.4s ease;
+    transition: all 0.2s ease;
 }
 
 .infraIcon svg {
@@ -91,8 +89,7 @@
 }
 
 .infraCard:hover .infraIcon {
-    background: var(--accent-warm);
-    color: #fff;
+    transform: scale(1.05);
 }
 
 .infraLabel {
@@ -120,7 +117,7 @@
     font-weight: 700;
     text-decoration: none;
     letter-spacing: 0.03em;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .actionBtn:hover {
@@ -130,7 +127,7 @@
 }
 
 .actionBtn svg {
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .actionBtn:hover svg {

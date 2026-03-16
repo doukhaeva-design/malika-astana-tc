@@ -1,5 +1,5 @@
 .section {
-    padding: 0 0 var(--section-padding);
+    padding: var(--section-padding) 0;
     background-color: var(--background);
 }
 
@@ -10,11 +10,12 @@
 }
 
 .banner {
-    background-color: var(--primary);
+    background: linear-gradient(135deg, #e8f4fd, #d4ecfb);
     border-radius: var(--radius-xl);
     padding: 56px 64px;
     position: relative;
     overflow: hidden;
+    border: 1px solid rgba(52, 152, 219, 0.2);
 }
 
 .banner::before {
@@ -24,7 +25,7 @@
     left: 0;
     width: 3px;
     height: 100%;
-    background: linear-gradient(to bottom, var(--accent-gold), var(--accent-warm));
+    background: linear-gradient(to bottom, #3498db, #2980b9);
 }
 
 .content {
@@ -35,8 +36,11 @@
     display: inline-block;
     font-size: var(--subtitle-size);
     font-weight: var(--subtitle-weight);
-    color: var(--accent-gold);
+    color: #217dbb;
     text-transform: uppercase;
+    background: rgba(52, 152, 219, 0.12);
+    padding: 4px 12px;
+    border-radius: var(--radius-sm);
     letter-spacing: var(--subtitle-spacing);
     margin-bottom: 12px;
 }
@@ -44,7 +48,7 @@
 .title {
     font-size: 2rem;
     font-weight: var(--title-weight);
-    color: #fff;
+    color: var(--primary);
     margin-bottom: 14px;
     letter-spacing: var(--title-spacing);
 }
@@ -52,7 +56,7 @@
 .text {
     font-size: 1rem;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--text-dim);
     margin-bottom: 28px;
 }
 
@@ -61,23 +65,23 @@
     align-items: center;
     gap: 8px;
     padding: var(--btn-padding);
-    background: var(--accent-gold);
-    color: var(--primary);
+    background: #3498db;
+    color: #fff;
     border-radius: var(--btn-radius);
     font-size: var(--btn-font-size);
     font-weight: var(--btn-font-weight);
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(199, 145, 0, 0.3);
-    filter: brightness(1.05);
+    background: #2980b9;
+    box-shadow: 0 8px 24px rgba(52, 152, 219, 0.3);
 }
 
 .btn svg {
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .btn:hover svg {

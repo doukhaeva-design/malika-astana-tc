@@ -1,5 +1,5 @@
 .section {
-    padding: var(--section-padding) 0;
+    padding: 140px 0 var(--section-padding);
     background-color: var(--background);
 }
 
@@ -7,6 +7,28 @@
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--container-padding);
+}
+
+.header {
+    margin-bottom: 48px;
+}
+
+.subtitle {
+    display: block;
+    font-size: var(--subtitle-size);
+    color: var(--subtitle-color);
+    text-transform: uppercase;
+    letter-spacing: var(--subtitle-spacing);
+    font-weight: var(--subtitle-weight);
+    margin-bottom: 12px;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: var(--title-weight);
+    color: var(--primary);
+    letter-spacing: var(--title-spacing);
+    line-height: 1.1;
 }
 
 .infoGrid {
@@ -17,25 +39,28 @@
 
 .infoCard {
     background: var(--background);
-    padding: 2.5rem 2rem;
+    padding: 2rem;
     border-radius: var(--radius-lg);
     border: 1px solid var(--gray-medium);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
+}
+
+.infoCard:hover {
+    border-color: var(--accent-warm);
+    box-shadow: var(--shadow-soft);
 }
 
 .iconBox {
     width: 48px;
     height: 48px;
-    background: var(--accent-soft);
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.25rem;
 }
 
 .cardLabel {
@@ -44,15 +69,33 @@
     text-transform: uppercase;
     letter-spacing: var(--subtitle-spacing);
     color: var(--text-muted);
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
 }
 
 .cardValue {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: var(--title-weight);
     color: var(--primary);
-    line-height: 1.4;
+    line-height: 1.5;
     margin: 0;
+}
+
+.hint {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.cardLink {
+    font-size: 1rem;
+    font-weight: var(--title-weight);
+    color: var(--primary);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.cardLink:hover {
+    color: var(--accent-warm);
 }
 
 @media (max-width: 1024px) {
@@ -63,11 +106,11 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: var(--section-padding-mobile) 0;
+        padding: 110px 0 var(--section-padding-mobile);
     }
 
-    .container {
-        padding: 0 20px;
+    .title {
+        font-size: 2rem;
     }
 
     .infoGrid {
@@ -76,6 +119,6 @@
     }
 
     .infoCard {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 }
