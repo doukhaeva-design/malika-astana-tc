@@ -2,7 +2,7 @@
   Главная страница (Home)
 
   1. Hero
-  2. Цифры (акцентная полоса)
+  2. О центре (цифры + текст)
   3. Направления магазинов
   4. Блок для арендаторов
   5. Контакты + Карта
@@ -10,7 +10,7 @@
 */
 
 import HeroSectionComponent from '@/components/Home/HeroSectionComponent';
-import StatsStripComponent from '@/components/Home/StatsStripComponent';
+import AboutStripComponent from '@/components/Home/AboutStripComponent';
 import ForEverydayNeedsSectionComponent from '@/components/Home/ForEverydayNeedsSectionComponent';
 import SoftTenantSectionComponent from '@/components/Home/SoftTenantSectionComponent';
 import VisitInfoSectionComponent from '@/components/Home/VisitInfoSectionComponent';
@@ -22,7 +22,7 @@ export default function Home() {
   return (
     <main>
       <HeroSectionComponent />
-      <StatsStripComponent />
+      <AboutStripComponent />
       <ForEverydayNeedsSectionComponent />
       <SoftTenantSectionComponent />
       <VisitInfoSectionComponent />

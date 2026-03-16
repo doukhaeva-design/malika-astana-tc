@@ -1,9 +1,9 @@
 "use client";
 
-import styles from './StatsStripComponent.module.css';
+import styles from './AboutStripComponent.module.css';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
-export default function StatsStripComponent() {
+export default function AboutStripComponent() {
     const { language } = useLanguage();
 
     const stats = language === 'ru'
@@ -19,10 +19,10 @@ export default function StatsStripComponent() {
         ];
 
     return (
-        <section className={styles.strip}>
+        <section className={styles.section}>
             <div className={styles.container}>
                 {stats.map((stat, i) => (
-                    <div key={i} className={styles.item}>
+                    <div key={i} className={styles.statItem}>
                         <span className={styles.value}>{stat.value}</span>
                         <span className={styles.label}>{stat.label}</span>
                     </div>

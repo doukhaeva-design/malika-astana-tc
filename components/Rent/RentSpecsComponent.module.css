@@ -159,6 +159,18 @@
     padding: 48px;
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-medium);
+    position: relative;
+    overflow: hidden;
+}
+
+.specsCol::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-warm), var(--accent-gold));
 }
 
 .specsTable {
@@ -242,6 +254,35 @@
     background: #fff;
     border-radius: var(--radius-lg);
     border: 1px solid var(--gray-medium);
+    transition: all 0.4s ease;
+}
+
+.targetCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--accent-warm);
+}
+
+.targetIcon {
+    width: 44px;
+    height: 44px;
+    background: var(--accent-soft);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.targetIcon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.targetCard:hover .targetIcon {
+    background: var(--primary);
+    color: #fff;
 }
 
 .targetCardTitle {
@@ -277,8 +318,8 @@
 
 .processGrid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
     position: relative;
 }
 
