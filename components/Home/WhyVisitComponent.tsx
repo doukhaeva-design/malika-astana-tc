@@ -3,13 +3,22 @@
 import styles from './WhyVisitComponent.module.css';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
-const icons = [
-    /* Рядом с трассой */
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>,
-    /* Парковка */
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 17V7h4a3 3 0 0 1 0 6H9" /></svg>,
-    /* Несколько задач за визит */
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>,
+const cards = [
+    {
+        icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" /><circle cx="12" cy="10" r="3" /></svg>,
+        color: '#e67e22',
+        bg: 'rgba(230, 126, 34, 0.08)',
+    },
+    {
+        icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" /><path d="M9 17V7h4a3 3 0 0 1 0 6H9" /></svg>,
+        color: '#3498db',
+        bg: 'rgba(52, 152, 219, 0.08)',
+    },
+    {
+        icon: <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>,
+        color: '#27ae60',
+        bg: 'rgba(39, 174, 96, 0.08)',
+    },
 ];
 
 export default function WhyVisitComponent() {
@@ -41,8 +50,8 @@ export default function WhyVisitComponent() {
                 <div className={styles.grid}>
                     {items.map((item, idx) => (
                         <div key={idx} className={`${styles.card} animate-fade stagger-${idx + 1}`}>
-                            <div className={styles.iconBox}>
-                                {icons[idx]}
+                            <div className={styles.iconBox} style={{ background: cards[idx].bg, color: cards[idx].color }}>
+                                {cards[idx].icon}
                             </div>
                             <div>
                                 <h3 className={styles.cardTitle}>{item.title}</h3>
