@@ -19,7 +19,7 @@ export default function CategoryDetailSectionComponent() {
             badge: language === 'ru' ? 'Категория' : 'Category',
             title: t.directions.categories[0].title,
             desc: t.directions.categories[0].desc,
-            img: '/category_auto_1772459952993.png',
+            img: '/category_auto_1772459952993.jpg',
             items: language === 'ru' ? ['Запчасти', 'Шины и диски', 'Масла', 'Аксессуары'] : ['Parts', 'Tires', 'Oils', 'Accessories']
         },
         {
@@ -27,7 +27,7 @@ export default function CategoryDetailSectionComponent() {
             badge: language === 'ru' ? 'Категория' : 'Category',
             title: t.directions.categories[1].title,
             desc: t.directions.categories[1].desc,
-            img: '/category_tech_1772459982373.png',
+            img: '/category_tech_1772459982373.jpg',
             items: language === 'ru' ? ['Оргтехника', 'Инструменты', 'Станки'] : ['Office tech', 'Tools', 'Machinery']
         },
         {
@@ -35,7 +35,7 @@ export default function CategoryDetailSectionComponent() {
             badge: language === 'ru' ? 'Категория' : 'Category',
             title: t.directions.categories[2].title,
             desc: t.directions.categories[2].desc,
-            img: '/category_home_1772459996707.png',
+            img: '/category_home_1772459996707.jpg',
             items: language === 'ru' ? ['Мебель', 'Декор', 'Текстиль', 'Хозтовары'] : ['Furniture', 'Decor', 'Textiles', 'Household']
         },
         {
@@ -43,7 +43,7 @@ export default function CategoryDetailSectionComponent() {
             badge: language === 'ru' ? 'Категория' : 'Category',
             title: t.directions.categories[3].title,
             desc: t.directions.categories[3].desc,
-            img: '/category_service_1772460173357.png',
+            img: '/category_service_1772460173357.jpg',
             items: language === 'ru' ? ['Ремонт', 'Обслуживание', 'Бытовые услуги'] : ['Repair', 'Maintenance', 'Services']
         },
         {
@@ -51,7 +51,7 @@ export default function CategoryDetailSectionComponent() {
             badge: language === 'ru' ? 'Медицина' : 'Medicine',
             title: t.directions.categories[4].title,
             desc: t.directions.categories[4].desc,
-            img: '/rehab_interior_v2_1772460250804.png',
+            img: '/rehab_interior_v2_1772460250804.jpg',
             items: language === 'ru' ? ['Массаж', 'ЛФК', 'Консультации'] : ['Massage', 'Exercises', 'Consultations']
         }
     ];

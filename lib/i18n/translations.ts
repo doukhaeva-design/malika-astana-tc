@@ -26,7 +26,7 @@ export const translations = {
             nav: 'Навигация',
             rights: '© 2024 MALIKA. Все права защищены.',
             call: 'Позвонить',
-            instagram: 'https://www.instagram.com/malika_astana/',
+            instagram: 'https://www.instagram.com/malikatc',
             whatsapp: 'https://wa.me/77003053536',
         },
         hero: {
@@ -315,7 +315,7 @@ export const translations = {
             nav: 'Navigation',
             rights: '© 2024 MALIKA. All rights reserved.',
             call: 'Call Us',
-            instagram: 'https://www.instagram.com/malika_astana/',
+            instagram: 'https://www.instagram.com/malikatc',
             whatsapp: 'https://wa.me/77003053536',
         },
         hero: {

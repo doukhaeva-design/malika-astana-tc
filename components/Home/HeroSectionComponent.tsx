@@ -42,7 +42,7 @@ export default function HeroSectionComponent() {
                             {t.hero.desc}
                         </p>
                         <div className={`${styles.actions} ${styles.reveal} ${styles.delay3}`}>
-                            <a href="#map" className={styles.btnPrimary}>
+                            <a href="https://go.2gis.com/fv6zx" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
                                 <span>{t.hero.btnPrimary}</span>
                                 <svg className={styles.btnIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                     <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />

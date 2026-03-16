@@ -42,25 +42,25 @@ export default function ForEverydayNeedsSectionComponent() {
             title: t.directions.categories[0].title,
             forWhom: language === 'ru' ? 'Для автомобиля' : 'For your car',
             desc: t.directions.categories[0].desc,
-            img: '/category_auto_1772459952993.png'
+            img: '/category_auto_1772459952993.jpg'
         },
         {
             title: t.directions.categories[1].title,
             forWhom: language === 'ru' ? 'Для бизнеса' : 'For business',
             desc: t.directions.categories[1].desc,
-            img: '/category_tech_1772459982373.png'
+            img: '/category_tech_1772459982373.jpg'
         },
         {
             title: t.directions.categories[2].title,
             forWhom: language === 'ru' ? 'Для дома' : 'For home',
             desc: t.directions.categories[2].desc,
-            img: '/category_home_1772459996707.png'
+            img: '/category_home_1772459996707.jpg'
         },
         {
             title: t.directions.categories[3].title,
             forWhom: language === 'ru' ? 'Услуги' : 'Services',
             desc: t.directions.categories[3].desc,
-            img: '/category_service_1772460173357.png'
+            img: '/category_service_1772460173357.jpg'
         }
     ];
 
