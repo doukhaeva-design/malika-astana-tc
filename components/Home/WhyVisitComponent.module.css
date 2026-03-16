@@ -49,20 +49,22 @@
 }
 
 .iconBox {
-    width: 48px;
-    height: 48px;
+    width: 56px;
+    height: 56px;
     border: none;
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
     transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .iconBox svg {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.8;
 }
 
 .card:hover .iconBox {

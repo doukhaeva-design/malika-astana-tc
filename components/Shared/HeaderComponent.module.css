@@ -222,7 +222,7 @@
 }
 
 .becomeTenantBtn {
-  background: linear-gradient(135deg, var(--accent-gold), var(--accent-warm));
+  background: var(--accent-gold);
   color: var(--primary);
   padding: 10px 24px;
   border-radius: var(--btn-radius);

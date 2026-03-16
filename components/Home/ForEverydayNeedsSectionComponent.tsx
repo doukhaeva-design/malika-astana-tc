@@ -117,8 +117,9 @@ export default function ForEverydayNeedsSectionComponent() {
                     <div
                         key={index}
                         className={`${styles.card} animate-fade stagger-${index + 1}`}
+                        style={{ '--card-color': dir.tagColor } as React.CSSProperties}
                     >
-                        <div className={styles.cardStripe} style={{ background: dir.tagColor }} />
+                        <div className={styles.cardStripe} />
                         <div className={styles.imageWrapper}>
                             <img src={dir.img} alt={dir.title} className={styles.cardImage} />
                         </div>

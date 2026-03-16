@@ -109,8 +109,11 @@
 
 .accent {
     position: relative;
-    color: var(--accent-gold);
     display: inline-block;
+    background: linear-gradient(135deg, #F8D352, #d4a829);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .description {
@@ -169,11 +172,29 @@
     justify-content: center;
     letter-spacing: 0.05em;
     position: relative;
-    box-shadow: 0 4px 15px rgba(255, 200, 55, 0.3);
+    overflow: hidden;
+}
+
+.btnPrimary::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 40%;
+    height: 200%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: skewX(-20deg);
+    animation: shine 4s infinite;
+}
+
+@keyframes shine {
+    0%, 100% { left: -60%; }
+    20% { left: 120%; }
+    21% { left: -60%; }
 }
 
 .btnPrimary:hover {
-    background: #FFD560;
+    background: #FBDF7A;
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(255, 200, 55, 0.5);
 }

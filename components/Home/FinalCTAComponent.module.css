@@ -54,7 +54,7 @@
 }
 
 .btnPrimary {
-    background: linear-gradient(135deg, var(--accent-gold), var(--accent-warm));
+    background: var(--accent-gold);
     color: var(--primary);
     padding: 16px 36px;
     text-decoration: none;
