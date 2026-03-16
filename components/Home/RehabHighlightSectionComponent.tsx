@@ -19,7 +19,7 @@ export default function RehabHighlightSectionComponent() {
                 <div className={`${styles.box} animate-fade`}>
                     <div className={styles.imageWrapper}>
                         <img
-                            src="/rehab_interior_v2_1772460250804.png"
+                            src="/rehab_interior_v2_1772460250804.jpg"
                             alt="Rehab Center"
                             className={styles.image}
                         />

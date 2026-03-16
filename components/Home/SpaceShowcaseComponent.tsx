@@ -23,7 +23,7 @@ export default function SpaceShowcaseComponent() {
         <section className={styles.section}>
             <div className={styles.bgWrapper}>
                 <img
-                    src="/space_showcase_1772459938757.png"
+                    src="/space_showcase_1772459938757.jpg"
                     alt="Malika Interior"
                     className={styles.bgImage}
                 />

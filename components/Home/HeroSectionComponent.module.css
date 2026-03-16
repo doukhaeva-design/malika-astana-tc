@@ -8,7 +8,7 @@
     padding-top: 40px;
     overflow: hidden;
     position: relative;
-    background: url('/HeroDevushkiPokupki.png') no-repeat 65% center;
+    background: url('/hero.jpg') no-repeat 65% center;
     background-size: cover;
 }
 
@@ -293,7 +293,7 @@
         min-height: calc(100svh - 40px);
         margin-top: 40px;
         padding: 30px 0 80px;
-        background: url('/HeroDevushkiPokupki.png') no-repeat center top;
+        background: url('/hero.jpg') no-repeat center top;
         background-size: cover;
     }
 

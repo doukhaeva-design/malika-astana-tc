@@ -23,9 +23,9 @@ export default function FinalCTAComponent() {
                         {t.finalCta.desc}
                     </p>
                     <div className={styles.actions}>
-                        <Link href="/shops" className={styles.btnPrimary}>
+                        <a href="https://go.2gis.com/fv6zx" target="_blank" rel="noopener noreferrer" className={styles.btnPrimary}>
                             {t.finalCta.btnRoute}
-                        </Link>
+                        </a>
                         <Link href="/contacts" className={styles.btnSecondary}>
                             {t.finalCta.btnContact}
                         </Link>
