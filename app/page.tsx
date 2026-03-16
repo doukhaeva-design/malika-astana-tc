@@ -1,23 +1,20 @@
-/* 
+/*
   Главная страница (Home)
-  Сборка основных секций торгового центра по утвержденной архитектуре.
+  Витрина — коротко, ярко, без перегруза.
 
   1. Hero
-  2. О центре
+  2. О центре (компактный, с кнопкой «Подробнее»)
   3. Направления магазинов
-  4. Преимущества
-  5. Блок для арендаторов
-  6. Перспективы развития (Space Showcase)
-  7. Контакты
+  4. Блок для арендаторов
+  5. Контакты + Карта
+  6. CTA
 */
 
 import React from 'react';
 import HeroSectionComponent from '@/components/Home/HeroSectionComponent';
 import AboutSectionComponent from '@/components/Home/AboutSectionComponent';
 import ForEverydayNeedsSectionComponent from '@/components/Home/ForEverydayNeedsSectionComponent';
-import CompactAdvantageSectionComponent from '@/components/Home/CompactAdvantageSectionComponent';
 import SoftTenantSectionComponent from '@/components/Home/SoftTenantSectionComponent';
-import SpaceShowcaseComponent from '@/components/Home/SpaceShowcaseComponent';
 import VisitInfoSectionComponent from '@/components/Home/VisitInfoSectionComponent';
 import MapSectionComponent from '@/components/Contacts/MapSectionComponent';
 import FinalCTAComponent from '@/components/Home/FinalCTAComponent';
@@ -27,14 +24,11 @@ export default function Home() {
   return (
     <main>
       <HeroSectionComponent />
-      <AboutSectionComponent />
+      <AboutSectionComponent compact />
       <ForEverydayNeedsSectionComponent />
-      <CompactAdvantageSectionComponent />
       <SoftTenantSectionComponent />
-      <SpaceShowcaseComponent />
       <VisitInfoSectionComponent />
       <MapSectionComponent />
-      
       <FinalCTAComponent />
       <FooterComponent />
     </main>

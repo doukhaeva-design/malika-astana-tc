@@ -1,6 +1,6 @@
 .section {
-    padding: 100px 0;
-    background-color: #ffffff;
+    padding: var(--section-padding) 0;
+    background-color: var(--background);
 }
 
 .container {
@@ -17,9 +17,9 @@
 
 .card {
     padding: 2.5rem 2rem;
-    border: 1px solid #f1f3f5;
-    border-radius: 20px;
-    background: #fff;
+    border: 1px solid var(--gray-medium);
+    border-radius: var(--radius-lg);
+    background: var(--background);
     /* Ультра-плавный переход для эффекта "свечения" */
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     display: flex;
@@ -38,9 +38,9 @@
 .iconBox {
     width: 52px;
     height: 52px;
-    background: #f8fafc;
-    border: 1px solid #edf2f7;
-    border-radius: 12px;
+    background: var(--accent-soft);
+    border: 1px solid var(--gray-medium);
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,7 +63,7 @@
 
 .cardTitle {
     font-size: 1.15rem;
-    font-weight: 800;
+    font-weight: var(--title-weight);
     margin-bottom: 1rem;
     color: var(--primary);
     text-transform: uppercase;
@@ -88,7 +88,7 @@
     }
 
     .section {
-        padding: 60px 0;
+        padding: var(--section-padding-mobile) 0;
     }
 
     .container {

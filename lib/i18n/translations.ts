@@ -44,6 +44,11 @@ export const translations = {
         about: {
             title: 'Торговый центр MALIKA',
             text: 'MALIKA — торговый центр в Байконурском районе Астаны. Здесь работают магазины автозапчастей, хозяйственных и бытовых товаров, оборудование для бизнеса, сервисные компании и медицинский центр реабилитации. Центр ориентирован на повседневные задачи бизнеса и жителей района: покупка запчастей, оборудования, бытовых товаров и получение необходимых услуг в одном месте.',
+            shortText: 'Торговый центр в Байконурском районе Астаны. Автозапчасти, оборудование, бытовые товары, сервисы и медицинский центр — всё в одном месте.',
+            moreBtn: 'Подробнее о центре',
+            heroSubtitle: 'Узнайте больше',
+            heroTitle: 'О ЦЕНТРЕ',
+            heroDesc: 'Торговый центр MALIKA — практичное пространство для покупок, бизнеса и повседневных решений в Астане.',
             stats: {
                 area: '4000 м²',
                 floors: '3 этажа',
@@ -316,6 +321,11 @@ export const translations = {
         about: {
             title: 'MALIKA Shopping Center',
             text: 'MALIKA is a shopping center in the Baikonyr district of Astana. It houses auto parts stores, household goods, business equipment, service companies, and a medical rehabilitation center. The center is oriented toward the everyday tasks of business and local residents.',
+            shortText: 'A shopping center in the Baikonyr district of Astana. Auto parts, equipment, household goods, services, and a medical center — all in one place.',
+            moreBtn: 'More about the center',
+            heroSubtitle: 'Learn more',
+            heroTitle: 'ABOUT CENTER',
+            heroDesc: 'MALIKA Shopping Center — a practical space for shopping, business, and everyday solutions in Astana.',
             stats: {
                 area: '4000 m²',
                 floors: '3 floors',

@@ -1,5 +1,5 @@
 .hero {
-    padding: 220px 0 100px;
+    padding: 180px 0 var(--section-padding);
     background-color: var(--primary);
     /* Строго основной цвет */
     position: relative;
@@ -43,7 +43,7 @@
 
 .title {
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: var(--title-weight);
     margin-bottom: 24px;
     letter-spacing: -0.02em;
     line-height: 1.1;
@@ -60,7 +60,7 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding: 140px 0 80px;
+        padding: 120px 0 var(--section-padding-mobile);
     }
 
     .title {

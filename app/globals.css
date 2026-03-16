@@ -35,8 +35,28 @@
   --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.06);
   --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.04), 0 24px 60px rgba(0, 0, 0, 0.08);
   --shadow-lifted: 0 8px 16px rgba(0, 0, 0, 0.06), 0 32px 72px rgba(0, 0, 0, 0.1);
+
+  /* Layout tokens */
   --max-width: 1440px;
   --container-padding: 20px;
+  --section-padding: 120px;
+  --section-padding-mobile: 60px;
+
+  /* Typography tokens — subtitles */
+  --subtitle-size: 0.75rem;
+  --subtitle-weight: 700;
+  --subtitle-spacing: 0.15em;
+  --subtitle-color: var(--accent-warm);
+
+  /* Typography tokens — section titles */
+  --title-weight: 700;
+  --title-spacing: -0.02em;
+
+  /* Button tokens */
+  --btn-radius: var(--radius-sm);
+  --btn-padding: 14px 28px;
+  --btn-font-size: 0.9rem;
+  --btn-font-weight: 600;
 }
 
 @media (min-width: 768px) {
