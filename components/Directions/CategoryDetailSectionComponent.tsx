@@ -106,11 +106,8 @@ export default function CategoryDetailSectionComponent() {
                             : 'Stores and services are open daily. Our team is always ready to help you find what you need.'}
                     </p>
                     <div className={styles.infoActions}>
-                        <Link href="/contacts" className={styles.infoBtn}>
-                            {language === 'ru' ? 'Контакты' : 'Contacts'}
-                        </Link>
-                        <a href="tel:+77003053536" className={styles.callBtn}>
-                            {language === 'ru' ? 'Позвонить' : 'Call Now'}
+                        <a href="tel:+77003053536" className={styles.infoBtn}>
+                            {language === 'ru' ? 'Позвонить' : 'Call'}
                         </a>
                     </div>
                 </div>
