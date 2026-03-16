@@ -74,18 +74,20 @@
 }
 
 .infraIcon {
-    width: 48px;
-    height: 48px;
-    border-radius: var(--radius-md);
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-lg);
     display: flex;
     align-items: center;
     justify-content: center;
     transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .infraIcon svg {
-    width: 22px;
-    height: 22px;
+    width: 24px;
+    height: 24px;
+    stroke-width: 1.8;
 }
 
 .infraCard:hover .infraIcon {
@@ -110,7 +112,7 @@
     align-items: center;
     gap: 10px;
     padding: 16px 32px;
-    background: linear-gradient(135deg, var(--accent-gold), var(--accent-warm));
+    background: var(--accent-gold);
     color: var(--primary);
     border-radius: var(--radius-sm);
     font-size: 0.9rem;

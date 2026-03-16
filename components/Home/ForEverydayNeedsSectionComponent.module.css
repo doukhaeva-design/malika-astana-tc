@@ -114,6 +114,7 @@
     right: 0;
     height: 3px;
     z-index: 2;
+    background: linear-gradient(90deg, var(--accent-warm), var(--accent-gold));
 }
 
 /* Featured card — first/main category */
@@ -145,14 +146,13 @@
 }
 
 .cardFeatured .btnSpecial:hover {
-    background: #FFD560;
-    border-color: #FFD560;
+    background: #FBDF7A;
+    border-color: #FBDF7A;
 }
 
 .card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-lifted);
-    border-color: rgba(212, 161, 61, 0.3);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px color-mix(in srgb, var(--card-color, #000) 20%, transparent);
 }
 
 .imageWrapper {
