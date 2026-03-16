@@ -39,7 +39,8 @@ export const translations = {
                 { title: 'Автотовары и запчасти', desc: 'Запчасти, расходники, инструменты и аксессуары для автомобиля.' },
                 { title: 'Оборудование для бизнеса', desc: 'Кондиционеры, холодильное оборудование, профессиональная техника.' },
                 { title: 'Товары для дома и ремонта', desc: 'Хозяйственные, бытовые и строительные товары.' },
-                { title: 'Сервисы и услуги', desc: 'Ремонт, обслуживание, шиномонтаж, столовая и другие сервисы.' },
+                { title: 'Сервисы и услуги', desc: 'Ремонт, обслуживание, шиномонтаж и другие сервисы.' },
+                { title: 'Столовая', desc: 'Горячие обеды, выпечка и комплексное питание для посетителей и арендаторов.' },
                 { title: 'Медицина', desc: 'Центр реабилитации и восстановления здоровья.' }
             ]
         },
@@ -266,7 +267,8 @@ export const translations = {
                 { title: 'Auto Parts & Goods', desc: 'Spare parts, consumables, tools, and accessories for your car.' },
                 { title: 'Business Equipment', desc: 'Air conditioners, refrigeration equipment, professional machinery.' },
                 { title: 'Home & Renovation', desc: 'Household, domestic, and construction goods.' },
-                { title: 'Services', desc: 'Repair, maintenance, tire service, canteen, and other services.' },
+                { title: 'Services', desc: 'Repair, maintenance, tire service, and other services.' },
+                { title: 'Canteen', desc: 'Hot lunches, pastries, and full meals for visitors and tenants.' },
                 { title: 'Medicine', desc: 'Rehabilitation and health recovery center.' }
             ]
         },
