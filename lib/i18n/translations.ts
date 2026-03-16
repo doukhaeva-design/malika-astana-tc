@@ -36,9 +36,9 @@ export const translations = {
             subtitle: 'В MALIKA представлены разные категории товаров и сервисов.',
             all: 'Все направления',
             categories: [
-                { title: 'Автотовары', desc: 'Запчасти, расходники, инструменты и аксессуары для автомобиля.' },
-                { title: 'Оборудование и техника', desc: 'Кондиционеры, холодильное оборудование, профессиональная техника.' },
-                { title: 'Товары для дома и стройки', desc: 'Хозяйственные, бытовые и строительные товары.' },
+                { title: 'Автотовары и запчасти', desc: 'Запчасти, расходники, инструменты и аксессуары для автомобиля.' },
+                { title: 'Оборудование для бизнеса', desc: 'Кондиционеры, холодильное оборудование, профессиональная техника.' },
+                { title: 'Товары для дома и ремонта', desc: 'Хозяйственные, бытовые и строительные товары.' },
                 { title: 'Сервисы и услуги', desc: 'Ремонт, обслуживание, шиномонтаж, столовая и другие сервисы.' },
                 { title: 'Медицина', desc: 'Центр реабилитации и восстановления здоровья.' }
             ]
@@ -263,9 +263,9 @@ export const translations = {
             subtitle: 'Different categories of goods and services are presented in MALIKA.',
             all: 'All Categories',
             categories: [
-                { title: 'Auto Goods', desc: 'Spare parts, consumables, tools, and accessories for your car.' },
-                { title: 'Equipment & Tech', desc: 'Air conditioners, refrigeration equipment, professional machinery.' },
-                { title: 'Home & Construction', desc: 'Household, domestic, and construction goods.' },
+                { title: 'Auto Parts & Goods', desc: 'Spare parts, consumables, tools, and accessories for your car.' },
+                { title: 'Business Equipment', desc: 'Air conditioners, refrigeration equipment, professional machinery.' },
+                { title: 'Home & Renovation', desc: 'Household, domestic, and construction goods.' },
                 { title: 'Services', desc: 'Repair, maintenance, tire service, canteen, and other services.' },
                 { title: 'Medicine', desc: 'Rehabilitation and health recovery center.' }
             ]

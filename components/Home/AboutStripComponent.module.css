@@ -23,17 +23,16 @@
     font-family: var(--font-display);
     font-size: 2rem;
     font-weight: var(--title-weight);
-    color: #fff;
+    color: var(--accent-gold);
     letter-spacing: -0.02em;
     line-height: 1;
 }
 
 .label {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: 500;
-    color: rgba(255, 255, 255, 0.45);
-    text-transform: uppercase;
-    letter-spacing: var(--subtitle-spacing);
+    color: rgba(255, 255, 255, 0.55);
+    letter-spacing: 0.03em;
 }
 
 @media (max-width: 768px) {

@@ -33,6 +33,11 @@ export default function WhyVisitComponent() {
                 <h2 className={`${styles.title} animate-fade`}>
                     {language === 'ru' ? 'Заезжайте по пути' : 'Stop by on your way'}
                 </h2>
+                <p className={`${styles.subtitle} animate-fade`}>
+                    {language === 'ru'
+                        ? 'Рядом с трассой Алаш, парковка и всё нужное в одном месте.'
+                        : 'Near Alash Highway, parking, and everything you need in one place.'}
+                </p>
                 <div className={styles.grid}>
                     {items.map((item, idx) => (
                         <div key={idx} className={`${styles.card} animate-fade stagger-${idx + 1}`}>
