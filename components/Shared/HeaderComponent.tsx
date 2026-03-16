@@ -95,7 +95,6 @@ export default function HeaderComponent() {
                             <Link href="/shops" className={`${styles.link} ${pathname === '/shops' ? styles.activeLink : ''}`}>{t.common.directionsShort}</Link>
                             <Link href="/rehab" className={`${styles.link} ${pathname === '/rehab' ? styles.activeLink : ''}`}>{t.common.rehab}</Link>
                             <Link href="/tenants" className={`${styles.link} ${pathname === '/tenants' ? styles.activeLink : ''}`}>{t.common.rent}</Link>
-                            <Link href="/about" className={`${styles.link} ${pathname === '/about' ? styles.activeLink : ''}`}>{t.common.aboutCenter}</Link>
                             <Link href="/contacts#contacts-header" className={`${styles.link} ${pathname === '/contacts' ? styles.activeLink : ''}`}>{t.common.contacts}</Link>
                         </nav>
 
@@ -147,10 +146,6 @@ export default function HeaderComponent() {
                             <Link href="/tenants" className={`${styles.mobileLink} ${pathname === '/tenants' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M3 21h18" /><path d="M9 8h1" /><path d="M9 12h1" /><path d="M9 16h1" /><path d="M14 8h1" /><path d="M14 12h1" /><path d="M14 16h1" /><path d="M5 21V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16" /></svg>
                                 <span className={styles.linkText}>{t.common.rent}</span>
-                            </Link>
-                            <Link href="/about" className={`${styles.mobileLink} ${pathname === '/about' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><circle cx="12" cy="12" r="10" /><line x1="12" y1="16" x2="12" y2="12" /><line x1="12" y1="8" x2="12.01" y2="8" /></svg>
-                                <span className={styles.linkText}>{t.common.aboutCenter}</span>
                             </Link>
                             <Link href="/contacts#contacts-header" className={`${styles.mobileLink} ${pathname === '/contacts' ? styles.mobileLinkActive : ''}`} onClick={closeMenu}>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={styles.linkIcon}><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>

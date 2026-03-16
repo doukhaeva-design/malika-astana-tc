@@ -79,9 +79,9 @@ export default function ForEverydayNeedsSectionComponent() {
                     <div className={styles.headerLeft}>
                         <h2 className={styles.title}>
                             {language === 'ru' ? (
-                                <>Магазины и сервисы <br /> для <span className={styles.accent}>важных задач</span></>
+                                <>Магазины и услуги <br /> для <span className={styles.accent}>дома и бизнеса</span></>
                             ) : (
-                                <>Shops and services <br /> for <span className={styles.accent}>important tasks</span></>
+                                <>Shops & services <br /> for <span className={styles.accent}>home & business</span></>
                             )}
                         </h2>
                         <p className={styles.subtitle}>

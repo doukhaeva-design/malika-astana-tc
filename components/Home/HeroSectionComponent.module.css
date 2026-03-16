@@ -74,21 +74,17 @@
     max-width: 700px;
 }
 
-.subtitleWrapper {
+.badgeWrapper {
     margin-bottom: 24px;
 }
 
-.serifSubtitle {
-    display: block;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #FFC837;
-    /* Vibrant warm gold */
+.badge {
     display: inline-block;
-    padding-left: 4px;
-    margin-left: -4px;
+    font-size: var(--subtitle-size);
+    font-weight: var(--subtitle-weight);
+    letter-spacing: var(--subtitle-spacing);
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
     line-height: 1.4;
     text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
 }
@@ -113,11 +109,8 @@
 
 .accent {
     position: relative;
-    color: #FFC837;
-    /* Vibrant warm gold */
+    color: var(--accent-gold);
     display: inline-block;
-    padding: 0 10px;
-    margin: 0 -10px;
 }
 
 .description {
@@ -133,24 +126,38 @@
     /* Contrast against complex photos */
 }
 
-.boldText {
-    font-weight: 700;
-    color: #ffffff;
-}
-
 .actions {
     display: flex;
     gap: 20px;
+}
+
+.metrics {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 2.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.metric {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 0.03em;
+}
+
+.metricDot {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
 }
 
 .btnPrimary {
     padding: 0 48px;
     height: 54px;
     font-family: var(--font-display);
-    background: #FFC837;
-    /* Vibrant warm gold */
-    color: #05080f;
-    /* High contrast dark text */
+    background: var(--accent-gold);
+    color: var(--primary);
     border: none;
     border-radius: var(--radius-md);
     font-weight: 600;
@@ -167,7 +174,6 @@
 
 .btnPrimary:hover {
     background: #FFD560;
-    /* Brighter gold on hover */
     transform: translateY(-3px);
     box-shadow: 0 8px 25px rgba(255, 200, 55, 0.5);
 }

@@ -24,7 +24,7 @@ export default function RentApplicationForm() {
                     {!isSubmitted ? (
                         <>
                             <div className={styles.header}>
-                                <h2 className={styles.title}>{t.rentHero.btnCTA}</h2>
+                                <h2 className={styles.title}>{t.rentPage.formTitle}</h2>
                                 <p className={styles.desc}>{t.rentPage.formDesc}</p>
                             </div>
 

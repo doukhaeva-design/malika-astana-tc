@@ -1,6 +1,6 @@
 .hero {
-    padding: var(--section-padding) 0;
-    background-color: #ffffff;
+    padding: 140px 0 var(--section-padding);
+    background-color: var(--background);
 }
 
 .container {
@@ -9,43 +9,14 @@
     padding: 0 var(--container-padding);
 }
 
-.pageHeader {
-    margin-bottom: 50px;
-}
-
-.subtitleWrapper {
-    margin-bottom: 0.2rem;
-}
-
-.serifSubtitle {
-    display: block;
-    font-size: var(--subtitle-size);
-    color: var(--subtitle-color);
-    opacity: 0.7;
-    text-transform: uppercase;
-    letter-spacing: var(--subtitle-spacing);
-    font-weight: var(--subtitle-weight);
-}
-
-.pageTitle {
-    font-size: 2.3rem;
-    /* Slightly smaller */
-    font-weight: var(--title-weight);
-    color: var(--primary);
-    letter-spacing: 0.05em;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-/* Main Layout */
 .layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-    /* Vertical alignment */
+    gap: 60px;
+    align-items: start;
 }
 
+/* Image */
 .imageSide {
     position: relative;
     width: 100%;
@@ -56,131 +27,158 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: var(--radius-sm);
-    /* Sharper corners for business style */
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-medium);
 }
 
+.statusBadge {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: var(--subtitle-weight);
+    text-transform: uppercase;
+    letter-spacing: var(--subtitle-spacing);
+    padding: 8px 16px;
+    border-radius: var(--radius-sm);
+}
+
+/* Text */
 .textSide {
     display: flex;
     flex-direction: column;
 }
 
-.mainTitle {
+.serifSubtitle {
+    display: block;
+    font-size: var(--subtitle-size);
+    color: var(--subtitle-color);
+    text-transform: uppercase;
+    letter-spacing: var(--subtitle-spacing);
+    font-weight: var(--subtitle-weight);
+    margin-bottom: 8px;
+}
+
+.pageTitle {
     font-size: 2.5rem;
     font-weight: var(--title-weight);
-    /* Back to bold site style */
     color: var(--primary);
-    margin-bottom: 20px;
+    letter-spacing: var(--title-spacing);
+    margin-bottom: 16px;
     line-height: 1.1;
 }
 
-.description {
-    font-size: 1.1rem;
+.heroFeatures {
+    font-size: 1.05rem;
+    color: var(--text-dim);
     line-height: 1.6;
+    margin-bottom: 12px;
+}
+
+.heroTags {
+    font-size: 0.85rem;
+    font-weight: var(--subtitle-weight);
+    color: var(--accent-warm);
+    letter-spacing: 0.02em;
+    margin-bottom: 24px;
+}
+
+.description {
+    font-size: 0.95rem;
+    line-height: 1.7;
     color: var(--text-muted);
-    margin-bottom: 30px;
-    max-width: 540px;
+    margin-bottom: 12px;
 }
 
-/* Actions & Buttons */
-.actions {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+.descExtra {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-dim);
+    font-weight: 600;
+    margin-bottom: 24px;
 }
 
-.waBtn,
-.callBtn,
-.downloadBtn {
-    padding: 14px 32px;
-    border-radius: var(--btn-radius);
-    /* Business-square style */
-    font-weight: 700;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
-    border: none;
-    cursor: pointer;
-}
-
-/* Primary Color for Main Action */
-.callBtn {
-    background-color: var(--primary);
-    color: #ffffff;
-    border: 1.5px solid var(--primary);
-}
-
-.callBtn:hover {
-    background-color: var(--primary-hover);
-    border-color: var(--primary-hover);
-    transform: translateY(-2px);
-}
-
-/* WhatsApp - Softer, less "biological" green */
-.waBtn {
-    background-color: #fff;
-    color: #25D366;
-    border: 1.5px solid #25D366;
-}
-
-.waBtn:hover {
-    background-color: #25D366;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.15);
-}
-
-/* Secondary Actions */
-.downloadBtn {
-    background-color: transparent;
-    color: var(--primary);
-    border: 1.5px solid #eee;
-}
-
-.downloadBtn:hover {
-    border-color: var(--accent-blue);
-    background-color: #fff;
-    transform: translateY(-2px);
-}
-
-.icon {
-    width: 18px;
-    height: 18px;
-    flex-shrink: 0;
-}
-
-/* New discrete Presentation Link */
+/* Presentation link */
 .presentationLinkWrapper {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
 }
 
 .presentationLink {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
+    gap: 8px;
     color: var(--primary);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     font-weight: 500;
     padding-bottom: 4px;
-    border-bottom: 1.5px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1.5px solid var(--gray-medium);
     transition: all 0.3s ease;
 }
 
 .presentationLink:hover {
-    color: var(--accent-blue);
-    border-bottom-color: var(--accent-blue);
-    transform: translateX(5px);
+    color: var(--accent-warm);
+    border-bottom-color: var(--accent-warm);
 }
 
 .linkIcon {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     opacity: 0.6;
+}
+
+/* Actions */
+.actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.btnPrimary {
+    padding: var(--btn-padding);
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    border-radius: var(--btn-radius);
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btnPrimary:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+}
+
+.btnSecondary {
+    padding: var(--btn-padding);
+    background-color: transparent;
+    color: var(--primary);
+    border: 1.5px solid var(--gray-medium);
+    border-radius: var(--btn-radius);
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btnSecondary:hover {
+    border-color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.btnIconSvg {
+    width: 16px;
+    height: 16px;
 }
 
 @media (max-width: 1024px) {
@@ -188,25 +186,23 @@
         grid-template-columns: 1fr;
         gap: 40px;
     }
-
-    .pageTitle {
-        font-size: 1.75rem;
-    }
 }
 
 @media (max-width: 768px) {
     .hero {
-        padding: var(--section-padding-mobile) 0;
+        padding: 110px 0 var(--section-padding-mobile);
+    }
+
+    .pageTitle {
+        font-size: 2rem;
     }
 
     .actions {
         flex-direction: column;
-        gap: 0.75rem;
     }
 
-    .waBtn,
-    .callBtn,
-    .downloadBtn {
+    .btnPrimary,
+    .btnSecondary {
         width: 100%;
         justify-content: center;
     }

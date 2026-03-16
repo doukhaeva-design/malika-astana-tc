@@ -1,6 +1,6 @@
-/* 
+/*
   Главный баннер (HeroSectionComponent)
-  Modern Commercial Look: Четкая типографика, плотные цвета и акцент на практичность.
+  Фото-фон + градиент + контент слева.
 */
 
 "use client";
@@ -23,7 +23,6 @@ export default function HeroSectionComponent() {
 
     return (
         <section className={styles.hero} onMouseMove={handleMouseMove}>
-            {/* Animated Background Glows — parallax follows cursor */}
             <div
                 className={styles.glow1}
                 style={{ transform: `translate(${mousePos.x * 1.5}px, ${mousePos.y * 1.5}px)` }}
@@ -33,15 +32,11 @@ export default function HeroSectionComponent() {
                 style={{ transform: `translate(${mousePos.x * -1}px, ${mousePos.y * -1}px)` }}
             />
 
-
-
             <div className={styles.container}>
                 <div className={styles.layout}>
                     <div className={styles.content}>
-                        <div className={`${styles.subtitleWrapper} ${styles.reveal}`}>
-                            <span className={styles.serifSubtitle}>
-                                {language === 'ru' ? 'Добро пожаловать' : 'Welcome'}
-                            </span>
+                        <div className={`${styles.badgeWrapper} ${styles.reveal}`}>
+                            <span className={styles.badge}>{t.hero.badge}</span>
                         </div>
                         <h1 className={`${styles.title} ${styles.reveal} ${styles.delay1}`}>
                             <span className={styles.titleLight}>{t.hero.title1}</span> <br />
@@ -54,10 +49,17 @@ export default function HeroSectionComponent() {
                             <Link href="/shops" className={styles.btnPrimary}>
                                 <span>{t.hero.btnPrimary}</span>
                                 <svg className={styles.btnIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                                    <line x1="7" y1="17" x2="17" y2="7"></line>
-                                    <polyline points="7 7 17 7 17 17"></polyline>
+                                    <line x1="7" y1="17" x2="17" y2="7" />
+                                    <polyline points="7 7 17 7 17 17" />
                                 </svg>
                             </Link>
+                        </div>
+                        <div className={`${styles.metrics} ${styles.reveal} ${styles.delay4}`}>
+                            <span className={styles.metric}>{t.hero.metric1}</span>
+                            <span className={styles.metricDot}>·</span>
+                            <span className={styles.metric}>{t.hero.metric2}</span>
+                            <span className={styles.metricDot}>·</span>
+                            <span className={styles.metric}>{t.hero.metric3}</span>
                         </div>
                     </div>
                 </div>

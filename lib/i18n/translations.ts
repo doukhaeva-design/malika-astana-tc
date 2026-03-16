@@ -11,7 +11,7 @@ export const translations = {
             route: 'Проложить маршрут',
             home: 'Главная',
             directions: 'Магазины и услуги',
-            directionsShort: 'Магазины и услуги',
+            directionsShort: 'Каталог',
             rehab: 'Реабилитация',
             aboutCenter: 'О центре',
             rent: 'Арендаторам',
@@ -33,22 +33,26 @@ export const translations = {
             welcome: 'Добро пожаловать',
             in: 'в',
             malika: 'MALIKA',
-            title1: 'Торговый центр MALIKA',
-            title2: 'Перспективная новая локация',
-            desc: 'Товары для бизнеса, дома и автомобилей, сервисы и медицинский центр в одном месте. Удобное расположение рядом с трассой Алаш и быстрый доступ из разных районов города.',
+            badge: 'Астана · Байконурский район',
+            title1: 'Торговый центр',
+            title2: 'MALIKA',
+            desc: 'Автозапчасти, оборудование, товары для дома, сервисы и медицинский центр — всё в одном месте.',
             about: 'О центре',
             scroll: 'Листайте вниз',
-            btnPrimary: 'Посмотреть магазины',
+            btnPrimary: 'Каталог магазинов',
             btnSecondary: 'Аренда помещений',
+            metric1: '50+ магазинов',
+            metric2: '4 000 м²',
+            metric3: 'Ежедневно 09–18',
         },
         about: {
-            title: 'Торговый центр MALIKA',
-            text: 'MALIKA — торговый центр в Байконурском районе Астаны. Здесь работают магазины автозапчастей, хозяйственных и бытовых товаров, оборудование для бизнеса, сервисные компании и медицинский центр реабилитации. Центр ориентирован на повседневные задачи бизнеса и жителей района: покупка запчастей, оборудования, бытовых товаров и получение необходимых услуг в одном месте.',
+            title: 'О центре',
+            text: 'MALIKA расположен в Байконурском районе Астаны. Здесь работают магазины автозапчастей, товаров для дома и быта, точки с оборудованием для бизнеса, сервисные компании и центр реабилитации. Это торговый центр для повседневных задач, куда удобно приехать за нужными товарами и услугами в одном месте.',
             shortText: 'Торговый центр в Байконурском районе Астаны. Автозапчасти, оборудование, бытовые товары, сервисы и медицинский центр — всё в одном месте.',
             moreBtn: 'Подробнее о центре',
             heroSubtitle: 'Узнайте больше',
-            heroTitle: 'О ЦЕНТРЕ',
-            heroDesc: 'Торговый центр MALIKA — практичное пространство для покупок, бизнеса и повседневных решений в Астане.',
+            heroTitle: 'О центре',
+            heroDesc: 'Торговый центр MALIKA — удобное место в Астане, где можно найти товары для дома, бизнеса и автомобилей, а также воспользоваться нужными услугами в одном пространстве.',
             stats: {
                 area: '4000 м²',
                 floors: '3 этажа',
@@ -56,14 +60,14 @@ export const translations = {
             }
         },
         advantages: {
-            title: 'Удобное место для покупок и бизнеса',
-            subtitle: 'Место, где удобно решать дела: от покупок для дома до сервисов для авто. Понятные условия аренды, свободная парковка и комфорт для ежедневных визитов.',
+            title: 'Почему сюда удобно приезжать',
+            subtitle: '',
             items: [
-                { title: 'Удобный подъезд', desc: 'Центр расположен рядом с трассой Алаш с удобным въездом.', color: '#fef5e7' },
+                { title: 'Удобный подъезд', desc: 'Центр расположен рядом с трассой Алаш, поэтому до него удобно добираться на автомобиле.', color: '#fef5e7' },
                 { title: 'Парковка', desc: 'На территории предусмотрена парковка для посетителей.', color: '#e6f2ed' },
-                { title: 'Компактный формат', desc: 'Все магазины и сервисы находятся рядом, что позволяет быстро решить необходимые задачи.', color: '#e2e8f0' },
-                { title: 'Безопасность', desc: 'Территория находится под охраной и видеонаблюдением.', color: '#e0f2fe' },
-                { title: 'Комфорт для бизнеса', desc: 'Инженерные коммуникации и инфраструктура позволяют работать удобно и стабильно.', color: '#f3f4f6' }
+                { title: 'Всё в одном месте', desc: 'Магазины и сервисы расположены рядом, поэтому за одно посещение можно решить сразу несколько задач.', color: '#e2e8f0' },
+                { title: 'Практичный формат', desc: 'Центр ориентирован на реальные повседневные потребности жителей района и бизнеса.', color: '#e0f2fe' },
+                { title: 'Безопасность', desc: 'Территория находится под охраной и видеонаблюдением.', color: '#f3f4f6' }
             ]
         },
         directions: {
@@ -71,10 +75,10 @@ export const translations = {
             subtitle: 'В MALIKA представлены разные категории товаров и сервисов.',
             all: 'Все направления',
             categories: [
-                { title: 'Автотовары', desc: 'Запчасти, комплектующие и аксессуары для автомобилей.' },
-                { title: 'Оборудование и техника', desc: 'Промышленное, торговое и офисное оборудование.' },
-                { title: 'Товары для дома', desc: 'Хозяйственные и бытовые товары.' },
-                { title: 'Сервисы и услуги', desc: 'Ремонт, обслуживание и бытовые сервисы.' },
+                { title: 'Автотовары', desc: 'Запчасти, инструменты и аксессуары для автомобилей.' },
+                { title: 'Оборудование и техника', desc: 'Профессиональная техника и оборудование.' },
+                { title: 'Товары для дома', desc: 'Всё необходимое для дома и ремонта.' },
+                { title: 'Сервисы и услуги', desc: 'Ремонт, обслуживание и профессиональные услуги.' },
                 { title: 'Медицина', desc: 'Современный центр реабилитации и восстановления здоровья.' }
             ]
         },
@@ -91,10 +95,10 @@ export const translations = {
             btn: 'Подробнее о центре',
         },
         spaceShowcase: {
-            title: 'Перспективы MALIKA',
-            subtitle: 'Развитие центра',
-            desc: 'Торговый центр продолжает развиваться. На территории комплекса: около 3 гектаров свободной земли, уже ведется строительство нового здания, планируется развитие складских и торговых помещений, рассматривается дальнейшее расширение комплекса.',
-            extra: 'Развитие центра создаёт дополнительные возможности для арендаторов и увеличивает поток посетителей.'
+            title: 'MALIKA сегодня',
+            subtitle: 'Развитие',
+            desc: 'Торговый центр MALIKA развивается как практичное пространство для покупок, услуг и повседневных решений. Сюда приезжают за товарами для автомобиля, дома и работы.',
+            extra: ''
         },
         rent: {
             title: 'Для арендаторов',
@@ -169,55 +173,68 @@ export const translations = {
         },
         rentPage: {
             heroTitle: 'Аренда помещений',
-            heroDesc: 'ТЦ MALIKA предлагает помещения для магазинов, сервисных компаний и коммерческих проектов. Центр расположен в Байконурском районе с удобным подъездом и развитой инфраструктурой.',
+            heroDesc: 'Торговый центр MALIKA предлагает в аренду помещения для разных форматов бизнеса. Комплекс расположен в Байконурском районе Астаны, рядом с крупными транспортными магистралями, что обеспечивает удобный доступ для клиентов, сотрудников и поставщиков.',
+            heroExtra: 'Доступны площади от 50 м² с возможностью адаптации пространства под задачи вашего бизнеса.',
             heroBtn: 'Оставить заявку',
             heroBtnSecondary: 'Позвонить в отдел аренды',
-            status: 'Открыт прием заявок',
+            status: 'Открыт приём заявок',
             statsUnits: 'Свободных мест',
             statsFormat: 'Удобные форматы',
             whyTitle: 'Преимущества для бизнеса',
             formatsTitle: 'Форматы помещений',
             infraTitle: 'Инфраструктура',
-            termsTitle: 'Условия сотрудничества',
+            termsTitle: 'Условия аренды',
 
             whyReasons: [
-                { title: 'Удобное расположение', desc: 'Рядом с трассой Алаш, обеспечивающей высокий трафик.' },
-                { title: 'Парковка', desc: 'Просторная зона для посетителей и сотрудников центра.' },
-                { title: 'Грузовой лифт', desc: 'Для удобной транспортировки товаров на этажи.' },
-                { title: 'Зона разгрузки', desc: 'Отдельная зона для приема грузов и логистики.' }
+                { title: 'Удобное расположение', desc: 'Торговый центр расположен рядом с основными транспортными направлениями города. До комплекса удобно добираться как клиентам, так и поставщикам.' },
+                { title: 'Парковка', desc: 'Для посетителей и сотрудников предусмотрена парковка более чем на 50 мест.' },
+                { title: 'Грузовой лифт', desc: 'Грузовой лифт упрощает перемещение товаров и оборудования между этажами.' },
+                { title: 'Зона разгрузки', desc: 'Для приёма поставок предусмотрена отдельная зона разгрузки. Также доступна техника для перемещения грузов.' }
             ],
 
             availableIntro: 'Мы предлагаем различные форматы коммерческих помещений.',
             availableTitle: 'Форматы помещений',
             availableSpaces: [
-                { title: 'Торговые помещения', desc: 'Площади от 50 м² для магазинов и розничной торговли.' },
-                { title: 'Складские помещения', desc: 'Пространства для хранения и логистических задач.' },
-                { title: 'Коммерческие участки', desc: 'Площадки для специализированных проектов и индивидуальных решений.' }
+                { title: 'Торговые помещения', desc: 'Площади от 50 м² для магазинов и торговых точек. Помещения можно адаптировать под формат бизнеса, при необходимости разделить перегородками.' },
+                { title: 'Складские помещения', desc: 'Подходят для хранения товаров, запасов и организации логистики.' },
+                { title: 'Коммерческие помещения', desc: 'Для сервисных компаний, офисов и работы с клиентами.' }
             ],
             infraItems: [
-                { label: 'Парковка', value: 'Зона на 50+ мест' },
-                { label: 'Грузовой лифт', value: 'Для габаритных грузов' },
-                { label: 'Зона разгрузки', value: 'Удобный дебаркадер' },
-                { label: 'Связь', value: 'Высокоскоростной Wi-Fi' }
+                { label: 'Парковка', value: 'более 50 мест' },
+                { label: 'Грузовой лифт', value: 'для перевозки габаритных грузов' },
+                { label: 'Зона разгрузки', value: 'удобный дебаркадер для поставок' },
+                { label: 'Интернет и связь', value: 'высокоскоростной интернет для работы бизнеса' }
             ],
             termItems: [
-                { label: 'Срок аренды', value: 'от 11 месяцев' },
+                { label: 'Минимальный срок аренды', value: 'от 11 месяцев' },
                 { label: 'Депозит', value: '1 месяц' },
-                { label: 'Каникулы', value: 'Индивидуально' }
+                { label: 'Арендные каникулы', value: 'обсуждаются индивидуально' },
+                { label: 'Планировка', value: 'возможность разделения помещений' }
+            ],
+            targetTitle: 'Кому подойдут помещения',
+            targetDesc: 'Помещения в торговом центре MALIKA подходят для различных форматов бизнеса:',
+            targetItems: [
+                { title: 'Магазины и торговые точки', desc: 'Автотовары, товары для дома, специализированная торговля.' },
+                { title: 'Сервисные компании', desc: 'Ремонт, обслуживание, бытовые и коммерческие услуги.' },
+                { title: 'Складские и логистические форматы', desc: 'Хранение товаров, запасы, работа с поставками.' }
             ],
             processTitle: 'Как стать арендатором',
             processSteps: [
-                { title: 'Заявка', desc: 'Оставьте запрос на сайте или позвоните нам.' },
-                { title: 'Просмотр', desc: 'Мы покажем подходящие варианты на месте.' },
-                { title: 'Договор', desc: 'Быстрое оформление и заезд в помещение.' }
+                { title: 'Оставьте заявку', desc: 'Свяжитесь с нами через сайт или по телефону.' },
+                { title: 'Подберите помещение', desc: 'Мы предложим подходящие варианты и организуем просмотр.' },
+                { title: 'Заключите договор', desc: 'После согласования условий подписывается договор аренды.' },
+                { title: 'Начните работу', desc: 'Помещение адаптируется под задачи вашего бизнеса.' }
             ],
-            formDesc: 'Расскажите, какое помещение вам интересно, и мы свяжемся с вами для обсуждения условий.'
+            formTitle: 'Интересует аренда?',
+            formDesc: 'Оставьте заявку, и мы свяжемся с вами, чтобы обсудить доступные помещения и условия аренды.'
         },
         rentHero: {
-            title: 'Аренда коммерческих помещений',
-            subtitle: 'Ваш бизнес в центре внимания',
-            mainTitle: 'Пространство для стабильного бизнеса',
-            mainDesc: 'Удобные помещения для торговли, услуг и повседневного спроса в торговом центре MALIKA. Гибкие условия, заметная локация и инфраструктура для стабильной работы.',
+            title: 'Аренда помещений',
+            subtitle: 'Торговый центр MALIKA',
+            heroFeatures: 'Помещения от 50 м² для магазинов, автотоваров, сервисных компаний и коммерческих проектов.',
+            heroTags: 'Гибкая планировка · Удобный подъезд · Условия для поставок',
+            mainTitle: '',
+            mainDesc: '',
             btn: 'Оставить заявку',
             btnCTA: 'Оставить заявку',
             btnCall: 'Позвонить',
@@ -268,8 +285,8 @@ export const translations = {
             ctaDesc: 'Оставьте заявку или позвоните нам для первичной консультации и составления плана реабилитации.'
         },
         directionsPage: {
-            heroTitle: 'Магазины и сервисы центра',
-            heroDesc: 'В торговом центре MALIKA представлены магазины и сервисные компании, работающие в разных направлениях. Здесь можно найти товары для автомобилей, оборудование для бизнеса, бытовые товары и необходимые услуги.',
+            heroTitle: 'Магазины и сервисы MALIKA',
+            heroDesc: 'Автозапчасти, оборудование, товары для дома, бытовые услуги и медицинский центр — всё в одном месте.',
         },
         rentContact: {
             title: 'Готовы обсудить аренду?',
@@ -288,7 +305,7 @@ export const translations = {
             route: 'Get Directions',
             home: 'Home',
             directions: 'Shops & Services',
-            directionsShort: 'Shops & Services',
+            directionsShort: 'Catalog',
             rehab: 'Rehabilitation',
             aboutCenter: 'About Center',
             rent: 'For Tenants',
@@ -310,13 +327,17 @@ export const translations = {
             welcome: 'Welcome',
             in: 'to',
             malika: 'MALIKA',
-            title1: 'MALIKA Trading Center',
-            title2: 'Promising New Location',
-            desc: 'Goods for business, home, and cars, services, and a medical center in one place. Convenient location near Alash highway and quick access from different city districts.',
+            badge: 'Astana · Baikonyr District',
+            title1: 'Shopping Center',
+            title2: 'MALIKA',
+            desc: 'Auto parts, equipment, home goods, services, and a medical center — all in one place.',
             about: 'About Center',
             scroll: 'Scroll Down',
-            btnPrimary: 'View Shops',
+            btnPrimary: 'View Catalog',
             btnSecondary: 'Rental Spaces',
+            metric1: '50+ shops',
+            metric2: '4,000 m²',
+            metric3: 'Daily 09–18',
         },
         about: {
             title: 'MALIKA Shopping Center',
@@ -348,10 +369,10 @@ export const translations = {
             subtitle: 'Different categories of goods and services are presented in MALIKA.',
             all: 'All Categories',
             categories: [
-                { title: 'Auto Goods', desc: 'Spare parts, components, and accessories for cars.' },
-                { title: 'Equipment & Tech', desc: 'Industrial, commercial, and office equipment.' },
-                { title: 'Home Goods', desc: 'Household and domestic goods.' },
-                { title: 'Services', desc: 'Repair, maintenance, and household services.' },
+                { title: 'Auto Goods', desc: 'Spare parts, tools, and accessories for cars.' },
+                { title: 'Equipment & Tech', desc: 'Professional equipment and machinery.' },
+                { title: 'Home Goods', desc: 'Everything you need for home and renovation.' },
+                { title: 'Services', desc: 'Repair, maintenance, and professional services.' },
                 { title: 'Medicine', desc: 'Modern rehabilitation and health recovery center.' }
             ]
         },
@@ -368,8 +389,8 @@ export const translations = {
             btn: 'Learn more about center',
         },
         spaceShowcase: {
-            title: 'MALIKA Prospects',
-            subtitle: 'Center Development',
+            title: 'Growth Prospects',
+            subtitle: 'MALIKA is growing',
             desc: 'The shopping center continues to evolve. On the complex territory: about 3 hectares of free land, a new building is already under construction, development of warehouse and retail premises is planned, and further expansion of the complex is being considered.',
             extra: 'The development of the center creates additional opportunities for tenants and increases the flow of visitors.'
         },
@@ -446,55 +467,68 @@ export const translations = {
         },
         rentPage: {
             heroTitle: 'Rental of Premises',
-            heroDesc: 'MALIKA Shopping Center offers premises for shops, service companies, and commercial projects. The center is located in the Baikonyr district with convenient access and developed infrastructure.',
+            heroDesc: 'MALIKA Shopping Center offers premises for various business formats. The complex is located in the Baikonyr district of Astana, near major highways, providing convenient access for clients, employees, and suppliers.',
+            heroExtra: 'Spaces from 50 m² available with the option to adapt the layout to your business needs.',
             heroBtn: 'Submit Inquiry',
             heroBtnSecondary: 'Call leasing department',
             status: 'Accepting applications',
             statsUnits: 'Available spaces',
             statsFormat: 'Convenient formats',
             whyTitle: 'Business Advantages',
-            formatsTitle: 'Room Formats',
+            formatsTitle: 'Space Formats',
             infraTitle: 'Infrastructure',
-            termsTitle: 'Terms of Cooperation',
+            termsTitle: 'Lease Terms',
 
             whyReasons: [
-                { title: 'Convenient Location', desc: 'Near Alash highway, ensuring high traffic.' },
-                { title: 'Parking', desc: 'Spacious area for visitors and center employees.' },
-                { title: 'Cargo Lift', desc: 'For convenient transportation of goods to the floors.' },
-                { title: 'Loading Zone', desc: 'Separate area for receiving goods and logistics.' }
+                { title: 'Convenient Location', desc: 'The shopping center is located near the city\'s main transport routes. Easy to reach for both clients and suppliers.' },
+                { title: 'Parking', desc: 'Parking for over 50 vehicles is available for visitors and staff.' },
+                { title: 'Cargo Lift', desc: 'The cargo lift simplifies moving goods and equipment between floors.' },
+                { title: 'Loading Zone', desc: 'A dedicated unloading zone is available for receiving deliveries. Equipment for moving cargo is also provided.' }
             ],
 
             availableIntro: 'We offer various formats of commercial premises.',
-            availableTitle: 'Commercial Space Formats',
+            availableTitle: 'Space Formats',
             availableSpaces: [
-                { title: 'Retail Spaces', desc: 'Premises for rent from 50 square meters for shops and retail.' },
-                { title: 'Warehouse Areas', desc: 'For storage and logistics tasks.' },
-                { title: 'Commercial Lots', desc: 'For specialized projects.' }
+                { title: 'Retail Spaces', desc: 'From 50 m² for shops and retail. Spaces can be adapted to your business format, with partitions available if needed.' },
+                { title: 'Warehouse Spaces', desc: 'For storing goods, inventory, and logistics operations.' },
+                { title: 'Commercial Spaces', desc: 'For service companies, offices, and client-facing operations.' }
             ],
             infraItems: [
-                { label: 'Parking', value: '50+ spots area' },
-                { label: 'Cargo Lift', value: 'For bulky goods' },
-                { label: 'Loading Zone', value: 'Convenient dock' },
-                { label: 'Internet', value: 'High-speed Wi-Fi' }
+                { label: 'Parking', value: 'over 50 spots' },
+                { label: 'Cargo Lift', value: 'for transporting bulky goods' },
+                { label: 'Loading Zone', value: 'convenient dock for deliveries' },
+                { label: 'Internet', value: 'high-speed internet for business' }
             ],
             termItems: [
-                { label: 'Lease term', value: 'from 11 months' },
+                { label: 'Minimum lease term', value: 'from 11 months' },
                 { label: 'Deposit', value: '1 month' },
-                { label: 'Grace period', value: 'Individual' }
+                { label: 'Rent-free period', value: 'discussed individually' },
+                { label: 'Layout', value: 'option to partition spaces' }
+            ],
+            targetTitle: 'Who are the spaces for',
+            targetDesc: 'MALIKA Shopping Center premises suit various business formats:',
+            targetItems: [
+                { title: 'Shops & retail', desc: 'Auto goods, home goods, specialized retail.' },
+                { title: 'Service companies', desc: 'Repair, maintenance, household and commercial services.' },
+                { title: 'Warehouse & logistics', desc: 'Goods storage, inventory, supply chain operations.' }
             ],
             processTitle: 'How to become a tenant',
             processSteps: [
-                { title: 'Inquiry', desc: 'Leave a request on the website or call us.' },
-                { title: 'Viewing', desc: 'We will show you suitable options on-site.' },
-                { title: 'Agreement', desc: 'Quick paperwork and moving into the space.' }
+                { title: 'Submit a request', desc: 'Contact us via the website or by phone.' },
+                { title: 'Choose a space', desc: 'We will suggest suitable options and arrange a viewing.' },
+                { title: 'Sign the lease', desc: 'Once terms are agreed, the lease agreement is signed.' },
+                { title: 'Start working', desc: 'The space is adapted to your business needs.' }
             ],
-            formDesc: 'Tell us which space you are interested in, and we will contact you to discuss the terms.'
+            formTitle: 'Interested in rental?',
+            formDesc: 'Leave a request and we will contact you to discuss available spaces and lease terms.'
         },
         rentHero: {
-            title: 'Commercial Space Rental',
-            subtitle: 'Your business in the spotlight',
-            mainTitle: 'Space for a stable business',
-            mainDesc: 'Convenient premises for trade, services, and everyday demand at the MALIKA shopping center. Flexible terms, prime location, and infrastructure for stable operation.',
+            title: 'Rental of Premises',
+            subtitle: 'MALIKA Shopping Center',
+            heroFeatures: 'Spaces from 50 m² for shops, auto goods, service companies, and commercial projects.',
+            heroTags: 'Flexible layout · Easy access · Delivery conditions',
+            mainTitle: '',
+            mainDesc: '',
             btn: 'Submit Application',
             btnCTA: 'Submit Application',
             btnCall: 'Call',
@@ -545,8 +579,8 @@ export const translations = {
             ctaDesc: 'Leave a request or call us for an initial consultation and creation of a rehabilitation plan.'
         },
         directionsPage: {
-            heroTitle: 'Shops and Services',
-            heroDesc: 'MALIKA Trading Center features shops and service companies operating in different directions. Here you can find auto goods, business equipment, household goods, and necessary services.',
+            heroTitle: 'Shops & Services at MALIKA',
+            heroDesc: 'Auto parts, equipment, home goods, household services, and a medical center — all in one place.',
         },
         rentContact: {
             title: 'Ready to discuss rental?',

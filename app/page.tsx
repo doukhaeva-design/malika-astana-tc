@@ -1,18 +1,16 @@
 /*
   Главная страница (Home)
-  Витрина — коротко, ярко, без перегруза.
 
   1. Hero
-  2. О центре (компактный, с кнопкой «Подробнее»)
+  2. О центре (цифры + текст)
   3. Направления магазинов
   4. Блок для арендаторов
   5. Контакты + Карта
   6. CTA
 */
 
-import React from 'react';
 import HeroSectionComponent from '@/components/Home/HeroSectionComponent';
-import AboutSectionComponent from '@/components/Home/AboutSectionComponent';
+import AboutStripComponent from '@/components/Home/AboutStripComponent';
 import ForEverydayNeedsSectionComponent from '@/components/Home/ForEverydayNeedsSectionComponent';
 import SoftTenantSectionComponent from '@/components/Home/SoftTenantSectionComponent';
 import VisitInfoSectionComponent from '@/components/Home/VisitInfoSectionComponent';
@@ -24,7 +22,7 @@ export default function Home() {
   return (
     <main>
       <HeroSectionComponent />
-      <AboutSectionComponent compact />
+      <AboutStripComponent />
       <ForEverydayNeedsSectionComponent />
       <SoftTenantSectionComponent />
       <VisitInfoSectionComponent />
