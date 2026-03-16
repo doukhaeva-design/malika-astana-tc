@@ -39,6 +39,14 @@ export default function ForEverydayNeedsSectionComponent() {
 
     const directions = [
         {
+            title: t.directions.categories[4].title,
+            forWhom: language === 'ru' ? 'Здоровье' : 'Health',
+            desc: t.directions.categories[4].desc,
+            img: '/rehab_interior_v2_1772460250804.jpg',
+            featured: true,
+            href: '/rehab'
+        },
+        {
             title: t.directions.categories[0].title,
             forWhom: language === 'ru' ? 'Авто' : 'Auto',
             desc: t.directions.categories[0].desc,
@@ -108,7 +116,7 @@ export default function ForEverydayNeedsSectionComponent() {
                 {directions.map((dir, index) => (
                     <div
                         key={index}
-                        className={`${styles.card} animate-fade stagger-${index + 1}`}
+                        className={`${styles.card} ${dir.featured ? styles.cardFeatured : ''} animate-fade stagger-${index + 1}`}
                     >
                         <div className={styles.imageWrapper}>
                             <img src={dir.img} alt={dir.title} className={styles.cardImage} />
@@ -122,7 +130,13 @@ export default function ForEverydayNeedsSectionComponent() {
                             <p className={styles.cardText}>{dir.desc}</p>
 
                             <div className={styles.cardFooter}>
-                                <div className={styles.separator}></div>
+                                {dir.href ? (
+                                    <Link href={dir.href} className={styles.btnSpecial}>
+                                        {language === 'ru' ? 'Подробнее' : 'Learn more'}
+                                    </Link>
+                                ) : (
+                                    <div className={styles.separator}></div>
+                                )}
                             </div>
                         </div>
                     </div>

@@ -77,11 +77,11 @@
     width: 44px;
     height: 44px;
     border-radius: var(--radius-md);
-    background: var(--accent-soft);
+    background: rgba(199, 145, 0, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
+    color: var(--accent-warm);
     transition: all 0.4s ease;
 }
 
@@ -91,7 +91,7 @@
 }
 
 .infraCard:hover .infraIcon {
-    background: var(--primary);
+    background: var(--accent-warm);
     color: #fff;
 }
 

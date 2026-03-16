@@ -28,7 +28,7 @@
 }
 
 .accent {
-    color: var(--accent);
+    color: var(--accent-warm);
 }
 
 .subtitle {
@@ -97,13 +97,58 @@
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08), 0 2px 8px rgba(0, 0, 0, 0.04);
+    box-shadow: var(--shadow-soft);
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     flex: 0 0 400px;
     scroll-snap-align: start;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    position: relative;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent-warm), var(--accent-gold));
+    z-index: 2;
+}
+
+/* Featured card — first/main category */
+.cardFeatured {
+    background-color: var(--primary);
+}
+
+.cardFeatured .cardTitle {
+    color: #fff;
+}
+
+.cardFeatured .cardText {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.cardFeatured .tag {
+    background: rgba(255, 200, 55, 0.15);
+    color: var(--accent-gold);
+}
+
+.cardFeatured .separator {
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.cardFeatured .btnSpecial {
+    background: var(--accent-gold);
+    color: var(--primary);
+    border-color: var(--accent-gold);
+}
+
+.cardFeatured .btnSpecial:hover {
+    background: #FFD560;
+    border-color: #FFD560;
 }
 
 .card:hover {
@@ -142,11 +187,15 @@
 }
 
 .tag {
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: var(--text-muted);
+    font-size: 0.7rem;
+    font-weight: var(--subtitle-weight);
+    color: var(--accent-warm);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: var(--subtitle-spacing);
+    background: rgba(199, 145, 0, 0.08);
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    display: inline-block;
 }
 
 .cardTitle {
