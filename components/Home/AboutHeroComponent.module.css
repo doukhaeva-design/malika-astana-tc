@@ -1,7 +1,6 @@
 .hero {
-    padding: 4rem 0;
-    background-color: var(--background);
-    scroll-margin-top: 80px;
+    padding: 0 0 4rem;
+    background-color: #ffffff;
 }
 
 .container {
@@ -35,7 +34,7 @@
 
 .title {
     font-size: 2.5rem;
-    font-weight: var(--title-weight);
+    font-weight: 800;
     color: var(--primary);
     line-height: 1.1;
     margin-bottom: 2rem;

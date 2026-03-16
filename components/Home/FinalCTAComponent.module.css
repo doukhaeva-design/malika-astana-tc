@@ -1,6 +1,6 @@
 /* components/Home/FinalCTAComponent.module.css */
 .section {
-    padding: 140px 0;
+    padding: var(--section-padding) 0;
     background-color: var(--primary);
     color: #fff;
     position: relative;
@@ -34,7 +34,7 @@
     font-size: clamp(2.5rem, 5vw, 4.5rem);
     line-height: 1;
     margin-bottom: 30px;
-    font-weight: 400;
+    font-weight: var(--title-weight);
     letter-spacing: -0.03em;
 }
 
@@ -54,33 +54,34 @@
 }
 
 .btnPrimary {
-    background-color: #fff;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-warm));
     color: var(--primary);
-    padding: 22px 48px;
+    padding: 16px 36px;
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    border-radius: var(--btn-radius);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .btnPrimary:hover {
-    background-color: var(--accent-warm);
-    color: #fff;
-    transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 32px rgba(199, 145, 0, 0.3);
+    filter: brightness(1.1);
 }
 
 .btnSecondary {
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: #fff;
-    padding: 22px 48px;
+    padding: 16px 36px;
     text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
     letter-spacing: 0.05em;
     text-transform: uppercase;
+    border-radius: var(--btn-radius);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -107,7 +108,7 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 100px 0;
+        padding: var(--section-padding-mobile) 0;
     }
 
     .actions {

@@ -1,7 +1,6 @@
 .section {
-    padding: 120px 0;
-    background-color: #0d1520;
-    /* Very light subtle blue-gray */
+    padding: var(--section-padding) 0;
+    background-color: var(--primary);
     position: relative;
     overflow: hidden;
 }
@@ -29,8 +28,7 @@
 
 .box {
     display: flex;
-    background-color: #1a2033;
-    /* Dark background for the box */
+    background-color: var(--primary-hover);
     border-radius: var(--radius-xl);
     overflow: hidden;
     box-shadow: var(--shadow-medium);
@@ -60,17 +58,17 @@
 
 .badge {
     display: inline-block;
-    font-size: 0.85rem;
+    font-size: var(--subtitle-size);
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: rgba(212, 161, 61, 0.9);
+    letter-spacing: var(--subtitle-spacing);
+    color: var(--accent-warm);
     margin-bottom: 24px;
 }
 
 .title {
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: var(--title-weight);
     margin-bottom: 24px;
     color: #ffffff;
     line-height: 1.1;
@@ -90,7 +88,7 @@
     background-color: transparent;
     color: var(--accent-warm);
     border: 1.5px solid var(--accent-warm);
-    border-radius: 6px;
+    border-radius: var(--btn-radius);
     font-weight: 700;
     font-size: 1rem;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -138,7 +136,7 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 60px 0;
+        padding: var(--section-padding-mobile) 0;
     }
 
     .container {

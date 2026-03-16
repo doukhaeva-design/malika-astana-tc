@@ -23,9 +23,15 @@ export default function HeroSectionComponent() {
 
     return (
         <section className={styles.hero} onMouseMove={handleMouseMove}>
-            {/* Animated Background Glows */}
-            <div className={styles.glow1}></div>
-            <div className={styles.glow2}></div>
+            {/* Animated Background Glows — parallax follows cursor */}
+            <div
+                className={styles.glow1}
+                style={{ transform: `translate(${mousePos.x * 1.5}px, ${mousePos.y * 1.5}px)` }}
+            />
+            <div
+                className={styles.glow2}
+                style={{ transform: `translate(${mousePos.x * -1}px, ${mousePos.y * -1}px)` }}
+            />
 
 
 
@@ -51,9 +57,6 @@ export default function HeroSectionComponent() {
                                     <line x1="7" y1="17" x2="17" y2="7"></line>
                                     <polyline points="7 7 17 7 17 17"></polyline>
                                 </svg>
-                            </Link>
-                            <Link href="/tenants" className={styles.btnSecondary}>
-                                {t.hero.btnSecondary}
                             </Link>
                         </div>
                     </div>

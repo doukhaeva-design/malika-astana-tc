@@ -35,7 +35,7 @@
     z-index: 0;
     opacity: 0.5;
     pointer-events: none;
-    animation: drift 20s infinite alternate cubic-bezier(0.5, 0, 0.5, 1);
+    transition: transform 0.3s ease-out;
 }
 
 .glow1 {
@@ -48,19 +48,8 @@
     bottom: -10vh;
     right: -10vw;
     background: radial-gradient(circle, rgba(212, 161, 61, 0.35) 0%, transparent 60%);
-    animation-delay: -10s;
-    animation-direction: alternate-reverse;
 }
 
-@keyframes drift {
-    0% {
-        transform: scale(1) translate(0, 0);
-    }
-
-    100% {
-        transform: scale(1.1) translate(5%, 10%);
-    }
-}
 
 
 
@@ -163,7 +152,7 @@
     color: #05080f;
     /* High contrast dark text */
     border: none;
-    border-radius: 4px;
+    border-radius: var(--radius-md);
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -206,7 +195,7 @@
     background-color: transparent;
     color: #ffffff;
     border: 2px solid rgba(255, 255, 255, 0.8);
-    border-radius: 4px;
+    border-radius: var(--radius-md);
     font-weight: 600;
     font-size: 0.95rem;
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
@@ -255,7 +244,7 @@
     width: 22px;
     height: 38px;
     border: 2px solid rgba(255, 255, 255, 0.4);
-    border-radius: 4px;
+    border-radius: var(--radius-md);
     position: relative;
 }
 
@@ -355,8 +344,7 @@
         height: 54px;
         padding: 0 24px;
         text-align: center;
-        border-radius: 16px;
-        /* Tight corners */
+        border-radius: var(--radius-lg);
         font-weight: 600;
     }
 

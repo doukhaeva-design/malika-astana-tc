@@ -1,26 +1,28 @@
-"use client";
-
-/* 
+/*
   Страница "О центре" (About Center)
-  Информация о масштабах, концепции и инфраструктуре ТЦ.
+  Полная информация: концепция, масштабы, преимущества, перспективы.
 
-  1. Концепция центра
-  2. Масштабы (м2, этажи)
-  3. Инфраструктура и район
+  1. Hero
+  2. О центре (полный текст + статистика)
+  3. Преимущества
+  4. Перспективы развития
 */
 
-import React from 'react';
+"use client";
+
+import AboutHeroComponent from '@/components/Home/AboutHeroComponent';
 import AboutSectionComponent from '@/components/Home/AboutSectionComponent';
-import SpaceShowcaseComponent from '@/components/Home/SpaceShowcaseComponent';
 import CompactAdvantageSectionComponent from '@/components/Home/CompactAdvantageSectionComponent';
+import SpaceShowcaseComponent from '@/components/Home/SpaceShowcaseComponent';
 import FooterComponent from '@/components/Shared/FooterComponent';
 
 export default function AboutPage() {
     return (
         <main>
+            <AboutHeroComponent />
             <AboutSectionComponent />
-            <SpaceShowcaseComponent />
             <CompactAdvantageSectionComponent />
+            <SpaceShowcaseComponent />
             <FooterComponent />
         </main>
     );

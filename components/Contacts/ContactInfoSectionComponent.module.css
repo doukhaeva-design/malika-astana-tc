@@ -1,6 +1,6 @@
 .section {
-    padding: 2rem 0 10rem;
-    background-color: #ffffff;
+    padding: var(--section-padding) 0;
+    background-color: var(--background);
 }
 
 .container {
@@ -16,10 +16,10 @@
 }
 
 .infoCard {
-    background: #fff;
+    background: var(--background);
     padding: 2.5rem 2rem;
-    border-radius: 20px;
-    border: 1px solid #f1f3f5;
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-medium);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -29,8 +29,8 @@
 .iconBox {
     width: 48px;
     height: 48px;
-    background: #f8fafc;
-    border-radius: 12px;
+    background: var(--accent-soft);
+    border-radius: var(--radius-md);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -39,17 +39,17 @@
 }
 
 .cardLabel {
-    font-size: 0.7rem;
-    font-weight: 700;
+    font-size: var(--subtitle-size);
+    font-weight: var(--subtitle-weight);
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: #94a3b8;
+    letter-spacing: var(--subtitle-spacing);
+    color: var(--text-muted);
     margin-bottom: 0.75rem;
 }
 
 .cardValue {
     font-size: 1.05rem;
-    font-weight: 700;
+    font-weight: var(--title-weight);
     color: var(--primary);
     line-height: 1.4;
     margin: 0;
@@ -63,7 +63,7 @@
 
 @media (max-width: 768px) {
     .section {
-        padding: 0 0 6rem;
+        padding: var(--section-padding-mobile) 0;
     }
 
     .container {
