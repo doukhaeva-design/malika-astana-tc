@@ -40,35 +40,27 @@ export default function ForEverydayNeedsSectionComponent() {
     const directions = [
         {
             title: t.directions.categories[0].title,
-            forWhom: language === 'ru' ? 'Владельцы авто' : 'Car owners',
+            forWhom: language === 'ru' ? 'Для автомобиля' : 'For your car',
             desc: t.directions.categories[0].desc,
             img: '/category_auto_1772459952993.png'
         },
         {
             title: t.directions.categories[1].title,
-            forWhom: language === 'ru' ? 'Бизнес-решения' : 'Business solutions',
+            forWhom: language === 'ru' ? 'Для бизнеса' : 'For business',
             desc: t.directions.categories[1].desc,
             img: '/category_tech_1772459982373.png'
         },
         {
             title: t.directions.categories[2].title,
-            forWhom: language === 'ru' ? 'Быт и уют' : 'Comfort & Life',
+            forWhom: language === 'ru' ? 'Для дома' : 'For home',
             desc: t.directions.categories[2].desc,
             img: '/category_home_1772459996707.png'
         },
         {
             title: t.directions.categories[3].title,
-            forWhom: language === 'ru' ? 'Бытовые услуги' : 'Household services',
+            forWhom: language === 'ru' ? 'Услуги' : 'Services',
             desc: t.directions.categories[3].desc,
             img: '/category_service_1772460173357.png'
-        },
-        {
-            title: t.directions.categories[4].title,
-            forWhom: language === 'ru' ? 'Реабилитация' : 'Rehabilitation',
-            desc: t.directions.categories[4].desc,
-            img: '/rehab_interior_v2_1772460250804.png',
-            isSpecial: true,
-            href: '/rehab'
         }
     ];
 
@@ -130,13 +122,7 @@ export default function ForEverydayNeedsSectionComponent() {
                             <p className={styles.cardText}>{dir.desc}</p>
 
                             <div className={styles.cardFooter}>
-                                {dir.isSpecial && dir.href ? (
-                                    <Link href={dir.href} className={styles.btnSpecial}>
-                                        {language === 'ru' ? 'Подробнее' : 'Learn more'}
-                                    </Link>
-                                ) : (
-                                    <div className={styles.separator}></div>
-                                )}
+                                <div className={styles.separator}></div>
                             </div>
                         </div>
                     </div>

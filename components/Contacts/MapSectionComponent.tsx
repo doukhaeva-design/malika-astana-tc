@@ -32,7 +32,7 @@ export default function MapSectionComponent() {
     };
 
     return (
-        <section className={styles.section}>
+        <section className={styles.section} id="map">
             <div className={`${styles.container} animate-fade`}>
                 <div className={styles.mapHero}>
                     <div className={styles.mapVisual}>
