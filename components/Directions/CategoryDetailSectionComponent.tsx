@@ -44,13 +44,21 @@ export default function CategoryDetailSectionComponent() {
             title: t.directions.categories[3].title,
             desc: t.directions.categories[3].desc,
             img: '/category_service_1772460173357.jpg',
-            items: language === 'ru' ? ['Ремонт', 'Шиномонтаж', 'Столовая', 'Обслуживание'] : ['Repair', 'Tire service', 'Canteen', 'Maintenance']
+            items: language === 'ru' ? ['Ремонт', 'Шиномонтаж', 'Обслуживание'] : ['Repair', 'Tire service', 'Maintenance']
+        },
+        {
+            id: 'canteen',
+            badge: language === 'ru' ? 'Питание' : 'Food',
+            title: t.directions.categories[4].title,
+            desc: t.directions.categories[4].desc,
+            img: '/category_canteen.jpg',
+            items: language === 'ru' ? ['Обеды', 'Выпечка', 'Комплексное питание'] : ['Lunches', 'Pastries', 'Full meals']
         },
         {
             id: 'rehab',
             badge: language === 'ru' ? 'Медицина' : 'Medicine',
-            title: t.directions.categories[4].title,
-            desc: t.directions.categories[4].desc,
+            title: t.directions.categories[5].title,
+            desc: t.directions.categories[5].desc,
             img: '/rehab_interior_v2_1772460250804.jpg',
             items: language === 'ru' ? ['Массаж', 'ЛФК', 'Консультации'] : ['Massage', 'Exercises', 'Consultations']
         }

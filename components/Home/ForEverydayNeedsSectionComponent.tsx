@@ -69,6 +69,14 @@ export default function ForEverydayNeedsSectionComponent() {
             img: '/category_service_1772460173357.jpg',
             tagColor: '#bb8fce',
             tagBg: 'rgba(187, 143, 206, 0.1)',
+        },
+        {
+            title: t.directions.categories[4].title,
+            forWhom: language === 'ru' ? 'Питание' : 'Food',
+            desc: t.directions.categories[4].desc,
+            img: '/category_canteen.jpg',
+            tagColor: '#e74c3c',
+            tagBg: 'rgba(231, 76, 60, 0.1)',
         }
     ];
 
