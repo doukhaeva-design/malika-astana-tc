@@ -9,14 +9,14 @@ export default function SpaceShowcaseComponent() {
 
     const facts = language === 'ru'
         ? [
-            'Автозапчасти, товары для дома и бизнеса',
-            'Сервисы и центр реабилитации',
-            'Удобный подъезд и парковка',
+            'Около 3 га свободной земли',
+            'Построено новое здание на территории',
+            'Заезд с двух улиц, первая линия',
         ]
         : [
-            'Auto parts, home and business goods',
-            'Services and rehabilitation center',
-            'Easy access and parking',
+            'About 3 hectares of available land',
+            'New building already constructed on-site',
+            'Access from two streets, first line',
         ];
 
     return (
@@ -39,7 +39,7 @@ export default function SpaceShowcaseComponent() {
                         {t.spaceShowcase.title}
                     </h2>
                     <p className={styles.text}>
-                        {t.spaceShowcase.extra}
+                        {t.spaceShowcase.desc}
                     </p>
 
                     <ul className={styles.factsList}>

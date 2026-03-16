@@ -40,7 +40,7 @@ export default function ForEverydayNeedsSectionComponent() {
     const directions = [
         {
             title: t.directions.categories[0].title,
-            forWhom: language === 'ru' ? 'Для автомобиля' : 'For your car',
+            forWhom: language === 'ru' ? 'Авто' : 'Auto',
             desc: t.directions.categories[0].desc,
             img: '/category_auto_1772459952993.jpg'
         },

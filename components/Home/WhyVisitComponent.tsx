@@ -17,14 +17,14 @@ export default function WhyVisitComponent() {
 
     const items = language === 'ru'
         ? [
-            { title: 'Рядом с трассой Алаш', desc: 'Быстрый подъезд на автомобиле из разных районов города.' },
+            { title: 'Рядом с трассой Алаш', desc: 'Заезд с двух улиц. Доступен общественный транспорт.' },
             { title: 'Парковка на 50+ мест', desc: 'Бесплатная парковка на территории центра.' },
-            { title: 'Несколько задач за один визит', desc: 'Запчасти, товары для дома, оборудование и сервисы — не нужно ехать в разные места.' },
+            { title: 'Несколько задач за один визит', desc: 'Запчасти, товары для дома, оборудование, сервисы и столовая — не нужно ехать в разные места.' },
         ]
         : [
-            { title: 'Near Alash Highway', desc: 'Quick access by car from different parts of the city.' },
+            { title: 'Near Alash Highway', desc: 'Access from two streets. Public transport available.' },
             { title: 'Parking for 50+ cars', desc: 'Free parking on the center premises.' },
-            { title: 'Multiple tasks in one visit', desc: 'Auto parts, home goods, equipment, and services — no need to drive to different places.' },
+            { title: 'Multiple tasks in one visit', desc: 'Auto parts, home goods, equipment, services, and a canteen — no need to drive to different places.' },
         ];
 
     return (
