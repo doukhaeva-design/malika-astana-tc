@@ -119,3 +119,41 @@
         /* Shorter landscape-style on mobile */
     }
 }
+
+.stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    padding-top: 40px;
+    border-top: 1px solid #eee;
+}
+
+.statItem {
+    display: flex;
+    flex-direction: column;
+}
+
+.statValue {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.statLabel {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 600px) {
+    .stats {
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .statValue {
+        font-size: 1.4rem;
+    }
+}

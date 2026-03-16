@@ -25,9 +25,21 @@ export default function SoftTenantSectionComponent() {
                         </div>
                         <h2 className={styles.title}>{t.softTenant.titlePart1} <span className={styles.highlight}>Malika</span></h2>
                         <p className={styles.text}>{t.softTenant.text}</p>
+                        
+                        <div className={styles.infraWrapper}>
+                            <p className={styles.infraTitle}>{t.softTenant.infraTitle}</p>
+                            <ul className={styles.infraList}>
+                                {t.softTenant.infraItems.map((item, idx) => (
+                                    <li key={idx} className={styles.infraItem}>
+                                        <span className={styles.dot}></span>
+                                        {item}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
 
                         <div className={styles.footer}>
-                            <Link href="/rent" className={styles.actionBtn}>
+                            <Link href="/tenants" className={styles.actionBtn}>
                                 {t.softTenant.btn}
                             </Link>
                         </div>

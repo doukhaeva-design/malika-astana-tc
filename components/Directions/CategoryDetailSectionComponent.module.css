@@ -1,6 +1,6 @@
 .section {
-    padding: 0 0 10rem;
-    background-color: #ffffff;
+    padding: var(--section-padding) 0;
+    background-color: var(--background);
     scroll-margin-top: 100px;
 }
 
@@ -20,9 +20,9 @@
 .card {
     display: flex;
     background: #fff;
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    border: 1px solid #f1f3f5;
+    border: 1px solid var(--gray-medium);
     transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
@@ -59,22 +59,22 @@
 }
 
 .number {
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: #94a3b8;
+    font-size: var(--subtitle-size);
+    font-weight: var(--subtitle-weight);
+    color: var(--text-muted);
     margin-top: 0.2rem;
 }
 
 .cardTitle {
     font-size: 1.4rem;
-    font-weight: 850;
+    font-weight: var(--title-weight);
     color: var(--primary);
     letter-spacing: -0.01em;
 }
 
 .cardDesc {
     font-size: 0.95rem;
-    color: #64748b;
+    color: var(--text-muted);
     line-height: 1.5;
     margin-bottom: 1.25rem;
 }
@@ -86,12 +86,12 @@
 }
 
 .itemTag {
-    font-size: 0.65rem;
-    font-weight: 700;
-    color: #64748b;
-    background: #f1f5f9;
+    font-size: 0.75rem;
+    font-weight: var(--subtitle-weight);
+    color: var(--text-muted);
+    background: var(--accent-soft);
     padding: 4px 10px;
-    border-radius: 6px;
+    border-radius: var(--radius-sm);
     letter-spacing: 0.02em;
 }
 
@@ -101,14 +101,14 @@
     margin: 8rem auto 0;
     text-align: center;
     padding: 6rem 4rem;
-    background-color: #f8fafc;
-    border-radius: 40px;
-    border: 1px solid #f1f5f9;
+    background-color: var(--gray-light);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--gray-medium);
 }
 
 .infoTitle {
     font-size: 2.25rem;
-    font-weight: 800;
+    font-weight: var(--title-weight);
     color: var(--primary);
     margin-bottom: 1.5rem;
 }
@@ -127,23 +127,25 @@
 }
 
 .infoBtn {
-    padding: 18px 48px;
+    padding: var(--btn-padding);
     background-color: var(--primary);
     color: #fff;
     text-decoration: none;
-    border-radius: 100px;
-    font-weight: 700;
+    border-radius: var(--btn-radius);
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
     transition: all 0.3s ease;
 }
 
 .callBtn {
-    padding: 18px 48px;
+    padding: var(--btn-padding);
     background-color: #fff;
     color: var(--primary);
-    border: 2px solid var(--primary);
+    border: 1.5px solid var(--primary);
     text-decoration: none;
-    border-radius: 100px;
-    font-weight: 800;
+    border-radius: var(--btn-radius);
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
     transition: all 0.3s ease;
 }
 
@@ -173,7 +175,7 @@
 
     .card {
         flex-direction: column;
-        border-radius: 16px;
+        border-radius: var(--radius-lg);
     }
 
     .imageSide {
@@ -208,7 +210,7 @@
     .infoBlock {
         padding: 3rem 1.25rem;
         margin-top: 4rem;
-        border-radius: 24px;
+        border-radius: var(--radius-xl);
     }
 
     .infoTitle {

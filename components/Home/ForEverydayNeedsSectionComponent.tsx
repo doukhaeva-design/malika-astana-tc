@@ -12,7 +12,7 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function ForEverydayNeedsSectionComponent() {
     const scrollRef = useRef<HTMLDivElement>(null);
-    const { language } = useLanguage();
+    const { t, language } = useLanguage();
 
     const scroll = (direction: 'left' | 'right') => {
         if (scrollRef.current) {
@@ -37,83 +37,38 @@ export default function ForEverydayNeedsSectionComponent() {
         return 440; // Ширина карточки 400 + gap 40
     };
 
-    const directions = language === 'ru' ? [
+    const directions = [
         {
-            title: 'Здоровье',
-            forWhom: 'Реабилитация',
-            desc: 'Профессиональный центр восстановления',
-            img: '/rehab_interior_v2_1772460250804.png',
-            isSpecial: true,
-            href: '/rehab'
-        },
-        {
-            title: 'Автотовары',
-            forWhom: 'Владельцы авто',
-            desc: 'Весь спектр запчастей и аксессуаров',
+            title: t.directions.categories[0].title,
+            forWhom: language === 'ru' ? 'Владельцы авто' : 'Car owners',
+            desc: t.directions.categories[0].desc,
             img: '/category_auto_1772459952993.png'
         },
         {
-            title: 'Техника',
-            forWhom: 'Бизнес-решения',
-            desc: 'Промышленное и офисное оборудование',
+            title: t.directions.categories[1].title,
+            forWhom: language === 'ru' ? 'Бизнес-решения' : 'Business solutions',
+            desc: t.directions.categories[1].desc,
             img: '/category_tech_1772459982373.png'
         },
         {
-            title: 'Бизнес',
-            forWhom: 'Предприниматели',
-            desc: 'Всё для коммерческой деятельности',
-            img: '/category_business_supply_v2_1772464118849.png'
-        },
-        {
-            title: 'Дом',
-            forWhom: 'Быт и уют',
-            desc: 'Товары для интерьера и быта',
+            title: t.directions.categories[2].title,
+            forWhom: language === 'ru' ? 'Быт и уют' : 'Comfort & Life',
+            desc: t.directions.categories[2].desc,
             img: '/category_home_1772459996707.png'
         },
         {
-            title: 'Сервис',
-            forWhom: 'Бытовые услуги',
-            desc: 'Ремонт и обслуживание в одном месте',
+            title: t.directions.categories[3].title,
+            forWhom: language === 'ru' ? 'Бытовые услуги' : 'Household services',
+            desc: t.directions.categories[3].desc,
             img: '/category_service_1772460173357.png'
-        }
-    ] : [
+        },
         {
-            title: 'Health',
-            forWhom: 'Rehabilitation',
-            desc: 'Professional recovery center',
+            title: t.directions.categories[4].title,
+            forWhom: language === 'ru' ? 'Реабилитация' : 'Rehabilitation',
+            desc: t.directions.categories[4].desc,
             img: '/rehab_interior_v2_1772460250804.png',
             isSpecial: true,
             href: '/rehab'
-        },
-        {
-            title: 'Auto Goods',
-            forWhom: 'Car owners',
-            desc: 'Full range of spare parts and accessories',
-            img: '/category_auto_1772459952993.png'
-        },
-        {
-            title: 'Technology',
-            forWhom: 'Business solutions',
-            desc: 'Industrial and office equipment',
-            img: '/category_tech_1772459982373.png'
-        },
-        {
-            title: 'Business',
-            forWhom: 'Entrepreneurs',
-            desc: 'Everything for commercial activities',
-            img: '/category_business_supply_v2_1772464118849.png'
-        },
-        {
-            title: 'Home',
-            forWhom: 'Comfort & Life',
-            desc: 'Interior and everyday goods',
-            img: '/category_home_1772459996707.png'
-        },
-        {
-            title: 'Service',
-            forWhom: 'Household services',
-            desc: 'Repair and maintenance in one place',
-            img: '/category_service_1772460173357.png'
         }
     ];
 
@@ -150,7 +105,7 @@ export default function ForEverydayNeedsSectionComponent() {
                         >
                             →
                         </button>
-                        <Link href="/directions" className={styles.viewAll}>
+                        <Link href="/shops" className={styles.viewAll}>
                             {language === 'ru' ? 'ВСЕ НАПРАВЛЕНИЯ' : 'ALL DIRECTIONS'}
                         </Link>
                     </div>

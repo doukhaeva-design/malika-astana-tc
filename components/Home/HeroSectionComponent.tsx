@@ -45,15 +45,15 @@ export default function HeroSectionComponent() {
                             {t.hero.desc}
                         </p>
                         <div className={`${styles.actions} ${styles.reveal} ${styles.delay3}`}>
-                            <Link href="/directions" className={styles.btnPrimary}>
-                                <span>{t.common.directions}</span>
+                            <Link href="/shops" className={styles.btnPrimary}>
+                                <span>{t.hero.btnPrimary}</span>
                                 <svg className={styles.btnIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                                     <line x1="7" y1="17" x2="17" y2="7"></line>
                                     <polyline points="7 7 17 7 17 17"></polyline>
                                 </svg>
                             </Link>
-                            <Link href="/contacts" className={styles.btnSecondary}>
-                                {t.hero.btnDirections}
+                            <Link href="/tenants" className={styles.btnSecondary}>
+                                {t.hero.btnSecondary}
                             </Link>
                         </div>
                     </div>

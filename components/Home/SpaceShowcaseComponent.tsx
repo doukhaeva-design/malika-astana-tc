@@ -46,7 +46,7 @@ function AnimatedNumber({ value, duration = 1500 }: { value: number, duration?: 
 }
 
 export default function SpaceShowcaseComponent() {
-    const { language } = useLanguage();
+    const { t, language } = useLanguage();
 
     return (
         <section className={styles.section}>
@@ -63,35 +63,19 @@ export default function SpaceShowcaseComponent() {
                 <div className={`${styles.content} animate-fade`}>
                     <div className={styles.subtitleWrapper}>
                         <span className={styles.serifSubtitle}>
-                            {language === 'ru' ? 'Ваш комфорт — наш приоритет' : 'Your comfort is our priority'}
+                            {t.spaceShowcase.subtitle}
                         </span>
                     </div>
                     <h2 className={styles.title}>
-                        {language === 'ru' ? (
-                            <>Все нужные сервисы <br /> в одном центре</>
-                        ) : (
-                            <>All necessary services <br /> in one center</>
-                        )}
+                        {t.spaceShowcase.title}
                     </h2>
                     <p className={styles.text}>
-                        {language === 'ru'
-                            ? 'Широкий выбор магазинов, товаров и услуг повседневного спроса, собранных под одной крышей для вашего удобства.'
-                            : 'A wide selection of shops, goods, and everyday services gathered under one roof for your convenience.'}
+                        {t.spaceShowcase.desc}
                     </p>
-                    <div className={styles.stats}>
-                        <div className={styles.statItem}>
-                            <span className={styles.num}>
-                                <AnimatedNumber value={150} />+
-                            </span>
-                            <span className={styles.label}>{language === 'ru' ? 'Торговых точек' : 'Retail spaces'}</span>
-                        </div>
-                        <div className={styles.statItem}>
-                            <span className={styles.num}>
-                                <AnimatedNumber value={2500} />{language === 'ru' ? 'м²' : 'm²'}
-                            </span>
-                            <span className={styles.label}>{language === 'ru' ? 'Площадь центра' : 'Center area'}</span>
-                        </div>
-                    </div>
+                    
+                    <p className={styles.extraText}>
+                        {t.spaceShowcase.extra}
+                    </p>
                 </div>
             </div>
         </section>
