@@ -28,7 +28,7 @@ export default function CategoryDetailSectionComponent() {
             title: t.directions.categories[1].title,
             desc: t.directions.categories[1].desc,
             img: '/category_tech_1772459982373.jpg',
-            items: language === 'ru' ? ['Оргтехника', 'Инструменты', 'Станки'] : ['Office tech', 'Tools', 'Machinery']
+            items: language === 'ru' ? ['Кондиционеры', 'Холодильное оборудование', 'Техника'] : ['Air conditioners', 'Refrigeration', 'Machinery']
         },
         {
             id: 'home',
@@ -36,7 +36,7 @@ export default function CategoryDetailSectionComponent() {
             title: t.directions.categories[2].title,
             desc: t.directions.categories[2].desc,
             img: '/category_home_1772459996707.jpg',
-            items: language === 'ru' ? ['Мебель', 'Декор', 'Текстиль', 'Хозтовары'] : ['Furniture', 'Decor', 'Textiles', 'Household']
+            items: language === 'ru' ? ['Хозтовары', 'Бытовые товары', 'Стройматериалы'] : ['Household', 'Domestic goods', 'Construction']
         },
         {
             id: 'service',
@@ -44,7 +44,7 @@ export default function CategoryDetailSectionComponent() {
             title: t.directions.categories[3].title,
             desc: t.directions.categories[3].desc,
             img: '/category_service_1772460173357.jpg',
-            items: language === 'ru' ? ['Ремонт', 'Обслуживание', 'Бытовые услуги'] : ['Repair', 'Maintenance', 'Services']
+            items: language === 'ru' ? ['Ремонт', 'Шиномонтаж', 'Столовая', 'Обслуживание'] : ['Repair', 'Tire service', 'Canteen', 'Maintenance']
         },
         {
             id: 'rehab',

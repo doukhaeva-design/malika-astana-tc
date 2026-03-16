@@ -10,7 +10,7 @@ import styles from './HeroSectionComponent.module.css';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 export default function HeroSectionComponent() {
-    const { language, t } = useLanguage();
+    const { t } = useLanguage();
     const [mousePos, setMousePos] = React.useState({ x: 0, y: 0 });
 
     const handleMouseMove = (e: React.MouseEvent) => {
@@ -50,7 +50,7 @@ export default function HeroSectionComponent() {
                                 </svg>
                             </a>
                             <a href="/shops" className={styles.btnSecondary}>
-                                <span>{language === 'ru' ? 'Каталог' : 'Catalog'}</span>
+                                <span>{t.common.directionsShort}</span>
                             </a>
                         </div>
                     </div>

@@ -10,12 +10,12 @@ export default function AboutStripComponent() {
         ? [
             { value: '4 000 м²', label: 'площадь центра' },
             { value: '3 этажа', label: 'торговых пространств' },
-            { value: '50+', label: 'магазинов и сервисов' },
+            { value: '50+', label: 'мест парковки' },
         ]
         : [
             { value: '4,000 m²', label: 'center area' },
             { value: '3 floors', label: 'of retail space' },
-            { value: '50+', label: 'shops & services' },
+            { value: '50+', label: 'parking spots' },
         ];
 
     return (

@@ -10,65 +10,26 @@ export const translations = {
             hours: 'Ежедневно 09:00 — 18:00',
             route: 'Проложить маршрут',
             home: 'Главная',
-            directions: 'Магазины и услуги',
             directionsShort: 'Каталог',
             rehab: 'Реабилитация',
-            aboutCenter: 'О центре',
             rent: 'Арендаторам',
             contacts: 'Контакты',
             becomeTenant: 'Стать арендатором',
             more: 'Ещё',
             company: 'Торговый центр MALIKA',
-            footerDesc: 'Торговый центр в Астане',
-            footerAddress: 'Астана, район Байконыр, Проезд 69, 1А',
+            footerAddress: 'Астана, Байконурский район, Проезд 69, 1А',
             footerPhone: 'Телефон: +7 (700) 305-35-36',
-            footerHours: 'Время работы: Ежедневно, 09:00 — 18:00',
             nav: 'Навигация',
-            rights: '© 2024 MALIKA. Все права защищены.',
+            rights: '© 2025 MALIKA. Все права защищены.',
             call: 'Позвонить',
             instagram: 'https://www.instagram.com/malikatc',
             whatsapp: 'https://wa.me/77003053536',
         },
         hero: {
-            welcome: 'Добро пожаловать',
-            in: 'в',
-            malika: 'MALIKA',
-            badge: 'Астана · Байконурский район',
             title1: 'Торговый центр',
             title2: 'MALIKA',
             desc: 'Товары и услуги для автомобиля, дома и бизнеса в одном месте.',
-            about: 'О центре',
-            scroll: 'Листайте вниз',
             btnPrimary: 'Проложить маршрут',
-            btnSecondary: 'Аренда помещений',
-            metric1: '50+ магазинов',
-            metric2: '4 000 м²',
-            metric3: 'Ежедневно 09–18',
-        },
-        about: {
-            title: 'О центре',
-            text: 'MALIKA расположен в Байконурском районе Астаны. Здесь работают магазины автозапчастей, товаров для дома и быта, точки с оборудованием для бизнеса, сервисные компании и центр реабилитации. Это торговый центр для повседневных задач, куда удобно приехать за нужными товарами и услугами в одном месте.',
-            shortText: 'Торговый центр в Байконурском районе Астаны. Автозапчасти, оборудование, бытовые товары, сервисы и медицинский центр — всё в одном месте.',
-            moreBtn: 'Подробнее о центре',
-            heroSubtitle: 'Узнайте больше',
-            heroTitle: 'О центре',
-            heroDesc: 'Торговый центр MALIKA — удобное место в Астане, где можно найти товары для дома, бизнеса и автомобилей, а также воспользоваться нужными услугами в одном пространстве.',
-            stats: {
-                area: '4000 м²',
-                floors: '3 этажа',
-                parking: 'парковка на 50+ мест'
-            }
-        },
-        advantages: {
-            title: 'Почему сюда удобно приезжать',
-            subtitle: '',
-            items: [
-                { title: 'Удобный подъезд', desc: 'Центр расположен рядом с трассой Алаш, поэтому до него удобно добираться на автомобиле.', color: '#fef5e7' },
-                { title: 'Парковка', desc: 'На территории предусмотрена парковка для посетителей.', color: '#e6f2ed' },
-                { title: 'Всё в одном месте', desc: 'Магазины и сервисы расположены рядом, поэтому за одно посещение можно решить сразу несколько задач.', color: '#e2e8f0' },
-                { title: 'Практичный формат', desc: 'Центр ориентирован на реальные повседневные потребности жителей района и бизнеса.', color: '#e0f2fe' },
-                { title: 'Безопасность', desc: 'Территория находится под охраной и видеонаблюдением.', color: '#f3f4f6' }
-            ]
         },
         directions: {
             title: 'Магазины и услуги',
@@ -76,10 +37,10 @@ export const translations = {
             all: 'Все направления',
             categories: [
                 { title: 'Автотовары', desc: 'Запчасти, расходники, инструменты и аксессуары для автомобиля.' },
-                { title: 'Оборудование и техника', desc: 'Профессиональная техника и оборудование.' },
-                { title: 'Товары для дома', desc: 'Всё необходимое для дома и ремонта.' },
-                { title: 'Сервисы и услуги', desc: 'Ремонт, обслуживание и профессиональные услуги.' },
-                { title: 'Медицина', desc: 'Современный центр реабилитации и восстановления здоровья.' }
+                { title: 'Оборудование и техника', desc: 'Кондиционеры, холодильное оборудование, профессиональная техника.' },
+                { title: 'Товары для дома и стройки', desc: 'Хозяйственные, бытовые и строительные товары.' },
+                { title: 'Сервисы и услуги', desc: 'Ремонт, обслуживание, шиномонтаж, столовая и другие сервисы.' },
+                { title: 'Медицина', desc: 'Центр реабилитации и восстановления здоровья.' }
             ]
         },
         rehab: {
@@ -95,16 +56,9 @@ export const translations = {
             btn: 'Подробнее о центре',
         },
         spaceShowcase: {
-            title: 'MALIKA сегодня',
-            subtitle: 'Развитие',
-            desc: 'Торговый центр MALIKA развивается как практичное пространство для покупок, услуг и повседневных решений. Сюда приезжают за товарами для автомобиля, дома и работы.',
-            extra: ''
-        },
-        rent: {
-            title: 'Для арендаторов',
-            subtitle: 'Помещения для бизнеса в ТЦ MALIKA',
-            desc: 'Торговый центр предлагает помещения для магазинов, сервисных компаний и коммерческих проектов. Администрация центра открыта к сотрудничеству и готова обсуждать условия аренды.',
-            btn: 'Стать арендатором',
+            title: 'Развитие территории',
+            subtitle: 'MALIKA растёт',
+            desc: 'На территории комплекса около 3 га земли. Уже построено новое здание, ведётся подготовка дополнительных площадей — склады, торговые помещения.'
         },
         visit: {
             title: 'ТЦ MALIKA',
@@ -169,12 +123,8 @@ export const translations = {
         rentPage: {
             heroTitle: 'Аренда помещений',
             heroDesc: 'Торговый центр MALIKA предлагает в аренду помещения для разных форматов бизнеса. Комплекс расположен в Байконурском районе Астаны, рядом с крупными транспортными магистралями, что обеспечивает удобный доступ для клиентов, сотрудников и поставщиков.',
-            heroExtra: 'Доступны площади от 50 м² с возможностью адаптации пространства под задачи вашего бизнеса.',
             heroBtn: 'Оставить заявку',
-            heroBtnSecondary: 'Позвонить в отдел аренды',
             status: 'Открыт приём заявок',
-            statsUnits: 'Свободных мест',
-            statsFormat: 'Удобные форматы',
             whyTitle: 'Преимущества для бизнеса',
             formatsTitle: 'Форматы помещений',
             infraTitle: 'Инфраструктура',
@@ -187,8 +137,6 @@ export const translations = {
                 { title: 'Зона разгрузки', desc: 'Для приёма поставок предусмотрена отдельная зона разгрузки. Также доступна техника для перемещения грузов.' }
             ],
 
-            availableIntro: 'Мы предлагаем различные форматы коммерческих помещений.',
-            availableTitle: 'Форматы помещений',
             availableSpaces: [
                 { title: 'Торговые помещения', desc: 'Площади от 50 м² для магазинов и торговых точек. Помещения можно адаптировать под формат бизнеса, при необходимости разделить перегородками.' },
                 { title: 'Складские помещения', desc: 'Подходят для хранения товаров, запасов и организации логистики.' },
@@ -228,8 +176,6 @@ export const translations = {
             subtitle: 'Торговый центр MALIKA',
             heroFeatures: 'Помещения от 50 м² для магазинов, автотоваров, сервисных компаний и коммерческих проектов.',
             heroTags: 'Гибкая планировка · Удобный подъезд · Условия для поставок',
-            mainTitle: '',
-            mainDesc: '',
             btn: 'Оставить заявку',
             btnCTA: 'Оставить заявку',
             btnCall: 'Позвонить',
@@ -283,14 +229,6 @@ export const translations = {
             heroTitle: 'Магазины и сервисы MALIKA',
             heroDesc: 'Автозапчасти, оборудование, товары для дома, бытовые услуги и медицинский центр — всё в одном месте.',
         },
-        rentContact: {
-            title: 'Готовы обсудить аренду?',
-            text: 'Свяжитесь с администрацией напрямую — ответим на все вопросы, покажем помещения и расскажем об условиях.',
-            waBtn: 'Написать в WhatsApp',
-            callBtn: 'Позвонить',
-            waMessage: 'Здравствуйте! Интересует аренда помещения в ТЦ MALIKA.',
-            hint: 'Администрация на связи ежедневно с 09:00 до 18:00',
-        }
     },
     en: {
         common: {
@@ -299,65 +237,26 @@ export const translations = {
             hours: 'Daily 09:00 — 18:00',
             route: 'Get Directions',
             home: 'Home',
-            directions: 'Shops & Services',
             directionsShort: 'Catalog',
             rehab: 'Rehabilitation',
-            aboutCenter: 'About Center',
             rent: 'For Tenants',
             contacts: 'Contacts',
             becomeTenant: 'Become a Tenant',
             more: 'More',
             company: 'MALIKA Trading Center',
-            footerDesc: 'Shopping center in Astana',
             footerAddress: 'Astana, Baikonyr District, Proyezd 69, 1A',
             footerPhone: 'Phone: +7 (700) 305-35-36',
-            footerHours: 'Working Hours: Daily, 09:00 — 18:00',
             nav: 'Navigation',
-            rights: '© 2024 MALIKA. All rights reserved.',
+            rights: '© 2025 MALIKA. All rights reserved.',
             call: 'Call Us',
             instagram: 'https://www.instagram.com/malikatc',
             whatsapp: 'https://wa.me/77003053536',
         },
         hero: {
-            welcome: 'Welcome',
-            in: 'to',
-            malika: 'MALIKA',
-            badge: 'Astana · Baikonyr District',
             title1: 'Shopping Center',
             title2: 'MALIKA',
             desc: 'Goods and services for your car, home, and business — all in one place.',
-            about: 'About Center',
-            scroll: 'Scroll Down',
             btnPrimary: 'Get Directions',
-            btnSecondary: 'Rental Spaces',
-            metric1: '50+ shops',
-            metric2: '4,000 m²',
-            metric3: 'Daily 09–18',
-        },
-        about: {
-            title: 'MALIKA Shopping Center',
-            text: 'MALIKA is a shopping center in the Baikonyr district of Astana. It houses auto parts stores, household goods, business equipment, service companies, and a medical rehabilitation center. The center is oriented toward the everyday tasks of business and local residents.',
-            shortText: 'A shopping center in the Baikonyr district of Astana. Auto parts, equipment, household goods, services, and a medical center — all in one place.',
-            moreBtn: 'More about the center',
-            heroSubtitle: 'Learn more',
-            heroTitle: 'ABOUT CENTER',
-            heroDesc: 'MALIKA Shopping Center — a practical space for shopping, business, and everyday solutions in Astana.',
-            stats: {
-                area: '4000 m²',
-                floors: '3 floors',
-                parking: 'parking for 50+ spots'
-            }
-        },
-        advantages: {
-            title: 'A Convenient Place for Shopping and Business',
-            subtitle: 'A place where it is convenient to handle matters: from home purchases to auto services.',
-            items: [
-                { title: 'Convenient Access', desc: 'The center is located near the Alash highway with easy entry.', color: '#fef5e7' },
-                { title: 'Parking', desc: 'On-site parking is provided for visitors.', color: '#e6f2ed' },
-                { title: 'Compact Format', desc: 'All shops and services are located nearby, allowing you to quickly solve necessary tasks.', color: '#e2e8f0' },
-                { title: 'Security', desc: 'The territory is under security and video surveillance.', color: '#e0f2fe' },
-                { title: 'Business Comfort', desc: 'Engineering communications and infrastructure allow for comfortable and stable work.', color: '#f3f4f6' }
-            ]
         },
         directions: {
             title: 'Shops and Services',
@@ -365,10 +264,10 @@ export const translations = {
             all: 'All Categories',
             categories: [
                 { title: 'Auto Goods', desc: 'Spare parts, consumables, tools, and accessories for your car.' },
-                { title: 'Equipment & Tech', desc: 'Professional equipment and machinery.' },
-                { title: 'Home Goods', desc: 'Everything you need for home and renovation.' },
-                { title: 'Services', desc: 'Repair, maintenance, and professional services.' },
-                { title: 'Medicine', desc: 'Modern rehabilitation and health recovery center.' }
+                { title: 'Equipment & Tech', desc: 'Air conditioners, refrigeration equipment, professional machinery.' },
+                { title: 'Home & Construction', desc: 'Household, domestic, and construction goods.' },
+                { title: 'Services', desc: 'Repair, maintenance, tire service, canteen, and other services.' },
+                { title: 'Medicine', desc: 'Rehabilitation and health recovery center.' }
             ]
         },
         rehab: {
@@ -384,16 +283,9 @@ export const translations = {
             btn: 'Learn more about center',
         },
         spaceShowcase: {
-            title: 'Growth Prospects',
+            title: 'Territory Development',
             subtitle: 'MALIKA is growing',
-            desc: 'The shopping center continues to evolve. On the complex territory: about 3 hectares of free land, a new building is already under construction, development of warehouse and retail premises is planned, and further expansion of the complex is being considered.',
-            extra: 'The development of the center creates additional opportunities for tenants and increases the flow of visitors.'
-        },
-        rent: {
-            title: 'For Tenants',
-            subtitle: 'Business Premises in MALIKA Shopping Center',
-            desc: 'The shopping center offers premises for shops, service companies, and commercial projects. The center administration is open to cooperation and ready to discuss rental terms.',
-            btn: 'Become a Tenant',
+            desc: 'The complex has about 3 hectares of land. A new building is already constructed, additional warehouse and retail spaces are being prepared.'
         },
         visit: {
             title: 'MALIKA TC',
@@ -458,12 +350,8 @@ export const translations = {
         rentPage: {
             heroTitle: 'Rental of Premises',
             heroDesc: 'MALIKA Shopping Center offers premises for various business formats. The complex is located in the Baikonyr district of Astana, near major highways, providing convenient access for clients, employees, and suppliers.',
-            heroExtra: 'Spaces from 50 m² available with the option to adapt the layout to your business needs.',
             heroBtn: 'Submit Inquiry',
-            heroBtnSecondary: 'Call leasing department',
             status: 'Accepting applications',
-            statsUnits: 'Available spaces',
-            statsFormat: 'Convenient formats',
             whyTitle: 'Business Advantages',
             formatsTitle: 'Space Formats',
             infraTitle: 'Infrastructure',
@@ -476,8 +364,6 @@ export const translations = {
                 { title: 'Loading Zone', desc: 'A dedicated unloading zone is available for receiving deliveries. Equipment for moving cargo is also provided.' }
             ],
 
-            availableIntro: 'We offer various formats of commercial premises.',
-            availableTitle: 'Space Formats',
             availableSpaces: [
                 { title: 'Retail Spaces', desc: 'From 50 m² for shops and retail. Spaces can be adapted to your business format, with partitions available if needed.' },
                 { title: 'Warehouse Spaces', desc: 'For storing goods, inventory, and logistics operations.' },
@@ -517,8 +403,6 @@ export const translations = {
             subtitle: 'MALIKA Shopping Center',
             heroFeatures: 'Spaces from 50 m² for shops, auto goods, service companies, and commercial projects.',
             heroTags: 'Flexible layout · Easy access · Delivery conditions',
-            mainTitle: '',
-            mainDesc: '',
             btn: 'Submit Application',
             btnCTA: 'Submit Application',
             btnCall: 'Call',
@@ -572,14 +456,6 @@ export const translations = {
             heroTitle: 'Shops & Services at MALIKA',
             heroDesc: 'Auto parts, equipment, home goods, household services, and a medical center — all in one place.',
         },
-        rentContact: {
-            title: 'Ready to discuss rental?',
-            text: 'Contact the administration directly — we will answer all questions, show available spaces, and explain the terms.',
-            waBtn: 'Message on WhatsApp',
-            callBtn: 'Call Us',
-            waMessage: 'Hello! I am interested in renting a space at MALIKA shopping center.',
-            hint: 'Administration is available daily from 09:00 to 18:00',
-        }
     }
 };
 
